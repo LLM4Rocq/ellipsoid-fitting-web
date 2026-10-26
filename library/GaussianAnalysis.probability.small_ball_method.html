@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.probability.small_ball_method</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod current" href="GaussianAnalysis.probability.small_ball_method.html" aria-current="page">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>ramp</span></li><li><a href="#ramp">ramp</a></li><li><a href="#ramp_ge0">ramp_<wbr>ge0</a></li><li><a href="#ramp_le1">ramp_<wbr>le1</a></li><li><a href="#ramp0">ramp0</a></li><li><a href="#ramp1">ramp1</a></li><li><a href="#ramp_sqr">ramp_<wbr>sqr</a></li><li><a href="#clamp01_lipschitz">clamp01_<wbr>lipschitz</a></li><li><a href="#ramp_lipschitz">ramp_<wbr>lipschitz</a></li><li><a href="#measurable_ramp">measurable_<wbr>ramp</a></li><li class="toc-sec"><span>small_ball_sequence</span></li><li><a href="#small_ball_event">small_<wbr>ball_<wbr>event</a></li><li><a href="#measurable_small_ball_event">measurable_<wbr>small_<wbr>ball_<wbr>event</a></li><li><a href="#small_ball_method">small_<wbr>ball_<wbr>method</a></li><li class="toc-sec"><span>dense_subset</span></li><li><a href="#rat_approx_rV">rat_<wbr>approx_<wbr>rV</a></li><li><a href="#dense_seq_rV">dense_<wbr>seq_<wbr>rV</a></li><li><a href="#mxdot_form_lipschitz">mxdot_<wbr>form_<wbr>lipschitz</a></li><li><a href="#mxdot_form_outer">mxdot_<wbr>form_<wbr>outer</a></li><li class="toc-sec"><span>small_ball_paley_zygmund</span></li><li><a href="#paley_zygmund_half">paley_<wbr>zygmund_<wbr>half</a></li><li class="toc-sec"><span>small_ball_linear</span></li><li><a href="#small_ball_linear">small_<wbr>ball_<wbr>linear</a></li><li class="toc-sec"><span>affine_moments</span></li><li><a href="#integrable_pow4">integrable_<wbr>pow4</a></li><li><a href="#integral_affine_sqr">integral_<wbr>affine_<wbr>sqr</a></li><li><a href="#integral_affine_pow4_le">integral_<wbr>affine_<wbr>pow4_<wbr>le</a></li><li><a href="#markov_ge0">markov_<wbr>ge0</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.probability.html">probability</a><span aria-hidden="true">/</span><span>small_ball_method</span></div>
+<h1 class="page-title">The small-ball method</h1>
+<div class="page-meta"><code>GaussianAnalysis.probability.small_ball_method</code><span>library/probability/small_ball_method.v</span><span>820 lines</span><span>20 lemmas and theorems, 2 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>5</b> library modules and 26 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.probability.lindeberg.html">GaussianAnalysis.probability.lindeberg</a></li><li><a href="GaussianAnalysis.probability.moments.html">GaussianAnalysis.probability.moments</a></li><li><a href="GaussianAnalysis.probability.symmetrization.html">GaussianAnalysis.probability.symmetrization</a></li><li><a href="GaussianAnalysis.probability.efron_stein.html">GaussianAnalysis.probability.efron_stein</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.interval, mathcomp.algebra.matrix, mathcomp.algebra.rat, mathcomp.algebra.arithmetic_tactic, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.numfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.hoelder, mathcomp.analysis.probability_theory.probability</p></div></details><details><summary>Required by <b>1</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Unsat/Ridge.v" target="_blank" rel="noopener">extension/Unsat/Ridge.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>Mendelson's small-ball method, in the form of Koltchinskii and Mendelson (2015, Theorem 2.1), cited by Koehler and Sohn (arXiv 2608.27372, lines 4764-4779): a uniform lower bound for the empirical second moments of a class of functions, from a lower bound on its small-ball probabilities and an upper bound on its Rademacher complexity. The deviation of the empirical process is controlled in expectation, by symmetrization and contraction (<a href="GaussianAnalysis.probability.symmetrization.html">symmetrization.v</a>), and then by Markov's inequality, so the probability of failure is of the order of the complexity: this suffices for limits in probability when the scale grows, and no bounded differences inequality is needed.</p>
+<p>Main results, for x of law <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n with n &gt; 0:</p>
+<ul><li><a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a>: for a sequence of measurable f_j, u &gt; 0 and q &gt; 0 with mu_k(|f_j| &gt;= 2 u) &gt;= q for all j and k &lt; n, and r with<pre class="display">E <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher_mean" title="GaussianAnalysis.probability.symmetrization.rademacher_mean">rademacher_mean</a> (max_(j &lt; J) |(1/n) sum_k eps_k f_j(x_k)|) &lt;= r</pre><p>for every J, the event <a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> n f (n u^2 q / 2), that some f_j has sum_k f_j(x_k)^2 &lt; n u^2 q / 2, has probability at most 8 r / (u q). It is measurable (<a class="r k-thm" href="#measurable_small_ball_event" title="GaussianAnalysis.probability.small_ball_method.measurable_small_ball_event">measurable_small_ball_event</a>). Proof: the ramp between u and 2 u, which is 1/u-Lipschitz (<a class="r k-thm" href="#ramp_lipschitz" title="GaussianAnalysis.probability.small_ball_method.ramp_lipschitz">ramp_lipschitz</a>), symmetrization and contraction for the initial segment j &lt; J, Markov's inequality, and the continuity of measures along the union over J.</p></li><li><a class="r k-thm" href="#paley_zygmund_half" title="GaussianAnalysis.probability.small_ball_method.paley_zygmund_half">paley_zygmund_half</a>: if E X^2 = 1 and E X^4 &lt;= K, then P(|X| &gt;= 1/2) &gt;= 9 / (16 K) (<a class="r k-thm" href="GaussianAnalysis.probability.moments.html#paley_zygmund" title="GaussianAnalysis.probability.moments.paley_zygmund">paley_zygmund</a> of <a href="GaussianAnalysis.probability.moments.html">moments.v</a> for X^2).</li><li><a class="r k-thm" href="#dense_seq_rV" title="GaussianAnalysis.probability.small_ball_method.dense_seq_rV">dense_seq_rV</a>: every nonempty set D of row vectors contains a sequence that is dense in D, from rational approximations (<a class="r k-thm" href="#rat_approx_rV" title="GaussianAnalysis.probability.small_ball_method.rat_approx_rV">rat_approx_rV</a>).</li><li><a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a>: let F : T -&gt; 'rV[R]_N, S a square matrix, K &gt; 0 and D a set of row vectors such that, for p in D and k &lt; n, E_k &lt;F, p&gt;^2 = p S p^T &gt; 0 and E_k &lt;F, p&gt;^4 &lt;= K (p S p^T)^2, where &lt;., .&gt; is mxdot. If Psi is measurable in x, with<pre class="display">|(1/n) sum_k eps_k &lt;F(x_k), p&gt;| &lt;= sqrt (p S p^T) Psi(x, eps)</pre><p>for p in D, and E <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher_mean" title="GaussianAnalysis.probability.symmetrization.rademacher_mean">rademacher_mean</a> (Psi x) &lt;= r, then there is a measurable event of probability at most 512 K r / 9 outside of which</p><pre class="display">(1/n) sum_k &lt;F(x_k), p&gt;^2 &gt;= 9 / (512 K) p S p^T</pre><p>for every p in D. Proof: <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a> for the normalized class on a dense sequence of D, with u = 1/4 and q = 9 / (16 K) from <a class="r k-thm" href="#paley_zygmund_half" title="GaussianAnalysis.probability.small_ball_method.paley_zygmund_half">paley_zygmund_half</a>, and the continuity of quadratic forms (<a class="r k-thm" href="#mxdot_form_lipschitz" title="GaussianAnalysis.probability.small_ball_method.mxdot_form_lipschitz">mxdot_form_lipschitz</a>, <a class="r k-thm" href="#mxdot_form_outer" title="GaussianAnalysis.probability.small_ball_method.mxdot_form_outer">mxdot_form_outer</a>). Removing the ridge (Lemma 2.12) uses it with the features augmented by a constant coordinate for the bias.</p></li><li>Moments of affine images, used for the affine forms of Lemma 2.12: <a class="r k-thm" href="#integrable_pow4" title="GaussianAnalysis.probability.small_ball_method.integrable_pow4">integrable_pow4</a> (a finite fourth moment makes X and X^2 integrable), <a class="r k-thm" href="#integral_affine_sqr" title="GaussianAnalysis.probability.small_ball_method.integral_affine_sqr">integral_affine_sqr</a>, E (X - b)^2 = E X^2 - 2 b E X + b^2, <a class="r k-thm" href="#integral_affine_pow4_le" title="GaussianAnalysis.probability.small_ball_method.integral_affine_pow4_le">integral_affine_pow4_le</a>, E (X - b)^4 &lt;= 8 (E X^4 + b^4), and <a class="r k-thm" href="#markov_ge0" title="GaussianAnalysis.probability.small_ball_method.markov_ge0">markov_ge0</a>, P(Y &gt; B) &lt;= E Y / B for Y &gt;= 0 and B &gt; 0.</li></ul>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u x</code></td><td class="g-rhs">min 1 (max 0 (|x| / u - 1))</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_<wbr>ball_<wbr>event</a> n f c</code></td><td class="g-rhs">the x : n.-tuple T for which some f_j has sum_k f_j(x_k)^2 &lt; c</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_<wbr>ball_<wbr>method</a></span><span><a class="r k-thm" href="#measurable_small_ball_event" title="GaussianAnalysis.probability.small_ball_method.measurable_small_ball_event">measurable_<wbr>small_<wbr>ball_<wbr>event</a></span><span><a class="r k-thm" href="#ramp_lipschitz" title="GaussianAnalysis.probability.small_ball_method.ramp_lipschitz">ramp_<wbr>lipschitz</a></span></div></td><td>Mendelson's small-ball method in Markov form, for <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n</code>: if the measurable <code>f_j</code> satisfy <code>mu_k(|f_j| &gt;= 2 u) &gt;= q</code> and <code>E rademacher_mean (max_(j &lt; J) |(1/n) sum_k eps_k f_j(x_k)|) &lt;= r</code> for every <code>J</code>, the probability that some <code>f_j</code> has <code>sum_k f_j(x_k)^2 &lt; n u^2 q / 2</code> is at most <code>8 r / (u q)</code>. By symmetrization, contraction and Markov's inequality, without a concentration inequality.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_<wbr>ball_<wbr>linear</a></span><span><a class="r k-thm" href="#paley_zygmund_half" title="GaussianAnalysis.probability.small_ball_method.paley_zygmund_half">paley_<wbr>zygmund_<wbr>half</a></span><span><a class="r k-thm" href="#dense_seq_rV" title="GaussianAnalysis.probability.small_ball_method.dense_seq_rV">dense_<wbr>seq_<wbr>rV</a></span></div></td><td>For linear forms <code>&lt;F(t), p&gt;</code> with <code>p</code> in a set <code>D</code>, <code>E &lt;F, p&gt;^2 = p S p^T &gt; 0</code>, <code>E &lt;F, p&gt;^4 &lt;= K (p S p^T)^2</code>, and a measurable <code>Psi</code> with <code>|(1/n) sum_k eps_k &lt;F(x_k), p&gt;| &lt;= sqrt (p S p^T) Psi(x, eps)</code> and <code>E rademacher_mean Psi &lt;= r</code>: outside a measurable event of probability at most <code>512 K r / 9</code>, <code>(1/n) sum_k &lt;F(x_k), p&gt;^2 &gt;= 9 / (512 K) p S p^T</code> for every <code>p</code> in <code>D</code>. Also: <code>P(|X| &gt;= 1/2) &gt;= 9 / (16 K)</code> if <code>E X^2 = 1</code> and <code>E X^4 &lt;= K</code>; every nonempty set of row vectors contains a dense sequence.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">22 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-ramp-18"><span class="sec-kw">section</span><span class="sec-name">ramp</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-def" id="ramp">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#ramp">ramp</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L81" target="_blank" rel="noopener">source, line 81</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType}, R -&gt; R -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> ramp (u x : <span class="sv" title="section variable R of section ramp">R</span>) : <span class="sv" title="section variable R of section ramp">R</span> := <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (<span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> 0 (`|<span class="bv">x</span>| / <span class="bv">u</span> - 1)).</pre></div>
+<div class="decl-doc"><p>The ramp from 0 on [-u, u] to 1 outside ]-2 u, 2 u[.</p></div>
+<details class="decl-used"><summary>Used by 8 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ramp_ge0" title="GaussianAnalysis.probability.small_ball_method.ramp_ge0">ramp_ge0</a>, <a class="r k-thm" href="#ramp_le1" title="GaussianAnalysis.probability.small_ball_method.ramp_le1">ramp_le1</a>, <a class="r k-thm" href="#ramp0" title="GaussianAnalysis.probability.small_ball_method.ramp0">ramp0</a>, <a class="r k-thm" href="#ramp1" title="GaussianAnalysis.probability.small_ball_method.ramp1">ramp1</a>, <a class="r k-thm" href="#ramp_sqr" title="GaussianAnalysis.probability.small_ball_method.ramp_sqr">ramp_sqr</a>, <a class="r k-thm" href="#ramp_lipschitz" title="GaussianAnalysis.probability.small_ball_method.ramp_lipschitz">ramp_lipschitz</a>, <a class="r k-thm" href="#measurable_ramp" title="GaussianAnalysis.probability.small_ball_method.measurable_ramp">measurable_ramp</a>, <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ramp_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ramp_ge0">ramp_ge0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L83" target="_blank" rel="noopener">source, line 83</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (u x : R), 0 &lt;= <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ramp_ge0 u x : 0 &lt;= <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ramp_le1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ramp_le1">ramp_le1</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L86" target="_blank" rel="noopener">source, line 86</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (u x : R), <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u x &lt;= 1</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ramp_le1 u x : <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> <span class="bv">x</span> &lt;= 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ramp_sqr" title="GaussianAnalysis.probability.small_ball_method.ramp_sqr">ramp_sqr</a>, <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ramp0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ramp0">ramp0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L89" target="_blank" rel="noopener">source, line 89</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (u : R), <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u 0 = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ramp0 u : <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> 0 = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ramp1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ramp1">ramp1</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L96" target="_blank" rel="noopener">source, line 96</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType}
+  [u : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R] 
+  [x : R],
+0 &lt; u -&gt; 2 * u &lt;= `|x| -&gt; <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u x = 1</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ramp1 u x : 0 &lt; <span class="bv">u</span> -&gt; 2 * <span class="bv">u</span> &lt;= `|<span class="bv">x</span>| -&gt; <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> <span class="bv">x</span> = 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ramp_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ramp_sqr">ramp_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L104" target="_blank" rel="noopener">source, line 104</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType}
+  [u : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R] 
+  (x : R),
+0 &lt; u -&gt; u ^+ 2 * <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u x &lt;= x ^+ 2</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ramp_sqr u x : 0 &lt; <span class="bv">u</span> -&gt; <span class="bv">u</span> ^+ 2 * <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> <span class="bv">x</span> &lt;= <span class="bv">x</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="clamp01_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#clamp01_lipschitz">clamp01_lipschitz</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L115" target="_blank" rel="noopener">source, line 115</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (a b : R), `|minr 1 (maxr 0 a) - minr 1 (maxr 0 b)| &lt;= `|a - b|</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> clamp01_lipschitz (a b : <span class="sv" title="section variable R of section ramp">R</span>) :
+  `|<span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (<span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> 0 <span class="bv">a</span>) - <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (<span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> 0 <span class="bv">b</span>)| &lt;= `|<span class="bv">a</span> - <span class="bv">b</span>|.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ramp_lipschitz" title="GaussianAnalysis.probability.small_ball_method.ramp_lipschitz">ramp_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ramp_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ramp_lipschitz">ramp_lipschitz</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L129" target="_blank" rel="noopener">source, line 129</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType}
+  [u : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R] 
+  (x y : R),
+0 &lt; u -&gt; `|<a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u x - <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u y| &lt;= u^-1 * `|x - y|</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ramp_lipschitz u x y : 0 &lt; <span class="bv">u</span> -&gt;
+  `|<a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> <span class="bv">x</span> - <a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span> <span class="bv">y</span>| &lt;= <span class="bv">u</span>^-1 * `|<span class="bv">x</span> - <span class="bv">y</span>|.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_ramp">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_ramp">measurable_ramp</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L140" target="_blank" rel="noopener">source, line 140</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (u : R), <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: R] (<a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> u)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_ramp u : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable R of section ramp">R</span>] (<a class="r k-def" href="#ramp" title="GaussianAnalysis.probability.small_ball_method.ramp">ramp</a> <span class="bv">u</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-small_ball_sequence-79"><span class="sec-kw">section</span><span class="sec-name">small_ball_sequence</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-def" id="small_ball_event">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#small_ball_event">small_ball_event</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L155" target="_blank" rel="noopener">source, line 155</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {d : measure_display} {T : measurableType d} {R : realType} (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>),
+(<span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; T -&gt; R) -&gt; R -&gt; set (n.-tuple T)</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> small_ball_event n (f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable T of section small_ball_sequence">T</span> -&gt; <span class="sv" title="section variable R of section small_ball_sequence">R</span>) (c : <span class="sv" title="section variable R of section small_ball_sequence">R</span>) :=
+  [set x : <span class="bv">n</span>.-tuple <span class="sv" title="section variable T of section small_ball_sequence">T</span> | <span class="kw">exists</span> j, (\sum_(k &lt; <span class="bv">n</span>) <span class="bv">f</span> <span class="bv">j</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">x</span> <span class="bv">k</span>) ^+ 2 &lt; <span class="bv">c</span>)%R].</pre></div>
+<div class="decl-doc"><p>The event that some f_j has an empirical second moment below c / n.</p></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_small_ball_event" title="GaussianAnalysis.probability.small_ball_method.measurable_small_ball_event">measurable_small_ball_event</a>, <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a>, <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+<pre class="code ctx"><span class="vk">Arguments</span> <a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> : clear implicits.</pre>
+<div class="decl k-thm" id="measurable_small_ball_event">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_small_ball_event">measurable_small_ball_event</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L159" target="_blank" rel="noopener">source, line 159</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; T -&gt; R] (c : R),
+(<span class="kw">forall</span> j : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] (f j)) -&gt;
+(measure_tuple_display d).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> (<a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> n f c)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#small_ball_method" title="GaussianAnalysis.probability.small_ball_method.small_ball_method">small_ball_method</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_small_ball_event n (f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable T of section small_ball_sequence">T</span> -&gt; <span class="sv" title="section variable R of section small_ball_sequence">R</span>) c :
+  (<span class="kw">forall</span> j, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section small_ball_sequence">T</span>] (<span class="bv">f</span> <span class="bv">j</span>)) -&gt;
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> (<a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> <span class="bv">n</span> <span class="bv">f</span> <span class="bv">c</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="small_ball_method">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#small_ball_method">small_ball_method</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L180" target="_blank" rel="noopener">source, line 180</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> T R] [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; T -&gt; R] [u q r : R],
+(0 &lt; n)%N -&gt;
+0 &lt; u -&gt;
+0 &lt; q -&gt;
+(<span class="kw">forall</span> j : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] (f j)) -&gt;
+(<span class="kw">forall</span> j k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, (k &lt; n)%N -&gt; (q%:E &lt;= mu k [set t | (2 * u &lt;= `|f j t|)%R])%E) -&gt;
+(<span class="kw">forall</span> J : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+ (\int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n]_x
+     (<a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher_mean" title="GaussianAnalysis.probability.symmetrization.rademacher_mean">rademacher_mean</a>
+        (<span class="kw">fun</span> s : n.-tuple <span class="x" title="Corelib.Init.Datatypes.bool">bool</span> =&gt;
+         <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#max_norm" title="GaussianAnalysis.probability.symmetrization.max_norm">max_norm</a>
+           (<span class="kw">fun</span> j : &#x27;I_J =&gt; n%:R^-1 * \sum_(k &lt; n) <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher" title="GaussianAnalysis.probability.symmetrization.rademacher">rademacher</a> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s k) * f j (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> x k))))%:E &lt;=
+  r%:E)%E) -&gt;
+(<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n (<a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> n f (n%:R * (u ^+ 2 * q / 2))) &lt;= (8 * r / (u * q))%:E)%E</pre></div>
+<div class="decl-doc"><p>Mendelson's small-ball method in Markov form, for a sequence of functions.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Mendelson's small-ball method in Markov form, for <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n</code>: if the measurable <code>f_j</code> satisfy <code>mu_k(|f_j| &gt;= 2 u) &gt;= q</code> and <code>E rademacher_mean (max_(j &lt; J) |(1/n) sum_k eps_k f_j(x_k)|) &lt;= r</code> for every <code>J</code>, the probability that some <code>f_j</code> has <code>sum_k f_j(x_k)^2 &lt; n u^2 q / 2</code> is at most <code>8 r / (u q)</code>. By symmetrization, contraction and Markov's inequality, without a concentration inequality.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> small_ball_method (mu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section small_ball_sequence">T</span> <span class="sv" title="section variable R of section small_ball_sequence">R</span>) n
+    (f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable T of section small_ball_sequence">T</span> -&gt; <span class="sv" title="section variable R of section small_ball_sequence">R</span>) (u q r : <span class="sv" title="section variable R of section small_ball_sequence">R</span>) :
+  (0 &lt; <span class="bv">n</span>)%N -&gt; (0 &lt; <span class="bv">u</span>)%R -&gt; (0 &lt; <span class="bv">q</span>)%R -&gt;
+  (<span class="kw">forall</span> j, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section small_ball_sequence">T</span>] (<span class="bv">f</span> <span class="bv">j</span>)) -&gt;
+  (<span class="kw">forall</span> j k, (<span class="bv">k</span> &lt; <span class="bv">n</span>)%N -&gt; <span class="bv">q</span>%:E &lt;= <span class="bv">mu</span> <span class="bv">k</span> [set t | (2 * <span class="bv">u</span> &lt;= `|<span class="bv">f</span> <span class="bv">j</span> <span class="bv">t</span>|)%R]) -&gt;
+  (<span class="kw">forall</span> J, \int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="bv">mu</span> <span class="bv">n</span>]_x
+     (<a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher_mean" title="GaussianAnalysis.probability.symmetrization.rademacher_mean">rademacher_mean</a> (<span class="kw">fun</span> s : <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.bool">bool</span> =&gt; <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#max_norm" title="GaussianAnalysis.probability.symmetrization.max_norm">max_norm</a> (<span class="kw">fun</span> j : &#x27;I_<span class="bv">J</span> =&gt;
+        <span class="bv">n</span>%:R^-1 * \sum_(k &lt; <span class="bv">n</span>) <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher" title="GaussianAnalysis.probability.symmetrization.rademacher">rademacher</a> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">k</span>) * <span class="bv">f</span> <span class="bv">j</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">x</span> <span class="bv">k</span>))))%:E
+     &lt;= <span class="bv">r</span>%:E) -&gt;
+  <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="bv">mu</span> <span class="bv">n</span> (<a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> <span class="bv">n</span> <span class="bv">f</span> (<span class="bv">n</span>%:R * (<span class="bv">u</span> ^+ 2 * <span class="bv">q</span> / 2))) &lt;=
+    (8 * <span class="bv">r</span> / (<span class="bv">u</span> * <span class="bv">q</span>))%:E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+</div>
+<pre class="code ctx"><span class="vk">Arguments</span> <a class="r k-def" href="#small_ball_event" title="GaussianAnalysis.probability.small_ball_method.small_ball_event">small_ball_event</a> {d T R} n f c.</pre>
+<div class="sec"><div class="sec-head" id="section-dense_subset-240"><span class="sec-kw">section</span><span class="sec-name">dense_subset</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="rat_approx_rV">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rat_approx_rV">rat_approx_rV</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L366" target="_blank" rel="noopener">source, line 366</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [N : nat] (x : &#x27;rV_N) [e : R],
+0 &lt; e -&gt; <span class="kw">exists</span> q : &#x27;rV_N, <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (x - <span class="x" title="mathcomp.algebra.matrix.map_mx">map_mx</span> <span class="x" title="mathcomp.algebra.rat.ratr">ratr</span> q) &lt; e</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rat_approx_rV N (x : &#x27;rV[<span class="sv" title="section variable R of section dense_subset">R</span>]_<span class="bv">N</span>) (e : <span class="sv" title="section variable R of section dense_subset">R</span>) : 0 &lt; <span class="bv">e</span> -&gt;
+  <span class="kw">exists</span> q : &#x27;rV[<span class="x" title="mathcomp.algebra.rat.rat">rat</span>]_<span class="bv">N</span>, <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">x</span> - <span class="x" title="mathcomp.algebra.matrix.map_mx">map_mx</span> <span class="x" title="mathcomp.algebra.rat.ratr">ratr</span> <span class="bv">q</span>) &lt; <span class="bv">e</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#dense_seq_rV" title="GaussianAnalysis.probability.small_ball_method.dense_seq_rV">dense_seq_rV</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="dense_seq_rV">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#dense_seq_rV">dense_seq_rV</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L390" target="_blank" rel="noopener">source, line 390</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV_N],
+D !=set0 -&gt;
+<span class="kw">exists</span> p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; &#x27;rV_N,
+  (<span class="kw">forall</span> j : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, D (p j)) /\
+  (<span class="kw">forall</span> x : &#x27;rV_N,
+   D x -&gt;
+   <span class="kw">forall</span> e : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+   0 &lt; e -&gt; <span class="kw">exists</span> j : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (p j - x) &lt; e)</pre></div>
+<div class="decl-doc"><p>Every nonempty set of row vectors has a dense sequence of its points.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> dense_seq_rV N (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section dense_subset">R</span>]_<span class="bv">N</span>) : <span class="bv">D</span> !=set0 -&gt;
+  <span class="kw">exists</span> p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section dense_subset">R</span>]_<span class="bv">N</span>, (<span class="kw">forall</span> j, <span class="bv">D</span> (<span class="bv">p</span> <span class="bv">j</span>)) /\
+    <span class="kw">forall</span> x, <span class="bv">D</span> <span class="bv">x</span> -&gt; <span class="kw">forall</span> e, 0 &lt; <span class="bv">e</span> -&gt; <span class="kw">exists</span> j, <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">p</span> <span class="bv">j</span> - <span class="bv">x</span>) &lt; <span class="bv">e</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_form_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_form_lipschitz">mxdot_form_lipschitz</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L425" target="_blank" rel="noopener">source, line 425</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [N : nat] (Q : &#x27;M_N) (p p&#x27; : &#x27;rV_N),
+`|<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p *m Q) p - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p&#x27; *m Q) p&#x27;| &lt;=
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> Q * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> p + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> p&#x27;) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (p - p&#x27;)</pre></div>
+<div class="decl-doc"><p>Quadratic forms are Lipschitz on bounded sets.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_form_lipschitz N (Q : &#x27;M[<span class="sv" title="section variable R of section dense_subset">R</span>]_<span class="bv">N</span>) (p p&#x27; : &#x27;rV[<span class="sv" title="section variable R of section dense_subset">R</span>]_<span class="bv">N</span>) :
+  `|<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p</span> *m <span class="bv">Q</span>) <span class="bv">p</span> - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p&#x27;</span> *m <span class="bv">Q</span>) <span class="bv">p&#x27;</span>| &lt;=
+    <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">Q</span> * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">p</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">p&#x27;</span>) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">p</span> - <span class="bv">p&#x27;</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_form_outer">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_form_outer">mxdot_form_outer</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L445" target="_blank" rel="noopener">source, line 445</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [N : nat] (a q : &#x27;rV_N), <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (q *m (a^T *m a)) q = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a q ^+ 2</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_form_outer N (a q : &#x27;rV[<span class="sv" title="section variable R of section dense_subset">R</span>]_<span class="bv">N</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">q</span> *m (<span class="bv">a</span>^T *m <span class="bv">a</span>)) <span class="bv">q</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">q</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-small_ball_paley_zygmund-313"><span class="sec-kw">section</span><span class="sec-name">small_ball_paley_zygmund</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-thm" id="paley_zygmund_half">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#paley_zygmund_half">paley_zygmund_half</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L461" target="_blank" rel="noopener">source, line 461</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> T R] [X : T -&gt; R] [K : R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] X -&gt;
+0 &lt; K -&gt;
+(\int[P]_t (X t ^+ 2)%:E)%E = 1%E -&gt;
+(\int[P]_t (X t ^+ 4)%:E &lt;= K%:E)%E -&gt;
+((9 / (16 * K))%:E &lt;= P [set t | (2^-1 &lt;= `|X t|)%R])%E</pre></div>
+<div class="decl-doc"><p>A small-ball probability from the second and fourth moments.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> paley_zygmund_half (P : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section small_ball_paley_zygmund">T</span> <span class="sv" title="section variable R of section small_ball_paley_zygmund">R</span>) (X : <span class="sv" title="section variable T of section small_ball_paley_zygmund">T</span> -&gt; <span class="sv" title="section variable R of section small_ball_paley_zygmund">R</span>) (K : <span class="sv" title="section variable R of section small_ball_paley_zygmund">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section small_ball_paley_zygmund">T</span>] <span class="bv">X</span> -&gt; (0 &lt; <span class="bv">K</span>)%R -&gt;
+  \int[<span class="bv">P</span>]_t (<span class="bv">X</span> <span class="bv">t</span> ^+ 2)%:E = 1 -&gt; \int[<span class="bv">P</span>]_t (<span class="bv">X</span> <span class="bv">t</span> ^+ 4)%:E &lt;= <span class="bv">K</span>%:E -&gt;
+  (9 / (16 * <span class="bv">K</span>))%:E &lt;= <span class="bv">P</span> [set t | (2^-1 &lt;= `|<span class="bv">X</span> <span class="bv">t</span>|)%R].</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#small_ball_linear" title="GaussianAnalysis.probability.small_ball_method.small_ball_linear">small_ball_linear</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-small_ball_linear-359"><span class="sec-kw">section</span><span class="sec-name">small_ball_linear</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-thm" id="small_ball_linear">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#small_ball_linear">small_ball_linear</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L516" target="_blank" rel="noopener">source, line 516</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> T R] [n N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [F : T -&gt; &#x27;rV_N] [S0 : &#x27;M_N] 
+  [D : set &#x27;rV_N] [K r : R] [Psi : n.-tuple T -&gt; n.-tuple <span class="x" title="Corelib.Init.Datatypes.bool">bool</span> -&gt; R],
+(0 &lt; n)%N -&gt;
+0 &lt; K -&gt;
+0 &lt;= r -&gt;
+(<span class="kw">forall</span> p : &#x27;rV_N, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] (<span class="kw">fun</span> t : T =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (F t) p)) -&gt;
+(<span class="kw">forall</span> p : &#x27;rV_N, D p -&gt; 0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p *m S0) p) -&gt;
+(<span class="kw">forall</span> (p : &#x27;rV_N) (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>),
+ D p -&gt; (k &lt; n)%N -&gt; (\int[mu k]_t (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (F t) p ^+ 2)%:E)%E = (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p *m S0) p)%:E) -&gt;
+(<span class="kw">forall</span> (p : &#x27;rV_N) (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>),
+ D p -&gt;
+ (k &lt; n)%N -&gt; (\int[mu k]_t (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (F t) p ^+ 4)%:E &lt;= (K * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p *m S0) p ^+ 2)%:E)%E) -&gt;
+(<span class="kw">forall</span> s : n.-tuple <span class="x" title="Corelib.Init.Datatypes.bool">bool</span>, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: n.-tuple T] (Psi^~ s)) -&gt;
+(<span class="kw">forall</span> (x : n.-tuple T) (s : n.-tuple <span class="x" title="Corelib.Init.Datatypes.bool">bool</span>) (p : &#x27;rV_N),
+ D p -&gt;
+ `|n%:R^-1 * \sum_(k &lt; n) <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher" title="GaussianAnalysis.probability.symmetrization.rademacher">rademacher</a> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s k) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (F (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> x k)) p| &lt;=
+ Num.ExtraDef.sqrtr (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p *m S0) p) * Psi x s) -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n]_x (<a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher_mean" title="GaussianAnalysis.probability.symmetrization.rademacher_mean">rademacher_mean</a> (Psi x))%:E &lt;= r%:E)%E -&gt;
+<span class="kw">exists</span> E : set (n.-tuple T),
+  [/\ (measure_tuple_display d).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> E,
+      (<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n E &lt;= (512 * K * r / 9)%:E)%E
+    &amp; <span class="kw">forall</span> x : n.-tuple T,
+      ~ E x -&gt;
+      <span class="kw">forall</span> p : &#x27;rV_N,
+      D p -&gt;
+      9 / (512 * K) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (p *m S0) p &lt;=
+      n%:R^-1 * \sum_(k &lt; n) <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (F (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> x k)) p ^+ 2]</pre></div>
+<div class="decl-doc"><p>The small-ball method for a linear class with comparable second and fourth moments.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For linear forms <code>&lt;F(t), p&gt;</code> with <code>p</code> in a set <code>D</code>, <code>E &lt;F, p&gt;^2 = p S p^T &gt; 0</code>, <code>E &lt;F, p&gt;^4 &lt;= K (p S p^T)^2</code>, and a measurable <code>Psi</code> with <code>|(1/n) sum_k eps_k &lt;F(x_k), p&gt;| &lt;= sqrt (p S p^T) Psi(x, eps)</code> and <code>E rademacher_mean Psi &lt;= r</code>: outside a measurable event of probability at most <code>512 K r / 9</code>, <code>(1/n) sum_k &lt;F(x_k), p&gt;^2 &gt;= 9 / (512 K) p S p^T</code> for every <code>p</code> in <code>D</code>. Also: <code>P(|X| &gt;= 1/2) &gt;= 9 / (16 K)</code> if <code>E X^2 = 1</code> and <code>E X^4 &lt;= K</code>; every nonempty set of row vectors contains a dense sequence.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> small_ball_linear (mu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section small_ball_linear">T</span> <span class="sv" title="section variable R of section small_ball_linear">R</span>) (n N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>)
+    (F : <span class="sv" title="section variable T of section small_ball_linear">T</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section small_ball_linear">R</span>]_<span class="bv">N</span>) (S : &#x27;M[<span class="sv" title="section variable R of section small_ball_linear">R</span>]_<span class="bv">N</span>) (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section small_ball_linear">R</span>]_<span class="bv">N</span>) (K r : <span class="sv" title="section variable R of section small_ball_linear">R</span>)
+    (Psi : <span class="bv">n</span>.-tuple <span class="sv" title="section variable T of section small_ball_linear">T</span> -&gt; <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.bool">bool</span> -&gt; <span class="sv" title="section variable R of section small_ball_linear">R</span>) :
+  (0 &lt; <span class="bv">n</span>)%N -&gt; (0 &lt; <span class="bv">K</span>)%R -&gt; (0 &lt;= <span class="bv">r</span>)%R -&gt;
+  (<span class="kw">forall</span> p, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section small_ball_linear">T</span>] (<span class="kw">fun</span> t =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">F</span> <span class="bv">t</span>) <span class="bv">p</span>)) -&gt;
+  (<span class="kw">forall</span> p, <span class="bv">D</span> <span class="bv">p</span> -&gt; 0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p</span> *m <span class="bv">S</span>) <span class="bv">p</span>)%R -&gt;
+  (<span class="kw">forall</span> p k, <span class="bv">D</span> <span class="bv">p</span> -&gt; (<span class="bv">k</span> &lt; <span class="bv">n</span>)%N -&gt;
+     \int[<span class="bv">mu</span> <span class="bv">k</span>]_t (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">F</span> <span class="bv">t</span>) <span class="bv">p</span> ^+ 2)%:E = (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p</span> *m <span class="bv">S</span>) <span class="bv">p</span>)%:E) -&gt;
+  (<span class="kw">forall</span> p k, <span class="bv">D</span> <span class="bv">p</span> -&gt; (<span class="bv">k</span> &lt; <span class="bv">n</span>)%N -&gt;
+     \int[<span class="bv">mu</span> <span class="bv">k</span>]_t (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">F</span> <span class="bv">t</span>) <span class="bv">p</span> ^+ 4)%:E &lt;= (<span class="bv">K</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p</span> *m <span class="bv">S</span>) <span class="bv">p</span> ^+ 2)%:E) -&gt;
+  (<span class="kw">forall</span> s, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="bv">n</span>.-tuple <span class="sv" title="section variable T of section small_ball_linear">T</span>] (<span class="bv">Psi</span> ^~ <span class="bv">s</span>)) -&gt;
+  (<span class="kw">forall</span> x s p, <span class="bv">D</span> <span class="bv">p</span> -&gt;
+     `|<span class="bv">n</span>%:R^-1 * \sum_(k &lt; <span class="bv">n</span>) <a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher" title="GaussianAnalysis.probability.symmetrization.rademacher">rademacher</a> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">k</span>) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">F</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">x</span> <span class="bv">k</span>)) <span class="bv">p</span>|
+       &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p</span> *m <span class="bv">S</span>) <span class="bv">p</span>) * <span class="bv">Psi</span> <span class="bv">x</span> <span class="bv">s</span>)%R -&gt;
+  \int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="bv">mu</span> <span class="bv">n</span>]_x (<a class="r k-def" href="GaussianAnalysis.probability.symmetrization.html#rademacher_mean" title="GaussianAnalysis.probability.symmetrization.rademacher_mean">rademacher_mean</a> (<span class="bv">Psi</span> <span class="bv">x</span>))%:E &lt;= <span class="bv">r</span>%:E -&gt;
+  <span class="kw">exists</span> E : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (<span class="bv">n</span>.-tuple <span class="sv" title="section variable T of section small_ball_linear">T</span>), [/\ <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">E</span>,
+    <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="bv">mu</span> <span class="bv">n</span> <span class="bv">E</span> &lt;= (512 * <span class="bv">K</span> * <span class="bv">r</span> / 9)%:E &amp;
+    <span class="kw">forall</span> x, ~ <span class="bv">E</span> <span class="bv">x</span> -&gt; <span class="kw">forall</span> p, <span class="bv">D</span> <span class="bv">p</span> -&gt;
+      (9 / (512 * <span class="bv">K</span>) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">p</span> *m <span class="bv">S</span>) <span class="bv">p</span> &lt;=
+       <span class="bv">n</span>%:R^-1 * \sum_(k &lt; <span class="bv">n</span>) <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">F</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">x</span> <span class="bv">k</span>)) <span class="bv">p</span> ^+ 2)%R].</pre></div></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-affine_moments-490"><span class="sec-kw">section</span><span class="sec-name">affine_moments</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (P : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="bv">T</span> <span class="bv">R</span>).
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-thm" id="integrable_pow4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_pow4">integrable_pow4</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L692" target="_blank" rel="noopener">source, line 692</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P : probability T R] [X : T -&gt; R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] X -&gt;
+(\int[P]_t (X t ^+ 4)%:E &lt; +oo)%E -&gt;
+P.-integrable [set: T] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o X) /\
+P.-integrable [set: T] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> t : T =&gt; X t ^+ 2))</pre></div>
+<div class="decl-doc"><p>A finite fourth moment gives integrable first and second powers.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_pow4 (X : <span class="sv" title="section variable T of section affine_moments">T</span> -&gt; <span class="sv" title="section variable R of section affine_moments">R</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section affine_moments">T</span>] <span class="bv">X</span> -&gt;
+  \int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t (<span class="bv">X</span> <span class="bv">t</span> ^+ 4)%:E &lt; +oo -&gt;
+  <span class="sv" title="section variable P of section affine_moments">P</span>.-integrable [set: <span class="sv" title="section variable T of section affine_moments">T</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">X</span>) /\
+  <span class="sv" title="section variable P of section affine_moments">P</span>.-integrable [set: <span class="sv" title="section variable T of section affine_moments">T</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> t =&gt; <span class="bv">X</span> <span class="bv">t</span> ^+ 2)%R).</pre></div></details>
+</div>
+<div class="decl k-thm" id="integral_affine_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_affine_sqr">integral_affine_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L723" target="_blank" rel="noopener">source, line 723</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P : probability T R] [X : T -&gt; R] (b : R),
+P.-integrable [set: T] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o X) -&gt;
+P.-integrable [set: T] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> t : T =&gt; X t ^+ 2)) -&gt;
+(\int[P]_t ((X t - b) ^+ 2)%:E)%E =
+(\int[P]_t (X t ^+ 2)%:E - (2 * b)%:E * \int[P]_t (X t)%:E + (b ^+ 2)%:E)%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_affine_sqr (X : <span class="sv" title="section variable T of section affine_moments">T</span> -&gt; <span class="sv" title="section variable R of section affine_moments">R</span>) (b : <span class="sv" title="section variable R of section affine_moments">R</span>) :
+  <span class="sv" title="section variable P of section affine_moments">P</span>.-integrable [set: <span class="sv" title="section variable T of section affine_moments">T</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">X</span>) -&gt;
+  <span class="sv" title="section variable P of section affine_moments">P</span>.-integrable [set: <span class="sv" title="section variable T of section affine_moments">T</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> t =&gt; <span class="bv">X</span> <span class="bv">t</span> ^+ 2)%R) -&gt;
+  \int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t ((<span class="bv">X</span> <span class="bv">t</span> - <span class="bv">b</span>) ^+ 2)%:E =
+  \int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t (<span class="bv">X</span> <span class="bv">t</span> ^+ 2)%:E - (2 * <span class="bv">b</span>)%:E * \int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t (<span class="bv">X</span> <span class="bv">t</span>)%:E + (<span class="bv">b</span> ^+ 2)%:E.</pre></div></details>
+</div>
+<div class="decl k-thm" id="integral_affine_pow4_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_affine_pow4_le">integral_affine_pow4_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L750" target="_blank" rel="noopener">source, line 750</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (P : probability T R) [X : T -&gt; R] (b : R),
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] X -&gt;
+(\int[P]_t ((X t - b) ^+ 4)%:E &lt;= 8 * (\int[P]_t (X t ^+ 4)%:E + (b ^+ 4)%:E))%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_affine_pow4_le (X : <span class="sv" title="section variable T of section affine_moments">T</span> -&gt; <span class="sv" title="section variable R of section affine_moments">R</span>) (b : <span class="sv" title="section variable R of section affine_moments">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section affine_moments">T</span>] <span class="bv">X</span> -&gt;
+  \int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t ((<span class="bv">X</span> <span class="bv">t</span> - <span class="bv">b</span>) ^+ 4)%:E &lt;=
+  8%:E * (\int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t (<span class="bv">X</span> <span class="bv">t</span> ^+ 4)%:E + (<span class="bv">b</span> ^+ 4)%:E).</pre></div></details>
+</div>
+<div class="decl k-thm" id="markov_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#markov_ge0">markov_ge0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/small_ball_method.v#L792" target="_blank" rel="noopener">source, line 792</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (P : probability T R) [Y : T -&gt; R] [B : R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] Y -&gt;
+(<span class="kw">forall</span> t : T, 0 &lt;= Y t) -&gt;
+0 &lt; B -&gt; (P [set t | (B &lt; Y t)%R] &lt;= (B^-1)%:E * \int[P]_t (Y t)%:E)%E</pre></div>
+<div class="decl-doc"><p>Markov's inequality.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> markov_ge0 (Y : <span class="sv" title="section variable T of section affine_moments">T</span> -&gt; <span class="sv" title="section variable R of section affine_moments">R</span>) (B : <span class="sv" title="section variable R of section affine_moments">R</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section affine_moments">T</span>] <span class="bv">Y</span> -&gt;
+  (<span class="kw">forall</span> t, 0 &lt;= <span class="bv">Y</span> <span class="bv">t</span>)%R -&gt; (0 &lt; <span class="bv">B</span>)%R -&gt;
+  <span class="sv" title="section variable P of section affine_moments">P</span> [set t | (<span class="bv">B</span> &lt; <span class="bv">Y</span> <span class="bv">t</span>)%R] &lt;= (<span class="bv">B</span>^-1)%:E * \int[<span class="sv" title="section variable P of section affine_moments">P</span>]_t (<span class="bv">Y</span> <span class="bv">t</span>)%:E.</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>ramp</span></li><li><a href="#ramp">ramp</a></li><li><a href="#ramp_ge0">ramp_<wbr>ge0</a></li><li><a href="#ramp_le1">ramp_<wbr>le1</a></li><li><a href="#ramp0">ramp0</a></li><li><a href="#ramp1">ramp1</a></li><li><a href="#ramp_sqr">ramp_<wbr>sqr</a></li><li><a href="#clamp01_lipschitz">clamp01_<wbr>lipschitz</a></li><li><a href="#ramp_lipschitz">ramp_<wbr>lipschitz</a></li><li><a href="#measurable_ramp">measurable_<wbr>ramp</a></li><li class="toc-sec"><span>small_ball_sequence</span></li><li><a href="#small_ball_event">small_<wbr>ball_<wbr>event</a></li><li><a href="#measurable_small_ball_event">measurable_<wbr>small_<wbr>ball_<wbr>event</a></li><li><a href="#small_ball_method">small_<wbr>ball_<wbr>method</a></li><li class="toc-sec"><span>dense_subset</span></li><li><a href="#rat_approx_rV">rat_<wbr>approx_<wbr>rV</a></li><li><a href="#dense_seq_rV">dense_<wbr>seq_<wbr>rV</a></li><li><a href="#mxdot_form_lipschitz">mxdot_<wbr>form_<wbr>lipschitz</a></li><li><a href="#mxdot_form_outer">mxdot_<wbr>form_<wbr>outer</a></li><li class="toc-sec"><span>small_ball_paley_zygmund</span></li><li><a href="#paley_zygmund_half">paley_<wbr>zygmund_<wbr>half</a></li><li class="toc-sec"><span>small_ball_linear</span></li><li><a href="#small_ball_linear">small_<wbr>ball_<wbr>linear</a></li><li class="toc-sec"><span>affine_moments</span></li><li><a href="#integrable_pow4">integrable_<wbr>pow4</a></li><li><a href="#integral_affine_sqr">integral_<wbr>affine_<wbr>sqr</a></li><li><a href="#integral_affine_pow4_le">integral_<wbr>affine_<wbr>pow4_<wbr>le</a></li><li><a href="#markov_ge0">markov_<wbr>ge0</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

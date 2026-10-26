@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.probability.countable_mixture</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod current" href="GaussianAnalysis.probability.countable_mixture.html" aria-current="page">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li><a href="#cmixture_weights">cmixture_<wbr>weights</a></li><li class="toc-sec"><span>countable_mixture</span></li><li><a href="#cmixture">cmixture</a></li><li class="is-local"><a href="#p0">p0</a></li><li class="is-local"><a href="#mterm">mterm</a></li><li class="is-local"><a href="#cmixture_mseries">cmixture_<wbr>mseries</a></li><li class="is-local"><a href="#cmixture0">cmixture0</a></li><li class="is-local"><a href="#cmixture_ge0">cmixture_<wbr>ge0</a></li><li class="is-local"><a href="#cmixture_sigma_additive">cmixture_<wbr>sigma_<wbr>additive</a></li><li><a href="#instance-line-106">instance at line 106</a></li><li class="is-local"><a href="#cmixture_setT">cmixture_<wbr>setT</a></li><li><a href="#instance-line-115">instance at line 115</a></li><li><a href="#cmixtureE">cmixtureE</a></li><li><a href="#ge0_integral_cmixture">ge0_<wbr>integral_<wbr>cmixture</a></li><li><a href="#integral_cmixture">integral_<wbr>cmixture</a></li><li class="toc-sec"><span>countable_tail</span></li><li class="is-local"><a href="#p0-2">p0</a></li><li><a href="#cmixture_tail">cmixture_<wbr>tail</a></li><li><a href="#cmixture_tailE">cmixture_<wbr>tailE</a></li><li><a href="#cmixture_tail_small">cmixture_<wbr>tail_<wbr>small</a></li><li><a href="#cmixture_tail_w">cmixture_<wbr>tail_<wbr>w</a></li><li><a href="#cmixture_tail_series">cmixture_<wbr>tail_<wbr>series</a></li><li><a href="#cmixture_tail_weights">cmixture_<wbr>tail_<wbr>weights</a></li><li class="toc-sec"><span>label_sums</span></li><li><a href="#esumZl">esumZl</a></li><li><a href="#esum_tuple_distr">esum_<wbr>tuple_<wbr>distr</a></li><li><a href="#esum_tuple_prod">esum_<wbr>tuple_<wbr>prod</a></li><li><a href="#esum_fin">esum_<wbr>fin</a></li><li><a href="#bernoulli_tail">bernoulli_<wbr>tail</a></li><li class="toc-sec"><span>label_weights</span></li><li><a href="#cmixture_weights_esum">cmixture_<wbr>weights_<wbr>esum</a></li><li><a href="#label_esum1">label_<wbr>esum1</a></li><li><a href="#labels_le">labels_<wbr>le</a></li><li><a href="#label_esum_le">label_<wbr>esum_<wbr>le</a></li><li><a href="#label_coupling">label_<wbr>coupling</a></li><li class="toc-sec"><span>tuple_prod_cmixture</span></li><li class="is-local"><a href="#lw">lw</a></li><li class="is-local"><a href="#lQ">lQ</a></li><li class="is-local"><a href="#lw0">lw0</a></li><li class="is-local"><a href="#esum_pickle">esum_<wbr>pickle</a></li><li class="is-local"><a href="#qw">qw</a></li><li class="is-local"><a href="#qP">qP</a></li><li class="is-local"><a href="#qw_weights">qw_<wbr>weights</a></li><li class="is-local"><a href="#cmixture_pickle">cmixture_<wbr>pickle</a></li><li><a href="#tuple_prod_cmixture">tuple_<wbr>prod_<wbr>cmixture</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.probability.html">probability</a><span aria-hidden="true">/</span><span>countable_mixture</span></div>
+<h1 class="page-title">Countable mixtures of probabilities</h1>
+<div class="page-meta"><code>GaussianAnalysis.probability.countable_mixture</code><span>library/probability/countable_mixture.v</span><span>669 lines</span><span>17 lemmas and theorems, 5 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>3</b> library modules and 25 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.probability.lindeberg.html">GaussianAnalysis.probability.lindeberg</a></li><li><a href="GaussianAnalysis.probability.conditioning.html">GaussianAnalysis.probability.conditioning</a></li><li><a href="GaussianAnalysis.probability.mixture.html">GaussianAnalysis.probability.mixture</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.boot.finfun, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.esum, mathcomp.analysis.exp, mathcomp.classical.cardinality, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.numfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.arithmetic_tactic, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic</p></div></details><details><summary>Required by <b>6</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Condition/Countable.v" target="_blank" rel="noopener">extension/Condition/Countable.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/ConditionKappa/Countable.v" target="_blank" rel="noopener">extension/ConditionKappa/Countable.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/ConditionKappa/Robust.v" target="_blank" rel="noopener">extension/ConditionKappa/Robust.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Countable/Robust.v" target="_blank" rel="noopener">extension/Countable/Robust.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Countable/Theorem.v" target="_blank" rel="noopener">extension/Countable/Theorem.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Countable/Truncation.v" target="_blank" rel="noopener">extension/Countable/Truncation.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>The mixture of probabilities P s, s : nat, with weights p s &gt;= 0 of sum one, and the sums over the tuples of labels that describe n independent draws from it. The weights are a proof argument of the mixture, as in <a href="GaussianAnalysis.probability.mixture.html">probability/mixture.v</a>.</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_<wbr>weights</a> p</code></td><td class="g-rhs">p s &gt;= 0 for every s and \sum_(s &lt;oo) p s = 1</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> P hp</code></td><td class="g-rhs">for hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p, the probability A |-&gt; \sum_(s &lt;oo) p s P s (A)</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_<wbr>tail</a> p m</code></td><td class="g-rhs">r_m = \sum_(s &gt; m) p s, the weight of the labels above m</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_<wbr>tail_<wbr>w</a> p m s</code></td><td class="g-rhs">p s / r_m for s &gt; m and 0 otherwise, the weights of the normalized tail</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_<wbr>le</a> n m</code></td><td class="g-rhs">the n-tuples of labels in nat that are all &lt;= m</td></tr></table></div>
+<p>Main results:</p>
+<ul><li>cmixtureE: cmixture P hp A = \sum_(s &lt;oo) p s P s (A); the mixture is the measure series mseries of the scaled probabilities p s P s;</li><li><a class="r k-thm" href="#ge0_integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.ge0_integral_cmixture">ge0_integral_cmixture</a>, <a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_cmixture</a>: \int f d(cmixture P hp) = \sum_s p s \int f dP_s for f nonnegative and measurable, and for f integrable under every P s with \sum_s p s \int |f| dP_s &lt; +oo, which is then integrable under the mixture (from ge0_integral_measure_series and integral_measure_series);</li><li><a class="r k-thm" href="#cmixture_tailE" title="GaussianAnalysis.probability.countable_mixture.cmixture_tailE">cmixture_tailE</a>, <a class="r k-thm" href="#cmixture_tail_small" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_small">cmixture_tail_small</a>, <a class="r k-thm" href="#cmixture_tail_series" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_series">cmixture_tail_series</a>, <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a>: \sum_(s &lt;= m) p s + r_m = 1, r_m tends to 0, and for r_m &gt; 0 the normalized tail weights are mixture weights, so that cmixture P with them is the normalized tail \sum_(s &gt; m) p s P s / r_m;</li><li>esumZl, <a class="r k-thm" href="#esum_fin" title="GaussianAnalysis.probability.countable_mixture.esum_fin">esum_fin</a>, <a class="r k-thm" href="#esum_tuple_distr" title="GaussianAnalysis.probability.countable_mixture.esum_tuple_distr">esum_tuple_distr</a>, <a class="r k-thm" href="#esum_tuple_prod" title="GaussianAnalysis.probability.countable_mixture.esum_tuple_prod">esum_tuple_prod</a>: an esum of nonnegative terms commutes with a nonnegative factor; over a subset of a finite type it is a finite sum; if the esum of a_i over nat is a real number x_i for every i &lt; n, the esum over s : n.-tuple nat of \prod_i a_i (s_i) is \prod_i x_i (the countable <a class="r k-thm" href="GaussianAnalysis.probability.mixture.html#big_tuple_distr" title="GaussianAnalysis.probability.mixture.big_tuple_distr">big_tuple_distr</a>), so it is x^n when every a_i is a;</li><li><a class="r k-thm" href="#label_esum1" title="GaussianAnalysis.probability.countable_mixture.label_esum1">label_esum1</a>, <a class="r k-thm" href="#label_esum_le" title="GaussianAnalysis.probability.countable_mixture.label_esum_le">label_esum_le</a>: the product weights \prod_i p (s_i) of the label tuples have sum one, and sum (1 - r_m)^n over <a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_le</a> n m;</li><li><a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a>, <a class="r k-thm" href="#bernoulli_tail" title="GaussianAnalysis.probability.countable_mixture.bernoulli_tail">bernoulli_tail</a>: an esum over the label tuples in nat and a finite sum over the label tuples in 'I_N, of product weights times probabilities, whose weights and probabilities agree on the tuples with all labels at most m, differ by at most 1 - (1 - r_m)^n &lt;= n r_m on every measurable set;</li><li><a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a>: n independent draws from a countable mixture: on every measurable set A of n-tuples, <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (fun=&gt; cmixture P hp) n A is the esum over the label tuples s : n.-tuple nat of \prod_i p (s_i) times <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (fun k =&gt; P (s_k)) n A (the countable form of <a class="r k-thm" href="GaussianAnalysis.probability.mixture.html#tuple_prod_mixture" title="GaussianAnalysis.probability.mixture.tuple_prod_mixture">tuple_prod_mixture</a>; both sides are measures that agree on boxes, the right one written as a countable mixture over nat through pickle).</li></ul></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_<wbr>weights</a></span><span><a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a></span><span><a class="r k-thm" href="#cmixtureE" title="GaussianAnalysis.probability.countable_mixture.cmixtureE">cmixtureE</a></span><span><a class="r k-thm" href="#ge0_integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.ge0_integral_cmixture">ge0_<wbr>integral_<wbr>cmixture</a></span><span><a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_<wbr>cmixture</a></span></div></td><td>The countable mixture of probabilities <code>P s</code>, <code>s : nat</code>, with weights <code>p s &gt;= 0</code> of sum one (<code>\sum_(s &lt;oo) p s = 1</code>), a probability: the measure series of the scaled <code>P s</code>. For <code>f</code> nonnegative and measurable, and for <code>f</code> integrable under every <code>P s</code> with <code>sum_s p_s int |f| dP_s &lt; +oo</code>, <code>int f d(mixture) = sum_s p_s int f dP_s</code>; in the second case <code>f</code> is integrable under the mixture.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_<wbr>tail</a></span><span><a class="r k-thm" href="#cmixture_tailE" title="GaussianAnalysis.probability.countable_mixture.cmixture_tailE">cmixture_<wbr>tailE</a></span><span><a class="r k-thm" href="#cmixture_tail_small" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_small">cmixture_<wbr>tail_<wbr>small</a></span><span><a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_<wbr>tail_<wbr>w</a></span><span><a class="r k-thm" href="#cmixture_tail_series" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_series">cmixture_<wbr>tail_<wbr>series</a></span><span><a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_<wbr>tail_<wbr>weights</a></span></div></td><td>The weight <code>r_m = sum_(s &gt; m) p_s</code> of the labels above <code>m</code>, with <code>sum_(s &lt;= m) p_s + r_m = 1</code>; <code>r_m</code> is at most any <code>eps &gt; 0</code> for some <code>m</code>. For <code>r_m &gt; 0</code> the weights <code>p_s / r_m</code>, <code>s &gt; m</code>, are mixture weights (the normalized tail <code>sum_(s &gt; m) p_s P_s / r_m</code>), and a series of nonnegative terms against them is <code>1 / r_m</code> times the series over <code>s &gt; m</code> against <code>p</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#esumZl" title="GaussianAnalysis.probability.countable_mixture.esumZl">esumZl</a></span><span><a class="r k-thm" href="#esum_fin" title="GaussianAnalysis.probability.countable_mixture.esum_fin">esum_<wbr>fin</a></span><span><a class="r k-thm" href="#esum_tuple_distr" title="GaussianAnalysis.probability.countable_mixture.esum_tuple_distr">esum_<wbr>tuple_<wbr>distr</a></span><span><a class="r k-thm" href="#esum_tuple_prod" title="GaussianAnalysis.probability.countable_mixture.esum_tuple_prod">esum_<wbr>tuple_<wbr>prod</a></span><span><a class="r k-thm" href="#label_esum1" title="GaussianAnalysis.probability.countable_mixture.label_esum1">label_<wbr>esum1</a></span><span><a class="r k-thm" href="#label_esum_le" title="GaussianAnalysis.probability.countable_mixture.label_esum_le">label_<wbr>esum_<wbr>le</a></span></div></td><td>For nonnegative terms, <code>esum (c x_i) = c esum x_i</code> (<code>c &gt;= 0</code>); an <code>esum</code> over a subset of a finite type is a finite sum; if the <code>esum</code> over <code>nat</code> of the nonnegative <code>a_i</code> is a real number <code>x_i</code> for every <code>i &lt; n</code>, the <code>esum</code> over <code>s : n.-tuple nat</code> of <code>prod_i a_i (s_i)</code> is <code>prod_i x_i</code> (the countable form of <a class="code-link k-thm" href="GaussianAnalysis.probability.mixture.html#big_tuple_distr" title="GaussianAnalysis.probability.mixture.big_tuple_distr"><code>big_tuple_distr</code></a>), in particular <code>x^n</code> when every <code>a_i</code> is <code>a</code>. Hence the product weights <code>prod_i p (s_i)</code> of the label tuples have sum one, and sum <code>(1 - r_m)^n</code> over the tuples whose labels are all at most <code>m</code> (<code><a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_le</a> n m</code>).</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_<wbr>coupling</a></span><span><a class="r k-thm" href="#bernoulli_tail" title="GaussianAnalysis.probability.countable_mixture.bernoulli_tail">bernoulli_<wbr>tail</a></span></div></td><td>The coupling of label tuples. A mixture <code>esum_(s : n.-tuple nat) prod_i p (s_i) Q_s(A)</code> and a finite mixture <code>sum_(t : n.-tuple &#x27;I_N) prod_i q (t_i) Q&#x27;_t(A)</code>, <code>m &lt; N</code>, whose weights and probabilities agree on the tuples with all labels at most <code>m</code>, differ by at most <code>1 - (1 - r_m)^n</code> on every measurable <code>A</code>; and <code>1 - (1 - r)^n &lt;= n r</code> for <code>0 &lt;= r &lt;= 1</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_<wbr>prod_<wbr>cmixture</a></span></div></td><td><code>n</code> independent draws from a countable mixture: for weights <code>p</code> with <code><a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p</code>, probabilities <code>P s</code> (<code>s : nat</code>) and every measurable set <code>A</code> of <code>n</code>-tuples, <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (fun=&gt; cmixture P hp) n A</code> is the <code>esum</code> over the label tuples <code>s : n.-tuple nat</code> of <code>prod_k p (s_k)</code> times <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (fun k =&gt; P (s_k)) n A</code>; the countable form of <a class="code-link k-thm" href="GaussianAnalysis.probability.mixture.html#tuple_prod_mixture" title="GaussianAnalysis.probability.mixture.tuple_prod_mixture"><code>tuple_prod_mixture</code></a>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">24 exported, 16 local</span></h2>
+<div class="decl-toolbar"><label><input type="checkbox" id="show-local"> Show the 16 local declarations (<code>Let</code>, <code>Local</code>)</label><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="decl k-def" id="cmixture_weights">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cmixture_weights">cmixture_weights</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L74" target="_blank" rel="noopener">source, line 74</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>], (<span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R) -&gt; <span class="kw">Prop</span></pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cmixture_weights (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="bv">R</span>) : <span class="kw">Prop</span> :=
+  (<span class="kw">forall</span> s, 0 &lt;= <span class="bv">p</span> <span class="bv">s</span>) /\ (\sum_(s &lt;oo) (<span class="bv">p</span> <span class="bv">s</span>)%:E = 1)%E.</pre></div>
+<div class="decl-doc"><p>Weights p s &gt;= 0, s : nat, of sum one.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The countable mixture of probabilities <code>P s</code>, <code>s : nat</code>, with weights <code>p s &gt;= 0</code> of sum one (<code>\sum_(s &lt;oo) p s = 1</code>), a probability: the measure series of the scaled <code>P s</code>. For <code>f</code> nonnegative and measurable, and for <code>f</code> integrable under every <code>P s</code> with <code>sum_s p_s int |f| dP_s &lt; +oo</code>, <code>int f d(mixture) = sum_s p_s int f dP_s</code>; in the second case <code>f</code> is integrable under the mixture.</p>
+</div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a>, <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a>, <a class="r k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a></li>
+</ul></details>
+</div>
+<div class="sec"><div class="sec-head" id="section-countable_mixture-16"><span class="sec-kw">section</span><span class="sec-name">countable_mixture</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Variables</span> (P : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section countable_mixture">T</span> <span class="sv" title="section variable R of section countable_mixture">R</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section countable_mixture">R</span>).
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-def" id="cmixture">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cmixture">cmixture</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L82" target="_blank" rel="noopener">source, line 82</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType],
+(nat -&gt; probability T R) -&gt; <span class="kw">forall</span> [p : nat -&gt; R], <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt; <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T -&gt; \bar R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cmixture (hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> <span class="sv" title="section variable p of section countable_mixture">p</span>) (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section countable_mixture">T</span>) : \bar <span class="sv" title="section variable R of section countable_mixture">R</span> :=
+  \sum_(s &lt;oo) (<span class="sv" title="section variable p of section countable_mixture">p</span> <span class="bv">s</span>)%:E * <span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span> <span class="bv">A</span>.</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a>.</p></div>
+<details class="decl-used"><summary>Used by 12 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#cmixture_mseries" title="GaussianAnalysis.probability.countable_mixture.cmixture_mseries (section-local)">cmixture_mseries</a>, <a class="r k-let" href="#cmixture0" title="GaussianAnalysis.probability.countable_mixture.cmixture0 (section-local)">cmixture0</a>, <a class="r k-let" href="#cmixture_ge0" title="GaussianAnalysis.probability.countable_mixture.cmixture_ge0 (section-local)">cmixture_ge0</a>, <a class="r k-let" href="#cmixture_sigma_additive" title="GaussianAnalysis.probability.countable_mixture.cmixture_sigma_additive (section-local)">cmixture_sigma_additive</a>, <a class="r k-inst" href="#instance-line-106" title="GaussianAnalysis.probability.countable_mixture: HB.instance at line 106">instance at line 106</a>, <a class="r k-let" href="#cmixture_setT" title="GaussianAnalysis.probability.countable_mixture.cmixture_setT (section-local)">cmixture_setT</a>, <a class="r k-inst" href="#instance-line-115" title="GaussianAnalysis.probability.countable_mixture: HB.instance at line 115">instance at line 115</a>, <a class="r k-thm" href="#cmixtureE" title="GaussianAnalysis.probability.countable_mixture.cmixtureE">cmixtureE</a>, <a class="r k-thm" href="#ge0_integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.ge0_integral_cmixture">ge0_integral_cmixture</a>, <a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_cmixture</a>, <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a>, <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<pre class="code ctx"><span class="vk">Variable</span> hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> <span class="sv" title="section variable p of section countable_mixture">p</span>.</pre>
+<div class="decl k-let is-local" id="p0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#p0">p0</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L87" target="_blank" rel="noopener">source, line 87</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> p0 s : (0 &lt;= <span class="sv" title="section variable p of section countable_mixture">p</span> <span class="bv">s</span>)%R.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#mterm" title="GaussianAnalysis.probability.countable_mixture.mterm (section-local)">mterm</a>, <a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="mterm">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mterm">mterm</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L89" target="_blank" rel="noopener">source, line 89</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mterm (s : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : {measure set <span class="sv" title="section variable T of section countable_mixture">T</span> -&gt; \bar <span class="sv" title="section variable R of section countable_mixture">R</span>} := <span class="x" title="mathcomp.analysis.measure_theory.measure_function.mscale">mscale</span> (<span class="x" title="mathcomp.algebra.interval_inference.NngNum">NngNum</span> (<a class="r let k-let" href="#p0" title="GaussianAnalysis.probability.countable_mixture.p0 (section-local)">p0</a> <span class="bv">s</span>)) (<span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span>).</pre></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#cmixture_mseries" title="GaussianAnalysis.probability.countable_mixture.cmixture_mseries (section-local)">cmixture_mseries</a>, <a class="r k-let" href="#cmixture_sigma_additive" title="GaussianAnalysis.probability.countable_mixture.cmixture_sigma_additive (section-local)">cmixture_sigma_additive</a>, <a class="r k-thm" href="#ge0_integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.ge0_integral_cmixture">ge0_integral_cmixture</a>, <a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="cmixture_mseries">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#cmixture_mseries">cmixture_mseries</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L91" target="_blank" rel="noopener">source, line 91</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> cmixture_mseries A : <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span> <span class="bv">A</span> = <span class="x" title="mathcomp.analysis.measure_theory.measure_function.mseries">mseries</span> <a class="r let k-let" href="#mterm" title="GaussianAnalysis.probability.countable_mixture.mterm (section-local)">mterm</a> 0 <span class="bv">A</span>.</pre></div>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#cmixture0" title="GaussianAnalysis.probability.countable_mixture.cmixture0 (section-local)">cmixture0</a>, <a class="r k-let" href="#cmixture_ge0" title="GaussianAnalysis.probability.countable_mixture.cmixture_ge0 (section-local)">cmixture_ge0</a>, <a class="r k-let" href="#cmixture_sigma_additive" title="GaussianAnalysis.probability.countable_mixture.cmixture_sigma_additive (section-local)">cmixture_sigma_additive</a>, <a class="r k-thm" href="#ge0_integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.ge0_integral_cmixture">ge0_integral_cmixture</a>, <a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="cmixture0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#cmixture0">cmixture0</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L94" target="_blank" rel="noopener">source, line 94</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> cmixture0 : <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span> <span class="x" title="mathcomp.classical.classical_sets.set0">set0</span> = 0.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-106" title="GaussianAnalysis.probability.countable_mixture: HB.instance at line 106">instance at line 106</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="cmixture_ge0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#cmixture_ge0">cmixture_ge0</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L97" target="_blank" rel="noopener">source, line 97</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> cmixture_ge0 A : 0 &lt;= <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span> <span class="bv">A</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-106" title="GaussianAnalysis.probability.countable_mixture: HB.instance at line 106">instance at line 106</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="cmixture_sigma_additive">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#cmixture_sigma_additive">cmixture_sigma_additive</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L100" target="_blank" rel="noopener">source, line 100</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> cmixture_sigma_additive : <span class="x" title="mathcomp.analysis.measure_theory.measure_function.semi_sigma_additive">semi_sigma_additive</span> (<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-106" title="GaussianAnalysis.probability.countable_mixture: HB.instance at line 106">instance at line 106</a></li>
+</ul></details>
+</div>
+<div class="decl k-inst" id="instance-line-106">
+<div class="decl-head">
+<span class="decl-kind">instance</span>
+<a class="decl-name" href="#instance-line-106">instance at line 106</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L106" target="_blank" rel="noopener">source, line 106</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">HB.instance Definition</span> _ := <span class="x" title="mathcomp.analysis.measure_theory.measure_function.isMeasure.Build">isMeasure.Build</span> _ _ _ (<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span>)
+  <a class="r let k-let" href="#cmixture0" title="GaussianAnalysis.probability.countable_mixture.cmixture0 (section-local)">cmixture0</a> <a class="r let k-let" href="#cmixture_ge0" title="GaussianAnalysis.probability.countable_mixture.cmixture_ge0 (section-local)">cmixture_ge0</a> <a class="r let k-let" href="#cmixture_sigma_additive" title="GaussianAnalysis.probability.countable_mixture.cmixture_sigma_additive (section-local)">cmixture_sigma_additive</a>.</pre></div>
+</div>
+<div class="decl k-let is-local" id="cmixture_setT">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#cmixture_setT">cmixture_setT</a>
+<span class="tag local" title="Let: local to section countable_mixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L109" target="_blank" rel="noopener">source, line 109</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> cmixture_setT : <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span> [set: <span class="sv" title="section variable T of section countable_mixture">T</span>] = 1.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-115" title="GaussianAnalysis.probability.countable_mixture: HB.instance at line 115">instance at line 115</a></li>
+</ul></details>
+</div>
+<div class="decl k-inst" id="instance-line-115">
+<div class="decl-head">
+<span class="decl-kind">instance</span>
+<a class="decl-name" href="#instance-line-115">instance at line 115</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L115" target="_blank" rel="noopener">source, line 115</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">HB.instance Definition</span> _ :=
+  @<span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Measure_isProbability.Build">Measure_isProbability.Build</span> _ _ <span class="sv" title="section variable R of section countable_mixture">R</span> (<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span>) <a class="r let k-let" href="#cmixture_setT" title="GaussianAnalysis.probability.countable_mixture.cmixture_setT (section-local)">cmixture_setT</a>.</pre></div>
+</div>
+<div class="decl k-thm" id="cmixtureE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cmixtureE">cmixtureE</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L118" target="_blank" rel="noopener">source, line 118</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (P : nat -&gt; probability T R) [p : nat -&gt; R] (hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p) 
+  (A : set T),
+<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> P hp A = \big[+%E/0]_(0 &lt;= s &lt;oo) ((p s)%:E * P s A)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cmixtureE A : <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span> <span class="bv">A</span> = \sum_(s &lt;oo) (<span class="sv" title="section variable p of section countable_mixture">p</span> <span class="bv">s</span>)%:E * <span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span> <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a>, <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ge0_integral_cmixture">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ge0_integral_cmixture">ge0_integral_cmixture</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L121" target="_blank" rel="noopener">source, line 121</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (P : nat -&gt; probability T R) [p : nat -&gt; R] (hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p) 
+  [D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T] [f : T -&gt; \bar R],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> D -&gt;
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> D f -&gt;
+(<span class="kw">forall</span> x : T, D x -&gt; (0%R &lt;= f x)%E) -&gt;
+(\int[<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> P hp]_(x <span class="kw">in</span> D) f x)%E =
+\big[+%E/0]_(0 &lt;= s &lt;oo) ((p s)%:E * \int[P s]_(x <span class="kw">in</span> D) f x)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ge0_integral_cmixture (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section countable_mixture">T</span>) (f : <span class="sv" title="section variable T of section countable_mixture">T</span> -&gt; \bar <span class="sv" title="section variable R of section countable_mixture">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">D</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> <span class="bv">D</span> <span class="bv">f</span> -&gt; (<span class="kw">forall</span> x, <span class="bv">D</span> <span class="bv">x</span> -&gt; 0 &lt;= <span class="bv">f</span> <span class="bv">x</span>) -&gt;
+  \int[<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) <span class="bv">f</span> <span class="bv">x</span> =
+  \sum_(s &lt;oo) (<span class="sv" title="section variable p of section countable_mixture">p</span> <span class="bv">s</span>)%:E * \int[<span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) <span class="bv">f</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_cmixture" title="GaussianAnalysis.probability.countable_mixture.integral_cmixture">integral_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_cmixture">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_cmixture">integral_cmixture</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L133" target="_blank" rel="noopener">source, line 133</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [P : nat -&gt; probability T R] [p : nat -&gt; R] (hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p) 
+  [D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T] [f : T -&gt; \bar R],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> D -&gt;
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> D f -&gt;
+(<span class="kw">forall</span> s : nat, (P s).-integrable D f) -&gt;
+(\big[+%E/0%R]_(0 &lt;= s &lt;oo) ((p s)%:E * \int[P s]_(x <span class="kw">in</span> D) `|f x|) &lt; +oo)%E -&gt;
+(<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> P hp).-integrable D f /\
+(\int[<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> P hp]_(x <span class="kw">in</span> D) f x)%E =
+\big[+%E/0]_(0 &lt;= s &lt;oo) ((p s)%:E * \int[P s]_(x <span class="kw">in</span> D) f x)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_cmixture (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section countable_mixture">T</span>) (f : <span class="sv" title="section variable T of section countable_mixture">T</span> -&gt; \bar <span class="sv" title="section variable R of section countable_mixture">R</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">D</span> -&gt;
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> <span class="bv">D</span> <span class="bv">f</span> -&gt; (<span class="kw">forall</span> s, (<span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span>).-integrable <span class="bv">D</span> <span class="bv">f</span>) -&gt;
+  \sum_(s &lt;oo) (<span class="sv" title="section variable p of section countable_mixture">p</span> <span class="bv">s</span>)%:E * \int[<span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) `|<span class="bv">f</span> <span class="bv">x</span>| &lt; +oo -&gt;
+  (<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span>).-integrable <span class="bv">D</span> <span class="bv">f</span> /\
+  \int[<a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable hp of section countable_mixture">hp</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) <span class="bv">f</span> <span class="bv">x</span> =
+  \sum_(s &lt;oo) (<span class="sv" title="section variable p of section countable_mixture">p</span> <span class="bv">s</span>)%:E * \int[<span class="sv" title="section variable P of section countable_mixture">P</span> <span class="bv">s</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) <span class="bv">f</span> <span class="bv">x</span>.</pre></div></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-countable_tail-106"><span class="sec-kw">section</span><span class="sec-name">countable_tail</span></div>
+<pre class="code ctx"><span class="vk">Context</span> (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="bv">R</span>).
+<span class="vk">Hypothesis</span> hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> <span class="sv" title="section variable p of section countable_tail">p</span>.
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-let is-local" id="p0-2">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#p0-2">p0</a>
+<span class="tag local" title="Let: local to section countable_tail, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L195" target="_blank" rel="noopener">source, line 195</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> p0 s : (0 &lt;= <span class="sv" title="section variable p of section countable_tail">p</span> <span class="bv">s</span>)%R.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cmixture_tail_small" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_small">cmixture_tail_small</a>, <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="cmixture_tail">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cmixture_tail">cmixture_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L198" target="_blank" rel="noopener">source, line 198</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [R : realType], (<span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R) -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cmixture_tail (m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="sv" title="section variable R of section countable_tail">R</span> :=
+  <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (\sum_(s &lt;oo | (<span class="bv">m</span> &lt; <span class="bv">s</span>)%N) (<span class="sv" title="section variable p of section countable_tail">p</span> <span class="bv">s</span>)%:E).</pre></div>
+<div class="decl-doc"><p>The mass of the labels s &gt; m.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The weight <code>r_m = sum_(s &gt; m) p_s</code> of the labels above <code>m</code>, with <code>sum_(s &lt;= m) p_s + r_m = 1</code>; <code>r_m</code> is at most any <code>eps &gt; 0</code> for some <code>m</code>. For <code>r_m &gt; 0</code> the weights <code>p_s / r_m</code>, <code>s &gt; m</code>, are mixture weights (the normalized tail <code>sum_(s &gt; m) p_s P_s / r_m</code>), and a series of nonnegative terms against them is <code>1 / r_m</code> times the series over <code>s &gt; m</code> against <code>p</code>.</p>
+</div>
+<details class="decl-used"><summary>Used by 7 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cmixture_tailE" title="GaussianAnalysis.probability.countable_mixture.cmixture_tailE">cmixture_tailE</a>, <a class="r k-thm" href="#cmixture_tail_small" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_small">cmixture_tail_small</a>, <a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_tail_w</a>, <a class="r k-thm" href="#cmixture_tail_series" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_series">cmixture_tail_series</a>, <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a>, <a class="r k-thm" href="#label_esum_le" title="GaussianAnalysis.probability.countable_mixture.label_esum_le">label_esum_le</a>, <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cmixture_tailE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cmixture_tailE">cmixture_tailE</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L201" target="_blank" rel="noopener">source, line 201</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt;
+<span class="kw">forall</span> m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+\big[+%E/0]_(0 &lt;= s &lt;oo | (m &lt; s)%N) (p s)%:E = (<a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m)%:E /\
+\sum_(s &lt; m.+1) p s + <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m = 1</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cmixture_tailE (m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) :
+  \sum_(s &lt;oo | (<span class="bv">m</span> &lt; <span class="bv">s</span>)%N) (<span class="sv" title="section variable p of section countable_tail">p</span> <span class="bv">s</span>)%:E = (<a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span>)%:E /\
+  (\sum_(s &lt; <span class="bv">m</span>.+1) <span class="sv" title="section variable p of section countable_tail">p</span> <span class="bv">s</span> + <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span> = 1)%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cmixture_tail_small" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_small">cmixture_tail_small</a>, <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a>, <a class="r k-thm" href="#label_esum_le" title="GaussianAnalysis.probability.countable_mixture.label_esum_le">label_esum_le</a>, <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cmixture_tail_small">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cmixture_tail_small">cmixture_tail_small</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L221" target="_blank" rel="noopener">source, line 221</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : nat -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt; <span class="kw">forall</span> [eps : R], 0 &lt; eps -&gt; <span class="kw">exists</span> m : nat, <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m &lt;= eps</pre></div>
+<div class="decl-doc"><p>The tail mass tends to zero: it is at most any eps &gt; 0 from some m on.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cmixture_tail_small (eps : <span class="sv" title="section variable R of section countable_tail">R</span>) : (0 &lt; <span class="bv">eps</span>)%R -&gt;
+  <span class="kw">exists</span> m, (<a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span> &lt;= <span class="bv">eps</span>)%R.</pre></div></details>
+</div>
+<div class="decl k-def" id="cmixture_tail_w">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cmixture_tail_w">cmixture_tail_w</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L239" target="_blank" rel="noopener">source, line 239</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [R : realType], (<span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R) -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cmixture_tail_w (m s : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="sv" title="section variable R of section countable_tail">R</span> :=
+  (<span class="kw">if</span> (<span class="bv">m</span> &lt; <span class="bv">s</span>)%N <span class="kw">then</span> <span class="sv" title="section variable p of section countable_tail">p</span> <span class="bv">s</span> / <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span> <span class="kw">else</span> 0)%R.</pre></div>
+<div class="decl-doc"><p>The normalized tail: the weights p s / r_m for s &gt; m, and 0 for s &lt;= m.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a>.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cmixture_tail_series" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_series">cmixture_tail_series</a>, <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cmixture_tail_series">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cmixture_tail_series">cmixture_tail_series</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L242" target="_blank" rel="noopener">source, line 242</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt;
+<span class="kw">forall</span> [m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [F : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; \bar R],
+0 &lt; <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m -&gt;
+(<span class="kw">forall</span> s : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, (0%R &lt;= F s)%E) -&gt;
+\big[+%E/0]_(0 &lt;= s &lt;oo) ((<a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_tail_w</a> p m s)%:E * F s)%E =
+(((<a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m)^-1)%:E * \big[+%E/0%R]_(0 &lt;= s &lt;oo | (m &lt; s)%N) ((p s)%:E * F s))%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cmixture_tail_series m (F : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; \bar <span class="sv" title="section variable R of section countable_tail">R</span>) : (0 &lt; <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span>)%R -&gt;
+  (<span class="kw">forall</span> s, 0 &lt;= <span class="bv">F</span> <span class="bv">s</span>) -&gt;
+  \sum_(s &lt;oo) (<a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_tail_w</a> <span class="bv">m</span> <span class="bv">s</span>)%:E * <span class="bv">F</span> <span class="bv">s</span> =
+  ((<a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span>)^-1)%:E * \sum_(s &lt;oo | (<span class="bv">m</span> &lt; <span class="bv">s</span>)%N) (<span class="sv" title="section variable p of section countable_tail">p</span> <span class="bv">s</span>)%:E * <span class="bv">F</span> <span class="bv">s</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cmixture_tail_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_weights">cmixture_tail_weights</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cmixture_tail_weights">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cmixture_tail_weights">cmixture_tail_weights</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L255" target="_blank" rel="noopener">source, line 255</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : nat -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt;
+<span class="kw">forall</span> [m : nat], 0 &lt; <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m -&gt; <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> (<a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_tail_w</a> p m)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cmixture_tail_weights m : (0 &lt; <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="bv">m</span>)%R -&gt;
+  <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> (<a class="r k-def" href="#cmixture_tail_w" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail_w">cmixture_tail_w</a> <span class="bv">m</span>).</pre></div></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-label_sums-168"><span class="sec-kw">section</span><span class="sec-name">label_sums</span></div>
+<pre class="code ctx"><span class="vk">Context</span> (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-thm" id="esumZl">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#esumZl">esumZl</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L274" target="_blank" rel="noopener">source, line 274</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [I : <span class="x" title="mathcomp.boot.choice.Choice.Exports.choiceType">choiceType</span>] [S : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> I] [a : I -&gt; \bar R] [c : R],
+0 &lt;= c -&gt;
+(<span class="kw">forall</span> i : I, S i -&gt; (0%R &lt;= a i)%E) -&gt;
+\esum_(i <span class="kw">in</span> S) (c%:E * a i)%E = (c%:E * (\esum_(i <span class="kw">in</span> S) a i))%E</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For nonnegative terms, <code>esum (c x_i) = c esum x_i</code> (<code>c &gt;= 0</code>); an <code>esum</code> over a subset of a finite type is a finite sum; if the <code>esum</code> over <code>nat</code> of the nonnegative <code>a_i</code> is a real number <code>x_i</code> for every <code>i &lt; n</code>, the <code>esum</code> over <code>s : n.-tuple nat</code> of <code>prod_i a_i (s_i)</code> is <code>prod_i x_i</code> (the countable form of <a class="code-link k-thm" href="GaussianAnalysis.probability.mixture.html#big_tuple_distr" title="GaussianAnalysis.probability.mixture.big_tuple_distr"><code>big_tuple_distr</code></a>), in particular <code>x^n</code> when every <code>a_i</code> is <code>a</code>. Hence the product weights <code>prod_i p (s_i)</code> of the label tuples have sum one, and sum <code>(1 - r_m)^n</code> over the tuples whose labels are all at most <code>m</code> (<code><a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_le</a> n m</code>).</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> esumZl (I : <span class="x" title="mathcomp.boot.choice.Choice.Exports.choiceType">choiceType</span>) (S : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="bv">I</span>) (a : <span class="bv">I</span> -&gt; \bar <span class="sv" title="section variable R of section label_sums">R</span>) (c : <span class="sv" title="section variable R of section label_sums">R</span>) :
+  (0 &lt;= <span class="bv">c</span>)%R -&gt; (<span class="kw">forall</span> i, <span class="bv">S</span> <span class="bv">i</span> -&gt; 0 &lt;= <span class="bv">a</span> <span class="bv">i</span>) -&gt;
+  \esum_(i <span class="kw">in</span> <span class="bv">S</span>) (<span class="bv">c</span>%:E * <span class="bv">a</span> <span class="bv">i</span>) = <span class="bv">c</span>%:E * \esum_(i <span class="kw">in</span> <span class="bv">S</span>) <span class="bv">a</span> <span class="bv">i</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#esum_tuple_distr" title="GaussianAnalysis.probability.countable_mixture.esum_tuple_distr">esum_tuple_distr</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="esum_tuple_distr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#esum_tuple_distr">esum_tuple_distr</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L296" target="_blank" rel="noopener">source, line 296</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [a : &#x27;I_n -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R] [x : &#x27;I_n -&gt; R],
+(<span class="kw">forall</span> (i : &#x27;I_n) (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>), 0 &lt;= a i k) -&gt;
+(<span class="kw">forall</span> i : &#x27;I_n, \esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (a i k)%:E = (x i)%:E) -&gt;
+\esum_(s <span class="kw">in</span> [set: n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; n) a i (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s i))%:E = (\prod_(i &lt; n) x i)%:E</pre></div>
+<div class="decl-doc"><p>The esum over the n-tuples of labels of products is the product of the esums over the labels: the countable form of <a class="r k-thm" href="GaussianAnalysis.probability.mixture.html#big_tuple_distr" title="GaussianAnalysis.probability.mixture.big_tuple_distr">big_tuple_distr</a>.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#esumZl" title="GaussianAnalysis.probability.countable_mixture.esumZl">esumZl</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> esum_tuple_distr (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) (a : &#x27;I_<span class="bv">n</span> -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section label_sums">R</span>) (x : &#x27;I_<span class="bv">n</span> -&gt; <span class="sv" title="section variable R of section label_sums">R</span>) :
+  (<span class="kw">forall</span> i k, (0 &lt;= <span class="bv">a</span> <span class="bv">i</span> <span class="bv">k</span>)%R) -&gt;
+  (<span class="kw">forall</span> i, \esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (<span class="bv">a</span> <span class="bv">i</span> <span class="bv">k</span>)%:E = (<span class="bv">x</span> <span class="bv">i</span>)%:E) -&gt;
+  \esum_(s <span class="kw">in</span> [set: <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; <span class="bv">n</span>) <span class="bv">a</span> <span class="bv">i</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>))%:E =
+  (\prod_(i &lt; <span class="bv">n</span>) <span class="bv">x</span> <span class="bv">i</span>)%:E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#esum_tuple_prod" title="GaussianAnalysis.probability.countable_mixture.esum_tuple_prod">esum_tuple_prod</a>, <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="esum_tuple_prod">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#esum_tuple_prod">esum_tuple_prod</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L345" target="_blank" rel="noopener">source, line 345</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [a : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R] [x : R] (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>),
+(<span class="kw">forall</span> k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, 0 &lt;= a k) -&gt;
+\esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (a k)%:E = x%:E -&gt;
+\esum_(s <span class="kw">in</span> [set: n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; n) a (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s i))%:E = (x ^+ n)%:E</pre></div>
+<div class="decl-doc"><p>The sum over the n-tuples of labels of the product weights is the n-th power of the sum of the weights.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#esumZl" title="GaussianAnalysis.probability.countable_mixture.esumZl">esumZl</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> esum_tuple_prod (a : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section label_sums">R</span>) (x : <span class="sv" title="section variable R of section label_sums">R</span>) (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) :
+  (<span class="kw">forall</span> k, (0 &lt;= <span class="bv">a</span> <span class="bv">k</span>)%R) -&gt; \esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (<span class="bv">a</span> <span class="bv">k</span>)%:E = <span class="bv">x</span>%:E -&gt;
+  \esum_(s <span class="kw">in</span> [set: <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; <span class="bv">n</span>) <span class="bv">a</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>))%:E =
+  (<span class="bv">x</span> ^+ <span class="bv">n</span>)%:E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#label_esum1" title="GaussianAnalysis.probability.countable_mixture.label_esum1">label_esum1</a>, <a class="r k-thm" href="#label_esum_le" title="GaussianAnalysis.probability.countable_mixture.label_esum_le">label_esum_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="esum_fin">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#esum_fin">esum_fin</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L357" target="_blank" rel="noopener">source, line 357</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [T : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>] [P : <span class="x" title="Corelib.ssr.ssrbool.pred">pred</span> T] [a : T -&gt; \bar R],
+(<span class="kw">forall</span> t : T, P t -&gt; (0%R &lt;= a t)%E) -&gt;
+\esum_(t <span class="kw">in</span> [set t | P t]) a t = \sum_(t | P t) a t</pre></div>
+<div class="decl-doc"><p>An esum over a subset of a finite type is a finite sum.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#esumZl" title="GaussianAnalysis.probability.countable_mixture.esumZl">esumZl</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> esum_fin (T : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>) (P : <span class="x" title="Corelib.ssr.ssrbool.pred">pred</span> <span class="bv">T</span>) (a : <span class="bv">T</span> -&gt; \bar <span class="sv" title="section variable R of section label_sums">R</span>) :
+  (<span class="kw">forall</span> t, <span class="bv">P</span> <span class="bv">t</span> -&gt; 0 &lt;= <span class="bv">a</span> <span class="bv">t</span>) -&gt;
+  \esum_(t <span class="kw">in</span> [set t | <span class="bv">P</span> <span class="bv">t</span>]) <span class="bv">a</span> <span class="bv">t</span> = \sum_(t | <span class="bv">P</span> <span class="bv">t</span>) <span class="bv">a</span> <span class="bv">t</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernoulli_tail">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernoulli_tail">bernoulli_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L375" target="_blank" rel="noopener">source, line 375</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [r : R] (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>), 0 &lt;= r &lt;= 1 -&gt; 1 - (1 - r) ^+ n &lt;= n%:R * r</pre></div>
+<div class="decl-doc"><p>Bernoulli's inequality, as used for the mass of the label tuples with some label above m.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernoulli_tail (r : <span class="sv" title="section variable R of section label_sums">R</span>) (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : (0 &lt;= <span class="bv">r</span> &lt;= 1)%R -&gt;
+  (1 - (1 - <span class="bv">r</span>) ^+ <span class="bv">n</span> &lt;= <span class="bv">n</span>%:R * <span class="bv">r</span>)%R.</pre></div></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-label_weights-251"><span class="sec-kw">section</span><span class="sec-name">label_weights</span></div>
+<pre class="code ctx"><span class="vk">Context</span> (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="bv">R</span>).
+<span class="vk">Hypothesis</span> hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> <span class="sv" title="section variable p of section label_weights">p</span>.
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-thm" id="cmixture_weights_esum">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cmixture_weights_esum">cmixture_weights_esum</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L393" target="_blank" rel="noopener">source, line 393</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt; \esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (p k)%:E = 1%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cmixture_weights_esum : \esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (<span class="sv" title="section variable p of section label_weights">p</span> <span class="bv">k</span>)%:E = 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#label_esum1" title="GaussianAnalysis.probability.countable_mixture.label_esum1">label_esum1</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="label_esum1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#label_esum1">label_esum1</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L397" target="_blank" rel="noopener">source, line 397</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt;
+<span class="kw">forall</span> n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, \esum_(s <span class="kw">in</span> [set: n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; n) p (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s i))%:E = 1%E</pre></div>
+<div class="decl-doc"><p>The label tuples s : n.-tuple nat: the product weights have sum one.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#esumZl" title="GaussianAnalysis.probability.countable_mixture.esumZl">esumZl</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> label_esum1 n :
+  \esum_(s <span class="kw">in</span> [set: <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; <span class="bv">n</span>) <span class="sv" title="section variable p of section label_weights">p</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>))%:E = 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a>, <a class="r k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="labels_le">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#labels_le">labels_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L402" target="_blank" rel="noopener">source, line 402</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>], <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>)</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> labels_le (n m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (<span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) :=
+  [set s | <span class="x" title="mathcomp.boot.seq.all">all</span> (<span class="kw">fun</span> k =&gt; (<span class="bv">k</span> &lt;= <span class="bv">m</span>)%N) <span class="bv">s</span>].</pre></div>
+<div class="decl-doc"><p>The label tuples whose labels are all at most m.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#label_esum_le" title="GaussianAnalysis.probability.countable_mixture.label_esum_le">label_esum_le</a>, <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a></li>
+</ul></details>
+</div>
+<pre class="code ctx"><span class="vk">Arguments</span> <a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_le</a> : clear implicits.</pre>
+<div class="decl k-thm" id="label_esum_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#label_esum_le">label_esum_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L406" target="_blank" rel="noopener">source, line 406</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : nat -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt;
+<span class="kw">forall</span> n m : nat,
+\esum_(s <span class="kw">in</span> <a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_le</a> m) (\prod_(i &lt; n) p (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s i))%:E =
+((1 - <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m) ^+ n)%:E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#esumZl" title="GaussianAnalysis.probability.countable_mixture.esumZl">esumZl</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> label_esum_le n m :
+  \esum_(s <span class="kw">in</span> <a class="r k-def" href="#labels_le" title="GaussianAnalysis.probability.countable_mixture.labels_le">labels_le</a> <span class="bv">n</span> <span class="bv">m</span>) (\prod_(i &lt; <span class="bv">n</span>) <span class="sv" title="section variable p of section label_weights">p</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>))%:E =
+  ((1 - <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="sv" title="section variable p of section label_weights">p</span> <span class="bv">m</span>) ^+ <span class="bv">n</span>)%:E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#label_coupling" title="GaussianAnalysis.probability.countable_mixture.label_coupling">label_coupling</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="label_coupling">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#label_coupling">label_coupling</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L442" target="_blank" rel="noopener">source, line 442</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R],
+<a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p -&gt;
+<span class="kw">forall</span> [dT : measure_display] [T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> dT] [n m N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] 
+  [q : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R] [Q : n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> T R]
+  [Q&#x27; : n.-tuple &#x27;I_N -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> T R] [A : set T],
+dT.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt;
+(m &lt; N)%N -&gt;
+(<span class="kw">forall</span> k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, (k &lt; N)%N -&gt; 0 &lt;= q k) -&gt;
+\sum_(k &lt; N) q k = 1 -&gt;
+(<span class="kw">forall</span> k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, (k &lt;= m)%N -&gt; q k = p k) -&gt;
+(<span class="kw">forall</span> t : n.-tuple &#x27;I_N,
+ <span class="x" title="mathcomp.boot.seq.all">all</span> (<span class="kw">fun</span> k : &#x27;I_N =&gt; (k &lt;= m)%N) t -&gt; Q&#x27; t A = Q (<span class="x" title="mathcomp.boot.tuple.map_tuple">map_tuple</span> (<span class="x" title="mathcomp.boot.fintype.nat_of_ord">nat_of_ord</span> (n:=N)) t) A) -&gt;
+(`|\esum_(s <span class="kw">in</span> [set: n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; n) p (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s i))%:E * Q s A -
+   (\sum_t ((\prod_(i &lt; n) q (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> t i))%:E * Q&#x27; t A)%E)%R| &lt;=
+ (1 - (1 - <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> p m) ^+ n)%:E)%E</pre></div>
+<div class="decl-doc"><p>The coupling of label tuples. A mixture over the tuples s of labels in nat, with the product weights of p, and a mixture over the tuples t of labels in 'I_N, with the product weights of q, whose weights and laws agree on the tuples with all labels at most m, differ by at most the mass 1 - (1 - r_m)^n of the tuples with some label above m.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The coupling of label tuples. A mixture <code>esum_(s : n.-tuple nat) prod_i p (s_i) Q_s(A)</code> and a finite mixture <code>sum_(t : n.-tuple &#x27;I_N) prod_i q (t_i) Q&#x27;_t(A)</code>, <code>m &lt; N</code>, whose weights and probabilities agree on the tuples with all labels at most <code>m</code>, differ by at most <code>1 - (1 - r_m)^n</code> on every measurable <code>A</code>; and <code>1 - (1 - r)^n &lt;= n r</code> for <code>0 &lt;= r &lt;= 1</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> label_coupling dT (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">dT</span>) (n m N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) (q : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section label_weights">R</span>)
+    (Q : <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="bv">T</span> <span class="sv" title="section variable R of section label_weights">R</span>)
+    (Q&#x27; : <span class="bv">n</span>.-tuple &#x27;I_<span class="bv">N</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="bv">T</span> <span class="sv" title="section variable R of section label_weights">R</span>) (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="bv">T</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt; (<span class="bv">m</span> &lt; <span class="bv">N</span>)%N -&gt;
+  (<span class="kw">forall</span> k, (<span class="bv">k</span> &lt; <span class="bv">N</span>)%N -&gt; (0 &lt;= <span class="bv">q</span> <span class="bv">k</span>)%R) -&gt; (\sum_(k &lt; <span class="bv">N</span>) <span class="bv">q</span> <span class="bv">k</span> = 1)%R -&gt;
+  (<span class="kw">forall</span> k, (<span class="bv">k</span> &lt;= <span class="bv">m</span>)%N -&gt; <span class="bv">q</span> <span class="bv">k</span> = <span class="sv" title="section variable p of section label_weights">p</span> <span class="bv">k</span>) -&gt;
+  (<span class="kw">forall</span> t : <span class="bv">n</span>.-tuple &#x27;I_<span class="bv">N</span>, <span class="x" title="mathcomp.boot.seq.all">all</span> (<span class="kw">fun</span> k : &#x27;I_<span class="bv">N</span> =&gt; (<span class="bv">k</span> &lt;= <span class="bv">m</span>)%N) <span class="bv">t</span> -&gt;
+     <span class="bv">Q&#x27;</span> <span class="bv">t</span> <span class="bv">A</span> = <span class="bv">Q</span> (<span class="x" title="mathcomp.boot.tuple.map_tuple">map_tuple</span> (@<span class="x" title="mathcomp.boot.fintype.nat_of_ord">nat_of_ord</span> <span class="bv">N</span>) <span class="bv">t</span>) <span class="bv">A</span>) -&gt;
+  `|\esum_(s <span class="kw">in</span> [set: <span class="bv">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (\prod_(i &lt; <span class="bv">n</span>) <span class="sv" title="section variable p of section label_weights">p</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>))%:E * <span class="bv">Q</span> <span class="bv">s</span> <span class="bv">A</span>
+    - \sum_(t : <span class="bv">n</span>.-tuple &#x27;I_<span class="bv">N</span>) (\prod_(i &lt; <span class="bv">n</span>) <span class="bv">q</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">t</span> <span class="bv">i</span>))%:E * <span class="bv">Q&#x27;</span> <span class="bv">t</span> <span class="bv">A</span>|
+  &lt;= (1 - (1 - <a class="r k-def" href="#cmixture_tail" title="GaussianAnalysis.probability.countable_mixture.cmixture_tail">cmixture_tail</a> <span class="sv" title="section variable p of section label_weights">p</span> <span class="bv">m</span>) ^+ <span class="bv">n</span>)%:E.</pre></div></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-tuple_prod_cmixture-397"><span class="sec-kw">section</span><span class="sec-name">tuple_prod_cmixture</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Variables</span> (P : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section tuple_prod_cmixture">T</span> <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span>).
+<span class="vk">Hypothesis</span> hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> <span class="sv" title="section variable p of section tuple_prod_cmixture">p</span>.
+<span class="vk">Variable</span> n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>.
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-let is-local" id="lw">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#lw">lw</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L576" target="_blank" rel="noopener">source, line 576</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> lw (s : <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span> := \prod_(i &lt; <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>) <span class="sv" title="section variable p of section tuple_prod_cmixture">p</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>).</pre></div>
+<div class="decl-doc"><p>The weight and the law of the label tuple s.</p></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#lw0" title="GaussianAnalysis.probability.countable_mixture.lw0 (section-local)">lw0</a>, <a class="r k-let" href="#qw" title="GaussianAnalysis.probability.countable_mixture.qw (section-local)">qw</a>, <a class="r k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a>, <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="lQ">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#lQ">lQ</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L578" target="_blank" rel="noopener">source, line 578</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> lQ (s : <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> (<span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="sv" title="section variable T of section tuple_prod_cmixture">T</span>) <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span> :=
+  <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (<span class="kw">fun</span> k =&gt; <span class="sv" title="section variable P of section tuple_prod_cmixture">P</span> (<span class="x" title="mathcomp.boot.seq.nth">nth</span> 0%N <span class="bv">s</span> <span class="bv">k</span>)) <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.</pre></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#qP" title="GaussianAnalysis.probability.countable_mixture.qP (section-local)">qP</a>, <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a>, <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="lw0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#lw0">lw0</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L581" target="_blank" rel="noopener">source, line 581</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> lw0 s : (0 &lt;= <a class="r let k-let" href="#lw" title="GaussianAnalysis.probability.countable_mixture.lw (section-local)">lw</a> <span class="bv">s</span>)%R.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="esum_pickle">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#esum_pickle">esum_pickle</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L585" target="_blank" rel="noopener">source, line 585</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> esum_pickle (G : <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; \bar <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span>) : (<span class="kw">forall</span> s, 0 &lt;= <span class="bv">G</span> <span class="bv">s</span>) -&gt;
+  \esum_(k <span class="kw">in</span> [set: <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (<span class="kw">if</span> <span class="x" title="mathcomp.boot.choice.pickle_inv">pickle_inv</span> <span class="bv">k</span> <span class="kw">is</span> <span class="x" title="Corelib.Init.Datatypes.Some">Some</span> s <span class="kw">then</span> <span class="bv">G</span> s <span class="kw">else</span> 0) =
+  \esum_(s <span class="kw">in</span> [set: <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) <span class="bv">G</span> <span class="bv">s</span>.</pre></div>
+<div class="decl-doc"><p>An esum over the label tuples, read through the enumeration pickle.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a>, <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="qw">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#qw">qw</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L608" target="_blank" rel="noopener">source, line 608</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> qw (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span> := <span class="kw">if</span> <span class="x" title="mathcomp.boot.choice.pickle_inv">pickle_inv</span> <span class="bv">k</span> <span class="kw">is</span> <span class="x" title="Corelib.Init.Datatypes.Some">Some</span> s <span class="kw">then</span> <a class="r let k-let" href="#lw" title="GaussianAnalysis.probability.countable_mixture.lw (section-local)">lw</a> s <span class="kw">else</span> 0%R.</pre></div>
+<div class="decl-doc"><p>The label tuples as a countable mixture indexed by nat.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a>, <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="qP">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#qP">qP</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L610" target="_blank" rel="noopener">source, line 610</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> qP (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> (<span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="sv" title="section variable T of section tuple_prod_cmixture">T</span>) <span class="sv" title="section variable R of section tuple_prod_cmixture">R</span> :=
+  <span class="kw">if</span> <span class="x" title="mathcomp.boot.choice.pickle_inv">pickle_inv</span> <span class="bv">k</span> <span class="kw">is</span> <span class="x" title="Corelib.Init.Datatypes.Some">Some</span> s <span class="kw">then</span> <a class="r let k-let" href="#lQ" title="GaussianAnalysis.probability.countable_mixture.lQ (section-local)">lQ</a> s <span class="kw">else</span> <a class="r let k-let" href="#lQ" title="GaussianAnalysis.probability.countable_mixture.lQ (section-local)">lQ</a> [tuple 0%N | _ &lt; <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>].</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a>, <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="qw_weights">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#qw_weights">qw_weights</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L613" target="_blank" rel="noopener">source, line 613</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> qw_weights : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> <a class="r let k-let" href="#qw" title="GaussianAnalysis.probability.countable_mixture.qw (section-local)">qw</a>.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#cmixture_pickle" title="GaussianAnalysis.probability.countable_mixture.cmixture_pickle (section-local)">cmixture_pickle</a>, <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="cmixture_pickle">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#cmixture_pickle">cmixture_pickle</a>
+<span class="tag local" title="Let: local to section tuple_prod_cmixture, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L625" target="_blank" rel="noopener">source, line 625</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> cmixture_pickle (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (<span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="sv" title="section variable T of section tuple_prod_cmixture">T</span>)) :
+  <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <a class="r let k-let" href="#qP" title="GaussianAnalysis.probability.countable_mixture.qP (section-local)">qP</a> <a class="r let k-let" href="#qw_weights" title="GaussianAnalysis.probability.countable_mixture.qw_weights (section-local)">qw_weights</a> <span class="bv">A</span> = \esum_(s <span class="kw">in</span> [set: <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) (<a class="r let k-let" href="#lw" title="GaussianAnalysis.probability.countable_mixture.lw (section-local)">lw</a> <span class="bv">s</span>)%:E * <a class="r let k-let" href="#lQ" title="GaussianAnalysis.probability.countable_mixture.lQ (section-local)">lQ</a> <span class="bv">s</span> <span class="bv">A</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tuple_prod_cmixture" title="GaussianAnalysis.probability.countable_mixture.tuple_prod_cmixture">tuple_prod_cmixture</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="tuple_prod_cmixture">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tuple_prod_cmixture">tuple_prod_cmixture</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/countable_mixture.v#L636" target="_blank" rel="noopener">source, line 636</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (P : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; probability T R) [p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R] (hp : <a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p) 
+  [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [A : set (n.-tuple T)],
+(measure_tuple_display d).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt;
+<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (<span class="kw">fun</span>=&gt; <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> P hp) n A =
+\esum_(s <span class="kw">in</span> [set: n.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>]) ((\prod_(i &lt; n) p (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> s i))%:E *
+                                  <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (<span class="kw">fun</span> k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> =&gt; P (<span class="x" title="mathcomp.boot.seq.nth">nth</span> 0%N s k)) n A)%E</pre></div>
+<div class="decl-doc"><p>n independent draws from a countable mixture: the countable form of <a class="r k-thm" href="GaussianAnalysis.probability.mixture.html#tuple_prod_mixture" title="GaussianAnalysis.probability.mixture.tuple_prod_mixture">tuple_prod_mixture</a>.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p><code>n</code> independent draws from a countable mixture: for weights <code>p</code> with <code><a class="r k-def" href="#cmixture_weights" title="GaussianAnalysis.probability.countable_mixture.cmixture_weights">cmixture_weights</a> p</code>, probabilities <code>P s</code> (<code>s : nat</code>) and every measurable set <code>A</code> of <code>n</code>-tuples, <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (fun=&gt; cmixture P hp) n A</code> is the <code>esum</code> over the label tuples <code>s : n.-tuple nat</code> of <code>prod_k p (s_k)</code> times <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (fun k =&gt; P (s_k)) n A</code>; the countable form of <a class="code-link k-thm" href="GaussianAnalysis.probability.mixture.html#tuple_prod_mixture" title="GaussianAnalysis.probability.mixture.tuple_prod_mixture"><code>tuple_prod_mixture</code></a>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tuple_prod_cmixture (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (<span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="sv" title="section variable T of section tuple_prod_cmixture">T</span>)) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt;
+  <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (<span class="kw">fun</span>=&gt; <a class="r k-def" href="#cmixture" title="GaussianAnalysis.probability.countable_mixture.cmixture">cmixture</a> <span class="sv" title="section variable P of section tuple_prod_cmixture">P</span> <span class="sv" title="section variable hp of section tuple_prod_cmixture">hp</span>) <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span> <span class="bv">A</span> =
+  \esum_(s <span class="kw">in</span> [set: <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>.-tuple <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>])
+    (\prod_(i &lt; <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span>) <span class="sv" title="section variable p of section tuple_prod_cmixture">p</span> (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> <span class="bv">s</span> <span class="bv">i</span>))%:E * <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> (<span class="kw">fun</span> k =&gt; <span class="sv" title="section variable P of section tuple_prod_cmixture">P</span> (<span class="x" title="mathcomp.boot.seq.nth">nth</span> 0%N <span class="bv">s</span> <span class="bv">k</span>)) <span class="sv" title="section variable n of section tuple_prod_cmixture">n</span> <span class="bv">A</span>.</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li><a href="#cmixture_weights">cmixture_<wbr>weights</a></li><li class="toc-sec"><span>countable_mixture</span></li><li><a href="#cmixture">cmixture</a></li><li class="is-local"><a href="#p0">p0</a></li><li class="is-local"><a href="#mterm">mterm</a></li><li class="is-local"><a href="#cmixture_mseries">cmixture_<wbr>mseries</a></li><li class="is-local"><a href="#cmixture0">cmixture0</a></li><li class="is-local"><a href="#cmixture_ge0">cmixture_<wbr>ge0</a></li><li class="is-local"><a href="#cmixture_sigma_additive">cmixture_<wbr>sigma_<wbr>additive</a></li><li><a href="#instance-line-106">instance at line 106</a></li><li class="is-local"><a href="#cmixture_setT">cmixture_<wbr>setT</a></li><li><a href="#instance-line-115">instance at line 115</a></li><li><a href="#cmixtureE">cmixtureE</a></li><li><a href="#ge0_integral_cmixture">ge0_<wbr>integral_<wbr>cmixture</a></li><li><a href="#integral_cmixture">integral_<wbr>cmixture</a></li><li class="toc-sec"><span>countable_tail</span></li><li class="is-local"><a href="#p0-2">p0</a></li><li><a href="#cmixture_tail">cmixture_<wbr>tail</a></li><li><a href="#cmixture_tailE">cmixture_<wbr>tailE</a></li><li><a href="#cmixture_tail_small">cmixture_<wbr>tail_<wbr>small</a></li><li><a href="#cmixture_tail_w">cmixture_<wbr>tail_<wbr>w</a></li><li><a href="#cmixture_tail_series">cmixture_<wbr>tail_<wbr>series</a></li><li><a href="#cmixture_tail_weights">cmixture_<wbr>tail_<wbr>weights</a></li><li class="toc-sec"><span>label_sums</span></li><li><a href="#esumZl">esumZl</a></li><li><a href="#esum_tuple_distr">esum_<wbr>tuple_<wbr>distr</a></li><li><a href="#esum_tuple_prod">esum_<wbr>tuple_<wbr>prod</a></li><li><a href="#esum_fin">esum_<wbr>fin</a></li><li><a href="#bernoulli_tail">bernoulli_<wbr>tail</a></li><li class="toc-sec"><span>label_weights</span></li><li><a href="#cmixture_weights_esum">cmixture_<wbr>weights_<wbr>esum</a></li><li><a href="#label_esum1">label_<wbr>esum1</a></li><li><a href="#labels_le">labels_<wbr>le</a></li><li><a href="#label_esum_le">label_<wbr>esum_<wbr>le</a></li><li><a href="#label_coupling">label_<wbr>coupling</a></li><li class="toc-sec"><span>tuple_prod_cmixture</span></li><li class="is-local"><a href="#lw">lw</a></li><li class="is-local"><a href="#lQ">lQ</a></li><li class="is-local"><a href="#lw0">lw0</a></li><li class="is-local"><a href="#esum_pickle">esum_<wbr>pickle</a></li><li class="is-local"><a href="#qw">qw</a></li><li class="is-local"><a href="#qP">qP</a></li><li class="is-local"><a href="#qw_weights">qw_<wbr>weights</a></li><li class="is-local"><a href="#cmixture_pickle">cmixture_<wbr>pickle</a></li><li><a href="#tuple_prod_cmixture">tuple_<wbr>prod_<wbr>cmixture</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

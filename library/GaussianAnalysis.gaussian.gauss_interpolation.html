@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.gaussian.gauss_interpolation</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod current" href="GaussianAnalysis.gaussian.gauss_interpolation.html" aria-current="page">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>differential_rV</span></li><li><a href="#diff_rV_sum">diff_<wbr>rV_<wbr>sum</a></li><li><a href="#is_derive_rV_comp">is_<wbr>derive_<wbr>rV_<wbr>comp</a></li><li class="toc-sec"><span>mulmx_derive</span></li><li><a href="#is_derive_mulmxl">is_<wbr>derive_<wbr>mulmxl</a></li><li><a href="#mulmx_col_mx">mulmx_<wbr>col_<wbr>mx</a></li><li class="toc-sec"><span>is_derive_scalel</span></li><li><a href="#is_derive_scalel">is_<wbr>derive_<wbr>scalel</a></li><li class="toc-sec"><span>Rintegral_sum</span></li><li><a href="#Rintegral_sum">Rintegral_<wbr>sum</a></li><li class="toc-sec"><span>gauss_entry_integrable</span></li><li><a href="#integrable_gauss_entry">integrable_<wbr>gauss_<wbr>entry</a></li><li class="toc-sec"><span>gauss_interpolation</span></li><li class="is-local"><a href="#C_ge0">C_<wbr>ge0</a></li><li class="is-local"><a href="#poly_mulmx">poly_<wbr>mulmx</a></li><li class="is-local"><a href="#integrable_D2F_mulmx">integrable_<wbr>D2F_<wbr>mulmx</a></li><li><a href="#gauss_ibp_mulmx">gauss_<wbr>ibp_<wbr>mulmx</a></li><li><a href="#gauss_ibp_gradient">gauss_<wbr>ibp_<wbr>gradient</a></li><li><a href="#gauss_interpolation">gauss_<wbr>interpolation</a></li><li><a href="#gauss_comparison">gauss_<wbr>comparison</a></li><li class="toc-sec"><span>gauss_comparison_partial</span></li><li class="is-local"><a href="#DF_diff">DF_<wbr>diff</a></li><li class="is-local"><a href="#DF_cont">DF_<wbr>cont</a></li><li class="is-local"><a href="#F_diff">F_<wbr>diff</a></li><li class="is-local"><a href="#DFE">DFE</a></li><li class="is-local"><a href="#D2FE">D2FE</a></li><li class="is-local"><a href="#DFEz">DFEz</a></li><li class="is-local"><a href="#D2FEz">D2FEz</a></li><li><a href="#gauss_comparison_partial">gauss_<wbr>comparison_<wbr>partial</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.gaussian.html">gaussian</a><span aria-hidden="true">/</span><span>gauss_interpolation</span></div>
+<h1 class="page-title">Gaussian interpolation and Kahane's comparison inequality</h1>
+<div class="page-meta"><code>GaussianAnalysis.gaussian.gauss_interpolation</code><span>library/gaussian/gauss_interpolation.v</span><span>545 lines</span><span>12 lemmas and theorems</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>4</b> library modules and 20 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.gaussian.gauss_ibp.html">GaussianAnalysis.gaussian.gauss_ibp</a></li><li><a href="GaussianAnalysis.gaussian.partial_derivative.html">GaussianAnalysis.gaussian.partial_derivative</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.arithmetic_tactic, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.algebra.interval, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.derive, mathcomp.analysis.trigo, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral</p></div></details><details><summary>Imported by <b>10</b></summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.random_matrix.goe.html">GaussianAnalysis.random_matrix.goe</a></li><li><a href="GaussianAnalysis.random_matrix.goe_rotation.html">GaussianAnalysis.random_matrix.goe_rotation</a></li><li><a href="GaussianAnalysis.random_matrix.wigner.html">GaussianAnalysis.random_matrix.wigner</a></li><li><a href="GaussianAnalysis.comparison.gauss_concentration.html">GaussianAnalysis.comparison.gauss_concentration</a></li><li><a href="GaussianAnalysis.comparison.slepian.html">GaussianAnalysis.comparison.slepian</a></li><li><a href="GaussianAnalysis.comparison.gordon.html">GaussianAnalysis.comparison.gordon</a></li><li><a href="GaussianAnalysis.comparison.escape.html">GaussianAnalysis.comparison.escape</a></li><li><a href="GaussianAnalysis.comparison.cgmt.html">GaussianAnalysis.comparison.cgmt</a></li><li><a href="GaussianAnalysis.comparison.gauss_law.html">GaussianAnalysis.comparison.gauss_law</a></li><li><a href="GaussianAnalysis.comparison.brascamp_lieb.html">GaussianAnalysis.comparison.brascamp_lieb</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>Let x have law gauss n, and let M t : 'M_(n, k) depend differentiably on a real parameter t. Then x *m M t is a centered Gaussian vector with covariance (M t)^T *m M t. For F : 'rV_k -&gt; R of class C^2 whose derivatives of order at most 2 grow at most polynomially, <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a> gives the derivative of t |-&gt; E[F (x *m M t)]:</p>
+<pre class="display">\sum_(j, l) ((M' t)^T *m M t) j l * E[d_l d_j F (x *m M t)],</pre>
+<p>with M' the derivative of M and d_j F = 'D_(delta_mx 0 j) F the partial derivative along the j-th vector of the canonical basis. When the Hessian of F is symmetric, this is half the pairing of the derivative of the covariance with the expected Hessian.</p>
+<p><a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a> is Kahane's comparison inequality: if</p>
+<pre class="display">\sum_(j, l) (A^T *m A - B^T *m B) j l * d_l d_j F z &lt;= 0</pre>
+<p>for every z, then E[F (x *m A)] &lt;= E[F (y *m B)] for x of law gauss n and y of law gauss m. The inequalities of Slepian, Sudakov-Fernique and Gordon follow from it for suitable F. The proof applies <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a> to the path col_mx (cos t *: A) (sin t *: B), t in [0, pi / 2], whose ends give x *m A and y *m B for the two blocks of a vector of law gauss (n + m).</p>
+<p><a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a> is the same inequality for F given by its partial derivatives of order 1 and 2 at every point, those of order 2 continuous: F is then of class C^2 (<a class="r k-thm" href="GaussianAnalysis.gaussian.partial_derivative.html#differentiable_partials" title="GaussianAnalysis.gaussian.partial_derivative.differentiable_partials">differentiable_partials</a> of <a href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative.v</a>).</p>
+<p>The first sections hold general facts used by the proofs: the chain rule along a curve, the derivative of a matrix product along a path, and integrals of finite sums.</p></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#gauss_ibp_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_mulmx">gauss_<wbr>ibp_<wbr>mulmx</a></span></div></td><td>Integration by parts through a linear map: <code>E[x_i d_j F (x *m M)] = \sum_l M_(i, l) E[d_l d_j F (x *m M)]</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_<wbr>interpolation</a></span></div></td><td>Gaussian interpolation: let <code>x</code> have law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code>, let the path of matrices <code>M t</code> be differentiable on an open interval with derivative <code>M&#x27; t</code>, with <code>|M t| &lt;= K</code> and <code>|M&#x27; t| &lt;= K</code> on the interval, and let <code>F</code> be of class C^2 with <code>F</code> and its partial derivatives of order 1 and 2 all bounded by one <code>C (1 + |z|^p)</code>. Then at every <code>t</code> of the interval the derivative of <code>t |-&gt; E[F (x *m M t)]</code> is <code>\sum_(j, l) ((M&#x27; t)^T M t)_(j, l) E[d_l d_j F (x *m M t)]</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_<wbr>comparison</a></span></div></td><td>Kahane's comparison inequality, for <code>F</code> of class C^2 with the same growth hypothesis: if <code>\sum_(j, l) (A^T A - B^T B)_(j, l) d_l d_j F &lt;= 0</code> everywhere, then <code>E[F (x *m A)] &lt;= E[F (y *m B)]</code> for <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code> and <code>y</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_<wbr>comparison_<wbr>partial</a></span></div></td><td>The same comparison for <code>F</code> given by its partial derivatives of order 1 and 2, those of order 2 continuous.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">12 exported, 10 local</span></h2>
+<div class="decl-toolbar"><label><input type="checkbox" id="show-local"> Show the 10 local declarations (<code>Let</code>, <code>Local</code>)</label><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-differential_rV-17"><span class="sec-kw">section</span><span class="sec-name">differential_rV</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>} {W : <span class="x" title="mathcomp.analysis.normedtype_theory.normed_module.NormedModule.Exports.normedModType">normedModType</span> <span class="bv">R</span>}.</pre>
+<div class="decl k-thm" id="diff_rV_sum">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#diff_rV_sum">diff_rV_sum</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L58" target="_blank" rel="noopener">source, line 58</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} {W : normedModType R} [F : &#x27;rV_k -&gt; W] 
+  [z : &#x27;rV_k] (v : &#x27;rV_k),
+<span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> F z -&gt; &#x27;d F z v = \sum_(j &lt; k) v 0 j *: &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j) F z</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> diff_rV_sum (F : &#x27;rV[<span class="sv" title="section variable R of section differential_rV">R</span>]_<span class="sv" title="section variable k of section differential_rV">k</span> -&gt; <span class="sv" title="section variable W of section differential_rV">W</span>) (z v : &#x27;rV[<span class="sv" title="section variable R of section differential_rV">R</span>]_<span class="sv" title="section variable k of section differential_rV">k</span>) : <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> <span class="bv">F</span> <span class="bv">z</span> -&gt;
+  &#x27;d <span class="bv">F</span> <span class="bv">z</span> <span class="bv">v</span> = \sum_(j &lt; <span class="sv" title="section variable k of section differential_rV">k</span>) <span class="bv">v</span> 0 <span class="bv">j</span> *: &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="bv">F</span> <span class="bv">z</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#is_derive_rV_comp" title="GaussianAnalysis.gaussian.gauss_interpolation.is_derive_rV_comp">is_derive_rV_comp</a>, <a class="r k-thm" href="#gauss_ibp_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_mulmx">gauss_ibp_mulmx</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_rV_comp">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_rV_comp">is_derive_rV_comp</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L65" target="_blank" rel="noopener">source, line 65</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} {W : normedModType R} [F : &#x27;rV_k -&gt; W] 
+  [g : R -&gt; &#x27;rV_k] [t : R] [dg : &#x27;rV_k],
+<span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> F (g t) -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 g dg -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 (F \o g) (\sum_(j &lt; k) dg 0 j *: &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j) F (g t))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_rV_comp (F : &#x27;rV[<span class="sv" title="section variable R of section differential_rV">R</span>]_<span class="sv" title="section variable k of section differential_rV">k</span> -&gt; <span class="sv" title="section variable W of section differential_rV">W</span>) (g : <span class="sv" title="section variable R of section differential_rV">R</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section differential_rV">R</span>]_<span class="sv" title="section variable k of section differential_rV">k</span>) t
+    (dg : &#x27;rV[<span class="sv" title="section variable R of section differential_rV">R</span>]_<span class="sv" title="section variable k of section differential_rV">k</span>) :
+  <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> <span class="bv">F</span> (<span class="bv">g</span> <span class="bv">t</span>) -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 <span class="bv">g</span> <span class="bv">dg</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="bv">F</span> \o <span class="bv">g</span>) (\sum_(j &lt; <span class="sv" title="section variable k of section differential_rV">k</span>) <span class="bv">dg</span> 0 <span class="bv">j</span> *: &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="bv">F</span> (<span class="bv">g</span> <span class="bv">t</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gauss_concentration:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_concentration.html#herbst_is_derive_Fz" title="GaussianAnalysis.comparison.gauss_concentration.herbst_is_derive_Fz">herbst_is_derive_Fz</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-mulmx_derive-34"><span class="sec-kw">section</span><span class="sec-name">mulmx_derive</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="is_derive_mulmxl">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_mulmxl">is_derive_mulmxl</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L83" target="_blank" rel="noopener">source, line 83</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m n p : nat] (A : &#x27;M_(m, n)) [M : R -&gt; &#x27;M_(n, p)] 
+  [t : R] [dM : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R n p">&#x27;M[R]_(n, p)</span>],
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 M dM -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 (<span class="kw">fun</span> s : <span class="hb" title="printed as Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt; A *m M s)
+  (A *m dM)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_mulmxl m n p (A : &#x27;M[<span class="sv" title="section variable R of section mulmx_derive">R</span>]_(<span class="bv">m</span>, <span class="bv">n</span>)) (M : <span class="sv" title="section variable R of section mulmx_derive">R</span> -&gt; &#x27;M[<span class="sv" title="section variable R of section mulmx_derive">R</span>]_(<span class="bv">n</span>, <span class="bv">p</span>))
+    (t : <span class="sv" title="section variable R of section mulmx_derive">R</span>) dM :
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 <span class="bv">M</span> <span class="bv">dM</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">A</span> *m <span class="bv">M</span> <span class="bv">s</span>) (<span class="bv">A</span> *m <span class="bv">dM</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mulmx_col_mx">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mulmx_col_mx">mulmx_col_mx</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L98" target="_blank" rel="noopener">source, line 98</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m n1 n2 p : nat] (x : &#x27;M_(m, n1 + n2)) (P : &#x27;M_(n1, p))
+  (Q : &#x27;M_(n2, p)),
+x *m <span class="x" title="mathcomp.algebra.matrix.col_mx">col_mx</span> P Q = <span class="x" title="mathcomp.algebra.matrix.lsubmx">lsubmx</span> x *m P + <span class="x" title="mathcomp.algebra.matrix.rsubmx">rsubmx</span> x *m Q</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mulmx_col_mx m n1 n2 p (x : &#x27;M[<span class="sv" title="section variable R of section mulmx_derive">R</span>]_(<span class="bv">m</span>, <span class="bv">n1</span> + <span class="bv">n2</span>)) (P : &#x27;M[<span class="sv" title="section variable R of section mulmx_derive">R</span>]_(<span class="bv">n1</span>, <span class="bv">p</span>))
+    (Q : &#x27;M[<span class="sv" title="section variable R of section mulmx_derive">R</span>]_(<span class="bv">n2</span>, <span class="bv">p</span>)) :
+  <span class="bv">x</span> *m <span class="x" title="mathcomp.algebra.matrix.col_mx">col_mx</span> <span class="bv">P</span> <span class="bv">Q</span> = <span class="x" title="mathcomp.algebra.matrix.lsubmx">lsubmx</span> <span class="bv">x</span> *m <span class="bv">P</span> + <span class="x" title="mathcomp.algebra.matrix.rsubmx">rsubmx</span> <span class="bv">x</span> *m <span class="bv">Q</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-is_derive_scalel-53"><span class="sec-kw">section</span><span class="sec-name">is_derive_scalel</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {V : <span class="x" title="mathcomp.analysis.normedtype_theory.normed_module.NormedModule.Exports.normedModType">normedModType</span> <span class="bv">R</span>}.</pre>
+<div class="decl k-thm" id="is_derive_scalel">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_scalel">is_derive_scalel</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L108" target="_blank" rel="noopener">source, line 108</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {V : normedModType R} [a : R -&gt; R] (P : V) [t da : R],
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 a da -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 (<span class="kw">fun</span> s : <span class="hb" title="printed as Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt; a s *: P)
+  (da *: P)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_scalel (a : <span class="sv" title="section variable R of section is_derive_scalel">R</span> -&gt; <span class="sv" title="section variable R of section is_derive_scalel">R</span>) (P : <span class="sv" title="section variable V of section is_derive_scalel">V</span>) (t da : <span class="sv" title="section variable R of section is_derive_scalel">R</span>) :
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 <span class="bv">a</span> <span class="bv">da</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">a</span> <span class="bv">s</span> *: <span class="bv">P</span>) (<span class="bv">da</span> *: <span class="bv">P</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gauss_concentration:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_concentration.html#herbst_is_derive_z" title="GaussianAnalysis.comparison.gauss_concentration.herbst_is_derive_z">herbst_is_derive_z</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-Rintegral_sum-64"><span class="sec-kw">section</span><span class="sec-name">Rintegral_sum</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Variable</span> mu : {measure set <span class="sv" title="section variable T of section Rintegral_sum">T</span> -&gt; \bar <span class="sv" title="section variable R of section Rintegral_sum">R</span>}.</pre>
+<div class="decl k-thm" id="Rintegral_sum">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#Rintegral_sum">Rintegral_sum</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L124" target="_blank" rel="noopener">source, line 124</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [mu : measure T R] [I : <span class="kw">Type</span>] (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> I) [D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T] [f : I -&gt; T -&gt; R],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> D -&gt;
+(<span class="kw">forall</span> i : I, mu.-integrable D (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o f i)) -&gt;
+\int[mu]_(x <span class="kw">in</span> D) \sum_(i &lt;- s) f i x = \sum_(i &lt;- s) \int[mu]_(x <span class="kw">in</span> D) f i x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> Rintegral_sum (I : <span class="kw">Type</span>) (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> <span class="bv">I</span>) (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section Rintegral_sum">T</span>) (f : <span class="bv">I</span> -&gt; <span class="sv" title="section variable T of section Rintegral_sum">T</span> -&gt; <span class="sv" title="section variable R of section Rintegral_sum">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">D</span> -&gt; (<span class="kw">forall</span> i, <span class="sv" title="section variable mu of section Rintegral_sum">mu</span>.-integrable <span class="bv">D</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">f</span> <span class="bv">i</span>)) -&gt;
+  \int[<span class="sv" title="section variable mu of section Rintegral_sum">mu</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) \sum_(i &lt;- <span class="bv">s</span>) <span class="bv">f</span> <span class="bv">i</span> <span class="bv">x</span> = \sum_(i &lt;- <span class="bv">s</span>) \int[<span class="sv" title="section variable mu of section Rintegral_sum">mu</span>]_(x <span class="kw">in</span> <span class="bv">D</span>) <span class="bv">f</span> <span class="bv">i</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 12 declarations in 7 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_ibp_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_mulmx">gauss_ibp_mulmx</a>, <a class="r k-thm" href="#gauss_ibp_gradient" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_gradient">gauss_ibp_gradient</a>, <a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a></li>
+<li><span class="um">GaussianAnalysis.random_matrix.goe:</span> <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#Rintegral_polyfun_sum" title="GaussianAnalysis.random_matrix.goe.Rintegral_polyfun_sum">Rintegral_polyfun_sum</a></li>
+<li><span class="um">GaussianAnalysis.random_matrix.goe_rotation:</span> <a class="r k-let" href="GaussianAnalysis.random_matrix.goe_rotation.html#Rint_sum2" title="GaussianAnalysis.random_matrix.goe_rotation.Rint_sum2 (section-local)">Rint_sum2</a>, <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe_rotation.html#goe_diag_var_identityS" title="GaussianAnalysis.random_matrix.goe_rotation.goe_diag_var_identityS">goe_diag_var_identityS</a></li>
+<li><span class="um">GaussianAnalysis.random_matrix.wigner:</span> <a class="r k-thm" href="GaussianAnalysis.random_matrix.wigner.html#semicircle_poly" title="GaussianAnalysis.random_matrix.wigner.semicircle_poly">semicircle_poly</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gauss_concentration:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_concentration.html#herbst_df_lower" title="GaussianAnalysis.comparison.gauss_concentration.herbst_df_lower">herbst_df_lower</a></li>
+<li><span class="um">GaussianAnalysis.comparison.escape:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.escape.html#gauss_frobenius_mean_le" title="GaussianAnalysis.comparison.escape.gauss_frobenius_mean_le">gauss_frobenius_mean_le</a>, <a class="r k-thm" href="GaussianAnalysis.comparison.escape.html#gauss_sqr_mulmx" title="GaussianAnalysis.comparison.escape.gauss_sqr_mulmx">gauss_sqr_mulmx</a></li>
+<li><span class="um">GaussianAnalysis.comparison.brascamp_lieb:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.brascamp_lieb.html#dLambda_le0" title="GaussianAnalysis.comparison.brascamp_lieb.dLambda_le0">dLambda_le0</a>, <a class="r k-let" href="GaussianAnalysis.comparison.brascamp_lieb.html#Lambda_lip" title="GaussianAnalysis.comparison.brascamp_lieb.Lambda_lip (section-local)">Lambda_lip</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-gauss_entry_integrable-78"><span class="sec-kw">section</span><span class="sec-name">gauss_entry_integrable</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="integrable_gauss_entry">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_gauss_entry">integrable_gauss_entry</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L143" target="_blank" rel="noopener">source, line 143</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (i : &#x27;I_n) [G : &#x27;rV_n -&gt; R] [c : R] [q : nat],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_n] G -&gt;
+(<span class="kw">forall</span> x : &#x27;rV_n, `|G x| &lt;= c * (1 + `|x| ^+ q)) -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n).-integrable [set: &#x27;rV_n] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : &#x27;rV_n =&gt; x 0 i * G x))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_gauss_entry n (i : &#x27;I_<span class="bv">n</span>) (G : &#x27;rV[<span class="sv" title="section variable R of section gauss_entry_integrable">R</span>]_<span class="bv">n</span> -&gt; <span class="sv" title="section variable R of section gauss_entry_integrable">R</span>) (c : <span class="sv" title="section variable R of section gauss_entry_integrable">R</span>) q :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section gauss_entry_integrable">R</span>]_<span class="bv">n</span>] <span class="bv">G</span> -&gt;
+  (<span class="kw">forall</span> x, `|<span class="bv">G</span> <span class="bv">x</span>| &lt;= <span class="bv">c</span> * (1 + `|<span class="bv">x</span>| ^+ <span class="bv">q</span>)) -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>).-integrable [set: &#x27;rV[<span class="sv" title="section variable R of section gauss_entry_integrable">R</span>]_<span class="bv">n</span>]
+    (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : &#x27;rV[<span class="sv" title="section variable R of section gauss_entry_integrable">R</span>]_<span class="bv">n</span> =&gt; <span class="bv">x</span> 0 <span class="bv">i</span> * <span class="bv">G</span> <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_ibp_gradient" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_gradient">gauss_ibp_gradient</a></li>
+</ul></details>
+</div>
+</div>
+<div class="note"><p>F is of class C^2, and F and its partial derivatives of order 1 and 2 are bounded by C (1 + |z|^p).</p></div>
+<div class="sec"><div class="sec-head" id="section-gauss_interpolation-88"><span class="sec-kw">section</span><span class="sec-name">gauss_interpolation</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variable</span> F : &#x27;rV[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_<span class="sv" title="section variable k of section gauss_interpolation">k</span> -&gt; <span class="sv" title="section variable R of section gauss_interpolation">R</span>.
+<span class="vk">Local Notation</span> DF j := (&#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j) <span class="sv" title="section variable F of section gauss_interpolation">F</span>).
+<span class="vk">Local Notation</span> D2F j l := (&#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 l) (&#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j) <span class="sv" title="section variable F of section gauss_interpolation">F</span>)).
+<span class="vk">Hypothesis</span> F_diff : <span class="kw">forall</span> z, <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> <span class="sv" title="section variable F of section gauss_interpolation">F</span> <span class="bv">z</span>.
+<span class="vk">Hypothesis</span> DF_diff : <span class="kw">forall</span> j z, <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> (<span class="ln" title="Local Notation DF j := (&#x27;D_(delta_mx 0 j) F).">DF</span> <span class="bv">j</span>) <span class="bv">z</span>.
+<span class="vk">Hypothesis</span> D2F_cont : <span class="kw">forall</span> j l, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span>).
+<span class="vk">Variables</span> (C : <span class="sv" title="section variable R of section gauss_interpolation">R</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>).
+<span class="vk">Hypothesis</span> F_poly : <span class="kw">forall</span> z, `|<span class="sv" title="section variable F of section gauss_interpolation">F</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_interpolation">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_interpolation">p</span>).
+<span class="vk">Hypothesis</span> DF_poly : <span class="kw">forall</span> j z, `|<span class="ln" title="Local Notation DF j := (&#x27;D_(delta_mx 0 j) F).">DF</span> <span class="bv">j</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_interpolation">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_interpolation">p</span>).
+<span class="vk">Hypothesis</span> D2F_poly : <span class="kw">forall</span> j l z, `|<span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_interpolation">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_interpolation">p</span>).</pre>
+<div class="decl k-let is-local" id="C_ge0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#C_ge0">C_ge0</a>
+<span class="tag local" title="Let: local to section gauss_interpolation, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L173" target="_blank" rel="noopener">source, line 173</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> C_ge0 : 0 &lt;= <span class="sv" title="section variable C of section gauss_interpolation">C</span>.</pre></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#poly_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.poly_mulmx (section-local)">poly_mulmx</a>, <a class="r k-thm" href="#gauss_ibp_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_mulmx">gauss_ibp_mulmx</a>, <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="poly_mulmx">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#poly_mulmx">poly_mulmx</a>
+<span class="tag local" title="Let: local to section gauss_interpolation, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L176" target="_blank" rel="noopener">source, line 176</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> poly_mulmx n (G : &#x27;rV[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_<span class="sv" title="section variable k of section gauss_interpolation">k</span> -&gt; <span class="sv" title="section variable R of section gauss_interpolation">R</span>) (M : &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) (K : <span class="sv" title="section variable R of section gauss_interpolation">R</span>) :
+  `|<span class="bv">M</span>| &lt;= <span class="bv">K</span> -&gt; (<span class="kw">forall</span> z, `|<span class="bv">G</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_interpolation">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_interpolation">p</span>)) -&gt;
+  <span class="kw">forall</span> x : &#x27;rV[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_<span class="bv">n</span>,
+    `|<span class="bv">G</span> (<span class="bv">x</span> *m <span class="bv">M</span>)| &lt;= <span class="sv" title="section variable C of section gauss_interpolation">C</span> * (1 + (<span class="bv">n</span>%:R * <span class="bv">K</span>) ^+ <span class="sv" title="section variable p of section gauss_interpolation">p</span>) * (1 + `|<span class="bv">x</span>| ^+ <span class="sv" title="section variable p of section gauss_interpolation">p</span>).</pre></div>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#integrable_D2F_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.integrable_D2F_mulmx (section-local)">integrable_D2F_mulmx</a>, <a class="r k-thm" href="#gauss_ibp_mulmx" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_mulmx">gauss_ibp_mulmx</a>, <a class="r k-thm" href="#gauss_ibp_gradient" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_gradient">gauss_ibp_gradient</a>, <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a>, <a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="integrable_D2F_mulmx">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#integrable_D2F_mulmx">integrable_D2F_mulmx</a>
+<span class="tag local" title="Let: local to section gauss_interpolation, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L195" target="_blank" rel="noopener">source, line 195</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> integrable_D2F_mulmx n (M : &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) j l :
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>).-integrable [set: &#x27;rV[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_<span class="bv">n</span>]
+    (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : &#x27;rV[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_<span class="bv">n</span> =&gt; <span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span> (<span class="bv">x</span> *m <span class="bv">M</span>))).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_ibp_mulmx">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_ibp_mulmx">gauss_ibp_mulmx</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L207" target="_blank" rel="noopener">source, line 207</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} [F : &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ differentiable (&#x27;D_(delta_mx 0 j) F) z) -&gt;
+(<span class="kw">forall</span> j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>,
+ continuous (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F))) -&gt;
+<span class="kw">forall</span> [C : R] [p : nat],
+(<span class="kw">forall</span> z : &#x27;rV_k, `|F z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 j) F) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+<span class="kw">forall</span> [n : nat] (M : &#x27;M_(n, k)) (i : &#x27;I_n) (j : &#x27;I_k),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (x 0 i * (&#x27;D_(delta_mx 0 j) F) (x *m M)) =
+\sum_(l &lt; k) M i l * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) (x *m M)</pre></div>
+<div class="decl-doc"><p>Integration by parts for x_i against a partial derivative of F at x *m M.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Integration by parts through a linear map: <code>E[x_i d_j F (x *m M)] = \sum_l M_(i, l) E[d_l d_j F (x *m M)]</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_ibp_mulmx n (M : &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) (i : &#x27;I_<span class="bv">n</span>) (j : &#x27;I_<span class="sv" title="section variable k of section gauss_interpolation">k</span>) :
+  \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x (<span class="bv">x</span> 0 <span class="bv">i</span> * <span class="ln" title="Local Notation DF j := (&#x27;D_(delta_mx 0 j) F).">DF</span> <span class="bv">j</span> (<span class="bv">x</span> *m <span class="bv">M</span>)) =
+  \sum_(l &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) <span class="bv">M</span> <span class="bv">i</span> <span class="bv">l</span> * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x <span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span> (<span class="bv">x</span> *m <span class="bv">M</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_ibp_gradient" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_ibp_gradient">gauss_ibp_gradient</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_ibp_gradient">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_ibp_gradient">gauss_ibp_gradient</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L261" target="_blank" rel="noopener">source, line 261</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} [F : &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ differentiable (&#x27;D_(delta_mx 0 j) F) z) -&gt;
+(<span class="kw">forall</span> j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>,
+ continuous (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F))) -&gt;
+<span class="kw">forall</span> [C : R] [p : nat],
+(<span class="kw">forall</span> z : &#x27;rV_k, `|F z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 j) F) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+<span class="kw">forall</span> [n : nat] (M M&#x27; : &#x27;M_(n, k)),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x \sum_(j &lt; k) (x *m M&#x27;) 0 j * (&#x27;D_(delta_mx 0 j) F) (x *m M) =
+\sum_(j &lt; k)
+   \sum_(l &lt; k)
+      (M&#x27;^T *m M) j l * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) (x *m M)</pre></div>
+<div class="decl-doc"><p>The same for the derivative of F at x *m M in the direction x *m M'.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_ibp_gradient n (M M&#x27; : &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) :
+  \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x (\sum_(j &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) (<span class="bv">x</span> *m <span class="bv">M&#x27;</span>) 0 <span class="bv">j</span> * <span class="ln" title="Local Notation DF j := (&#x27;D_(delta_mx 0 j) F).">DF</span> <span class="bv">j</span> (<span class="bv">x</span> *m <span class="bv">M</span>)) =
+  \sum_(j &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) \sum_(l &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) (<span class="bv">M&#x27;</span>^T *m <span class="bv">M</span>) <span class="bv">j</span> <span class="bv">l</span> * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x <span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span> (<span class="bv">x</span> *m <span class="bv">M</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_interpolation" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_interpolation">gauss_interpolation</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_interpolation">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_interpolation">gauss_interpolation</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L294" target="_blank" rel="noopener">source, line 294</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} [F : &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>, differentiable F z) -&gt;
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ differentiable (&#x27;D_(delta_mx 0 j) F) z) -&gt;
+(<span class="kw">forall</span> j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>,
+ continuous (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F))) -&gt;
+<span class="kw">forall</span> [C : R] [p : nat],
+(<span class="kw">forall</span> z : &#x27;rV_k, `|F z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 j) F) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+<span class="kw">forall</span> [n : nat] [M M&#x27; : R -&gt; &#x27;M_(n, k)] [u v K : R],
+(<span class="kw">forall</span> s : R, s \<span class="kw">in</span> `]u, v[ -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> s 1 M (M&#x27; s)) -&gt;
+(<span class="kw">forall</span> s : R, s \<span class="kw">in</span> `]u, v[ -&gt; `|M s| &lt;= K) -&gt;
+(<span class="kw">forall</span> s : R, s \<span class="kw">in</span> `]u, v[ -&gt; `|M&#x27; s| &lt;= K) -&gt;
+<span class="kw">forall</span> [t : R],
+t \<span class="kw">in</span> `]u, v[ -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x F (x *m M s))
+  (\sum_(j &lt; k)
+      \sum_(l &lt; k)
+         ((M&#x27; t)^T *m M t) j l *
+         \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) (x *m M t))</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Gaussian interpolation: let <code>x</code> have law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code>, let the path of matrices <code>M t</code> be differentiable on an open interval with derivative <code>M&#x27; t</code>, with <code>|M t| &lt;= K</code> and <code>|M&#x27; t| &lt;= K</code> on the interval, and let <code>F</code> be of class C^2 with <code>F</code> and its partial derivatives of order 1 and 2 all bounded by one <code>C (1 + |z|^p)</code>. Then at every <code>t</code> of the interval the derivative of <code>t |-&gt; E[F (x *m M t)]</code> is <code>\sum_(j, l) ((M&#x27; t)^T M t)_(j, l) E[d_l d_j F (x *m M t)]</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_interpolation n (M M&#x27; : <span class="sv" title="section variable R of section gauss_interpolation">R</span> -&gt; &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) (u v K : <span class="sv" title="section variable R of section gauss_interpolation">R</span>) :
+  (<span class="kw">forall</span> s, <span class="bv">s</span> \<span class="kw">in</span> `]<span class="bv">u</span>, <span class="bv">v</span>[ -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">s</span> 1 <span class="bv">M</span> (<span class="bv">M&#x27;</span> <span class="bv">s</span>)) -&gt;
+  (<span class="kw">forall</span> s, <span class="bv">s</span> \<span class="kw">in</span> `]<span class="bv">u</span>, <span class="bv">v</span>[ -&gt; `|<span class="bv">M</span> <span class="bv">s</span>| &lt;= <span class="bv">K</span>) -&gt;
+  (<span class="kw">forall</span> s, <span class="bv">s</span> \<span class="kw">in</span> `]<span class="bv">u</span>, <span class="bv">v</span>[ -&gt; `|<span class="bv">M&#x27;</span> <span class="bv">s</span>| &lt;= <span class="bv">K</span>) -&gt;
+  <span class="kw">forall</span> t, <span class="bv">t</span> \<span class="kw">in</span> `]<span class="bv">u</span>, <span class="bv">v</span>[ -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x <span class="sv" title="section variable F of section gauss_interpolation">F</span> (<span class="bv">x</span> *m <span class="bv">M</span> <span class="bv">s</span>))
+    (\sum_(j &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) \sum_(l &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) ((<span class="bv">M&#x27;</span> <span class="bv">t</span>)^T *m <span class="bv">M</span> <span class="bv">t</span>) <span class="bv">j</span> <span class="bv">l</span> *
+      \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x <span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span> (<span class="bv">x</span> *m <span class="bv">M</span> <span class="bv">t</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison">gauss_comparison</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_comparison">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_comparison">gauss_comparison</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L369" target="_blank" rel="noopener">source, line 369</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} [F : &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>, differentiable F z) -&gt;
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ differentiable (&#x27;D_(delta_mx 0 j) F) z) -&gt;
+(<span class="kw">forall</span> j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>,
+ continuous (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F))) -&gt;
+<span class="kw">forall</span> [C : R] [p : nat],
+(<span class="kw">forall</span> z : &#x27;rV_k, `|F z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 j) F) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ `|(&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+<span class="kw">forall</span> [n m : nat] [A : &#x27;M_(n, k)] [B : &#x27;M_(m, k)],
+(<span class="kw">forall</span> z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>,
+ \sum_(j &lt; k)
+    \sum_(l &lt; k) (A^T *m A - B^T *m B) j l * (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)) z &lt;=
+ 0) -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (F (x *m A))%:E &lt;= \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m]_y (F (y *m B))%:E)%E</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Kahane's comparison inequality, for <code>F</code> of class C^2 with the same growth hypothesis: if <code>\sum_(j, l) (A^T A - B^T B)_(j, l) d_l d_j F &lt;= 0</code> everywhere, then <code>E[F (x *m A)] &lt;= E[F (y *m B)]</code> for <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code> and <code>y</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_comparison n m (A : &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) (B : &#x27;M[<span class="sv" title="section variable R of section gauss_interpolation">R</span>]_(<span class="bv">m</span>, <span class="sv" title="section variable k of section gauss_interpolation">k</span>)) :
+  (<span class="kw">forall</span> z,
+    \sum_(j &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) \sum_(l &lt; <span class="sv" title="section variable k of section gauss_interpolation">k</span>) (<span class="bv">A</span>^T *m <span class="bv">A</span> - <span class="bv">B</span>^T *m <span class="bv">B</span>) <span class="bv">j</span> <span class="bv">l</span> * <span class="ln" title="Local Notation D2F j l := (&#x27;D_(delta_mx 0 l) (&#x27;D_(delta_mx 0 j) F)).">D2F</span> <span class="bv">j</span> <span class="bv">l</span> <span class="bv">z</span> &lt;= 0) -&gt;
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x (<span class="sv" title="section variable F of section gauss_interpolation">F</span> (<span class="bv">x</span> *m <span class="bv">A</span>))%:E &lt;= \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">m</span>]_y (<span class="sv" title="section variable F of section gauss_interpolation">F</span> (<span class="bv">y</span> *m <span class="bv">B</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 3 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+<li><span class="um">GaussianAnalysis.comparison.slepian:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.slepian.html#sudakov_fernique" title="GaussianAnalysis.comparison.slepian.sudakov_fernique">sudakov_fernique</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gordon:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gordon.html#gordon" title="GaussianAnalysis.comparison.gordon.gordon">gordon</a></li>
+</ul></details>
+</div>
+</div>
+<div class="note"><p>Kahane's comparison inequality for F given by its partial derivatives of order 1 and 2, continuous at order 2: F is then of class C^2.</p></div>
+<div class="sec"><div class="sec-head" id="section-gauss_comparison_partial-346"><span class="sec-kw">section</span><span class="sec-name">gauss_comparison_partial</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variables</span> (F : &#x27;rV[<span class="sv" title="section variable R of section gauss_comparison_partial">R</span>]_<span class="sv" title="section variable k of section gauss_comparison_partial">k</span> -&gt; <span class="sv" title="section variable R of section gauss_comparison_partial">R</span>) (DF : &#x27;I_<span class="sv" title="section variable k of section gauss_comparison_partial">k</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section gauss_comparison_partial">R</span>]_<span class="sv" title="section variable k of section gauss_comparison_partial">k</span> -&gt; <span class="sv" title="section variable R of section gauss_comparison_partial">R</span>)
+  (D2F : &#x27;I_<span class="sv" title="section variable k of section gauss_comparison_partial">k</span> -&gt; &#x27;I_<span class="sv" title="section variable k of section gauss_comparison_partial">k</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section gauss_comparison_partial">R</span>]_<span class="sv" title="section variable k of section gauss_comparison_partial">k</span> -&gt; <span class="sv" title="section variable R of section gauss_comparison_partial">R</span>).
+<span class="vk">Hypothesis</span> F_partial : <span class="kw">forall</span> j z, <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">z</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="sv" title="section variable F of section gauss_comparison_partial">F</span> (<span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span> <span class="bv">z</span>).
+<span class="vk">Hypothesis</span> DF_partial : <span class="kw">forall</span> j l z,
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">z</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">l</span>) (<span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span>) (<span class="sv" title="section variable D2F of section gauss_comparison_partial">D2F</span> <span class="bv">j</span> <span class="bv">l</span> <span class="bv">z</span>).
+<span class="vk">Hypothesis</span> D2F_cont : <span class="kw">forall</span> j l, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="sv" title="section variable D2F of section gauss_comparison_partial">D2F</span> <span class="bv">j</span> <span class="bv">l</span>).
+<span class="vk">Variables</span> (C : <span class="sv" title="section variable R of section gauss_comparison_partial">R</span>) (p : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>).
+<span class="vk">Hypothesis</span> F_poly : <span class="kw">forall</span> z, `|<span class="sv" title="section variable F of section gauss_comparison_partial">F</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_comparison_partial">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_comparison_partial">p</span>).
+<span class="vk">Hypothesis</span> DF_poly : <span class="kw">forall</span> j z, `|<span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_comparison_partial">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_comparison_partial">p</span>).
+<span class="vk">Hypothesis</span> D2F_poly : <span class="kw">forall</span> j l z, `|<span class="sv" title="section variable D2F of section gauss_comparison_partial">D2F</span> <span class="bv">j</span> <span class="bv">l</span> <span class="bv">z</span>| &lt;= <span class="sv" title="section variable C of section gauss_comparison_partial">C</span> * (1 + `|<span class="bv">z</span>| ^+ <span class="sv" title="section variable p of section gauss_comparison_partial">p</span>).</pre>
+<div class="decl k-let is-local" id="DF_diff">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#DF_diff">DF_diff</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L505" target="_blank" rel="noopener">source, line 505</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> DF_diff j z : <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> (<span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span>) <span class="bv">z</span>.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#DF_cont" title="GaussianAnalysis.gaussian.gauss_interpolation.DF_cont (section-local)">DF_cont</a>, <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="DF_cont">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#DF_cont">DF_cont</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L511" target="_blank" rel="noopener">source, line 511</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> DF_cont j : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#F_diff" title="GaussianAnalysis.gaussian.gauss_interpolation.F_diff (section-local)">F_diff</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="F_diff">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#F_diff">F_diff</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L514" target="_blank" rel="noopener">source, line 514</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> F_diff z : <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> <span class="sv" title="section variable F of section gauss_comparison_partial">F</span> <span class="bv">z</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="DFE">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#DFE">DFE</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L519" target="_blank" rel="noopener">source, line 519</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> DFE j : &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="sv" title="section variable F of section gauss_comparison_partial">F</span> = <span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span>.</pre></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#D2FE" title="GaussianAnalysis.gaussian.gauss_interpolation.D2FE (section-local)">D2FE</a>, <a class="r k-let" href="#D2FEz" title="GaussianAnalysis.gaussian.gauss_interpolation.D2FEz (section-local)">D2FEz</a>, <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="D2FE">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#D2FE">D2FE</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L522" target="_blank" rel="noopener">source, line 522</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> D2FE j l : &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">l</span>) (&#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="sv" title="section variable F of section gauss_comparison_partial">F</span>) = <span class="sv" title="section variable D2F of section gauss_comparison_partial">D2F</span> <span class="bv">j</span> <span class="bv">l</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="DFEz">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#DFEz">DFEz</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L525" target="_blank" rel="noopener">source, line 525</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> DFEz j z : &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="sv" title="section variable F of section gauss_comparison_partial">F</span> <span class="bv">z</span> = <span class="sv" title="section variable DF of section gauss_comparison_partial">DF</span> <span class="bv">j</span> <span class="bv">z</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="D2FEz">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#D2FEz">D2FEz</a>
+<span class="tag local" title="Let: local to section gauss_comparison_partial, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L528" target="_blank" rel="noopener">source, line 528</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> D2FEz j l z : &#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">l</span>) (&#x27;D_(<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="sv" title="section variable F of section gauss_comparison_partial">F</span>) <span class="bv">z</span> = <span class="sv" title="section variable D2F of section gauss_comparison_partial">D2F</span> <span class="bv">j</span> <span class="bv">l</span> <span class="bv">z</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_comparison_partial" title="GaussianAnalysis.gaussian.gauss_interpolation.gauss_comparison_partial">gauss_comparison_partial</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_comparison_partial">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_comparison_partial">gauss_comparison_partial</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/gauss_interpolation.v#L531" target="_blank" rel="noopener">source, line 531</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {k : nat} [F : &#x27;rV_k -&gt; R] [DF : &#x27;I_k -&gt; &#x27;rV_k -&gt; R]
+  [D2F : &#x27;I_k -&gt; &#x27;I_k -&gt; &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ is_derive z (delta_mx 0 j) F (DF j z)) -&gt;
+(<span class="kw">forall</span> (j : &#x27;I_k) (l : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality k">&#x27;I_k</span>)
+   (z : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 k">&#x27;rV[R]_k</span>),
+ is_derive z (delta_mx 0 l) (DF j) (D2F j l z)) -&gt;
+(<span class="kw">forall</span> j l : &#x27;I_k, continuous (D2F j l)) -&gt;
+<span class="kw">forall</span> [C : R] [p : nat],
+(<span class="kw">forall</span> z : &#x27;rV_k, `|F z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j : &#x27;I_k) (z : &#x27;rV_k), `|DF j z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+(<span class="kw">forall</span> (j l : &#x27;I_k) (z : &#x27;rV_k), `|D2F j l z| &lt;= C * (1 + `|z| ^+ p)) -&gt;
+<span class="kw">forall</span> [n m : nat] [A : &#x27;M_(n, k)] [B : &#x27;M_(m, k)],
+(<span class="kw">forall</span> z : &#x27;rV_k, \sum_(j &lt; k) \sum_(l &lt; k) (A^T *m A - B^T *m B) j l * D2F j l z &lt;= 0) -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (F (x *m A))%:E &lt;= \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m]_y (F (y *m B))%:E)%E</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The same comparison for <code>F</code> given by its partial derivatives of order 1 and 2, those of order 2 continuous.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_comparison_partial n m (A : &#x27;M[<span class="sv" title="section variable R of section gauss_comparison_partial">R</span>]_(<span class="bv">n</span>, <span class="sv" title="section variable k of section gauss_comparison_partial">k</span>)) (B : &#x27;M[<span class="sv" title="section variable R of section gauss_comparison_partial">R</span>]_(<span class="bv">m</span>, <span class="sv" title="section variable k of section gauss_comparison_partial">k</span>)) :
+  (<span class="kw">forall</span> z,
+    \sum_(j &lt; <span class="sv" title="section variable k of section gauss_comparison_partial">k</span>) \sum_(l &lt; <span class="sv" title="section variable k of section gauss_comparison_partial">k</span>) (<span class="bv">A</span>^T *m <span class="bv">A</span> - <span class="bv">B</span>^T *m <span class="bv">B</span>) <span class="bv">j</span> <span class="bv">l</span> * <span class="sv" title="section variable D2F of section gauss_comparison_partial">D2F</span> <span class="bv">j</span> <span class="bv">l</span> <span class="bv">z</span> &lt;= 0) -&gt;
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x (<span class="sv" title="section variable F of section gauss_comparison_partial">F</span> (<span class="bv">x</span> *m <span class="bv">A</span>))%:E &lt;= \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">m</span>]_y (<span class="sv" title="section variable F of section gauss_comparison_partial">F</span> (<span class="bv">y</span> *m <span class="bv">B</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.comparison.gauss_law:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_law.html#gauss_law_smooth" title="GaussianAnalysis.comparison.gauss_law.gauss_law_smooth">gauss_law_smooth</a></li>
+</ul></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>differential_rV</span></li><li><a href="#diff_rV_sum">diff_<wbr>rV_<wbr>sum</a></li><li><a href="#is_derive_rV_comp">is_<wbr>derive_<wbr>rV_<wbr>comp</a></li><li class="toc-sec"><span>mulmx_derive</span></li><li><a href="#is_derive_mulmxl">is_<wbr>derive_<wbr>mulmxl</a></li><li><a href="#mulmx_col_mx">mulmx_<wbr>col_<wbr>mx</a></li><li class="toc-sec"><span>is_derive_scalel</span></li><li><a href="#is_derive_scalel">is_<wbr>derive_<wbr>scalel</a></li><li class="toc-sec"><span>Rintegral_sum</span></li><li><a href="#Rintegral_sum">Rintegral_<wbr>sum</a></li><li class="toc-sec"><span>gauss_entry_integrable</span></li><li><a href="#integrable_gauss_entry">integrable_<wbr>gauss_<wbr>entry</a></li><li class="toc-sec"><span>gauss_interpolation</span></li><li class="is-local"><a href="#C_ge0">C_<wbr>ge0</a></li><li class="is-local"><a href="#poly_mulmx">poly_<wbr>mulmx</a></li><li class="is-local"><a href="#integrable_D2F_mulmx">integrable_<wbr>D2F_<wbr>mulmx</a></li><li><a href="#gauss_ibp_mulmx">gauss_<wbr>ibp_<wbr>mulmx</a></li><li><a href="#gauss_ibp_gradient">gauss_<wbr>ibp_<wbr>gradient</a></li><li><a href="#gauss_interpolation">gauss_<wbr>interpolation</a></li><li><a href="#gauss_comparison">gauss_<wbr>comparison</a></li><li class="toc-sec"><span>gauss_comparison_partial</span></li><li class="is-local"><a href="#DF_diff">DF_<wbr>diff</a></li><li class="is-local"><a href="#DF_cont">DF_<wbr>cont</a></li><li class="is-local"><a href="#F_diff">F_<wbr>diff</a></li><li class="is-local"><a href="#DFE">DFE</a></li><li class="is-local"><a href="#D2FE">D2FE</a></li><li class="is-local"><a href="#DFEz">DFEz</a></li><li class="is-local"><a href="#D2FEz">D2FEz</a></li><li><a href="#gauss_comparison_partial">gauss_<wbr>comparison_<wbr>partial</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

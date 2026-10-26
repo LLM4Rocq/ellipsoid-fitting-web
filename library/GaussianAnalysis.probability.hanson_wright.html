@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.probability.hanson_wright</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod current" href="GaussianAnalysis.probability.hanson_wright.html" aria-current="page">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>gauss_mgf</span></li><li><a href="#integral_gauss_expR_dot">integral_<wbr>gauss_<wbr>expR_<wbr>dot</a></li><li><a href="#gauss_chaos_mgf">gauss_<wbr>chaos_<wbr>mgf</a></li><li class="toc-sec"><span>decoupling</span></li><li><a href="#set_toggle">set_<wbr>toggle</a></li><li><a href="#set_toggleK">set_<wbr>toggleK</a></li><li><a href="#in_set_toggle">in_<wbr>set_<wbr>toggle</a></li><li><a href="#card_set_ord">card_<wbr>set_<wbr>ord</a></li><li><a href="#sum_set_indicator">sum_<wbr>set_<wbr>indicator</a></li><li><a href="#offdiag_decouple">offdiag_<wbr>decouple</a></li><li class="toc-sec"><span>expR_avg</span></li><li><a href="#expR_avg_le">expR_<wbr>avg_<wbr>le</a></li><li class="toc-sec"><span>integral_avg</span></li><li><a href="#ge0_integral_avg">ge0_<wbr>integral_<wbr>avg</a></li><li class="toc-sec"><span>subexponential_of_mgf</span></li><li><a href="#subexponential_of_mgf">subexponential_<wbr>of_<wbr>mgf</a></li><li class="toc-sec"><span>hanson_wright</span></li><li class="is-local"><a href="#mX">mX</a></li><li><a href="#hw_decoupled">hw_<wbr>decoupled</a></li><li><a href="#ord_ext">ord_<wbr>ext</a></li><li><a href="#ord_extE">ord_<wbr>extE</a></li><li class="is-local"><a href="#hoeffding">hoeffding</a></li><li><a href="#hw_mask">hw_<wbr>mask</a></li><li><a href="#hw_mask_diag">hw_<wbr>mask_<wbr>diag</a></li><li><a href="#opnorm_diag01">opnorm_<wbr>diag01</a></li><li><a href="#opnorm_hw_mask">opnorm_<wbr>hw_<wbr>mask</a></li><li><a href="#mxdot_hw_mask">mxdot_<wbr>hw_<wbr>mask</a></li><li><a href="#hw_decoupled_mgf">hw_<wbr>decoupled_<wbr>mgf</a></li><li><a href="#hw_offdiag">hw_<wbr>offdiag</a></li><li class="is-local"><a href="#mdec">mdec</a></li><li class="is-local"><a href="#moff">moff</a></li><li><a href="#hw_offdiag_mgf">hw_<wbr>offdiag_<wbr>mgf</a></li><li><a href="#entry_le_opnorm">entry_<wbr>le_<wbr>opnorm</a></li><li><a href="#hw_sqmean">hw_<wbr>sqmean</a></li><li><a href="#hw_diag">hw_<wbr>diag</a></li><li class="is-local"><a href="#sub_center">sub_<wbr>center</a></li><li class="is-local"><a href="#center0">center0</a></li><li><a href="#hw_diag_mgf">hw_<wbr>diag_<wbr>mgf</a></li><li><a href="#hw_quad">hw_<wbr>quad</a></li><li><a href="#hw_center">hw_<wbr>center</a></li><li><a href="#hw_quad_split">hw_<wbr>quad_<wbr>split</a></li><li class="is-local"><a href="#mquad">mquad</a></li><li class="is-local"><a href="#mdiag">mdiag</a></li><li><a href="#hanson_wright_mgf">hanson_<wbr>wright_<wbr>mgf</a></li><li><a href="#hw_quad0">hw_<wbr>quad0</a></li><li><a href="#hanson_wright_subexponential">hanson_<wbr>wright_<wbr>subexponential</a></li><li><a href="#hanson_wright_upper">hanson_<wbr>wright_<wbr>upper</a></li><li><a href="#hw_quadN">hw_<wbr>quadN</a></li><li><a href="#hanson_wright">hanson_<wbr>wright</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.probability.html">probability</a><span aria-hidden="true">/</span><span>hanson_wright</span></div>
+<h1 class="page-title">The Hanson-Wright inequality</h1>
+<div class="page-meta"><code>GaussianAnalysis.probability.hanson_wright</code><span>library/probability/hanson_wright.v</span><span>985 lines</span><span>26 lemmas and theorems, 9 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>11</b> library modules and 26 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.matrix.real_spectral.html">GaussianAnalysis.matrix.real_spectral</a></li><li><a href="GaussianAnalysis.matrix.opnorm.html">GaussianAnalysis.matrix.opnorm</a></li><li><a href="GaussianAnalysis.comparison.normal_mgf.html">GaussianAnalysis.comparison.normal_mgf</a></li><li><a href="GaussianAnalysis.comparison.chi_square.html">GaussianAnalysis.comparison.chi_square</a></li><li><a href="GaussianAnalysis.comparison.gauss_law.html">GaussianAnalysis.comparison.gauss_law</a></li><li><a href="GaussianAnalysis.probability.lindeberg.html">GaussianAnalysis.probability.lindeberg</a></li><li><a href="GaussianAnalysis.probability.subgaussian.html">GaussianAnalysis.probability.subgaussian</a></li><li><a href="GaussianAnalysis.probability.conditioning.html">GaussianAnalysis.probability.conditioning</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.sesquilinear, mathcomp.algebra.interval, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.numfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.arithmetic_tactic, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.analysis.probability_theory.normal_distribution</p></div></details><details><summary>Required by <b>1</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Features/Regular.v" target="_blank" rel="noopener">extension/Features/Regular.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>Let x have law <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n, so that X_i = f_i (x_i) are independent, centered and subgaussian with constant K (<a href="GaussianAnalysis.probability.subgaussian.html">subgaussian.v</a>), and let A be a real n x n matrix. The quadratic form Q = \sum_(i, j) a_ij X_i X_j (<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> A) concentrates around <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> A = \sum_i a_ii E X_i^2, which is its mean (an identity this file does not need): the inequality of Hanson and Wright in the form of Rudelson and Vershynin (Vershynin, High-Dimensional Probability, theorem 6.2.1), with explicit constants. This is item HW of phase 5 (Lemma 3.2 of Koehler and Sohn, arXiv 2608.27372, lines 2157-2185).</p>
+<ul><li><a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a>: for u &gt;= 0, P(|Q - E Q| &gt;= u) &lt;= 2 exp (- min (u^2 / (6912 K^4 |A|_F^2), u / (136 K^2 opnorm A))), with 6912 written 4 * 1728 in the statement; <a class="r k-thm" href="#hanson_wright_upper" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_upper">hanson_wright_upper</a> is the one-sided bound.</li><li><a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a>: Q - E Q is subexponential with every constant L &gt;= 252 K^2 |A|_F.</li><li><a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a>: E exp (l (Q - E Q)) &lt;= exp (1728 l^2 K^4 |A|_F^2) when 68 |l| K^2 opnorm A &lt;= 1. Q - E Q is the diagonal part \sum_i a_ii (X_i^2 - E X_i^2) (<a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a>, Bernstein's inequality, <a class="r k-thm" href="GaussianAnalysis.probability.subgaussian.html#subexponential_sum_mgf" title="GaussianAnalysis.probability.subgaussian.subexponential_sum_mgf">subexponential_sum_mgf</a>) plus the off-diagonal part (<a class="r k-thm" href="#hw_quad_split" title="GaussianAnalysis.probability.hanson_wright.hw_quad_split">hw_quad_split</a>), and exp of their average is at most the average of the exps.</li><li><a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a>: E exp (l \sum_(i != j) a_ij X_i X_j) &lt;= exp (432 l^2 K^4 |A|_F^2) when 1152 l^2 K^4 opnorm A ^ 2 &lt;= 1. The off-diagonal sum is 4 / 2^n times the sum over the sets S of the decoupled sums \sum_(i in S, j notin S) (<a class="r k-thm" href="#offdiag_decouple" title="GaussianAnalysis.probability.hanson_wright.offdiag_decouple">offdiag_decouple</a>, since a quarter of the sets contain i and not j: <a class="r k-thm" href="#sum_set_indicator" title="GaussianAnalysis.probability.hanson_wright.sum_set_indicator">sum_set_indicator</a>, by the involutions <a class="r k-def" href="#set_toggle" title="GaussianAnalysis.probability.hanson_wright.set_toggle">set_toggle</a>), and <a class="r k-thm" href="#expR_avg_le" title="GaussianAnalysis.probability.hanson_wright.expR_avg_le">expR_avg_le</a> is Jensen's inequality for exp and a finite average.</li><li><a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a>: E exp (l \sum_(i in S, j notin S) a_ij X_i X_j) &lt;= exp (27 l^2 K^4 |A|_F^2) when 72 l^2 K^4 opnorm A ^ 2 &lt;= 1. Resample the coordinates outside S (<a class="r k-thm" href="GaussianAnalysis.probability.conditioning.html#ge0_integral_tuple_prod_merge" title="GaussianAnalysis.probability.conditioning.ge0_integral_tuple_prod_merge">ge0_integral_tuple_prod_merge</a> of <a href="GaussianAnalysis.probability.conditioning.html">conditioning.v</a>), apply Hoeffding's inequality to them, write the result as a Gaussian integral (<a class="r k-thm" href="#integral_gauss_expR_dot" title="GaussianAnalysis.probability.hanson_wright.integral_gauss_expR_dot">integral_gauss_expR_dot</a>: E exp &lt;g, w&gt; = exp (|w|^2 / 2)), exchange the integrals (fubini_tonelli), apply Hoeffding's inequality to the coordinates in S, and bound the Gaussian chaos for the matrix <a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> S A, whose norms are at most those of A.</li><li><a class="r k-thm" href="#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a>: for M : 'M_(n, m), 0 &lt;= t and 4 t opnorm M ^ 2 &lt;= 1, E exp (t |g M|^2) &lt;= exp (3 / 2 t |M|_F^2): g M has the law of h B with B = diag (sqrt d) P for the spectral decomposition M^T M = P^T diag d P (<a class="r k-thm" href="GaussianAnalysis.comparison.gauss_law.html#ge0_integral_gauss_mulmx" title="GaussianAnalysis.comparison.gauss_law.ge0_integral_gauss_mulmx">ge0_integral_gauss_mulmx</a>), and |h B|^2 is a weighted chi-square.</li><li><a class="r k-thm" href="#subexponential_of_mgf" title="GaussianAnalysis.probability.hanson_wright.subexponential_of_mgf">subexponential_of_mgf</a>: if E exp (l Y) &lt;= exp (l^2 s^2) for |l| b &lt;= 1, then Y is subexponential with every constant L &gt;= 3 max (2 s, b).</li></ul></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_<wbr>wright</a></span><span><a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_<wbr>wright_<wbr>subexponential</a></span><span><a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_<wbr>wright_<wbr>mgf</a></span></div></td><td>The Hanson-Wright inequality: for <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n</code> with <code>X_i = f_i (x_i)</code> centered and subgaussian with constant <code>K</code>, and <code>A</code> a real <code>n x n</code> matrix, <code>Q = \sum_(i, j) a_ij X_i X_j</code> satisfies <code>P(|Q - E Q| &gt;= u) &lt;= 2 exp (- min (u^2 / (6912 K^4 |A|_F^2), u / (136 K^2 opnorm A)))</code>, and <code>Q - E Q</code> is subexponential with constant <code>252 K^2 |A|_F</code>; <code>E Q</code> is written <code>\sum_i a_ii E X_i^2</code> (<a class="code-link k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center"><code>hw_center</code></a>). Proved by decoupling over the sets <code>S</code> of coordinates, Hoeffding's inequality twice and a Gaussian chaos bound, and Bernstein's inequality for the diagonal.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_<wbr>chaos_<wbr>mgf</a></span><span><a class="r k-thm" href="#integral_gauss_expR_dot" title="GaussianAnalysis.probability.hanson_wright.integral_gauss_expR_dot">integral_<wbr>gauss_<wbr>expR_<wbr>dot</a></span><span><a class="r k-thm" href="#subexponential_of_mgf" title="GaussianAnalysis.probability.hanson_wright.subexponential_of_mgf">subexponential_<wbr>of_<wbr>mgf</a></span><span><a class="r k-thm" href="#offdiag_decouple" title="GaussianAnalysis.probability.hanson_wright.offdiag_decouple">offdiag_<wbr>decouple</a></span></div></td><td>For <code>g</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code>: <code>E exp &lt;g, w&gt; = exp (|w|^2 / 2)</code>, and <code>E exp (t |g M|^2) &lt;= exp (3/2 t |M|_F^2)</code> when <code>4 t opnorm M ^ 2 &lt;= 1</code>. A bound <code>E exp (l Y) &lt;= exp (l^2 s^2)</code> for <code>|l| b &lt;= 1</code> makes <code>Y</code> subexponential with constant <code>3 max (2 s, b)</code>. The off-diagonal sum <code>\sum_(i != j) c_ij</code> is <code>4 / 2^n</code> times the sum over the sets <code>S</code> of <code>\sum_(i in S, j notin S) c_ij</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">35 exported, 8 local</span></h2>
+<div class="decl-toolbar"><label><input type="checkbox" id="show-local"> Show the 8 local declarations (<code>Let</code>, <code>Local</code>)</label><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-gauss_mgf-20"><span class="sec-kw">section</span><span class="sec-name">gauss_mgf</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="integral_gauss_expR_dot">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_gauss_expR_dot">integral_gauss_expR_dot</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L74" target="_blank" rel="noopener">source, line 74</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (w : &#x27;rV_n),
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_g (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> g w))%:E)%E = (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> w w / 2))%:E</pre></div>
+<div class="decl-doc"><p>The moment generating function of the standard Gaussian vector.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_gauss_expR_dot n (w : &#x27;rV[<span class="sv" title="section variable R of section gauss_mgf">R</span>]_<span class="bv">n</span>) :
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_g (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">g</span> <span class="bv">w</span>))%:E = (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">w</span> <span class="bv">w</span> / 2))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_chaos_mgf">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_chaos_mgf">gauss_chaos_mgf</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L92" target="_blank" rel="noopener">source, line 92</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n m : nat] [M : &#x27;M_(n, m)] [t : R],
+0 &lt;= t -&gt;
+4 * t * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> M ^+ 2 &lt;= 1 -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_g (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (g *m M) (g *m M)))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (3 / 2 * t * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> M M))%:E)%E</pre></div>
+<div class="decl-doc"><p>A Gaussian chaos: |g M|^2 for g of law gauss n.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>g</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code>: <code>E exp &lt;g, w&gt; = exp (|w|^2 / 2)</code>, and <code>E exp (t |g M|^2) &lt;= exp (3/2 t |M|_F^2)</code> when <code>4 t opnorm M ^ 2 &lt;= 1</code>. A bound <code>E exp (l Y) &lt;= exp (l^2 s^2)</code> for <code>|l| b &lt;= 1</code> makes <code>Y</code> subexponential with constant <code>3 max (2 s, b)</code>. The off-diagonal sum <code>\sum_(i != j) c_ij</code> is <code>4 / 2^n</code> times the sum over the sets <code>S</code> of <code>\sum_(i in S, j notin S) c_ij</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_chaos_mgf n m (M : &#x27;M[<span class="sv" title="section variable R of section gauss_mgf">R</span>]_(<span class="bv">n</span>, <span class="bv">m</span>)) (t : <span class="sv" title="section variable R of section gauss_mgf">R</span>) :
+  0 &lt;= <span class="bv">t</span> -&gt; 4 * <span class="bv">t</span> * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">M</span> ^+ 2 &lt;= 1 -&gt;
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_g (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">g</span> *m <span class="bv">M</span>) (<span class="bv">g</span> *m <span class="bv">M</span>)))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (3 / 2 * <span class="bv">t</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">M</span> <span class="bv">M</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-decoupling-98"><span class="sec-kw">section</span><span class="sec-name">decoupling</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>).
+<span class="vk">Implicit Types</span> (S : {set &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span>}) (i j k l : &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span>).</pre>
+<div class="decl k-def" id="set_toggle">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#set_toggle">set_toggle</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L166" target="_blank" rel="noopener">source, line 166</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [n : nat], &#x27;I_n -&gt; {set &#x27;I_n} -&gt; {set &#x27;I_n}</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> set_toggle k S : {set &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span>} := <span class="kw">if</span> <span class="bv">k</span> \<span class="kw">in</span> <span class="bv">S</span> <span class="kw">then</span> <span class="bv">S</span> :\ <span class="bv">k</span> <span class="kw">else</span> <span class="bv">k</span> |: <span class="bv">S</span>.</pre></div>
+<div class="decl-doc"><p>Remove k from S if it is there, add it otherwise.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#set_toggleK" title="GaussianAnalysis.probability.hanson_wright.set_toggleK">set_toggleK</a>, <a class="r k-thm" href="#in_set_toggle" title="GaussianAnalysis.probability.hanson_wright.in_set_toggle">in_set_toggle</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="set_toggleK">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#set_toggleK">set_toggleK</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L168" target="_blank" rel="noopener">source, line 168</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [n : nat] (k : &#x27;I_n), <span class="x" title="Corelib.ssr.ssrfun.involutive">involutive</span> (<a class="r k-def" href="#set_toggle" title="GaussianAnalysis.probability.hanson_wright.set_toggle">set_toggle</a> k)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> set_toggleK k : <span class="x" title="Corelib.ssr.ssrfun.involutive">involutive</span> (<a class="r k-def" href="#set_toggle" title="GaussianAnalysis.probability.hanson_wright.set_toggle">set_toggle</a> <span class="bv">k</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sum_set_indicator" title="GaussianAnalysis.probability.hanson_wright.sum_set_indicator">sum_set_indicator</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="in_set_toggle">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#in_set_toggle">in_set_toggle</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L175" target="_blank" rel="noopener">source, line 175</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [n : nat] (k l : &#x27;I_n) (S : {set &#x27;I_n}),
+(l \<span class="kw">in</span> <a class="r k-def" href="#set_toggle" title="GaussianAnalysis.probability.hanson_wright.set_toggle">set_toggle</a> k S) = (<span class="kw">if</span> l == k <span class="kw">then</span> k \notin S <span class="kw">else</span> l \<span class="kw">in</span> S)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> in_set_toggle k l S :
+  (<span class="bv">l</span> \<span class="kw">in</span> <a class="r k-def" href="#set_toggle" title="GaussianAnalysis.probability.hanson_wright.set_toggle">set_toggle</a> <span class="bv">k</span> <span class="bv">S</span>) = (<span class="kw">if</span> <span class="bv">l</span> == <span class="bv">k</span> <span class="kw">then</span> <span class="bv">k</span> \notin <span class="bv">S</span> <span class="kw">else</span> <span class="bv">l</span> \<span class="kw">in</span> <span class="bv">S</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sum_set_indicator" title="GaussianAnalysis.probability.hanson_wright.sum_set_indicator">sum_set_indicator</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="card_set_ord">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#card_set_ord">card_set_ord</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L185" target="_blank" rel="noopener">source, line 185</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> n : nat, #|{set &#x27;I_n}| = 2 ^ n</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> card_set_ord : #|{set &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span>}| = 2 ^ <span class="sv" title="section variable n of section decoupling">n</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sum_set_indicator" title="GaussianAnalysis.probability.hanson_wright.sum_set_indicator">sum_set_indicator</a>, <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sum_set_indicator">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sum_set_indicator">sum_set_indicator</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L189" target="_blank" rel="noopener">source, line 189</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [i j : &#x27;I_n],
+i != j -&gt; \sum_S ((i \<span class="kw">in</span> S) &amp;&amp; (j \notin S))%:R = (2 ^ n)%:R / 4</pre></div>
+<div class="decl-doc"><p>For i != j, a quarter of the sets contain i and not j.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sum_set_indicator i j : <span class="bv">i</span> != <span class="bv">j</span> -&gt;
+  \sum_(S : {set &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span>}) ((<span class="bv">i</span> \<span class="kw">in</span> <span class="bv">S</span>) &amp;&amp; (<span class="bv">j</span> \notin <span class="bv">S</span>))%:R = (2 ^ <span class="sv" title="section variable n of section decoupling">n</span>)%:R / 4 :&gt; <span class="sv" title="section variable R of section decoupling">R</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#offdiag_decouple" title="GaussianAnalysis.probability.hanson_wright.offdiag_decouple">offdiag_decouple</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="offdiag_decouple">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#offdiag_decouple">offdiag_decouple</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L221" target="_blank" rel="noopener">source, line 221</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (c : &#x27;I_n -&gt; &#x27;I_n -&gt; R),
+\sum_i \sum_j (i != j)%:R * c i j =
+4 / (2 ^ n)%:R * \sum_S \sum_i \sum_j ((i \<span class="kw">in</span> S) &amp;&amp; (j \notin S))%:R * c i j</pre></div>
+<div class="decl-doc"><p>The off-diagonal sum as an average over the sets S of the sums over i in S and j notin S.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> offdiag_decouple (c : &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span> -&gt; &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span> -&gt; <span class="sv" title="section variable R of section decoupling">R</span>) :
+  \sum_i \sum_j (<span class="bv">i</span> != <span class="bv">j</span>)%:R * <span class="bv">c</span> <span class="bv">i</span> <span class="bv">j</span> =
+  4 / (2 ^ <span class="sv" title="section variable n of section decoupling">n</span>)%:R * \sum_(S : {set &#x27;I_<span class="sv" title="section variable n of section decoupling">n</span>})
+    \sum_i \sum_j ((<span class="bv">i</span> \<span class="kw">in</span> <span class="bv">S</span>) &amp;&amp; (<span class="bv">j</span> \notin <span class="bv">S</span>))%:R * <span class="bv">c</span> <span class="bv">i</span> <span class="bv">j</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-expR_avg-162"><span class="sec-kw">section</span><span class="sec-name">expR_avg</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="expR_avg_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#expR_avg_le">expR_avg_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L247" target="_blank" rel="noopener">source, line 247</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [I : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>] (y : I -&gt; R),
+(0 &lt; #|I|)%N -&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (#|I|%:R^-1 * \sum_k y k) &lt;= #|I|%:R^-1 * \sum_k <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (y k)</pre></div>
+<div class="decl-doc"><p>Jensen's inequality for exp and a finite average.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> expR_avg_le (I : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>) (y : <span class="bv">I</span> -&gt; <span class="sv" title="section variable R of section expR_avg">R</span>) : (0 &lt; #|<span class="bv">I</span>|)%N -&gt;
+  <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (#|<span class="bv">I</span>|%:R^-1 * \sum_k <span class="bv">y</span> <span class="bv">k</span>) &lt;= #|<span class="bv">I</span>|%:R^-1 * \sum_k <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">y</span> <span class="bv">k</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-integral_avg-179"><span class="sec-kw">section</span><span class="sec-name">integral_avg</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Variable</span> mu : {measure set <span class="sv" title="section variable T of section integral_avg">T</span> -&gt; \bar <span class="sv" title="section variable R of section integral_avg">R</span>}.</pre>
+<div class="decl k-thm" id="ge0_integral_avg">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ge0_integral_avg">ge0_integral_avg</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L270" target="_blank" rel="noopener">source, line 270</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [mu : measure T R] [I : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>] [g : I -&gt; T -&gt; R] [B : R],
+(0 &lt; #|I|)%N -&gt;
+(<span class="kw">forall</span> k : I, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] (g k)) -&gt;
+(<span class="kw">forall</span> (k : I) (x : T), 0 &lt;= g k x) -&gt;
+(<span class="kw">forall</span> k : I, (\int[mu]_x (g k x)%:E &lt;= B%:E)%E) -&gt;
+(\int[mu]_x (#|I|%:R^-1 * \sum_k g k x)%:E &lt;= B%:E)%E</pre></div>
+<div class="decl-doc"><p>If each g k has integral at most B, so has their average.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ge0_integral_avg (I : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>) (g : <span class="bv">I</span> -&gt; <span class="sv" title="section variable T of section integral_avg">T</span> -&gt; <span class="sv" title="section variable R of section integral_avg">R</span>) (B : <span class="sv" title="section variable R of section integral_avg">R</span>) :
+  (0 &lt; #|<span class="bv">I</span>|)%N -&gt; (<span class="kw">forall</span> k, <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section integral_avg">T</span>] (<span class="bv">g</span> <span class="bv">k</span>)) -&gt;
+  (<span class="kw">forall</span> k x, 0 &lt;= <span class="bv">g</span> <span class="bv">k</span> <span class="bv">x</span>) -&gt;
+  (<span class="kw">forall</span> k, \int[<span class="sv" title="section variable mu of section integral_avg">mu</span>]_x (<span class="bv">g</span> <span class="bv">k</span> <span class="bv">x</span>)%:E &lt;= <span class="bv">B</span>%:E)%E -&gt;
+  (\int[<span class="sv" title="section variable mu of section integral_avg">mu</span>]_x (#|<span class="bv">I</span>|%:R^-1 * \sum_k <span class="bv">g</span> <span class="bv">k</span> <span class="bv">x</span>)%:E &lt;= <span class="bv">B</span>%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#subexponential_of_mgf" title="GaussianAnalysis.probability.hanson_wright.subexponential_of_mgf">subexponential_of_mgf</a>, <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a>, <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-subexponential_of_mgf-198"><span class="sec-kw">section</span><span class="sec-name">subexponential_of_mgf</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (P : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="bv">T</span> <span class="bv">R</span>).</pre>
+<div class="decl k-thm" id="subexponential_of_mgf">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#subexponential_of_mgf">subexponential_of_mgf</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L301" target="_blank" rel="noopener">source, line 301</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P : probability T R] [Y : T -&gt; R] [s b L : R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] Y -&gt;
+0 &lt;= s -&gt;
+0 &lt; b -&gt;
+(<span class="kw">forall</span> l : join_Num_NumDomain_between_GRing_PzSemiRing_and_Num_SemiNormedZmodule R,
+ `|l| * b &lt;= 1 -&gt; (\int[P]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (l * Y x))%:E &lt;= (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (l ^+ 2 * s ^+ 2))%:E)%E) -&gt;
+3 * Num.max (2 * s) b &lt;= L -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subexponential" title="GaussianAnalysis.probability.subgaussian.subexponential">subexponential</a> P Y L</pre></div>
+<div class="decl-doc"><p>A bound on the moment generating function near 0 gives a subexponential constant: if E exp (l Y) &lt;= exp (l^2 s^2) for |l| b &lt;= 1, then Y is subexponential with every constant L &gt;= 3 max (2 s, b).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> subexponential_of_mgf (Y : <span class="sv" title="section variable T of section subexponential_of_mgf">T</span> -&gt; <span class="sv" title="section variable R of section subexponential_of_mgf">R</span>) (s b L : <span class="sv" title="section variable R of section subexponential_of_mgf">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section subexponential_of_mgf">T</span>] <span class="bv">Y</span> -&gt; 0 &lt;= <span class="bv">s</span> -&gt; 0 &lt; <span class="bv">b</span> -&gt;
+  (<span class="kw">forall</span> l, `|<span class="bv">l</span>| * <span class="bv">b</span> &lt;= 1 -&gt;
+     (\int[<span class="sv" title="section variable P of section subexponential_of_mgf">P</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> * <span class="bv">Y</span> <span class="bv">x</span>))%:E &lt;= (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> ^+ 2 * <span class="bv">s</span> ^+ 2))%:E)%E) -&gt;
+  3 * <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> (2 * <span class="bv">s</span>) <span class="bv">b</span> &lt;= <span class="bv">L</span> -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subexponential" title="GaussianAnalysis.probability.subgaussian.subexponential">subexponential</a> <span class="sv" title="section variable P of section subexponential_of_mgf">P</span> <span class="bv">Y</span> <span class="bv">L</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-hanson_wright-271"><span class="sec-kw">section</span><span class="sec-name">hanson_wright</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Variables</span> (mu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section hanson_wright">T</span> <span class="sv" title="section variable R of section hanson_wright">R</span>) (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) (f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable T of section hanson_wright">T</span> -&gt; <span class="sv" title="section variable R of section hanson_wright">R</span>) (K : <span class="sv" title="section variable R of section hanson_wright">R</span>).
+<span class="vk">Hypothesis</span> sf : <span class="kw">forall</span> i, (<span class="bv">i</span> &lt; <span class="sv" title="section variable n of section hanson_wright">n</span>)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (<span class="sv" title="section variable mu of section hanson_wright">mu</span> <span class="bv">i</span>) (<span class="sv" title="section variable f of section hanson_wright">f</span> <span class="bv">i</span>) <span class="sv" title="section variable K of section hanson_wright">K</span>.
+<span class="vk">Hypothesis</span> f0 : <span class="kw">forall</span> i, (<span class="bv">i</span> &lt; <span class="sv" title="section variable n of section hanson_wright">n</span>)%N -&gt; (\int[<span class="sv" title="section variable mu of section hanson_wright">mu</span> <span class="bv">i</span>]_t <span class="sv" title="section variable f of section hanson_wright">f</span> <span class="bv">i</span> <span class="bv">t</span> = 0)%R.
+<span class="vk">Local Notation</span> P := (<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="sv" title="section variable mu of section hanson_wright">mu</span> <span class="sv" title="section variable n of section hanson_wright">n</span>).
+<span class="vk">Local Notation</span> X x i := (<span class="sv" title="section variable f of section hanson_wright">f</span> (<span class="x" title="mathcomp.boot.fintype.nat_of_ord">nat_of_ord</span> i) (<span class="x" title="mathcomp.boot.tuple.tnth">tnth</span> x i)).</pre>
+<div class="decl k-let is-local" id="mX">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mX">mX</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L392" target="_blank" rel="noopener">source, line 392</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mX (i : &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>] (<span class="kw">fun</span> x =&gt; <span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">i</span>).</pre></div>
+</div>
+<div class="decl k-def" id="hw_decoupled">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_decoupled">hw_decoupled</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L399" target="_blank" rel="noopener">source, line 399</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] [n : nat],
+(nat -&gt; T -&gt; R) -&gt; {set &#x27;I_n} -&gt; &#x27;M_n -&gt; n.-tuple T -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_decoupled (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> :=
+  \sum_i \sum_j ((<span class="bv">i</span> \<span class="kw">in</span> <span class="bv">S</span>) &amp;&amp; (<span class="bv">j</span> \notin <span class="bv">S</span>))%:R * (<span class="bv">A</span> <span class="bv">i</span> <span class="bv">j</span> * (<span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">i</span> * <span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">j</span>)).</pre></div>
+<div class="decl-doc"><p>The decoupled form \sum_(i in S, j notin S) a_ij X_i X_j.</p></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a>, <a class="r k-let" href="#mdec" title="GaussianAnalysis.probability.hanson_wright.mdec (section-local)">mdec</a>, <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="ord_ext">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#ord_ext">ord_ext</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L403" target="_blank" rel="noopener">source, line 403</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [R : realType] [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>], (&#x27;I_n -&gt; R) -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> ord_ext (c : &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span> -&gt; <span class="sv" title="section variable R of section hanson_wright">R</span>) (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> :=
+  <span class="kw">if</span> <span class="x" title="mathcomp.boot.eqtype.insub">insub</span> <span class="bv">k</span> <span class="kw">is</span> <span class="x" title="Corelib.Init.Datatypes.Some">Some</span> i <span class="kw">then</span> <span class="bv">c</span> i <span class="kw">else</span> 0.</pre></div>
+<div class="decl-doc"><p>A function of the ordinals as a function of the integers.</p></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ord_extE" title="GaussianAnalysis.probability.hanson_wright.ord_extE">ord_extE</a>, <a class="r k-let" href="#hoeffding" title="GaussianAnalysis.probability.hanson_wright.hoeffding (section-local)">hoeffding</a>, <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ord_extE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ord_extE">ord_extE</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L406" target="_blank" rel="noopener">source, line 406</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat] (c : &#x27;I_n -&gt; R) (i : &#x27;I_n), <a class="r k-def" href="#ord_ext" title="GaussianAnalysis.probability.hanson_wright.ord_ext">ord_ext</a> c i = c i</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ord_extE (c : &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span> -&gt; <span class="sv" title="section variable R of section hanson_wright">R</span>) (i : &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>) : <a class="r k-def" href="#ord_ext" title="GaussianAnalysis.probability.hanson_wright.ord_ext">ord_ext</a> <span class="bv">c</span> <span class="bv">i</span> = <span class="bv">c</span> <span class="bv">i</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#hoeffding" title="GaussianAnalysis.probability.hanson_wright.hoeffding (section-local)">hoeffding</a>, <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="hoeffding">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#hoeffding">hoeffding</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L410" target="_blank" rel="noopener">source, line 410</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> hoeffding (c : &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span> -&gt; <span class="sv" title="section variable R of section hanson_wright">R</span>) (l : <span class="sv" title="section variable R of section hanson_wright">R</span>) :
+  (\int[<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> * \sum_i <span class="bv">c</span> <span class="bv">i</span> * <span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">i</span>))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (3 * <span class="bv">l</span> ^+ 2 * \sum_i <span class="bv">c</span> <span class="bv">i</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2))%:E)%E.</pre></div>
+<div class="decl-doc"><p>Hoeffding's inequality for coefficients indexed by 'I_n.</p></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="hw_mask">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_mask">hw_mask</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L421" target="_blank" rel="noopener">source, line 421</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat], {set &#x27;I_n} -&gt; &#x27;M_n -&gt; &#x27;M_n</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_mask (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span> :=
+  \matrix_(j, i) (((<span class="bv">i</span> \<span class="kw">in</span> <span class="bv">S</span>) &amp;&amp; (<span class="bv">j</span> \notin <span class="bv">S</span>))%:R * <span class="bv">A</span> <span class="bv">i</span> <span class="bv">j</span>).</pre></div>
+<div class="decl-doc"><p>The matrix of the decoupled form: (g M)_i = \sum_(j notin S) g_j a_ij for i in S, 0 otherwise.</p></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_mask_diag" title="GaussianAnalysis.probability.hanson_wright.hw_mask_diag">hw_mask_diag</a>, <a class="r k-thm" href="#opnorm_hw_mask" title="GaussianAnalysis.probability.hanson_wright.opnorm_hw_mask">opnorm_hw_mask</a>, <a class="r k-thm" href="#mxdot_hw_mask" title="GaussianAnalysis.probability.hanson_wright.mxdot_hw_mask">mxdot_hw_mask</a>, <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_mask_diag">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#hw_mask_diag">hw_mask_diag</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L424" target="_blank" rel="noopener">source, line 424</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat] (S0 : {set &#x27;I_n}) (A : &#x27;M_n),
+<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> S0 A = <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> (\row_j (j \notin S0)%:R) *m A^T *m <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> (\row_i (i \<span class="kw">in</span> S0)%:R)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> hw_mask_diag (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) :
+  <a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> <span class="bv">S</span> <span class="bv">A</span> = <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> (\row_j (<span class="bv">j</span> \notin <span class="bv">S</span>)%:R) *m <span class="bv">A</span>^T *m
+    <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> (\row_i (<span class="bv">i</span> \<span class="kw">in</span> <span class="bv">S</span>)%:R).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#opnorm_hw_mask" title="GaussianAnalysis.probability.hanson_wright.opnorm_hw_mask">opnorm_hw_mask</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="opnorm_diag01">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#opnorm_diag01">opnorm_diag01</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L432" target="_blank" rel="noopener">source, line 432</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat] [v : &#x27;rV_n],
+(<span class="kw">forall</span> i : &#x27;I_n, v 0 i = 0 \/ v 0 i = 1) -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> v) &lt;= 1</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> opnorm_diag01 (v : &#x27;rV[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) : (<span class="kw">forall</span> i, <span class="bv">v</span> 0 <span class="bv">i</span> = 0 \/ <span class="bv">v</span> 0 <span class="bv">i</span> = 1) -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> <span class="bv">v</span>) &lt;= 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#opnorm_hw_mask" title="GaussianAnalysis.probability.hanson_wright.opnorm_hw_mask">opnorm_hw_mask</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="opnorm_hw_mask">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#opnorm_hw_mask">opnorm_hw_mask</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L442" target="_blank" rel="noopener">source, line 442</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat] (S : {set &#x27;I_n}) (A : &#x27;M_n),
+<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> S A) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> opnorm_hw_mask (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> <span class="bv">S</span> <span class="bv">A</span>) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_hw_mask">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_hw_mask">mxdot_hw_mask</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L455" target="_blank" rel="noopener">source, line 455</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat] (S : {set &#x27;I_n}) (A : &#x27;M_n),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> S A) (<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> S A) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_hw_mask (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> <span class="bv">S</span> <span class="bv">A</span>) (<a class="r k-def" href="#hw_mask" title="GaussianAnalysis.probability.hanson_wright.hw_mask">hw_mask</a> <span class="bv">S</span> <span class="bv">A</span>) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_decoupled_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled_mgf">hw_decoupled_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_decoupled_mgf">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hw_decoupled_mgf">hw_decoupled_mgf</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L467" target="_blank" rel="noopener">source, line 467</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; \int[mu i]_t f i t = 0) -&gt;
+<span class="kw">forall</span> (S0 : {set &#x27;I_n}) [A : &#x27;M_n] [l : R],
+72 * l ^+ 2 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A ^+ 2 &lt;= 1 -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (l * <a class="r k-def" href="#hw_decoupled" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled">hw_decoupled</a> f S0 A x))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (27 * l ^+ 2 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A))%:E)%E</pre></div>
+<div class="decl-doc"><p>The moment generating function of the decoupled form: resample the coordinates outside S, apply Hoeffding's inequality to them, write the result as a Gaussian integral, exchange the integrals, apply Hoeffding's inequality to the coordinates in S and bound the Gaussian chaos.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hw_decoupled_mgf (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (l : <span class="sv" title="section variable R of section hanson_wright">R</span>) :
+  72 * <span class="bv">l</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span> ^+ 2 &lt;= 1 -&gt;
+  (\int[<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> * <a class="r k-def" href="#hw_decoupled" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled">hw_decoupled</a> <span class="bv">S</span> <span class="bv">A</span> <span class="bv">x</span>))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (27 * <span class="bv">l</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="hw_offdiag">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_offdiag">hw_offdiag</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L583" target="_blank" rel="noopener">source, line 583</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] [n : nat],
+(nat -&gt; T -&gt; R) -&gt; &#x27;M_n -&gt; n.-tuple T -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_offdiag (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> :=
+  \sum_i \sum_j (<span class="bv">i</span> != <span class="bv">j</span>)%:R * (<span class="bv">A</span> <span class="bv">i</span> <span class="bv">j</span> * (<span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">i</span> * <span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">j</span>)).</pre></div>
+<div class="decl-doc"><p>The off-diagonal part \sum_(i != j) a_ij X_i X_j.</p></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#moff" title="GaussianAnalysis.probability.hanson_wright.moff (section-local)">moff</a>, <a class="r k-thm" href="#hw_offdiag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag_mgf">hw_offdiag_mgf</a>, <a class="r k-thm" href="#hw_quad_split" title="GaussianAnalysis.probability.hanson_wright.hw_quad_split">hw_quad_split</a>, <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="mdec">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mdec">mdec</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L586" target="_blank" rel="noopener">source, line 586</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mdec (S : {set &#x27;I_<span class="sv" title="section variable n of section hanson_wright">n</span>}) (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>] (<a class="r k-def" href="#hw_decoupled" title="GaussianAnalysis.probability.hanson_wright.hw_decoupled">hw_decoupled</a> <span class="bv">S</span> <span class="bv">A</span>).</pre></div>
+</div>
+<div class="decl k-let is-local" id="moff">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#moff">moff</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L594" target="_blank" rel="noopener">source, line 594</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> moff (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>] (<a class="r k-def" href="#hw_offdiag" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag">hw_offdiag</a> <span class="bv">A</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_offdiag_mgf">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hw_offdiag_mgf">hw_offdiag_mgf</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L602" target="_blank" rel="noopener">source, line 602</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; \int[mu i]_t f i t = 0) -&gt;
+<span class="kw">forall</span> [A : &#x27;M_n] [l : R],
+1152 * l ^+ 2 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A ^+ 2 &lt;= 1 -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (l * <a class="r k-def" href="#hw_offdiag" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag">hw_offdiag</a> f A x))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (432 * l ^+ 2 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A))%:E)%E</pre></div>
+<div class="decl-doc"><p>Decoupling: average the decoupled forms over the sets S.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hw_offdiag_mgf (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (l : <span class="sv" title="section variable R of section hanson_wright">R</span>) :
+  1152 * <span class="bv">l</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span> ^+ 2 &lt;= 1 -&gt;
+  (\int[<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> * <a class="r k-def" href="#hw_offdiag" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag">hw_offdiag</a> <span class="bv">A</span> <span class="bv">x</span>))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (432 * <span class="bv">l</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="entry_le_opnorm">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#entry_le_opnorm">entry_le_opnorm</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L638" target="_blank" rel="noopener">source, line 638</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [n : nat] (A : &#x27;M_n) (i j : &#x27;I_n), `|A i j| &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> entry_le_opnorm (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) i j : `|<span class="bv">A</span> <span class="bv">i</span> <span class="bv">j</span>| &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a>, <a class="r k-thm" href="#hanson_wright_upper" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_upper">hanson_wright_upper</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="hw_sqmean">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_sqmean">hw_sqmean</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L647" target="_blank" rel="noopener">source, line 647</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType],
+(<span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; probability T R) -&gt; (<span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; T -&gt; R) -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_sqmean (i : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> := \int[<span class="sv" title="section variable mu of section hanson_wright">mu</span> <span class="bv">i</span>]_t <span class="sv" title="section variable f of section hanson_wright">f</span> <span class="bv">i</span> <span class="bv">t</span> ^+ 2.</pre></div>
+<div class="decl-doc"><p>The second moments E X_i^2 and the diagonal part \sum_i a_ii (X_i^2 - E X_i^2).</p></div>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-def" href="#hw_diag" title="GaussianAnalysis.probability.hanson_wright.hw_diag">hw_diag</a>, <a class="r k-let" href="#sub_center" title="GaussianAnalysis.probability.hanson_wright.sub_center (section-local)">sub_center</a>, <a class="r k-let" href="#center0" title="GaussianAnalysis.probability.hanson_wright.center0 (section-local)">center0</a>, <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a>, <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="hw_diag">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_diag">hw_diag</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L649" target="_blank" rel="noopener">source, line 649</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType],
+(nat -&gt; probability T R) -&gt; <span class="kw">forall</span> [n : nat], (nat -&gt; T -&gt; R) -&gt; &#x27;M_n -&gt; n.-tuple T -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_diag (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> :=
+  \sum_i <span class="bv">A</span> <span class="bv">i</span> <span class="bv">i</span> * (<span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">i</span> ^+ 2 - <a class="r k-def" href="#hw_sqmean" title="GaussianAnalysis.probability.hanson_wright.hw_sqmean">hw_sqmean</a> <span class="bv">i</span>).</pre></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a>, <a class="r k-thm" href="#hw_quad_split" title="GaussianAnalysis.probability.hanson_wright.hw_quad_split">hw_quad_split</a>, <a class="r k-let" href="#mdiag" title="GaussianAnalysis.probability.hanson_wright.mdiag (section-local)">mdiag</a>, <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="sub_center">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#sub_center">sub_center</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L652" target="_blank" rel="noopener">source, line 652</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> sub_center (i : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : (<span class="bv">i</span> &lt; <span class="sv" title="section variable n of section hanson_wright">n</span>)%N -&gt;
+  <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subexponential" title="GaussianAnalysis.probability.subgaussian.subexponential">subexponential</a> (<span class="sv" title="section variable mu of section hanson_wright">mu</span> <span class="bv">i</span>) (<span class="kw">fun</span> t =&gt; <span class="sv" title="section variable f of section hanson_wright">f</span> <span class="bv">i</span> <span class="bv">t</span> ^+ 2 - <a class="r k-def" href="#hw_sqmean" title="GaussianAnalysis.probability.hanson_wright.hw_sqmean">hw_sqmean</a> <span class="bv">i</span>) (3 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="center0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#center0">center0</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L658" target="_blank" rel="noopener">source, line 658</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> center0 (i : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : (<span class="bv">i</span> &lt; <span class="sv" title="section variable n of section hanson_wright">n</span>)%N -&gt;
+  \int[<span class="sv" title="section variable mu of section hanson_wright">mu</span> <span class="bv">i</span>]_t (<span class="sv" title="section variable f of section hanson_wright">f</span> <span class="bv">i</span> <span class="bv">t</span> ^+ 2 - <a class="r k-def" href="#hw_sqmean" title="GaussianAnalysis.probability.hanson_wright.hw_sqmean">hw_sqmean</a> <span class="bv">i</span>) = 0.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_diag_mgf" title="GaussianAnalysis.probability.hanson_wright.hw_diag_mgf">hw_diag_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_diag_mgf">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hw_diag_mgf">hw_diag_mgf</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L668" target="_blank" rel="noopener">source, line 668</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+<span class="kw">forall</span> [A : &#x27;M_n] [l : R],
+6 * `|l| * K ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A &lt;= 1 -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (l * <a class="r k-def" href="#hw_diag" title="GaussianAnalysis.probability.hanson_wright.hw_diag">hw_diag</a> mu f A x))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (144 * l ^+ 2 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A))%:E)%E</pre></div>
+<div class="decl-doc"><p>Bernstein's inequality for the diagonal part.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hw_diag_mgf (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (l : <span class="sv" title="section variable R of section hanson_wright">R</span>) :
+  6 * `|<span class="bv">l</span>| * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span> &lt;= 1 -&gt;
+  (\int[<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> * <a class="r k-def" href="#hw_diag" title="GaussianAnalysis.probability.hanson_wright.hw_diag">hw_diag</a> <span class="bv">A</span> <span class="bv">x</span>))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (144 * <span class="bv">l</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="hw_quad">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_quad">hw_quad</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L703" target="_blank" rel="noopener">source, line 703</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] [n : nat],
+(nat -&gt; T -&gt; R) -&gt; &#x27;M_n -&gt; n.-tuple T -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_quad (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> :=
+  \sum_i \sum_j <span class="bv">A</span> <span class="bv">i</span> <span class="bv">j</span> * (<span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">i</span> * <span class="ln" title="Local Notation X x i := (f (nat_of_ord i) (tnth x i)).">X</span> <span class="bv">x</span> <span class="bv">j</span>).</pre></div>
+<div class="decl-doc"><p>The quadratic form Q = \sum_(i, j) a_ij X_i X_j and the constant \sum_i a_ii E X_i^2, which is its mean.</p></div>
+<details class="decl-used"><summary>Used by 8 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_quad_split" title="GaussianAnalysis.probability.hanson_wright.hw_quad_split">hw_quad_split</a>, <a class="r k-let" href="#mquad" title="GaussianAnalysis.probability.hanson_wright.mquad (section-local)">mquad</a>, <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a>, <a class="r k-thm" href="#hw_quad0" title="GaussianAnalysis.probability.hanson_wright.hw_quad0">hw_quad0</a>, <a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a>, <a class="r k-thm" href="#hanson_wright_upper" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_upper">hanson_wright_upper</a>, <a class="r k-thm" href="#hw_quadN" title="GaussianAnalysis.probability.hanson_wright.hw_quadN">hw_quadN</a>, <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="hw_center">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#hw_center">hw_center</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L706" target="_blank" rel="noopener">source, line 706</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType],
+(nat -&gt; probability T R) -&gt; <span class="kw">forall</span> [n : nat], (nat -&gt; T -&gt; R) -&gt; &#x27;M_n -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> hw_center (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) : <span class="sv" title="section variable R of section hanson_wright">R</span> := \sum_i <span class="bv">A</span> <span class="bv">i</span> <span class="bv">i</span> * <a class="r k-def" href="#hw_sqmean" title="GaussianAnalysis.probability.hanson_wright.hw_sqmean">hw_sqmean</a> <span class="bv">i</span>.</pre></div>
+<details class="decl-used"><summary>Used by 7 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hw_quad_split" title="GaussianAnalysis.probability.hanson_wright.hw_quad_split">hw_quad_split</a>, <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a>, <a class="r k-thm" href="#hw_quad0" title="GaussianAnalysis.probability.hanson_wright.hw_quad0">hw_quad0</a>, <a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a>, <a class="r k-thm" href="#hanson_wright_upper" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_upper">hanson_wright_upper</a>, <a class="r k-thm" href="#hw_quadN" title="GaussianAnalysis.probability.hanson_wright.hw_quadN">hw_quadN</a>, <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_quad_split">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#hw_quad_split">hw_quad_split</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L708" target="_blank" rel="noopener">source, line 708</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (mu : nat -&gt; probability T R) [n : nat] (f : nat -&gt; T -&gt; R) (A : &#x27;M_n) 
+  (x : n.-tuple T),
+<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f A x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f A = <a class="r k-def" href="#hw_diag" title="GaussianAnalysis.probability.hanson_wright.hw_diag">hw_diag</a> mu f A x + <a class="r k-def" href="#hw_offdiag" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag">hw_offdiag</a> f A x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> hw_quad_split (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) :
+  <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span> <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> <span class="bv">A</span> = <a class="r k-def" href="#hw_diag" title="GaussianAnalysis.probability.hanson_wright.hw_diag">hw_diag</a> <span class="bv">A</span> <span class="bv">x</span> + <a class="r k-def" href="#hw_offdiag" title="GaussianAnalysis.probability.hanson_wright.hw_offdiag">hw_offdiag</a> <span class="bv">A</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="mquad">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mquad">mquad</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L726" target="_blank" rel="noopener">source, line 726</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mquad (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>] (<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span>).</pre></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a>, <a class="r k-thm" href="#hanson_wright_upper" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_upper">hanson_wright_upper</a>, <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="mdiag">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mdiag">mdiag</a>
+<span class="tag local" title="Let: local to section hanson_wright, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L732" target="_blank" rel="noopener">source, line 732</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mdiag (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>] (<a class="r k-def" href="#hw_diag" title="GaussianAnalysis.probability.hanson_wright.hw_diag">hw_diag</a> <span class="bv">A</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_mgf" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_mgf">hanson_wright_mgf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hanson_wright_mgf">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hanson_wright_mgf">hanson_wright_mgf</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L739" target="_blank" rel="noopener">source, line 739</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; \int[mu i]_t f i t = 0) -&gt;
+<span class="kw">forall</span> [A : &#x27;M_n] [l : R],
+68 * `|l| * K ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A &lt;= 1 -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (l * (<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f A x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f A)))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (1728 * l ^+ 2 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A))%:E)%E</pre></div>
+<div class="decl-doc"><p>The moment generating function of Q - E Q.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hanson_wright_mgf (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (l : <span class="sv" title="section variable R of section hanson_wright">R</span>) :
+  68 * `|<span class="bv">l</span>| * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span> &lt;= 1 -&gt;
+  (\int[<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">l</span> * (<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span> <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> <span class="bv">A</span>)))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (1728 * <span class="bv">l</span> ^+ 2 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a>, <a class="r k-thm" href="#hanson_wright_upper" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_upper">hanson_wright_upper</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_quad0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#hw_quad0">hw_quad0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L799" target="_blank" rel="noopener">source, line 799</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (mu : nat -&gt; probability T R) [n : nat] (f : nat -&gt; T -&gt; R) (x : n.-tuple T),
+<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f 0 x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f 0 = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> hw_quad0 (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) : <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> 0 <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> 0 = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright_subexponential" title="GaussianAnalysis.probability.hanson_wright.hanson_wright_subexponential">hanson_wright_subexponential</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hanson_wright_subexponential">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hanson_wright_subexponential">hanson_wright_subexponential</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L811" target="_blank" rel="noopener">source, line 811</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; \int[mu i]_t f i t = 0) -&gt;
+<span class="kw">forall</span> [A : &#x27;M_n] [L : R],
+0 &lt; L -&gt;
+252 * K ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> A &lt;= L -&gt;
+<a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subexponential" title="GaussianAnalysis.probability.subgaussian.subexponential">subexponential</a> (<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n) (<span class="kw">fun</span> x : n.-tuple T =&gt; <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f A x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f A) L</pre></div>
+<div class="decl-doc"><p>Hanson-Wright, subexponential form: Q - E Q is subexponential with constant 252 K^2 |A|_F.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hanson_wright_subexponential (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (L : <span class="sv" title="section variable R of section hanson_wright">R</span>) :
+  0 &lt; <span class="bv">L</span> -&gt; 252 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">A</span> &lt;= <span class="bv">L</span> -&gt;
+  <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subexponential" title="GaussianAnalysis.probability.subgaussian.subexponential">subexponential</a> <span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span> (<span class="kw">fun</span> x =&gt; <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span> <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> <span class="bv">A</span>) <span class="bv">L</span>.</pre></div></details>
+</div>
+<div class="decl k-thm" id="hanson_wright_upper">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hanson_wright_upper">hanson_wright_upper</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L858" target="_blank" rel="noopener">source, line 858</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; \int[mu i]_t f i t = 0) -&gt;
+<span class="kw">forall</span> (A : &#x27;M_n) [u : R],
+0 &lt;= u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n [set x | (u &lt;= <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f A x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f A)%R] &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span>
+    (- Num.min (u ^+ 2 / (4 * 1728 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A)) (u / (136 * K ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A))))%:E)%E</pre></div>
+<div class="decl-doc"><p>Hanson-Wright, upper tail: P(Q - E Q &gt;= u) &lt;= exp (- min (u^2 / (6912 K^4 |A|_F^2), u / (136 K^2 opnorm A))).</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hanson_wright_upper (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (u : <span class="sv" title="section variable R of section hanson_wright">R</span>) : 0 &lt;= <span class="bv">u</span> -&gt;
+  (<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span> [set x | (<span class="bv">u</span> &lt;= <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span> <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> <span class="bv">A</span>)%R] &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> (<span class="bv">u</span> ^+ 2 / (4 * 1728 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>))
+                    (<span class="bv">u</span> / (136 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span>))))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hw_quadN">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#hw_quadN">hw_quadN</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L934" target="_blank" rel="noopener">source, line 934</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (mu : nat -&gt; probability T R) [n : nat] (f : nat -&gt; T -&gt; R) (A : &#x27;M_n) 
+  (x : n.-tuple T),
+<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f (- A) x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f (- A) = - (<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f A x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f A)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> hw_quadN (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (x : <span class="sv" title="section variable n of section hanson_wright">n</span>.-tuple <span class="sv" title="section variable T of section hanson_wright">T</span>) :
+  <a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> (- <span class="bv">A</span>) <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> (- <span class="bv">A</span>) = - (<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span> <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> <span class="bv">A</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#hanson_wright" title="GaussianAnalysis.probability.hanson_wright.hanson_wright">hanson_wright</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="hanson_wright">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#hanson_wright">hanson_wright</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/hanson_wright.v#L947" target="_blank" rel="noopener">source, line 947</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  [mu : nat -&gt; probability T R] [n : nat] [f : nat -&gt; T -&gt; R] [K : R],
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; <a class="r k-def" href="GaussianAnalysis.probability.subgaussian.html#subgaussian" title="GaussianAnalysis.probability.subgaussian.subgaussian">subgaussian</a> (mu i) (f i) K) -&gt;
+(<span class="kw">forall</span> i : nat, (i &lt; n)%N -&gt; \int[mu i]_t f i t = 0) -&gt;
+<span class="kw">forall</span> (A : &#x27;M_n) [u : R],
+0 &lt;= u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n [set x | (u &lt;= `|<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> f A x - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> mu f A|)%R] &lt;=
+ (2 *
+  <span class="x" title="mathcomp.analysis.sequences.expR">expR</span>
+    (- Num.min (u ^+ 2 / (4 * 1728 * K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A)) (u / (136 * K ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A))))%:E)%E</pre></div>
+<div class="decl-doc"><p>The Hanson-Wright inequality: P(|Q - E Q| &gt;= u) &lt;= 2 exp (- min (u^2 / (6912 K^4 |A|_F^2), u / (136 K^2 opnorm A))).</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The Hanson-Wright inequality: for <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n</code> with <code>X_i = f_i (x_i)</code> centered and subgaussian with constant <code>K</code>, and <code>A</code> a real <code>n x n</code> matrix, <code>Q = \sum_(i, j) a_ij X_i X_j</code> satisfies <code>P(|Q - E Q| &gt;= u) &lt;= 2 exp (- min (u^2 / (6912 K^4 |A|_F^2), u / (136 K^2 opnorm A)))</code>, and <code>Q - E Q</code> is subexponential with constant <code>252 K^2 |A|_F</code>; <code>E Q</code> is written <code>\sum_i a_ii E X_i^2</code> (<a class="code-link k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center"><code>hw_center</code></a>). Proved by decoupling over the sets <code>S</code> of coordinates, Hoeffding's inequality twice and a Gaussian chaos bound, and Bernstein's inequality for the diagonal.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> hanson_wright (A : &#x27;M[<span class="sv" title="section variable R of section hanson_wright">R</span>]_<span class="sv" title="section variable n of section hanson_wright">n</span>) (u : <span class="sv" title="section variable R of section hanson_wright">R</span>) : 0 &lt;= <span class="bv">u</span> -&gt;
+  (<span class="ln" title="Local Notation P := (tuple_prod mu n).">P</span> [set x | (<span class="bv">u</span> &lt;= `|<a class="r k-def" href="#hw_quad" title="GaussianAnalysis.probability.hanson_wright.hw_quad">hw_quad</a> <span class="bv">A</span> <span class="bv">x</span> - <a class="r k-def" href="#hw_center" title="GaussianAnalysis.probability.hanson_wright.hw_center">hw_center</a> <span class="bv">A</span>|)%R] &lt;=
+   (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> (<span class="bv">u</span> ^+ 2 / (4 * 1728 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>))
+                        (<span class="bv">u</span> / (136 * <span class="sv" title="section variable K of section hanson_wright">K</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span>))))%:E)%E.</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>gauss_mgf</span></li><li><a href="#integral_gauss_expR_dot">integral_<wbr>gauss_<wbr>expR_<wbr>dot</a></li><li><a href="#gauss_chaos_mgf">gauss_<wbr>chaos_<wbr>mgf</a></li><li class="toc-sec"><span>decoupling</span></li><li><a href="#set_toggle">set_<wbr>toggle</a></li><li><a href="#set_toggleK">set_<wbr>toggleK</a></li><li><a href="#in_set_toggle">in_<wbr>set_<wbr>toggle</a></li><li><a href="#card_set_ord">card_<wbr>set_<wbr>ord</a></li><li><a href="#sum_set_indicator">sum_<wbr>set_<wbr>indicator</a></li><li><a href="#offdiag_decouple">offdiag_<wbr>decouple</a></li><li class="toc-sec"><span>expR_avg</span></li><li><a href="#expR_avg_le">expR_<wbr>avg_<wbr>le</a></li><li class="toc-sec"><span>integral_avg</span></li><li><a href="#ge0_integral_avg">ge0_<wbr>integral_<wbr>avg</a></li><li class="toc-sec"><span>subexponential_of_mgf</span></li><li><a href="#subexponential_of_mgf">subexponential_<wbr>of_<wbr>mgf</a></li><li class="toc-sec"><span>hanson_wright</span></li><li class="is-local"><a href="#mX">mX</a></li><li><a href="#hw_decoupled">hw_<wbr>decoupled</a></li><li><a href="#ord_ext">ord_<wbr>ext</a></li><li><a href="#ord_extE">ord_<wbr>extE</a></li><li class="is-local"><a href="#hoeffding">hoeffding</a></li><li><a href="#hw_mask">hw_<wbr>mask</a></li><li><a href="#hw_mask_diag">hw_<wbr>mask_<wbr>diag</a></li><li><a href="#opnorm_diag01">opnorm_<wbr>diag01</a></li><li><a href="#opnorm_hw_mask">opnorm_<wbr>hw_<wbr>mask</a></li><li><a href="#mxdot_hw_mask">mxdot_<wbr>hw_<wbr>mask</a></li><li><a href="#hw_decoupled_mgf">hw_<wbr>decoupled_<wbr>mgf</a></li><li><a href="#hw_offdiag">hw_<wbr>offdiag</a></li><li class="is-local"><a href="#mdec">mdec</a></li><li class="is-local"><a href="#moff">moff</a></li><li><a href="#hw_offdiag_mgf">hw_<wbr>offdiag_<wbr>mgf</a></li><li><a href="#entry_le_opnorm">entry_<wbr>le_<wbr>opnorm</a></li><li><a href="#hw_sqmean">hw_<wbr>sqmean</a></li><li><a href="#hw_diag">hw_<wbr>diag</a></li><li class="is-local"><a href="#sub_center">sub_<wbr>center</a></li><li class="is-local"><a href="#center0">center0</a></li><li><a href="#hw_diag_mgf">hw_<wbr>diag_<wbr>mgf</a></li><li><a href="#hw_quad">hw_<wbr>quad</a></li><li><a href="#hw_center">hw_<wbr>center</a></li><li><a href="#hw_quad_split">hw_<wbr>quad_<wbr>split</a></li><li class="is-local"><a href="#mquad">mquad</a></li><li class="is-local"><a href="#mdiag">mdiag</a></li><li><a href="#hanson_wright_mgf">hanson_<wbr>wright_<wbr>mgf</a></li><li><a href="#hw_quad0">hw_<wbr>quad0</a></li><li><a href="#hanson_wright_subexponential">hanson_<wbr>wright_<wbr>subexponential</a></li><li><a href="#hanson_wright_upper">hanson_<wbr>wright_<wbr>upper</a></li><li><a href="#hw_quadN">hw_<wbr>quadN</a></li><li><a href="#hanson_wright">hanson_<wbr>wright</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

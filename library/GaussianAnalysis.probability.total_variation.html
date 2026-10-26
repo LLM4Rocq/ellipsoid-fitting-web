@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.probability.total_variation</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod current" href="GaussianAnalysis.probability.total_variation.html" aria-current="page">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>total_variation</span></li><li><a href="#tv_dist">tv_<wbr>dist</a></li><li><a href="#prob_fine_itv">prob_<wbr>fine_<wbr>itv</a></li><li><a href="#prob_fineB_le1">prob_<wbr>fineB_<wbr>le1</a></li><li class="is-local"><a href="#tv_ub">tv_<wbr>ub</a></li><li class="is-local"><a href="#tv_ne">tv_<wbr>ne</a></li><li><a href="#tv_dist_ge">tv_<wbr>dist_<wbr>ge</a></li><li><a href="#tv_dist_geE">tv_<wbr>dist_<wbr>geE</a></li><li><a href="#tv_dist_le">tv_<wbr>dist_<wbr>le</a></li><li><a href="#tv_dist_ge0">tv_<wbr>dist_<wbr>ge0</a></li><li><a href="#tv_dist_le1">tv_<wbr>dist_<wbr>le1</a></li><li><a href="#tv_distC">tv_<wbr>distC</a></li><li><a href="#tv_dist_triangle">tv_<wbr>dist_<wbr>triangle</a></li><li><a href="#tv_dist_eq0">tv_<wbr>dist_<wbr>eq0</a></li><li><a href="#tv_distxx">tv_<wbr>distxx</a></li><li><a href="#tv_distE">tv_<wbr>distE</a></li><li class="toc-sec"><span>product_bound</span></li><li><a href="#tuple_prod_tv">tuple_<wbr>prod_<wbr>tv</a></li><li class="toc-sec"><span>exp_limit</span></li><li><a href="#one_sub_le_expR">one_<wbr>sub_<wbr>le_<wbr>expR</a></li><li><a href="#expR_le_one_sub">expR_<wbr>le_<wbr>one_<wbr>sub</a></li><li><a href="#pow_one_sub_bounds">pow_<wbr>one_<wbr>sub_<wbr>bounds</a></li><li><a href="#pow_one_sub_dist">pow_<wbr>one_<wbr>sub_<wbr>dist</a></li><li><a href="#pow_one_sub_cvg">pow_<wbr>one_<wbr>sub_<wbr>cvg</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.probability.html">probability</a><span aria-hidden="true">/</span><span>total_variation</span></div>
+<h1 class="page-title">The total variation distance</h1>
+<div class="page-meta"><code>GaussianAnalysis.probability.total_variation</code><span>library/probability/total_variation.v</span><span>264 lines</span><span>18 lemmas and theorems, 1 definition</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>1</b> library modules and 22 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.probability.lindeberg.html">GaussianAnalysis.probability.lindeberg</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.numfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.arithmetic_tactic, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic</p></div></details><details><summary>Required by <b>2</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/ConditionKappa/Robust.v" target="_blank" rel="noopener">extension/ConditionKappa/Robust.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Countable/Robust.v" target="_blank" rel="noopener">extension/Countable/Robust.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>The total variation distance of two probabilities on a measurable type is the supremum of |P A - Q A| over the measurable sets A. It is a real number in [0, 1], since probabilities are finite.</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_<wbr>dist</a> P Q</code></td><td class="g-rhs">sup {|P A - Q A| : A measurable}, a real number</td></tr></table></div>
+<p>Main results:</p>
+<ul><li><a class="r k-thm" href="#tv_dist_ge" title="GaussianAnalysis.probability.total_variation.tv_dist_ge">tv_dist_ge</a>, <a class="r k-thm" href="#tv_dist_geE" title="GaussianAnalysis.probability.total_variation.tv_dist_geE">tv_dist_geE</a>, <a class="r k-thm" href="#tv_dist_le" title="GaussianAnalysis.probability.total_variation.tv_dist_le">tv_dist_le</a>: |P A - Q A| &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q for every measurable A (as reals and as extended reals), and <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q is the least such bound; <a class="r k-thm" href="#tv_distE" title="GaussianAnalysis.probability.total_variation.tv_distE">tv_distE</a>: as an extended real it is the ereal_sup of the |P A - Q A|;</li><li><a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>, <a class="r k-thm" href="#tv_dist_le1" title="GaussianAnalysis.probability.total_variation.tv_dist_le1">tv_dist_le1</a>, <a class="r k-thm" href="#tv_distC" title="GaussianAnalysis.probability.total_variation.tv_distC">tv_distC</a>, <a class="r k-thm" href="#tv_dist_triangle" title="GaussianAnalysis.probability.total_variation.tv_dist_triangle">tv_dist_triangle</a>, <a class="r k-thm" href="#tv_dist_eq0" title="GaussianAnalysis.probability.total_variation.tv_dist_eq0">tv_dist_eq0</a>, <a class="r k-thm" href="#tv_distxx" title="GaussianAnalysis.probability.total_variation.tv_distxx">tv_distxx</a>: a pseudometric with values in [0, 1], zero for laws that agree on the measurable sets;</li><li><a class="r k-thm" href="#tuple_prod_tv" title="GaussianAnalysis.probability.total_variation.tuple_prod_tv">tuple_prod_tv</a>: for laws mu i and nu i on T and every measurable set A of n-tuples, |<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n A - <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> nu n A| is at most the sum of the <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> (mu i) (nu i), i &lt; n (the hybrid argument of <a class="r k-thm" href="GaussianAnalysis.probability.lindeberg.html#lindeberg_replacement" title="GaussianAnalysis.probability.lindeberg.lindeberg_replacement">lindeberg_replacement</a> with the indicator of A);</li><li><a class="r k-thm" href="#one_sub_le_expR" title="GaussianAnalysis.probability.total_variation.one_sub_le_expR">one_sub_le_expR</a>, <a class="r k-thm" href="#expR_le_one_sub" title="GaussianAnalysis.probability.total_variation.expR_le_one_sub">expR_le_one_sub</a>, <a class="r k-thm" href="#pow_one_sub_bounds" title="GaussianAnalysis.probability.total_variation.pow_one_sub_bounds">pow_one_sub_bounds</a>: for 0 &lt;= x &lt; n, exp (- x n / (n - x)) &lt;= (1 - x / n)^n &lt;= exp (- x); <a class="r k-thm" href="#pow_one_sub_dist" title="GaussianAnalysis.probability.total_variation.pow_one_sub_dist">pow_one_sub_dist</a>: |(1 - x / n)^n - exp (- x)| &lt;= x^2 / (n - x); <a class="r k-thm" href="#pow_one_sub_cvg" title="GaussianAnalysis.probability.total_variation.pow_one_sub_cvg">pow_one_sub_cvg</a>: (1 - x / n)^n tends to exp (- x) for every x &gt;= 0.</li></ul></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_<wbr>dist</a></span><span><a class="r k-thm" href="#tv_dist_ge" title="GaussianAnalysis.probability.total_variation.tv_dist_ge">tv_<wbr>dist_<wbr>ge</a></span><span><a class="r k-thm" href="#tv_dist_geE" title="GaussianAnalysis.probability.total_variation.tv_dist_geE">tv_<wbr>dist_<wbr>geE</a></span><span><a class="r k-thm" href="#tv_dist_le" title="GaussianAnalysis.probability.total_variation.tv_dist_le">tv_<wbr>dist_<wbr>le</a></span><span><a class="r k-thm" href="#tv_distE" title="GaussianAnalysis.probability.total_variation.tv_distE">tv_<wbr>distE</a></span></div></td><td>The total variation distance of two probabilities <code>P</code> and <code>Q</code> on a measurable type: <code><a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q = sup {|P A - Q A| : A measurable}</code>, a real number. For every measurable <code>A</code>, <code>|P A - Q A| &lt;= tv_dist P Q</code>, as reals and as extended reals, and <code><a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q</code> is the least such bound; as an extended real it is the <code>ereal_sup</code> of the <code>|P A - Q A|</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_<wbr>dist_<wbr>ge0</a></span><span><a class="r k-thm" href="#tv_dist_le1" title="GaussianAnalysis.probability.total_variation.tv_dist_le1">tv_<wbr>dist_<wbr>le1</a></span><span><a class="r k-thm" href="#tv_distC" title="GaussianAnalysis.probability.total_variation.tv_distC">tv_<wbr>distC</a></span><span><a class="r k-thm" href="#tv_dist_triangle" title="GaussianAnalysis.probability.total_variation.tv_dist_triangle">tv_<wbr>dist_<wbr>triangle</a></span><span><a class="r k-thm" href="#tv_dist_eq0" title="GaussianAnalysis.probability.total_variation.tv_dist_eq0">tv_<wbr>dist_<wbr>eq0</a></span><span><a class="r k-thm" href="#tv_distxx" title="GaussianAnalysis.probability.total_variation.tv_distxx">tv_<wbr>distxx</a></span></div></td><td>A pseudometric with values in <code>[0, 1]</code>: symmetric, with the triangle inequality, and zero for laws that agree on the measurable sets.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#tuple_prod_tv" title="GaussianAnalysis.probability.total_variation.tuple_prod_tv">tuple_<wbr>prod_<wbr>tv</a></span></div></td><td>For laws <code>mu i</code> and <code>nu i</code> on <code>T</code> and every measurable set <code>A</code> of <code>n</code>-tuples, <code>|tuple_prod mu n A - tuple_prod nu n A| &lt;= sum_(i &lt; n) tv_dist (mu i) (nu i)</code>: the hybrid argument of <a class="code-link k-thm" href="GaussianAnalysis.probability.lindeberg.html#lindeberg_replacement" title="GaussianAnalysis.probability.lindeberg.lindeberg_replacement"><code>lindeberg_replacement</code></a>, with the indicator of <code>A</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#pow_one_sub_bounds" title="GaussianAnalysis.probability.total_variation.pow_one_sub_bounds">pow_<wbr>one_<wbr>sub_<wbr>bounds</a></span><span><a class="r k-thm" href="#pow_one_sub_dist" title="GaussianAnalysis.probability.total_variation.pow_one_sub_dist">pow_<wbr>one_<wbr>sub_<wbr>dist</a></span><span><a class="r k-thm" href="#pow_one_sub_cvg" title="GaussianAnalysis.probability.total_variation.pow_one_sub_cvg">pow_<wbr>one_<wbr>sub_<wbr>cvg</a></span></div></td><td>For <code>0 &lt;= x &lt; n</code>, <code>exp (- x n / (n - x)) &lt;= (1 - x / n)^n &lt;= exp (- x)</code> and <code>|(1 - x / n)^n - exp (- x)| &lt;= x^2 / (n - x)</code>; hence <code>(1 - x / n)^n</code> tends to <code>exp (- x)</code> for every <code>x &gt;= 0</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">19 exported, 2 local</span></h2>
+<div class="decl-toolbar"><label><input type="checkbox" id="show-local"> Show the 2 local declarations (<code>Let</code>, <code>Local</code>)</label><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-total_variation-15"><span class="sec-kw">section</span><span class="sec-name">total_variation</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Implicit Types</span> P Q S : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section total_variation">T</span> <span class="sv" title="section variable R of section total_variation">R</span>.</pre>
+<div class="decl k-def" id="tv_dist">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#tv_dist">tv_dist</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L53" target="_blank" rel="noopener">source, line 53</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType],
+probability T R -&gt; probability T R -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> tv_dist P Q : <span class="sv" title="section variable R of section total_variation">R</span> :=
+  <span class="x" title="mathcomp.reals.reals.sup">sup</span> [set `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">Q</span> <span class="bv">A</span>)| | A <span class="kw">in</span> <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>].</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The total variation distance of two probabilities <code>P</code> and <code>Q</code> on a measurable type: <code><a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q = sup {|P A - Q A| : A measurable}</code>, a real number. For every measurable <code>A</code>, <code>|P A - Q A| &lt;= tv_dist P Q</code>, as reals and as extended reals, and <code><a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q</code> is the least such bound; as an extended real it is the <code>ereal_sup</code> of the <code>|P A - Q A|</code>.</p>
+</div>
+<details class="decl-used"><summary>Used by 11 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_dist_ge" title="GaussianAnalysis.probability.total_variation.tv_dist_ge">tv_dist_ge</a>, <a class="r k-thm" href="#tv_dist_geE" title="GaussianAnalysis.probability.total_variation.tv_dist_geE">tv_dist_geE</a>, <a class="r k-thm" href="#tv_dist_le" title="GaussianAnalysis.probability.total_variation.tv_dist_le">tv_dist_le</a>, <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>, <a class="r k-thm" href="#tv_dist_le1" title="GaussianAnalysis.probability.total_variation.tv_dist_le1">tv_dist_le1</a>, <a class="r k-thm" href="#tv_distC" title="GaussianAnalysis.probability.total_variation.tv_distC">tv_distC</a>, <a class="r k-thm" href="#tv_dist_triangle" title="GaussianAnalysis.probability.total_variation.tv_dist_triangle">tv_dist_triangle</a>, <a class="r k-thm" href="#tv_dist_eq0" title="GaussianAnalysis.probability.total_variation.tv_dist_eq0">tv_dist_eq0</a>, <a class="r k-thm" href="#tv_distxx" title="GaussianAnalysis.probability.total_variation.tv_distxx">tv_distxx</a>, <a class="r k-thm" href="#tv_distE" title="GaussianAnalysis.probability.total_variation.tv_distE">tv_distE</a>, <a class="r k-thm" href="#tuple_prod_tv" title="GaussianAnalysis.probability.total_variation.tuple_prod_tv">tuple_prod_tv</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="prob_fine_itv">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#prob_fine_itv">prob_fine_itv</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L56" target="_blank" rel="noopener">source, line 56</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (P : probability T R) [A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt; 0 &lt;= <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (P A) &lt;= 1</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> prob_fine_itv P (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section total_variation">T</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt; 0 &lt;= <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) &lt;= 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#prob_fineB_le1" title="GaussianAnalysis.probability.total_variation.prob_fineB_le1">prob_fineB_le1</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="prob_fineB_le1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#prob_fineB_le1">prob_fineB_le1</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L64" target="_blank" rel="noopener">source, line 64</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (P Q : probability T R) [A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt; `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (P A) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (Q A)| &lt;= 1</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> prob_fineB_le1 P Q (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section total_variation">T</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt;
+  `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">Q</span> <span class="bv">A</span>)| &lt;= 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#tv_ub" title="GaussianAnalysis.probability.total_variation.tv_ub (section-local)">tv_ub</a>, <a class="r k-thm" href="#tv_dist_le1" title="GaussianAnalysis.probability.total_variation.tv_dist_le1">tv_dist_le1</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="tv_ub">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#tv_ub">tv_ub</a>
+<span class="tag local" title="Let: local to section total_variation, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L72" target="_blank" rel="noopener">source, line 72</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> tv_ub P Q :
+  <span class="x" title="mathcomp.classical.classical_sets.has_ubound">has_ubound</span> [set `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">Q</span> <span class="bv">A</span>)| | A <span class="kw">in</span> <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>].</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_dist_ge" title="GaussianAnalysis.probability.total_variation.tv_dist_ge">tv_dist_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="tv_ne">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#tv_ne">tv_ne</a>
+<span class="tag local" title="Let: local to section total_variation, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L76" target="_blank" rel="noopener">source, line 76</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> tv_ne P Q :
+  [set `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">Q</span> <span class="bv">A</span>)| | A <span class="kw">in</span> <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>] !=set0.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_dist_le" title="GaussianAnalysis.probability.total_variation.tv_dist_le">tv_dist_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="tv_dist_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_ge">tv_dist_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L80" target="_blank" rel="noopener">source, line 80</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (P Q : probability T R) [A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt; `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (P A) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (Q A)| &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_ge P Q (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section total_variation">T</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt;
+  `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">Q</span> <span class="bv">A</span>)| &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_dist_geE" title="GaussianAnalysis.probability.total_variation.tv_dist_geE">tv_dist_geE</a>, <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>, <a class="r k-thm" href="#tv_distC" title="GaussianAnalysis.probability.total_variation.tv_distC">tv_distC</a>, <a class="r k-thm" href="#tv_dist_triangle" title="GaussianAnalysis.probability.total_variation.tv_dist_triangle">tv_dist_triangle</a>, <a class="r k-thm" href="#tuple_prod_tv" title="GaussianAnalysis.probability.total_variation.tuple_prod_tv">tuple_prod_tv</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="tv_dist_geE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_geE">tv_dist_geE</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L84" target="_blank" rel="noopener">source, line 84</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (P Q : probability T R) [A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T],
+d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt; (`|P A - Q A| &lt;= (<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q)%:E)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_geE P Q (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section total_variation">T</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt;
+  (`|<span class="bv">P</span> <span class="bv">A</span> - <span class="bv">Q</span> <span class="bv">A</span>| &lt;= (<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span>)%:E)%E.</pre></div></details>
+</div>
+<div class="decl k-thm" id="tv_dist_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_le">tv_dist_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L93" target="_blank" rel="noopener">source, line 93</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P Q : probability T R] [c : R],
+(<span class="kw">forall</span> A : set T, d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt; `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (P A) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (Q A)| &lt;= c) -&gt; <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q &lt;= c</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_le P Q (c : <span class="sv" title="section variable R of section total_variation">R</span>) :
+  (<span class="kw">forall</span> A, <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt; `|<span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">P</span> <span class="bv">A</span>) - <span class="x" title="mathcomp.reals.constructive_ereal.fine">fine</span> (<span class="bv">Q</span> <span class="bv">A</span>)| &lt;= <span class="bv">c</span>) -&gt;
+  <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span> &lt;= <span class="bv">c</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_dist_le1" title="GaussianAnalysis.probability.total_variation.tv_dist_le1">tv_dist_le1</a>, <a class="r k-thm" href="#tv_distC" title="GaussianAnalysis.probability.total_variation.tv_distC">tv_distC</a>, <a class="r k-thm" href="#tv_dist_triangle" title="GaussianAnalysis.probability.total_variation.tv_dist_triangle">tv_dist_triangle</a>, <a class="r k-thm" href="#tv_dist_eq0" title="GaussianAnalysis.probability.total_variation.tv_dist_eq0">tv_dist_eq0</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="tv_dist_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_ge0">tv_dist_ge0</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L98" target="_blank" rel="noopener">source, line 98</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] (P Q : probability T R),
+0 &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>A pseudometric with values in <code>[0, 1]</code>: symmetric, with the triangle inequality, and zero for laws that agree on the measurable sets.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_ge0 P Q : 0 &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_dist_eq0" title="GaussianAnalysis.probability.total_variation.tv_dist_eq0">tv_dist_eq0</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="tv_dist_le1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_le1">tv_dist_le1</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L101" target="_blank" rel="noopener">source, line 101</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] (P Q : probability T R),
+<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q &lt;= 1</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_le1 P Q : <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span> &lt;= 1.</pre></div></details>
+</div>
+<div class="decl k-thm" id="tv_distC">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_distC">tv_distC</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L104" target="_blank" rel="noopener">source, line 104</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] (P Q : probability T R),
+<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q = <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> Q P</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_distC P Q : <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span> = <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">Q</span> <span class="bv">P</span>.</pre></div></details>
+</div>
+<div class="decl k-thm" id="tv_dist_triangle">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_triangle">tv_dist_triangle</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L110" target="_blank" rel="noopener">source, line 110</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (P Q S : probability T R),
+<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P S &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q + <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> Q S</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_triangle P Q S : <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">S</span> &lt;= <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span> + <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">Q</span> <span class="bv">S</span>.</pre></div></details>
+</div>
+<div class="decl k-thm" id="tv_dist_eq0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_dist_eq0">tv_dist_eq0</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L117" target="_blank" rel="noopener">source, line 117</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] [P Q : probability T R],
+(<span class="kw">forall</span> A : set T, d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt; P A = Q A) -&gt; <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q = 0</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_dist_eq0 P Q : (<span class="kw">forall</span> A, <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt; <span class="bv">P</span> <span class="bv">A</span> = <span class="bv">Q</span> <span class="bv">A</span>) -&gt;
+  <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span> = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#tv_distxx" title="GaussianAnalysis.probability.total_variation.tv_distxx">tv_distxx</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="tv_distxx">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_distxx">tv_distxx</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L124" target="_blank" rel="noopener">source, line 124</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] (P : probability T R),
+<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P P = 0</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#tv_dist_ge0" title="GaussianAnalysis.probability.total_variation.tv_dist_ge0">tv_dist_ge0</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_distxx P : <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">P</span> = 0.</pre></div></details>
+</div>
+<div class="decl k-thm" id="tv_distE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#tv_distE">tv_distE</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L127" target="_blank" rel="noopener">source, line 127</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] (P Q : probability T R),
+(<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> P Q)%:E = <span class="x" title="mathcomp.analysis.ereal.ereal_sup">ereal_sup</span> [set `|P A - Q A|%E | A <span class="kw">in</span> d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>]</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> tv_distE P Q :
+  (<a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> <span class="bv">P</span> <span class="bv">Q</span>)%:E = <span class="x" title="mathcomp.analysis.ereal.ereal_sup">ereal_sup</span> [set (`|<span class="bv">P</span> <span class="bv">A</span> - <span class="bv">Q</span> <span class="bv">A</span>|)%E | A <span class="kw">in</span> <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>].</pre></div></details>
+</div>
+</div>
+<div class="note"><p>The product bound: replace the coordinates one at a time.</p></div>
+<div class="sec"><div class="sec-head" id="section-product_bound-97"><span class="sec-kw">section</span><span class="sec-name">product_bound</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).</pre>
+<div class="decl k-thm" id="tuple_prod_tv">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#tuple_prod_tv">tuple_prod_tv</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L150" target="_blank" rel="noopener">source, line 150</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType]
+  (mu nu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> T R) [n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>] [A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (n.-tuple T)],
+(measure_tuple_display d).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A -&gt;
+(`|<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> mu n A - <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> nu n A| &lt;= (\sum_(i &lt; n) <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> (mu i) (nu i))%:E)%E</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For laws <code>mu i</code> and <code>nu i</code> on <code>T</code> and every measurable set <code>A</code> of <code>n</code>-tuples, <code>|tuple_prod mu n A - tuple_prod nu n A| &lt;= sum_(i &lt; n) tv_dist (mu i) (nu i)</code>: the hybrid argument of <a class="code-link k-thm" href="GaussianAnalysis.probability.lindeberg.html#lindeberg_replacement" title="GaussianAnalysis.probability.lindeberg.lindeberg_replacement"><code>lindeberg_replacement</code></a>, with the indicator of <code>A</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> tuple_prod_tv (mu nu : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="sv" title="section variable T of section product_bound">T</span> <span class="sv" title="section variable R of section product_bound">R</span>) n
+    (A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> (<span class="bv">n</span>.-tuple <span class="sv" title="section variable T of section product_bound">T</span>)) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span> -&gt;
+  (`|<a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="bv">mu</span> <span class="bv">n</span> <span class="bv">A</span> - <a class="r k-def" href="GaussianAnalysis.probability.lindeberg.html#tuple_prod" title="GaussianAnalysis.probability.lindeberg.tuple_prod">tuple_prod</a> <span class="bv">nu</span> <span class="bv">n</span> <span class="bv">A</span>| &lt;=
+    (\sum_(i &lt; <span class="bv">n</span>) <a class="r k-def" href="#tv_dist" title="GaussianAnalysis.probability.total_variation.tv_dist">tv_dist</a> (<span class="bv">mu</span> <span class="bv">i</span>) (<span class="bv">nu</span> <span class="bv">i</span>))%:E)%E.</pre></div></details>
+</div>
+</div>
+<div class="note"><p>(1 - x / n)^n tends to exp (- x).</p></div>
+<div class="sec"><div class="sec-head" id="section-exp_limit-123"><span class="sec-kw">section</span><span class="sec-name">exp_limit</span></div>
+<pre class="code ctx"><span class="vk">Variable</span> R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>.</pre>
+<div class="decl k-thm" id="one_sub_le_expR">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#one_sub_le_expR">one_sub_le_expR</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L188" target="_blank" rel="noopener">source, line 188</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] (y : R), 1 - y &lt;= <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- y)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> one_sub_le_expR (y : <span class="sv" title="section variable R of section exp_limit">R</span>) : 1 - <span class="bv">y</span> &lt;= <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">y</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#pow_one_sub_bounds" title="GaussianAnalysis.probability.total_variation.pow_one_sub_bounds">pow_one_sub_bounds</a>, <a class="r k-thm" href="#pow_one_sub_dist" title="GaussianAnalysis.probability.total_variation.pow_one_sub_dist">pow_one_sub_dist</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="expR_le_one_sub">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#expR_le_one_sub">expR_le_one_sub</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L191" target="_blank" rel="noopener">source, line 191</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [y : R], 0 &lt;= y &lt; 1 -&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (y / (1 - y))) &lt;= 1 - y</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> expR_le_one_sub (y : <span class="sv" title="section variable R of section exp_limit">R</span>) : 0 &lt;= <span class="bv">y</span> &lt; 1 -&gt;
+  <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="bv">y</span> / (1 - <span class="bv">y</span>))) &lt;= 1 - <span class="bv">y</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#pow_one_sub_bounds" title="GaussianAnalysis.probability.total_variation.pow_one_sub_bounds">pow_one_sub_bounds</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="pow_one_sub_bounds">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#pow_one_sub_bounds">pow_one_sub_bounds</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L202" target="_blank" rel="noopener">source, line 202</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [x : R] [n : nat],
+0 &lt;= x -&gt; x &lt; n%:R -&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (x * n%:R / (n%:R - x))) &lt;= (1 - x / n%:R) ^+ n &lt;= <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- x)</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>0 &lt;= x &lt; n</code>, <code>exp (- x n / (n - x)) &lt;= (1 - x / n)^n &lt;= exp (- x)</code> and <code>|(1 - x / n)^n - exp (- x)| &lt;= x^2 / (n - x)</code>; hence <code>(1 - x / n)^n</code> tends to <code>exp (- x)</code> for every <code>x &gt;= 0</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> pow_one_sub_bounds (x : <span class="sv" title="section variable R of section exp_limit">R</span>) n : 0 &lt;= <span class="bv">x</span> -&gt; <span class="bv">x</span> &lt; <span class="bv">n</span>%:R -&gt;
+  <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="bv">x</span> * <span class="bv">n</span>%:R / (<span class="bv">n</span>%:R - <span class="bv">x</span>))) &lt;= (1 - <span class="bv">x</span> / <span class="bv">n</span>%:R) ^+ <span class="bv">n</span> &lt;= <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">x</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#pow_one_sub_dist" title="GaussianAnalysis.probability.total_variation.pow_one_sub_dist">pow_one_sub_dist</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="pow_one_sub_dist">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#pow_one_sub_dist">pow_one_sub_dist</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L225" target="_blank" rel="noopener">source, line 225</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [x : R] [n : nat],
+0 &lt;= x -&gt; x &lt; n%:R -&gt; `|(1 - x / n%:R) ^+ n - <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- x)| &lt;= x ^+ 2 / (n%:R - x)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#pow_one_sub_bounds" title="GaussianAnalysis.probability.total_variation.pow_one_sub_bounds">pow_one_sub_bounds</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> pow_one_sub_dist (x : <span class="sv" title="section variable R of section exp_limit">R</span>) n : 0 &lt;= <span class="bv">x</span> -&gt; <span class="bv">x</span> &lt; <span class="bv">n</span>%:R -&gt;
+  `|(1 - <span class="bv">x</span> / <span class="bv">n</span>%:R) ^+ <span class="bv">n</span> - <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">x</span>)| &lt;= <span class="bv">x</span> ^+ 2 / (<span class="bv">n</span>%:R - <span class="bv">x</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#pow_one_sub_cvg" title="GaussianAnalysis.probability.total_variation.pow_one_sub_cvg">pow_one_sub_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="pow_one_sub_cvg">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#pow_one_sub_cvg">pow_one_sub_cvg</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/probability/total_variation.v#L245" target="_blank" rel="noopener">source, line 245</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [x : R], 0 &lt;= x -&gt; (1 - x / n%:R) ^+ n @[n --&gt; \oo] --&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- x)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#pow_one_sub_bounds" title="GaussianAnalysis.probability.total_variation.pow_one_sub_bounds">pow_one_sub_bounds</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> pow_one_sub_cvg (x : <span class="sv" title="section variable R of section exp_limit">R</span>) : 0 &lt;= <span class="bv">x</span> -&gt;
+  (<span class="kw">fun</span> n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> =&gt; (1 - <span class="bv">x</span> / <span class="bv">n</span>%:R) ^+ <span class="bv">n</span>) @ \oo --&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">x</span>).</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>total_variation</span></li><li><a href="#tv_dist">tv_<wbr>dist</a></li><li><a href="#prob_fine_itv">prob_<wbr>fine_<wbr>itv</a></li><li><a href="#prob_fineB_le1">prob_<wbr>fineB_<wbr>le1</a></li><li class="is-local"><a href="#tv_ub">tv_<wbr>ub</a></li><li class="is-local"><a href="#tv_ne">tv_<wbr>ne</a></li><li><a href="#tv_dist_ge">tv_<wbr>dist_<wbr>ge</a></li><li><a href="#tv_dist_geE">tv_<wbr>dist_<wbr>geE</a></li><li><a href="#tv_dist_le">tv_<wbr>dist_<wbr>le</a></li><li><a href="#tv_dist_ge0">tv_<wbr>dist_<wbr>ge0</a></li><li><a href="#tv_dist_le1">tv_<wbr>dist_<wbr>le1</a></li><li><a href="#tv_distC">tv_<wbr>distC</a></li><li><a href="#tv_dist_triangle">tv_<wbr>dist_<wbr>triangle</a></li><li><a href="#tv_dist_eq0">tv_<wbr>dist_<wbr>eq0</a></li><li><a href="#tv_distxx">tv_<wbr>distxx</a></li><li><a href="#tv_distE">tv_<wbr>distE</a></li><li class="toc-sec"><span>product_bound</span></li><li><a href="#tuple_prod_tv">tuple_<wbr>prod_<wbr>tv</a></li><li class="toc-sec"><span>exp_limit</span></li><li><a href="#one_sub_le_expR">one_<wbr>sub_<wbr>le_<wbr>expR</a></li><li><a href="#expR_le_one_sub">expR_<wbr>le_<wbr>one_<wbr>sub</a></li><li><a href="#pow_one_sub_bounds">pow_<wbr>one_<wbr>sub_<wbr>bounds</a></li><li><a href="#pow_one_sub_dist">pow_<wbr>one_<wbr>sub_<wbr>dist</a></li><li><a href="#pow_one_sub_cvg">pow_<wbr>one_<wbr>sub_<wbr>cvg</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

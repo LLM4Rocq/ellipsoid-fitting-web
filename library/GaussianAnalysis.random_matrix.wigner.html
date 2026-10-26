@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.random_matrix.wigner</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod current" href="GaussianAnalysis.random_matrix.wigner.html" aria-current="page">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>bernstein</span></li><li><a href="#bernstein_basis">bernstein_<wbr>basis</a></li><li><a href="#bernstein_sum1">bernstein_<wbr>sum1</a></li><li><a href="#bernstein_shift">bernstein_<wbr>shift</a></li><li><a href="#bernstein_mean">bernstein_<wbr>mean</a></li><li><a href="#bernstein_var">bernstein_<wbr>var</a></li><li><a href="#bernstein_basis_ge0">bernstein_<wbr>basis_<wbr>ge0</a></li><li><a href="#bernstein">bernstein</a></li><li><a href="#bernstein_lipschitz">bernstein_<wbr>lipschitz</a></li><li><a href="#bernstein_polyE">bernstein_<wbr>polyE</a></li><li><a href="#weierstrass_lipschitz">weierstrass_<wbr>lipschitz</a></li><li class="toc-sec"><span>catalan</span></li><li><a href="#segner">segner</a></li><li class="toc-sec"><span>semicircle_catalan</span></li><li><a href="#sum_parity">sum_<wbr>parity</a></li><li><a href="#semicircle_catalan">semicircle_<wbr>catalan</a></li><li class="toc-sec"><span>goe_moment_limit</span></li><li><a href="#cvg_nat_eps">cvg_<wbr>nat_<wbr>eps</a></li><li><a href="#cvg_sum_seq">cvg_<wbr>sum_<wbr>seq</a></li><li><a href="#goe_tr_cov_cvg">goe_<wbr>tr_<wbr>cov_<wbr>cvg</a></li><li><a href="#goe_moment_cvg">goe_<wbr>moment_<wbr>cvg</a></li><li><a href="#goe_clip_cvg">goe_<wbr>clip_<wbr>cvg</a></li><li class="toc-sec"><span>wigner</span></li><li><a href="#goe_stat">goe_<wbr>stat</a></li><li><a href="#goe_stat_poly_clip">goe_<wbr>stat_<wbr>poly_<wbr>clip</a></li><li><a href="#integrable_semicircle_poly">integrable_<wbr>semicircle_<wbr>poly</a></li><li><a href="#semicircle_poly">semicircle_<wbr>poly</a></li><li><a href="#continuous_clip">continuous_<wbr>clip</a></li><li><a href="#semicircle_clip">semicircle_<wbr>clip</a></li><li><a href="#goe_stat_lipschitz">goe_<wbr>stat_<wbr>lipschitz</a></li><li><a href="#clip_comp_lipschitz">clip_<wbr>comp_<wbr>lipschitz</a></li><li><a href="#polyfun_goe_stat_clip">polyfun_<wbr>goe_<wbr>stat_<wbr>clip</a></li><li><a href="#goe_stat_clip_mean_cvg">goe_<wbr>stat_<wbr>clip_<wbr>mean_<wbr>cvg</a></li><li><a href="#goe_stat_conc">goe_<wbr>stat_<wbr>conc</a></li><li><a href="#continuous_goe_stat">continuous_<wbr>goe_<wbr>stat</a></li><li><a href="#wigner">wigner</a></li><li><a href="#goe_stat_near">goe_<wbr>stat_<wbr>near</a></li><li><a href="#clip3_bound">clip3_<wbr>bound</a></li><li><a href="#semicircle_near">semicircle_<wbr>near</a></li><li><a href="#wigner_uniform">wigner_<wbr>uniform</a></li><li><a href="#wigner_uniform_inf">wigner_<wbr>uniform_<wbr>inf</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span aria-hidden="true">/</span><span>wigner</span></div>
+<h1 class="page-title">Wigner's semicircle law for the GOE</h1>
+<div class="page-meta"><code>GaussianAnalysis.random_matrix.wigner</code><span>library/random_matrix/wigner.v</span><span>1,129 lines</span><span>33 lemmas and theorems, 3 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>11</b> library modules and 25 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.probability.semicircle_law.html">GaussianAnalysis.probability.semicircle_law</a></li><li><a href="GaussianAnalysis.gaussian.gauss_ibp.html">GaussianAnalysis.gaussian.gauss_ibp</a></li><li><a href="GaussianAnalysis.gaussian.gauss_interpolation.html">GaussianAnalysis.gaussian.gauss_interpolation</a></li><li><a href="GaussianAnalysis.comparison.gauss_smoothing.html">GaussianAnalysis.comparison.gauss_smoothing</a></li><li><a href="GaussianAnalysis.comparison.gauss_concentration.html">GaussianAnalysis.comparison.gauss_concentration</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.matrix.opnorm.html">GaussianAnalysis.matrix.opnorm</a></li><li><a href="GaussianAnalysis.matrix.von_neumann.html">GaussianAnalysis.matrix.von_neumann</a></li><li><a href="GaussianAnalysis.random_matrix.goe.html">GaussianAnalysis.random_matrix.goe</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.poly, mathcomp.algebra.matrix, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.algebra.interval, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.derive, mathcomp.analysis.realfun, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.algebra.arithmetic_tactic</p></div></details><details><summary>Required by <b>4</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Condition/GaussianCone.v" target="_blank" rel="noopener">extension/Condition/GaussianCone.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/ConditionKappa/GaussianLimit.v" target="_blank" rel="noopener">extension/ConditionKappa/GaussianLimit.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Gaussian/Limit.v" target="_blank" rel="noopener">extension/Gaussian/Limit.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Gaussian/Subcritical.v" target="_blank" rel="noopener">extension/Gaussian/Subcritical.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>Let W = <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a for a of law gauss (d * d) (<a href="GaussianAnalysis.random_matrix.goe.html">random_matrix/goe.v</a>). The empirical law of its eigenvalues spec W (<a href="GaussianAnalysis.matrix.von_neumann.html">matrix/von_neumann.v</a>) converges in probability to the semicircle law of radius 2. This is the form of the semicircle law that Lemma 5.14 of Koehler and Sohn (arXiv 2608.27372, line 5905) cites from Anderson, Guionnet and Zeitouni. This file completes item G7 of phase 5.</p>
+<p>Proved:</p>
+<ul><li><a class="r k-thm" href="#weierstrass_lipschitz" title="GaussianAnalysis.random_matrix.wigner.weierstrass_lipschitz">weierstrass_lipschitz</a>: Weierstrass's approximation theorem on a compact interval for Lipschitz functions, by Bernstein polynomials (not in MathComp-Analysis 1.16): <a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_lipschitz</a>, |B_n f (x) - f x| &lt;= L / (2 sqrt n) on [0, 1] for f L-Lipschitz, from the mean and the variance of the binomial law (<a class="r k-thm" href="#bernstein_mean" title="GaussianAnalysis.random_matrix.wigner.bernstein_mean">bernstein_mean</a>, <a class="r k-thm" href="#bernstein_var" title="GaussianAnalysis.random_matrix.wigner.bernstein_var">bernstein_var</a>).</li><li>segner: Segner's recurrence c_(n+1) = \sum_(i &lt;= n) c_i c_(n-i) for a sequence with c_0 = 1 and (i + 2) c_(i+1) = (4 i + 2) c_i, by sums symmetric under i |-&gt; n - i (the Catalan numbers, without generating functions).</li><li><a class="r k-thm" href="#semicircle_catalan" title="GaussianAnalysis.random_matrix.wigner.semicircle_catalan">semicircle_catalan</a>: the moments m_k of <a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> 2 satisfy the recursion of the Schwinger-Dyson equation of <a href="GaussianAnalysis.random_matrix.goe.html">goe.v</a> in the limit, m_(k+1) = \sum_(r &lt; k) m_r m_(k-1-r), from segner and the moment recursion and the odd moments of <a href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law.v</a>.</li><li><a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a>: for W = <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a with a of law gauss (d * d), E tr W^k / d tends to the k-th moment of <a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> 2 as d tends to infinity, by induction on k with <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#goe_tr_sd" title="GaussianAnalysis.random_matrix.goe.goe_tr_sd">goe_tr_sd</a> of <a href="GaussianAnalysis.random_matrix.goe.html">goe.v</a>, whose covariance terms tend to 0 (<a class="r k-thm" href="#goe_tr_cov_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_tr_cov_cvg">goe_tr_cov_cvg</a>, from <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#goe_tr_var_small" title="GaussianAnalysis.random_matrix.goe.goe_tr_var_small">goe_tr_var_small</a> and <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#Rintegral_cov_le" title="GaussianAnalysis.random_matrix.goe.Rintegral_cov_le">Rintegral_cov_le</a>); the same holds for the eigenvalues clipped to [-3, 3] (<a class="r k-thm" href="#goe_clip_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_clip_cvg">goe_clip_cvg</a>).</li><li>wigner: Wigner's semicircle law. For f continuous and L-Lipschitz on [-3, 3], and eps &gt; 0, P(|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> f a - \int f dsigma| &gt;= eps) &lt;= eps for every large d, where <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> f a = (1 / d) \sum_i f (spec W 0 i) and sigma = <a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> 2. Off the event opnorm W &gt;= 3, whose probability tends to 0 (<a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#goe_opnorm_tail_small" title="GaussianAnalysis.random_matrix.goe.goe_opnorm_tail_small">goe_opnorm_tail_small</a>), the statistic is that of f o clip 3, which is Lipschitz (<a class="r k-thm" href="#clip_comp_lipschitz" title="GaussianAnalysis.random_matrix.wigner.clip_comp_lipschitz">clip_comp_lipschitz</a>); its mean tends to \int f dsigma by polynomial approximation on [-3, 3] (<a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a>, with <a class="r k-thm" href="#goe_stat_poly_clip" title="GaussianAnalysis.random_matrix.wigner.goe_stat_poly_clip">goe_stat_poly_clip</a>, <a class="r k-thm" href="#semicircle_poly" title="GaussianAnalysis.random_matrix.wigner.semicircle_poly">semicircle_poly</a> and <a class="r k-thm" href="#semicircle_clip" title="GaussianAnalysis.random_matrix.wigner.semicircle_clip">semicircle_clip</a>), and it concentrates around its mean (<a class="r k-thm" href="#goe_stat_conc" title="GaussianAnalysis.random_matrix.wigner.goe_stat_conc">goe_stat_conc</a>: <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g is sqrt 2 L / d-Lipschitz in a, <a class="r k-thm" href="#goe_stat_lipschitz" title="GaussianAnalysis.random_matrix.wigner.goe_stat_lipschitz">goe_stat_lipschitz</a>).</li><li><a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a>: the same uniformly over a family f_t, t in [t0, t1], of functions L-Lipschitz on [-3, 3] and L-Lipschitz in t on [-3, 3]: for every large d, the event that |<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> f_t a - \int f_t dsigma| &gt;= eps for some t lies in a measurable event of probability at most eps. A grid of step eps / (3 (|L| + 1)) in t, wigner at each grid point, the union bound (Boole_inequality), and the event opnorm W &gt;= 3 again; between grid points <a class="r k-thm" href="#goe_stat_near" title="GaussianAnalysis.random_matrix.wigner.goe_stat_near">goe_stat_near</a> and <a class="r k-thm" href="#semicircle_near" title="GaussianAnalysis.random_matrix.wigner.semicircle_near">semicircle_near</a>. Lemma 5.14 uses it for the functions (x - t)_+ and (x - t)_+^2.</li><li><a class="r k-thm" href="#wigner_uniform_inf" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform_inf">wigner_uniform_inf</a>: under the same hypotheses, with t0 &lt;= t1, the infimum over t in [t0, t1] of <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) a converges in probability to the infimum over t of \int f_t dsigma: for every large d, the samples where the two differ by at least eps lie in a measurable event of probability at most eps. It follows from <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a> at eps / 3, with inf_adherent; no minimum needs to be attained.</li></ul>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_<wbr>stat</a> f a</code></td><td class="g-rhs">(1 / d) \sum_i f (spec (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a) 0 i), the empirical mean of f over the spectrum of the GOE matrix <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_<wbr>moment_<wbr>cvg</a></span><span><a class="r k-thm" href="#goe_clip_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_clip_cvg">goe_<wbr>clip_<wbr>cvg</a></span><span><a class="r k-thm" href="#segner" title="GaussianAnalysis.random_matrix.wigner.segner">segner</a></span><span><a class="r k-thm" href="#semicircle_catalan" title="GaussianAnalysis.random_matrix.wigner.semicircle_catalan">semicircle_<wbr>catalan</a></span></div></td><td><code>E tr W^k / d</code> tends to <code>\int x^k d(semicircle_prob 2)</code> for every <code>k</code>, by induction from the Schwinger-Dyson equation, whose covariance terms vanish in the limit; the semicircle moments satisfy the same recursion (Segner's recurrence for the Catalan numbers, proved from their ratio recurrence).</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a></span><span><a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_<wbr>stat_<wbr>clip_<wbr>mean_<wbr>cvg</a></span><span><a class="r k-thm" href="#goe_stat_conc" title="GaussianAnalysis.random_matrix.wigner.goe_stat_conc">goe_<wbr>stat_<wbr>conc</a></span></div></td><td>Wigner's semicircle law: for <code>f</code> continuous and Lipschitz on <code>[-3, 3]</code> and <code>eps &gt; 0</code>, <code>P(|(1 / d) \sum_i f (spec W 0 i) - \int f d(semicircle_prob 2)| &gt;= eps) &lt;= eps</code> for every large <code>d</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_<wbr>uniform</a></span><span><a class="r k-thm" href="#goe_stat_near" title="GaussianAnalysis.random_matrix.wigner.goe_stat_near">goe_<wbr>stat_<wbr>near</a></span><span><a class="r k-thm" href="#semicircle_near" title="GaussianAnalysis.random_matrix.wigner.semicircle_near">semicircle_<wbr>near</a></span></div></td><td>Wigner's law uniformly over a family <code>f_t</code>, <code>t</code> in <code>[t0, t1]</code>, of continuous functions that are <code>L</code>-Lipschitz on <code>[-3, 3]</code> and <code>L</code>-Lipschitz in <code>t</code> there: for every <code>eps &gt; 0</code> and every large <code>d</code>, the event that <code>|(1 / d) \sum_i f_t (spec W 0 i) - \int f_t d(semicircle_prob 2)| &gt;= eps</code> for some <code>t</code> lies in a measurable event of probability at most <code>eps</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#wigner_uniform_inf" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform_inf">wigner_<wbr>uniform_<wbr>inf</a></span></div></td><td>Under the hypotheses of <a class="code-link k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform"><code>wigner_uniform</code></a>, with <code>t0 &lt;= t1</code>: the infimum over <code>t</code> in <code>[t0, t1]</code> of <code><a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) a</code> converges in probability to the infimum over <code>t</code> of <code>\int f_t d(semicircle_prob 2)</code>. For every <code>eps &gt; 0</code> and every large <code>d</code>, the samples where the two infima differ by at least <code>eps</code> lie in a measurable set of Gaussian probability at most <code>eps</code>. No minimum needs to be attained.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#weierstrass_lipschitz" title="GaussianAnalysis.random_matrix.wigner.weierstrass_lipschitz">weierstrass_<wbr>lipschitz</a></span><span><a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_<wbr>lipschitz</a></span></div></td><td>Weierstrass's approximation theorem for Lipschitz functions: if <code>f</code> is <code>L</code>-Lipschitz on <code>[a, b]</code>, then for every <code>eps &gt; 0</code> some polynomial <code>p</code> satisfies <code>|p.[x] - f x| &lt;= eps</code> on <code>[a, b]</code>. On <code>[0, 1]</code> the Bernstein polynomial of <code>f</code> of degree <code>n &gt;= 1</code> is within <code>L / (2 sqrt n)</code> of <code>f</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">36 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-bernstein-20"><span class="sec-kw">section</span><span class="sec-name">bernstein</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-def" id="bernstein_basis">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#bernstein_basis">bernstein_basis</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L89" target="_blank" rel="noopener">source, line 89</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType}, <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> bernstein_basis (n k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) (x : <span class="sv" title="section variable R of section bernstein">R</span>) : <span class="sv" title="section variable R of section bernstein">R</span> :=
+  &#x27;C(<span class="bv">n</span>, <span class="bv">k</span>)%:R * <span class="bv">x</span> ^+ <span class="bv">k</span> * (1 - <span class="bv">x</span>) ^+ (<span class="bv">n</span> - <span class="bv">k</span>).</pre></div>
+<div class="decl-doc"><p>The Bernstein basis C(n, k) x^k (1 - x)^(n - k).</p></div>
+<details class="decl-used"><summary>Used by 8 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_sum1" title="GaussianAnalysis.random_matrix.wigner.bernstein_sum1">bernstein_sum1</a>, <a class="r k-thm" href="#bernstein_shift" title="GaussianAnalysis.random_matrix.wigner.bernstein_shift">bernstein_shift</a>, <a class="r k-thm" href="#bernstein_mean" title="GaussianAnalysis.random_matrix.wigner.bernstein_mean">bernstein_mean</a>, <a class="r k-thm" href="#bernstein_var" title="GaussianAnalysis.random_matrix.wigner.bernstein_var">bernstein_var</a>, <a class="r k-thm" href="#bernstein_basis_ge0" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis_ge0">bernstein_basis_ge0</a>, <a class="r k-def" href="#bernstein" title="GaussianAnalysis.random_matrix.wigner.bernstein">bernstein</a>, <a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_lipschitz</a>, <a class="r k-thm" href="#bernstein_polyE" title="GaussianAnalysis.random_matrix.wigner.bernstein_polyE">bernstein_polyE</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_sum1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_sum1">bernstein_sum1</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L92" target="_blank" rel="noopener">source, line 92</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (n : nat) (x : R), \sum_(k &lt; n.+1) <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> n k x = 1</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_sum1 n x : \sum_(k &lt; <span class="bv">n</span>.+1) <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">n</span> <span class="bv">k</span> <span class="bv">x</span> = 1.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_mean" title="GaussianAnalysis.random_matrix.wigner.bernstein_mean">bernstein_mean</a>, <a class="r k-thm" href="#bernstein_var" title="GaussianAnalysis.random_matrix.wigner.bernstein_var">bernstein_var</a>, <a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_shift">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_shift">bernstein_shift</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L101" target="_blank" rel="noopener">source, line 101</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (g : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R) (m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) (x : R),
+\sum_(k &lt; m.+2) g k * k%:R * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> m.+1 k x =
+m.+1%:R * x * \sum_(j &lt; m.+1) g j.+1 * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> m j x</pre></div>
+<div class="decl-doc"><p>k C(n + 1, k) = (n + 1) C(n, k - 1): the sums against k shift the degree.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_shift (g : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section bernstein">R</span>) m x :
+  \sum_(k &lt; <span class="bv">m</span>.+2) <span class="bv">g</span> <span class="bv">k</span> * <span class="bv">k</span>%:R * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">m</span>.+1 <span class="bv">k</span> <span class="bv">x</span> =
+  <span class="bv">m</span>.+1%:R * <span class="bv">x</span> * \sum_(j &lt; <span class="bv">m</span>.+1) <span class="bv">g</span> <span class="bv">j</span>.+1 * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">m</span> <span class="bv">j</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_mean" title="GaussianAnalysis.random_matrix.wigner.bernstein_mean">bernstein_mean</a>, <a class="r k-thm" href="#bernstein_var" title="GaussianAnalysis.random_matrix.wigner.bernstein_var">bernstein_var</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_mean">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_mean">bernstein_mean</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L115" target="_blank" rel="noopener">source, line 115</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (n : nat) (x : R),
+\sum_(k &lt; n.+1) k%:R * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> n k x = n%:R * x</pre></div>
+<div class="decl-doc"><p>The mean and the variance of the binomial law.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_mean n x :
+  \sum_(k &lt; <span class="bv">n</span>.+1) <span class="bv">k</span>%:R * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">n</span> <span class="bv">k</span> <span class="bv">x</span> = <span class="bv">n</span>%:R * <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_var" title="GaussianAnalysis.random_matrix.wigner.bernstein_var">bernstein_var</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_var">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_var">bernstein_var</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L123" target="_blank" rel="noopener">source, line 123</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (n : nat)
+  (x : join_GRing_PzRing_between_Algebra_BaseZmodule_and_GRing_PzSemiRing R),
+\sum_(k &lt; n.+1) (k%:R - n%:R * x) ^+ 2 * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> n k x = n%:R * x * (1 - x)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_var n x :
+  \sum_(k &lt; <span class="bv">n</span>.+1) (<span class="bv">k</span>%:R - <span class="bv">n</span>%:R * <span class="bv">x</span>) ^+ 2 * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">n</span> <span class="bv">k</span> <span class="bv">x</span> =
+  <span class="bv">n</span>%:R * <span class="bv">x</span> * (1 - <span class="bv">x</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_basis_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_basis_ge0">bernstein_basis_ge0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L142" target="_blank" rel="noopener">source, line 142</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (n k : nat)
+  [x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R],
+0 &lt;= x &lt;= 1 -&gt; 0 &lt;= <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> n k x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_basis_ge0 n k x : 0 &lt;= <span class="bv">x</span> &lt;= 1 -&gt; 0 &lt;= <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">n</span> <span class="bv">k</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="bernstein">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#bernstein">bernstein</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L149" target="_blank" rel="noopener">source, line 149</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType}, (R -&gt; R) -&gt; nat -&gt; R -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> bernstein (f : <span class="sv" title="section variable R of section bernstein">R</span> -&gt; <span class="sv" title="section variable R of section bernstein">R</span>) n (x : <span class="sv" title="section variable R of section bernstein">R</span>) : <span class="sv" title="section variable R of section bernstein">R</span> :=
+  \sum_(k &lt; <span class="bv">n</span>.+1) <span class="bv">f</span> (<span class="bv">k</span>%:R / <span class="bv">n</span>%:R) * <a class="r k-def" href="#bernstein_basis" title="GaussianAnalysis.random_matrix.wigner.bernstein_basis">bernstein_basis</a> <span class="bv">n</span> <span class="bv">k</span> <span class="bv">x</span>.</pre></div>
+<div class="decl-doc"><p>The Bernstein polynomial of f of degree n.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bernstein_lipschitz" title="GaussianAnalysis.random_matrix.wigner.bernstein_lipschitz">bernstein_lipschitz</a>, <a class="r k-thm" href="#bernstein_polyE" title="GaussianAnalysis.random_matrix.wigner.bernstein_polyE">bernstein_polyE</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_lipschitz">bernstein_lipschitz</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L154" target="_blank" rel="noopener">source, line 154</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R] [L : R] (n : nat)
+  [x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R],
+(<span class="kw">forall</span> y z : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= y &lt;= 1 -&gt; 0 &lt;= z &lt;= 1 -&gt; `|f y - f z| &lt;= L * `|y - z|) -&gt;
+0 &lt;= x &lt;= 1 -&gt; `|<a class="r k-def" href="#bernstein" title="GaussianAnalysis.random_matrix.wigner.bernstein">bernstein</a> f n.+1 x - f x| &lt;= L / (2 * Num.ExtraDef.sqrtr n.+1%:R)</pre></div>
+<div class="decl-doc"><p>For f L-Lipschitz on [0, 1], the Bernstein polynomial of degree n.+1 is within L / (2 sqrt (n + 1)) of f on [0, 1].</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#weierstrass_lipschitz" title="GaussianAnalysis.random_matrix.wigner.weierstrass_lipschitz">weierstrass_lipschitz</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_lipschitz (f : <span class="sv" title="section variable R of section bernstein">R</span> -&gt; <span class="sv" title="section variable R of section bernstein">R</span>) (L : <span class="sv" title="section variable R of section bernstein">R</span>) n x :
+  (<span class="kw">forall</span> y z, 0 &lt;= <span class="bv">y</span> &lt;= 1 -&gt; 0 &lt;= <span class="bv">z</span> &lt;= 1 -&gt; `|<span class="bv">f</span> <span class="bv">y</span> - <span class="bv">f</span> <span class="bv">z</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">y</span> - <span class="bv">z</span>|) -&gt;
+  0 &lt;= <span class="bv">x</span> &lt;= 1 -&gt;
+  `|<a class="r k-def" href="#bernstein" title="GaussianAnalysis.random_matrix.wigner.bernstein">bernstein</a> <span class="bv">f</span> <span class="bv">n</span>.+1 <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">x</span>| &lt;= <span class="bv">L</span> / (2 * <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> <span class="bv">n</span>.+1%:R).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#weierstrass_lipschitz" title="GaussianAnalysis.random_matrix.wigner.weierstrass_lipschitz">weierstrass_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bernstein_polyE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bernstein_polyE">bernstein_polyE</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L216" target="_blank" rel="noopener">source, line 216</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (f : R -&gt; R) (n : nat),
+<span class="kw">exists</span> p : {poly R}, <span class="kw">forall</span> x : R, <a class="r k-def" href="#bernstein" title="GaussianAnalysis.random_matrix.wigner.bernstein">bernstein</a> f n x = p.[x]</pre></div>
+<div class="decl-doc"><p>The Bernstein polynomial is a polynomial.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bernstein_polyE (f : <span class="sv" title="section variable R of section bernstein">R</span> -&gt; <span class="sv" title="section variable R of section bernstein">R</span>) n : <span class="kw">exists</span> p : {poly <span class="sv" title="section variable R of section bernstein">R</span>},
+  <span class="kw">forall</span> x, <a class="r k-def" href="#bernstein" title="GaussianAnalysis.random_matrix.wigner.bernstein">bernstein</a> <span class="bv">f</span> <span class="bv">n</span> <span class="bv">x</span> = <span class="bv">p</span>.[<span class="bv">x</span>].</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#weierstrass_lipschitz" title="GaussianAnalysis.random_matrix.wigner.weierstrass_lipschitz">weierstrass_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="weierstrass_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#weierstrass_lipschitz">weierstrass_lipschitz</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L227" target="_blank" rel="noopener">source, line 227</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R] [L a b eps : R],
+a &lt; b -&gt;
+0 &lt; eps -&gt;
+(<span class="kw">forall</span> y z : R, a &lt;= y &lt;= b -&gt; a &lt;= z &lt;= b -&gt; `|f y - f z| &lt;= L * `|y - z|) -&gt;
+<span class="kw">exists</span> p : {poly R}, <span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; `|p.[x] - f x| &lt;= eps</pre></div>
+<div class="decl-doc"><p>Weierstrass's approximation theorem for Lipschitz functions on a compact interval, with an explicit degree.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Weierstrass's approximation theorem for Lipschitz functions: if <code>f</code> is <code>L</code>-Lipschitz on <code>[a, b]</code>, then for every <code>eps &gt; 0</code> some polynomial <code>p</code> satisfies <code>|p.[x] - f x| &lt;= eps</code> on <code>[a, b]</code>. On <code>[0, 1]</code> the Bernstein polynomial of <code>f</code> of degree <code>n &gt;= 1</code> is within <code>L / (2 sqrt n)</code> of <code>f</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> weierstrass_lipschitz (f : <span class="sv" title="section variable R of section bernstein">R</span> -&gt; <span class="sv" title="section variable R of section bernstein">R</span>) (L a b eps : <span class="sv" title="section variable R of section bernstein">R</span>) :
+  <span class="bv">a</span> &lt; <span class="bv">b</span> -&gt; 0 &lt; <span class="bv">eps</span> -&gt;
+  (<span class="kw">forall</span> y z, <span class="bv">a</span> &lt;= <span class="bv">y</span> &lt;= <span class="bv">b</span> -&gt; <span class="bv">a</span> &lt;= <span class="bv">z</span> &lt;= <span class="bv">b</span> -&gt; `|<span class="bv">f</span> <span class="bv">y</span> - <span class="bv">f</span> <span class="bv">z</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">y</span> - <span class="bv">z</span>|) -&gt;
+  <span class="kw">exists</span> p : {poly <span class="sv" title="section variable R of section bernstein">R</span>}, <span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; `|<span class="bv">p</span>.[<span class="bv">x</span>] - <span class="bv">f</span> <span class="bv">x</span>| &lt;= <span class="bv">eps</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-catalan-157"><span class="sec-kw">section</span><span class="sec-name">catalan</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.RealField.Exports.realFieldType">realFieldType</span>}.</pre>
+<div class="decl k-thm" id="segner">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#segner">segner</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L279" target="_blank" rel="noopener">source, line 279</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realFieldType} [c : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R],
+c 0%N = 1 -&gt;
+(<span class="kw">forall</span> i : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, i.+2%:R * c i.+1 = (4 * i%:R + 2) * c i) -&gt;
+<span class="kw">forall</span> n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, \sum_(0 &lt;= i &lt; n.+1) c i * c (n - i)%N = c n.+1</pre></div>
+<div class="decl-doc"><p>Segner's recurrence c_(n+1) = \sum_(i &lt;= n) c_i c_(n-i) for a sequence with c_0 = 1 and (i + 2) c_(i+1) = (4 i + 2) c_i, such as the Catalan numbers and the even moments of the semicircle law of radius 2.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> segner (c : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section catalan">R</span>) : <span class="bv">c</span> 0%N = 1 -&gt;
+  (<span class="kw">forall</span> i, <span class="bv">i</span>.+2%:R * <span class="bv">c</span> <span class="bv">i</span>.+1 = (4 * <span class="bv">i</span>%:R + 2) * <span class="bv">c</span> <span class="bv">i</span>) -&gt;
+  <span class="kw">forall</span> n, \sum_(0 &lt;= i &lt; <span class="bv">n</span>.+1) <span class="bv">c</span> <span class="bv">i</span> * <span class="bv">c</span> (<span class="bv">n</span> - <span class="bv">i</span>)%N = <span class="bv">c</span> <span class="bv">n</span>.+1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#semicircle_catalan" title="GaussianAnalysis.random_matrix.wigner.semicircle_catalan">semicircle_catalan</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-semicircle_catalan-192"><span class="sec-kw">section</span><span class="sec-name">semicircle_catalan</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Local Notation</span> m k := (\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : <span class="sv" title="section variable R of section semicircle_catalan">R</span>)]_x ((<span class="bv">x</span> : <span class="sv" title="section variable R of section semicircle_catalan">R</span>) ^+ k)).</pre>
+<div class="decl k-thm" id="sum_parity">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sum_parity">sum_parity</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L325" target="_blank" rel="noopener">source, line 325</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R) (n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>),
+\sum_(r &lt; n.*2.+1) f r = \sum_(i &lt; n.+1) f i.*2 + \sum_(i &lt; n) f i.*2.+1</pre></div>
+<div class="decl-doc"><p>A sum over r &lt; 2 n + 1, split into even and odd r.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sum_parity (f : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section semicircle_catalan">R</span>) n :
+  \sum_(r &lt; <span class="bv">n</span>.*2.+1) <span class="bv">f</span> <span class="bv">r</span> =
+  \sum_(i &lt; <span class="bv">n</span>.+1) <span class="bv">f</span> <span class="bv">i</span>.*2 + \sum_(i &lt; <span class="bv">n</span>) <span class="bv">f</span> <span class="bv">i</span>.*2.+1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#semicircle_catalan" title="GaussianAnalysis.random_matrix.wigner.semicircle_catalan">semicircle_catalan</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="semicircle_catalan">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#semicircle_catalan">semicircle_catalan</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L338" target="_blank" rel="noopener">source, line 338</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (k : nat),
+\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x (x : R) ^+ k.+1 =
+\sum_(r &lt; k)
+   \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x (x : R) ^+ r *
+   \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x (x : R) ^+ (k.-1 - r)</pre></div>
+<div class="decl-doc"><p>The moments of the semicircle law of radius 2 satisfy the recursion of the Schwinger-Dyson equation: m_(k+1) = \sum_(r &lt; k) m_r m_(k-1-r).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> semicircle_catalan k : <span class="ln" title="Local Notation m k := (\int[semicircle_prob (2 : R)]_x ((x : R) ^+ k)).">m</span> <span class="bv">k</span>.+1 = \sum_(r &lt; <span class="bv">k</span>) <span class="ln" title="Local Notation m k := (\int[semicircle_prob (2 : R)]_x ((x : R) ^+ k)).">m</span> <span class="bv">r</span> * <span class="ln" title="Local Notation m k := (\int[semicircle_prob (2 : R)]_x ((x : R) ^+ k)).">m</span> (<span class="bv">k</span>.-1 - <span class="bv">r</span>)%N.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-goe_moment_limit-235"><span class="sec-kw">section</span><span class="sec-name">goe_moment_limit</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Local Notation</span> m k := (\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : <span class="sv" title="section variable R of section goe_moment_limit">R</span>)]_x ((<span class="bv">x</span> : <span class="sv" title="section variable R of section goe_moment_limit">R</span>) ^+ k)).</pre>
+<div class="decl k-thm" id="cvg_nat_eps">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cvg_nat_eps">cvg_nat_eps</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L379" target="_blank" rel="noopener">source, line 379</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [u : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R] [l : R],
+(<span class="kw">forall</span> eps : R, 0 &lt; eps -&gt; <span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="kw">forall</span> d : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, (D &lt;= d)%N -&gt; `|l - u d| &lt;= eps) -&gt;
+u x @[x --&gt; \oo] --&gt; l</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cvg_nat_eps (u : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section goe_moment_limit">R</span>) (l : <span class="sv" title="section variable R of section goe_moment_limit">R</span>) :
+  (<span class="kw">forall</span> eps : <span class="sv" title="section variable R of section goe_moment_limit">R</span>, 0 &lt; <span class="bv">eps</span> -&gt;
+     <span class="kw">exists</span> D, <span class="kw">forall</span> d, (<span class="bv">D</span> &lt;= <span class="bv">d</span>)%N -&gt; `|<span class="bv">l</span> - <span class="bv">u</span> <span class="bv">d</span>| &lt;= <span class="bv">eps</span>) -&gt;
+  <span class="bv">u</span> @ \oo --&gt; <span class="bv">l</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_tr_cov_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_tr_cov_cvg">goe_tr_cov_cvg</a>, <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a>, <a class="r k-thm" href="#goe_clip_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_clip_cvg">goe_clip_cvg</a>, <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cvg_sum_seq">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cvg_sum_seq">cvg_sum_seq</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L388" target="_blank" rel="noopener">source, line 388</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [I : <span class="kw">Type</span>] [s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> I] [f : I -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; R] [l : I -&gt; R],
+(<span class="kw">forall</span> i : I, f i x @[x --&gt; \oo] --&gt; l i) -&gt;
+\sum_(i &lt;- s) f i d @[d --&gt; \oo] --&gt; \sum_(i &lt;- s) l i</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cvg_sum_seq (I : <span class="kw">Type</span>) (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> <span class="bv">I</span>) (f : <span class="bv">I</span> -&gt; <span class="x" title="Corelib.Init.Datatypes.nat">nat</span> -&gt; <span class="sv" title="section variable R of section goe_moment_limit">R</span>) (l : <span class="bv">I</span> -&gt; <span class="sv" title="section variable R of section goe_moment_limit">R</span>) :
+  (<span class="kw">forall</span> i, <span class="bv">f</span> <span class="bv">i</span> @ \oo --&gt; <span class="bv">l</span> <span class="bv">i</span>) -&gt;
+  (<span class="kw">fun</span> d =&gt; \sum_(i &lt;- <span class="bv">s</span>) <span class="bv">f</span> <span class="bv">i</span> <span class="bv">d</span>) @ \oo --&gt; \sum_(i &lt;- <span class="bv">s</span>) <span class="bv">l</span> <span class="bv">i</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a>, <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_tr_cov_cvg">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_tr_cov_cvg">goe_tr_cov_cvg</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L398" target="_blank" rel="noopener">source, line 398</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (r q : nat),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_a (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> r a * <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> q a) -
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> r a * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> q a @[d --&gt; \oo] --&gt; 0</pre></div>
+<div class="decl-doc"><p>The covariances of the normalized traces tend to 0.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_tr_cov_cvg r q :
+  (<span class="kw">fun</span> d =&gt; \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section goe_moment_limit">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_a (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> <span class="bv">r</span> <span class="bv">a</span> * <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> <span class="bv">q</span> <span class="bv">a</span>) -
+    \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section goe_moment_limit">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> <span class="bv">r</span> <span class="bv">a</span> * \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section goe_moment_limit">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> <span class="bv">q</span> <span class="bv">a</span>)
+  @ \oo --&gt; 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_moment_cvg">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_moment_cvg">goe_moment_cvg</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L414" target="_blank" rel="noopener">source, line 414</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [k : nat],
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> k a @[d --&gt; \oo] --&gt; \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x
+                                                     (x : R) ^+ k</pre></div>
+<div class="decl-doc"><p>Wigner's moment limit: E tr W^k / d tends to the k-th moment of the semicircle law of radius 2.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p><code>E tr W^k / d</code> tends to <code>\int x^k d(semicircle_prob 2)</code> for every <code>k</code>, by induction from the Schwinger-Dyson equation, whose covariance terms vanish in the limit; the semicircle moments satisfy the same recursion (Segner's recurrence for the Catalan numbers, proved from their ratio recurrence).</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_moment_cvg k :
+  (<span class="kw">fun</span> d =&gt; \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section goe_moment_limit">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_tr" title="GaussianAnalysis.random_matrix.goe.goe_tr">goe_tr</a> <span class="bv">k</span> <span class="bv">a</span>) @ \oo --&gt; <span class="ln" title="Local Notation m k := (\int[semicircle_prob (2 : R)]_x ((x : R) ^+ k)).">m</span> <span class="bv">k</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_clip_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_clip_cvg">goe_clip_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_clip_cvg">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_clip_cvg">goe_clip_cvg</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L471" target="_blank" rel="noopener">source, line 471</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [j : nat],
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_clip" title="GaussianAnalysis.random_matrix.goe.goe_clip">goe_clip</a> j a @[d --&gt; \oo] --&gt; \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x
+                                                       (x : R) ^+ j</pre></div>
+<div class="decl-doc"><p>The moments of the eigenvalues clipped to [-3, 3] have the same limits.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_moment_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_moment_cvg">goe_moment_cvg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_clip_cvg j :
+  (<span class="kw">fun</span> d =&gt; \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section goe_moment_limit">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_a <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_clip" title="GaussianAnalysis.random_matrix.goe.goe_clip">goe_clip</a> <span class="bv">j</span> <span class="bv">a</span>) @ \oo --&gt; <span class="ln" title="Local Notation m k := (\int[semicircle_prob (2 : R)]_x ((x : R) ^+ k)).">m</span> <span class="bv">j</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-wigner-324"><span class="sec-kw">section</span><span class="sec-name">wigner</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Local Notation</span> sigma := (<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : <span class="sv" title="section variable R of section wigner">R</span>)).
+<span class="vk">Local Notation</span> m k := (\int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x ((<span class="bv">x</span> : <span class="sv" title="section variable R of section wigner">R</span>) ^+ k)).</pre>
+<div class="decl k-def" id="goe_stat">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#goe_stat">goe_stat</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L512" target="_blank" rel="noopener">source, line 512</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat], (R -&gt; R) -&gt; &#x27;rV_(d * d) -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> goe_stat d (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (a : &#x27;rV[<span class="sv" title="section variable R of section wigner">R</span>]_(<span class="bv">d</span> * <span class="bv">d</span>)) : <span class="sv" title="section variable R of section wigner">R</span> :=
+  (\sum_i <span class="bv">f</span> (<a class="r k-def" href="GaussianAnalysis.matrix.von_neumann.html#spec" title="GaussianAnalysis.matrix.von_neumann.spec">spec</a> (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span>) 0 <span class="bv">i</span>)) / <span class="bv">d</span>%:R.</pre></div>
+<div class="decl-doc"><p>The empirical mean (1 / d) \sum_i f (lambda_i) of f over the spectrum of W = <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a.</p></div>
+<details class="decl-used"><summary>Used by 10 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_poly_clip" title="GaussianAnalysis.random_matrix.wigner.goe_stat_poly_clip">goe_stat_poly_clip</a>, <a class="r k-thm" href="#goe_stat_lipschitz" title="GaussianAnalysis.random_matrix.wigner.goe_stat_lipschitz">goe_stat_lipschitz</a>, <a class="r k-thm" href="#polyfun_goe_stat_clip" title="GaussianAnalysis.random_matrix.wigner.polyfun_goe_stat_clip">polyfun_goe_stat_clip</a>, <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a>, <a class="r k-thm" href="#goe_stat_conc" title="GaussianAnalysis.random_matrix.wigner.goe_stat_conc">goe_stat_conc</a>, <a class="r k-thm" href="#continuous_goe_stat" title="GaussianAnalysis.random_matrix.wigner.continuous_goe_stat">continuous_goe_stat</a>, <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a>, <a class="r k-thm" href="#goe_stat_near" title="GaussianAnalysis.random_matrix.wigner.goe_stat_near">goe_stat_near</a>, <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a>, <a class="r k-thm" href="#wigner_uniform_inf" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform_inf">wigner_uniform_inf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_stat_poly_clip">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_stat_poly_clip">goe_stat_poly_clip</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L515" target="_blank" rel="noopener">source, line 515</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (p : {poly R}) (a : &#x27;rV_(d * d)),
+<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="kw">fun</span> x : R =&gt; p.[<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 x]) a = \sum_(j &lt; <span class="x" title="mathcomp.boot.seq.size">size</span> p) p`_j * <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_clip" title="GaussianAnalysis.random_matrix.goe.goe_clip">goe_clip</a> j a</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_stat_poly_clip d (p : {poly <span class="sv" title="section variable R of section wigner">R</span>}) (a : &#x27;rV[<span class="sv" title="section variable R of section wigner">R</span>]_(<span class="bv">d</span> * <span class="bv">d</span>)) :
+  <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="kw">fun</span> x =&gt; <span class="bv">p</span>.[<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">x</span>]) <span class="bv">a</span> =
+  \sum_(j &lt; <span class="x" title="mathcomp.boot.seq.size">size</span> <span class="bv">p</span>) <span class="bv">p</span>`_<span class="bv">j</span> * <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_clip" title="GaussianAnalysis.random_matrix.goe.goe_clip">goe_clip</a> <span class="bv">j</span> <span class="bv">a</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrable_semicircle_poly">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_semicircle_poly">integrable_semicircle_poly</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L524" target="_blank" rel="noopener">source, line 524</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (p : {poly R}),
+(<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)).-integrable [set: R] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="x" title="mathcomp.algebra.poly.horner">horner</span> p)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_semicircle_poly (p : {poly <span class="sv" title="section variable R of section wigner">R</span>}) :
+  <span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>.-integrable [set: <span class="sv" title="section variable R of section wigner">R</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="x" title="mathcomp.algebra.poly.horner">horner</span> <span class="bv">p</span>).</pre></div></details>
+</div>
+<div class="decl k-thm" id="semicircle_poly">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#semicircle_poly">semicircle_poly</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L531" target="_blank" rel="noopener">source, line 531</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (p : {poly R}),
+\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x p.[x] =
+\sum_(j &lt; <span class="x" title="mathcomp.boot.seq.size">size</span> p) p`_j * \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x (x : R) ^+ j</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> semicircle_poly (p : {poly <span class="sv" title="section variable R of section wigner">R</span>}) :
+  \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">p</span>.[<span class="bv">x</span>] = \sum_(j &lt; <span class="x" title="mathcomp.boot.seq.size">size</span> <span class="bv">p</span>) <span class="bv">p</span>`_<span class="bv">j</span> * <span class="ln" title="Local Notation m k := (\int[sigma]_x ((x : R) ^+ k)).">m</span> <span class="bv">j</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="continuous_clip">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#continuous_clip">continuous_clip</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L545" target="_blank" rel="noopener">source, line 545</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [c : R], <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> c)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> continuous_clip (c : <span class="sv" title="section variable R of section wigner">R</span>) : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> <span class="bv">c</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#semicircle_clip" title="GaussianAnalysis.random_matrix.wigner.semicircle_clip">semicircle_clip</a>, <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a>, <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a>, <a class="r k-thm" href="#semicircle_near" title="GaussianAnalysis.random_matrix.wigner.semicircle_near">semicircle_near</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="semicircle_clip">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#semicircle_clip">semicircle_clip</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L553" target="_blank" rel="noopener">source, line 553</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [h : R -&gt; R],
+<span class="x" title="mathcomp.classical.filter.continuous">continuous</span> h -&gt;
+\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x h (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 x) = \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x h x</pre></div>
+<div class="decl-doc"><p>The semicircle law of radius 2 lives on [-2, 2]: clipping at 3 does not change its integrals.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> semicircle_clip (h : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <span class="bv">h</span> -&gt;
+  \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">h</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">x</span>) = \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">h</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a>, <a class="r k-thm" href="#semicircle_near" title="GaussianAnalysis.random_matrix.wigner.semicircle_near">semicircle_near</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_stat_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_stat_lipschitz">goe_stat_lipschitz</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L566" target="_blank" rel="noopener">source, line 566</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] [g : R -&gt; R] [L : R],
+0 &lt;= L -&gt;
+(<span class="kw">forall</span> x y : R, `|g x - g y| &lt;= L * `|x - y|) -&gt;
+<span class="kw">forall</span> a b : &#x27;rV_(d * d),
+`|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g a - <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g b| &lt;= Num.ExtraDef.sqrtr 2 * L / d%:R * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (a - b)</pre></div>
+<div class="decl-doc"><p>For g L-Lipschitz, <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g is (sqrt 2 L / d)-Lipschitz in a.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_stat_lipschitz d (g : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L : <span class="sv" title="section variable R of section wigner">R</span>) : 0 &lt;= <span class="bv">L</span> -&gt;
+  (<span class="kw">forall</span> x y, `|<span class="bv">g</span> <span class="bv">x</span> - <span class="bv">g</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  <span class="kw">forall</span> a b : &#x27;rV[<span class="sv" title="section variable R of section wigner">R</span>]_(<span class="bv">d</span> * <span class="bv">d</span>),
+  `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">g</span> <span class="bv">a</span> - <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">g</span> <span class="bv">b</span>| &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> 2 * <span class="bv">L</span> / <span class="bv">d</span>%:R * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">a</span> - <span class="bv">b</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#polyfun_goe_stat_clip" title="GaussianAnalysis.random_matrix.wigner.polyfun_goe_stat_clip">polyfun_goe_stat_clip</a>, <a class="r k-thm" href="#goe_stat_conc" title="GaussianAnalysis.random_matrix.wigner.goe_stat_conc">goe_stat_conc</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="clip_comp_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#clip_comp_lipschitz">clip_comp_lipschitz</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L588" target="_blank" rel="noopener">source, line 588</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R] [L : R],
+(<span class="kw">forall</span> x y : R, -3 &lt;= x &lt;= 3 -&gt; -3 &lt;= y &lt;= 3 -&gt; `|f x - f y| &lt;= L * `|x - y|) -&gt;
+0 &lt;= L /\ (<span class="kw">forall</span> x y : R, `|f (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 x) - f (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 y)| &lt;= L * `|x - y|)</pre></div>
+<div class="decl-doc"><p>A test function that is L-Lipschitz on [-3, 3], composed with clip 3, is L-Lipschitz and bounded.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> clip_comp_lipschitz (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L : <span class="sv" title="section variable R of section wigner">R</span>) :
+  (<span class="kw">forall</span> x y : <span class="sv" title="section variable R of section wigner">R</span>, -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; -3 &lt;= <span class="bv">y</span> &lt;= 3 -&gt; `|<span class="bv">f</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  0 &lt;= <span class="bv">L</span> /\ <span class="kw">forall</span> x y : <span class="sv" title="section variable R of section wigner">R</span>, `|<span class="bv">f</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">x</span>) - <span class="bv">f</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">y</span>)| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#polyfun_goe_stat_clip" title="GaussianAnalysis.random_matrix.wigner.polyfun_goe_stat_clip">polyfun_goe_stat_clip</a>, <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a>, <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="polyfun_goe_stat_clip">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#polyfun_goe_stat_clip">polyfun_goe_stat_clip</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L602" target="_blank" rel="noopener">source, line 602</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (d : nat) [f : R -&gt; R] [L : R],
+(<span class="kw">forall</span> x y : R, -3 &lt;= x &lt;= 3 -&gt; -3 &lt;= y &lt;= 3 -&gt; `|f x - f y| &lt;= L * `|x - y|) -&gt;
+<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#polyfun" title="GaussianAnalysis.random_matrix.goe.polyfun">polyfun</a> (<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="kw">fun</span> x : R =&gt; f (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 x)))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> polyfun_goe_stat_clip d (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L : <span class="sv" title="section variable R of section wigner">R</span>) :
+  (<span class="kw">forall</span> x y : <span class="sv" title="section variable R of section wigner">R</span>, -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; -3 &lt;= <span class="bv">y</span> &lt;= 3 -&gt; `|<span class="bv">f</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#polyfun" title="GaussianAnalysis.random_matrix.goe.polyfun">polyfun</a> (@<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">d</span> (<span class="kw">fun</span> x =&gt; <span class="bv">f</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">x</span>))).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_stat_clip_mean_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_stat_clip_mean_cvg">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_stat_clip_mean_cvg">goe_stat_clip_mean_cvg</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L634" target="_blank" rel="noopener">source, line 634</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R] [L : R],
+<span class="x" title="mathcomp.classical.filter.continuous">continuous</span> f -&gt;
+(<span class="kw">forall</span> x y : R, -3 &lt;= x &lt;= 3 -&gt; -3 &lt;= y &lt;= 3 -&gt; `|f x - f y| &lt;= L * `|x - y|) -&gt;
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_a <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="kw">fun</span> x : R =&gt; f (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 x)) a @[d --&gt; \oo] --&gt; 
+\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x f x</pre></div>
+<div class="decl-doc"><p>The mean of the statistic of f o clip 3 tends to \int f dsigma, for f continuous and Lipschitz on [-3, 3]: by a polynomial p within eta of f on [-3, 3] (<a class="r k-thm" href="#weierstrass_lipschitz" title="GaussianAnalysis.random_matrix.wigner.weierstrass_lipschitz">weierstrass_lipschitz</a>), whose statistic is a combination of the clipped moments (<a class="r k-thm" href="#goe_stat_poly_clip" title="GaussianAnalysis.random_matrix.wigner.goe_stat_poly_clip">goe_stat_poly_clip</a>, <a class="r k-thm" href="#goe_clip_cvg" title="GaussianAnalysis.random_matrix.wigner.goe_clip_cvg">goe_clip_cvg</a>).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_stat_clip_mean_cvg (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L : <span class="sv" title="section variable R of section wigner">R</span>) : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <span class="bv">f</span> -&gt;
+  (<span class="kw">forall</span> x y : <span class="sv" title="section variable R of section wigner">R</span>, -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; -3 &lt;= <span class="bv">y</span> &lt;= 3 -&gt; `|<span class="bv">f</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  (<span class="kw">fun</span> d =&gt; \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section wigner">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_a <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="kw">fun</span> x =&gt; <span class="bv">f</span> (<a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">x</span>)) <span class="bv">a</span>) @ \oo
+    --&gt; \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">f</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_stat_conc">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_stat_conc">goe_stat_conc</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L740" target="_blank" rel="noopener">source, line 740</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [g : R -&gt; R] [L u eps : R],
+0 &lt;= L -&gt;
+(<span class="kw">forall</span> x y : R, `|g x - g y| &lt;= L * `|x - y|) -&gt;
+0 &lt; u -&gt;
+0 &lt; eps -&gt;
+<span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  <span class="kw">forall</span> d : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  (D &lt;= d)%N -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) [set a | (u &lt;= `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g a - \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)]_b <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g b|)%R] &lt;=
+   eps%:E)%E</pre></div>
+<div class="decl-doc"><p>Concentration: for g L-Lipschitz, P(|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g - E <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g| &gt;= u) &lt;= eps for every large d (<a class="r k-thm" href="GaussianAnalysis.comparison.gauss_concentration.html#gauss_concentration_abs_tail" title="GaussianAnalysis.comparison.gauss_concentration.gauss_concentration_abs_tail">gauss_concentration_abs_tail</a> with the constant sqrt 2 (L + 1) / d).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_stat_conc (g : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L u eps : <span class="sv" title="section variable R of section wigner">R</span>) : 0 &lt;= <span class="bv">L</span> -&gt;
+  (<span class="kw">forall</span> x y, `|<span class="bv">g</span> <span class="bv">x</span> - <span class="bv">g</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt; 0 &lt; <span class="bv">u</span> -&gt; 0 &lt; <span class="bv">eps</span> -&gt;
+  <span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="kw">forall</span> d, (<span class="bv">D</span> &lt;= <span class="bv">d</span>)%N -&gt;
+  (@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section wigner">R</span> (<span class="bv">d</span> * <span class="bv">d</span>) [set a | (<span class="bv">u</span> &lt;= `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">g</span> <span class="bv">a</span> -
+     \int[@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section wigner">R</span> (<span class="bv">d</span> * <span class="bv">d</span>)]_b <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">g</span> <span class="bv">b</span>|)%R] &lt;= <span class="bv">eps</span>%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="continuous_goe_stat">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#continuous_goe_stat">continuous_goe_stat</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L785" target="_blank" rel="noopener">source, line 785</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] [f : R -&gt; R], <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> f -&gt; <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> f)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> continuous_goe_stat d (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <span class="bv">f</span> -&gt;
+  <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (@<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">d</span> <span class="bv">f</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner" title="GaussianAnalysis.random_matrix.wigner.wigner">wigner</a>, <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="wigner">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#wigner">wigner</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L806" target="_blank" rel="noopener">source, line 806</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R] [L : R],
+<span class="x" title="mathcomp.classical.filter.continuous">continuous</span> f -&gt;
+(<span class="kw">forall</span> x y : R, -3 &lt;= x &lt;= 3 -&gt; -3 &lt;= y &lt;= 3 -&gt; `|f x - f y| &lt;= L * `|x - y|) -&gt;
+<span class="kw">forall</span> [eps : R],
+0 &lt; eps -&gt;
+<span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  <span class="kw">forall</span> d : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  (D &lt;= d)%N -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) [set a | (eps &lt;= `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> f a - \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x f x|)%R] &lt;=
+   eps%:E)%E</pre></div>
+<div class="decl-doc"><p>Wigner's semicircle law: for f continuous and Lipschitz on [-3, 3] and eps &gt; 0, the probability that (1 / d) \sum_i f (lambda_i (W)) is farther than eps from \int f d(<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> 2) is at most eps for every large d.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Wigner's semicircle law: for <code>f</code> continuous and Lipschitz on <code>[-3, 3]</code> and <code>eps &gt; 0</code>, <code>P(|(1 / d) \sum_i f (spec W 0 i) - \int f d(semicircle_prob 2)| &gt;= eps) &lt;= eps</code> for every large <code>d</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> wigner (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L : <span class="sv" title="section variable R of section wigner">R</span>) : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <span class="bv">f</span> -&gt;
+  (<span class="kw">forall</span> x y : <span class="sv" title="section variable R of section wigner">R</span>, -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; -3 &lt;= <span class="bv">y</span> &lt;= 3 -&gt; `|<span class="bv">f</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  <span class="kw">forall</span> eps : <span class="sv" title="section variable R of section wigner">R</span>, 0 &lt; <span class="bv">eps</span> -&gt; <span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="kw">forall</span> d, (<span class="bv">D</span> &lt;= <span class="bv">d</span>)%N -&gt;
+  (@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section wigner">R</span> (<span class="bv">d</span> * <span class="bv">d</span>) [set a | (<span class="bv">eps</span> &lt;= `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">f</span> <span class="bv">a</span> - \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">f</span> <span class="bv">x</span>|)%R]
+     &lt;= <span class="bv">eps</span>%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_stat_near">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_stat_near">goe_stat_near</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L875" target="_blank" rel="noopener">source, line 875</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] [g h : R -&gt; R] [c : R] [a : &#x27;rV_(d * d)],
+<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a) &lt;= 3 -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderZmodule_between_Algebra_BaseZmodule_and_Order_Preorder R,
+ -3 &lt;= x &lt;= 3 -&gt; `|g x - h x| &lt;= c) -&gt;
+`|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> g a - <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> h a| &lt;= c</pre></div>
+<div class="decl-doc"><p>If |g x - h x| &lt;= c on [-3, 3] and the spectrum of <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a lies in [-3, 3], the statistics of g and h differ by at most c.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_stat_near d (g h : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (c : <span class="sv" title="section variable R of section wigner">R</span>) (a : &#x27;rV[<span class="sv" title="section variable R of section wigner">R</span>]_(<span class="bv">d</span> * <span class="bv">d</span>)) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span>) &lt;= 3 -&gt; (<span class="kw">forall</span> x, -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; `|<span class="bv">g</span> <span class="bv">x</span> - <span class="bv">h</span> <span class="bv">x</span>| &lt;= <span class="bv">c</span>) -&gt;
+  `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">g</span> <span class="bv">a</span> - <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> <span class="bv">h</span> <span class="bv">a</span>| &lt;= <span class="bv">c</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="clip3_bound">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#clip3_bound">clip3_bound</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L897" target="_blank" rel="noopener">source, line 897</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (x : R), -3 &lt;= <a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 x &lt;= 3</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> clip3_bound (x : <span class="sv" title="section variable R of section wigner">R</span>) : -3 &lt;= <a class="r k-def" href="GaussianAnalysis.comparison.gauss_concentration.html#clip" title="GaussianAnalysis.comparison.gauss_concentration.clip">clip</a> 3 <span class="bv">x</span> &lt;= 3.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#semicircle_near" title="GaussianAnalysis.random_matrix.wigner.semicircle_near">semicircle_near</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="semicircle_near">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#semicircle_near">semicircle_near</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L901" target="_blank" rel="noopener">source, line 901</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [g h : R -&gt; R] [c : R],
+<span class="x" title="mathcomp.classical.filter.continuous">continuous</span> g -&gt;
+<span class="x" title="mathcomp.classical.filter.continuous">continuous</span> h -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderZmodule_between_Algebra_BaseZmodule_and_Order_Preorder R,
+ -3 &lt;= x &lt;= 3 -&gt; `|g x - h x| &lt;= c) -&gt;
+`|\int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x g x - \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x h x| &lt;= c</pre></div>
+<div class="decl-doc"><p>The same for the integrals against the semicircle law.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> semicircle_near (g h : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (c : <span class="sv" title="section variable R of section wigner">R</span>) : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <span class="bv">g</span> -&gt; <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <span class="bv">h</span> -&gt;
+  (<span class="kw">forall</span> x, -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; `|<span class="bv">g</span> <span class="bv">x</span> - <span class="bv">h</span> <span class="bv">x</span>| &lt;= <span class="bv">c</span>) -&gt;
+  `|\int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">g</span> <span class="bv">x</span> - \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">h</span> <span class="bv">x</span>| &lt;= <span class="bv">c</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a>, <a class="r k-thm" href="#wigner_uniform_inf" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform_inf">wigner_uniform_inf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="wigner_uniform">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#wigner_uniform">wigner_uniform</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L933" target="_blank" rel="noopener">source, line 933</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R -&gt; R] [L t0 t1 : R],
+(<span class="kw">forall</span> t : R, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (f t)) -&gt;
+(<span class="kw">forall</span> (t : R)
+   (x y : join_Num_POrderZmodule_between_Algebra_BaseZmodule_and_Order_Preorder R),
+ t0 &lt;= t &lt;= t1 -&gt; -3 &lt;= x &lt;= 3 -&gt; -3 &lt;= y &lt;= 3 -&gt; `|f t x - f t y| &lt;= L * `|x - y|) -&gt;
+(<span class="kw">forall</span> (t s : R)
+   (x : join_Num_POrderZmodule_between_Algebra_BaseZmodule_and_Order_Preorder R),
+ t0 &lt;= t &lt;= t1 -&gt; t0 &lt;= s &lt;= t1 -&gt; -3 &lt;= x &lt;= 3 -&gt; `|f t x - f s x| &lt;= L * `|t - s|) -&gt;
+<span class="kw">forall</span> [eps : R],
+0 &lt; eps -&gt;
+<span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  <span class="kw">forall</span> d : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  (D &lt;= d)%N -&gt;
+  <span class="kw">exists</span> A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV_(d * d),
+    [/\ (<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A,
+        (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) A &lt;= eps%:E)%E
+      &amp; [<span class="x" title="mathcomp.classical.classical_sets.set">set</span> a | (<span class="kw">exists2</span> t : R,
+                    t0 &lt;= t &lt;= t1 &amp;
+                    eps &lt;= `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) a - \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x f t x|)]
+        `&lt;=` A]</pre></div>
+<div class="decl-doc"><p>Wigner's law uniformly over a family f_t, t in [t0, t1], of functions that are L-Lipschitz on [-3, 3] and L-Lipschitz in t: for every large d, the event that some t has a deviation at least eps lies in a measurable event of probability at most eps. Lemma 5.14 of Koehler and Sohn uses it for (x - t)_+ and (x - t)_+^2.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Wigner's law uniformly over a family <code>f_t</code>, <code>t</code> in <code>[t0, t1]</code>, of continuous functions that are <code>L</code>-Lipschitz on <code>[-3, 3]</code> and <code>L</code>-Lipschitz in <code>t</code> there: for every <code>eps &gt; 0</code> and every large <code>d</code>, the event that <code>|(1 / d) \sum_i f_t (spec W 0 i) - \int f_t d(semicircle_prob 2)| &gt;= eps</code> for some <code>t</code> lies in a measurable event of probability at most <code>eps</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> wigner_uniform (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L t0 t1 : <span class="sv" title="section variable R of section wigner">R</span>) :
+  (<span class="kw">forall</span> t, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="bv">f</span> <span class="bv">t</span>)) -&gt;
+  (<span class="kw">forall</span> t x y, <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span> -&gt; -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; -3 &lt;= <span class="bv">y</span> &lt;= 3 -&gt;
+     `|<span class="bv">f</span> <span class="bv">t</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">t</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  (<span class="kw">forall</span> t s x, <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span> -&gt; <span class="bv">t0</span> &lt;= <span class="bv">s</span> &lt;= <span class="bv">t1</span> -&gt; -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt;
+     `|<span class="bv">f</span> <span class="bv">t</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">s</span> <span class="bv">x</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">t</span> - <span class="bv">s</span>|) -&gt;
+  <span class="kw">forall</span> eps : <span class="sv" title="section variable R of section wigner">R</span>, 0 &lt; <span class="bv">eps</span> -&gt; <span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="kw">forall</span> d, (<span class="bv">D</span> &lt;= <span class="bv">d</span>)%N -&gt;
+  <span class="kw">exists</span> A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section wigner">R</span>]_(<span class="bv">d</span> * <span class="bv">d</span>), [/\ <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span>,
+    (@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section wigner">R</span> (<span class="bv">d</span> * <span class="bv">d</span>) <span class="bv">A</span> &lt;= <span class="bv">eps</span>%:E)%E &amp;
+    [set a | <span class="kw">exists2</span> t, <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span> &amp;
+       <span class="bv">eps</span> &lt;= `|<a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="bv">f</span> <span class="bv">t</span>) <span class="bv">a</span> - \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">f</span> <span class="bv">t</span> <span class="bv">x</span>|] `&lt;=` <span class="bv">A</span>].</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#wigner_uniform_inf" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform_inf">wigner_uniform_inf</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="wigner_uniform_inf">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#wigner_uniform_inf">wigner_uniform_inf</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/wigner.v#L1068" target="_blank" rel="noopener">source, line 1068</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f : R -&gt; R -&gt; R] [L t0 t1 : R],
+t0 &lt;= t1 -&gt;
+(<span class="kw">forall</span> t : R, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (f t)) -&gt;
+(<span class="kw">forall</span> (t : R)
+   (x y : join_Num_POrderZmodule_between_Algebra_BaseZmodule_and_Order_Preorder R),
+ t0 &lt;= t &lt;= t1 -&gt; -3 &lt;= x &lt;= 3 -&gt; -3 &lt;= y &lt;= 3 -&gt; `|f t x - f t y| &lt;= L * `|x - y|) -&gt;
+(<span class="kw">forall</span> (t s : R)
+   (x : join_Num_POrderZmodule_between_Algebra_BaseZmodule_and_Order_Preorder R),
+ t0 &lt;= t &lt;= t1 -&gt; t0 &lt;= s &lt;= t1 -&gt; -3 &lt;= x &lt;= 3 -&gt; `|f t x - f s x| &lt;= L * `|t - s|) -&gt;
+<span class="kw">forall</span> [eps : R],
+0 &lt; eps -&gt;
+<span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  <span class="kw">forall</span> d : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>,
+  (D &lt;= d)%N -&gt;
+  <span class="kw">exists</span> A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV_(d * d),
+    [/\ (<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> A,
+        (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) A &lt;= eps%:E)%E
+      &amp; [<span class="x" title="mathcomp.classical.classical_sets.set">set</span> a | eps &lt;=
+                 `|<span class="x" title="mathcomp.reals.reals.inf">inf</span> [<span class="x" title="mathcomp.classical.classical_sets.set">set</span> <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) a | t <span class="kw">in</span> [<span class="x" title="mathcomp.classical.classical_sets.set">set</span> t | t0 &lt;= t &lt;= t1]] -
+                   <span class="x" title="mathcomp.reals.reals.inf">inf</span>
+                     [<span class="x" title="mathcomp.classical.classical_sets.set">set</span> \int[<a class="r k-def" href="GaussianAnalysis.probability.semicircle_law.html#semicircle_prob" title="GaussianAnalysis.probability.semicircle_law.semicircle_prob">semicircle_prob</a> (2 : R)]_x f t x
+                        | t <span class="kw">in</span> [<span class="x" title="mathcomp.classical.classical_sets.set">set</span> t | t0 &lt;= t &lt;= t1]]|]
+        `&lt;=` A]</pre></div>
+<div class="decl-doc"><p>The minimum over t in [t0, t1], written as an infimum, of <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) converges in probability to the minimum over t of \int f t dsigma, under the hypotheses of <a class="r k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform">wigner_uniform</a>: outside an event of probability at most eps / 3, every <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) is within eps / 3 of its limit, so the two infima differ by less than 2 eps / 3. No minimum needs to be attained.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Under the hypotheses of <a class="code-link k-thm" href="#wigner_uniform" title="GaussianAnalysis.random_matrix.wigner.wigner_uniform"><code>wigner_uniform</code></a>, with <code>t0 &lt;= t1</code>: the infimum over <code>t</code> in <code>[t0, t1]</code> of <code><a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (f t) a</code> converges in probability to the infimum over <code>t</code> of <code>\int f_t d(semicircle_prob 2)</code>. For every <code>eps &gt; 0</code> and every large <code>d</code>, the samples where the two infima differ by at least <code>eps</code> lie in a measurable set of Gaussian probability at most <code>eps</code>. No minimum needs to be attained.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> wigner_uniform_inf (f : <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span> -&gt; <span class="sv" title="section variable R of section wigner">R</span>) (L t0 t1 : <span class="sv" title="section variable R of section wigner">R</span>) : <span class="bv">t0</span> &lt;= <span class="bv">t1</span> -&gt;
+  (<span class="kw">forall</span> t, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="bv">f</span> <span class="bv">t</span>)) -&gt;
+  (<span class="kw">forall</span> t x y, <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span> -&gt; -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt; -3 &lt;= <span class="bv">y</span> &lt;= 3 -&gt;
+     `|<span class="bv">f</span> <span class="bv">t</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">t</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">x</span> - <span class="bv">y</span>|) -&gt;
+  (<span class="kw">forall</span> t s x, <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span> -&gt; <span class="bv">t0</span> &lt;= <span class="bv">s</span> &lt;= <span class="bv">t1</span> -&gt; -3 &lt;= <span class="bv">x</span> &lt;= 3 -&gt;
+     `|<span class="bv">f</span> <span class="bv">t</span> <span class="bv">x</span> - <span class="bv">f</span> <span class="bv">s</span> <span class="bv">x</span>| &lt;= <span class="bv">L</span> * `|<span class="bv">t</span> - <span class="bv">s</span>|) -&gt;
+  <span class="kw">forall</span> eps : <span class="sv" title="section variable R of section wigner">R</span>, 0 &lt; <span class="bv">eps</span> -&gt; <span class="kw">exists</span> D : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>, <span class="kw">forall</span> d, (<span class="bv">D</span> &lt;= <span class="bv">d</span>)%N -&gt;
+  <span class="kw">exists</span> A : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section wigner">R</span>]_(<span class="bv">d</span> * <span class="bv">d</span>), [/\ <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">A</span>,
+    (@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section wigner">R</span> (<span class="bv">d</span> * <span class="bv">d</span>) <span class="bv">A</span> &lt;= <span class="bv">eps</span>%:E)%E &amp;
+    [set a | <span class="bv">eps</span> &lt;=
+       `|<span class="x" title="mathcomp.reals.reals.inf">inf</span> [set <a class="r k-def" href="#goe_stat" title="GaussianAnalysis.random_matrix.wigner.goe_stat">goe_stat</a> (<span class="bv">f</span> <span class="bv">t</span>) <span class="bv">a</span> | t <span class="kw">in</span> [set t | <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span>]] -
+         <span class="x" title="mathcomp.reals.reals.inf">inf</span> [set \int[<span class="ln" title="Local Notation sigma := (semicircle_prob (2 : R)).">sigma</span>]_x <span class="bv">f</span> <span class="bv">t</span> <span class="bv">x</span> | t <span class="kw">in</span> [set t | <span class="bv">t0</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">t1</span>]]|]
+    `&lt;=` <span class="bv">A</span>].</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>bernstein</span></li><li><a href="#bernstein_basis">bernstein_<wbr>basis</a></li><li><a href="#bernstein_sum1">bernstein_<wbr>sum1</a></li><li><a href="#bernstein_shift">bernstein_<wbr>shift</a></li><li><a href="#bernstein_mean">bernstein_<wbr>mean</a></li><li><a href="#bernstein_var">bernstein_<wbr>var</a></li><li><a href="#bernstein_basis_ge0">bernstein_<wbr>basis_<wbr>ge0</a></li><li><a href="#bernstein">bernstein</a></li><li><a href="#bernstein_lipschitz">bernstein_<wbr>lipschitz</a></li><li><a href="#bernstein_polyE">bernstein_<wbr>polyE</a></li><li><a href="#weierstrass_lipschitz">weierstrass_<wbr>lipschitz</a></li><li class="toc-sec"><span>catalan</span></li><li><a href="#segner">segner</a></li><li class="toc-sec"><span>semicircle_catalan</span></li><li><a href="#sum_parity">sum_<wbr>parity</a></li><li><a href="#semicircle_catalan">semicircle_<wbr>catalan</a></li><li class="toc-sec"><span>goe_moment_limit</span></li><li><a href="#cvg_nat_eps">cvg_<wbr>nat_<wbr>eps</a></li><li><a href="#cvg_sum_seq">cvg_<wbr>sum_<wbr>seq</a></li><li><a href="#goe_tr_cov_cvg">goe_<wbr>tr_<wbr>cov_<wbr>cvg</a></li><li><a href="#goe_moment_cvg">goe_<wbr>moment_<wbr>cvg</a></li><li><a href="#goe_clip_cvg">goe_<wbr>clip_<wbr>cvg</a></li><li class="toc-sec"><span>wigner</span></li><li><a href="#goe_stat">goe_<wbr>stat</a></li><li><a href="#goe_stat_poly_clip">goe_<wbr>stat_<wbr>poly_<wbr>clip</a></li><li><a href="#integrable_semicircle_poly">integrable_<wbr>semicircle_<wbr>poly</a></li><li><a href="#semicircle_poly">semicircle_<wbr>poly</a></li><li><a href="#continuous_clip">continuous_<wbr>clip</a></li><li><a href="#semicircle_clip">semicircle_<wbr>clip</a></li><li><a href="#goe_stat_lipschitz">goe_<wbr>stat_<wbr>lipschitz</a></li><li><a href="#clip_comp_lipschitz">clip_<wbr>comp_<wbr>lipschitz</a></li><li><a href="#polyfun_goe_stat_clip">polyfun_<wbr>goe_<wbr>stat_<wbr>clip</a></li><li><a href="#goe_stat_clip_mean_cvg">goe_<wbr>stat_<wbr>clip_<wbr>mean_<wbr>cvg</a></li><li><a href="#goe_stat_conc">goe_<wbr>stat_<wbr>conc</a></li><li><a href="#continuous_goe_stat">continuous_<wbr>goe_<wbr>stat</a></li><li><a href="#wigner">wigner</a></li><li><a href="#goe_stat_near">goe_<wbr>stat_<wbr>near</a></li><li><a href="#clip3_bound">clip3_<wbr>bound</a></li><li><a href="#semicircle_near">semicircle_<wbr>near</a></li><li><a href="#wigner_uniform">wigner_<wbr>uniform</a></li><li><a href="#wigner_uniform_inf">wigner_<wbr>uniform_<wbr>inf</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

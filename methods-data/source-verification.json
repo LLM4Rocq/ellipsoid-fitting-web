@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-02T14:58:53.119340+00:00",
+  "method": "Read-only SHA-256 verification of source bytes and Git tree identity; no fresh Rocq compilation in this report audit.",
+  "proof_commit": "212a24947ecc03bd0fe84fa63b65e2c1bf8ba273",
+  "merged_commit": "df283b7951db565183b8cf3f1bf96b382f6592f8",
+  "published_head": "7b0c5bb45f37563aa649ca67c7c60aac71c15fc4",
+  "verification_record_sha256": "22efd014c6e0048776a22dc5f1b626f10d16dd2b5f3399df6d1fbfd44c4f24f8",
+  "proof_source_count": 648,
+  "frozen_source_count": 6,
+  "unique_paths_checked_including_contract": 650,
+  "current_source_mismatches": [],
+  "merged_source_mismatches": [],
+  "merged_tree_equals_checked_head": true,
+  "result": "PASS"
+}

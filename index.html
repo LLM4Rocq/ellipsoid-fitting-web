@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Two ways into the formal development: the ellipsoid-fitting paper and its new results, and the reusable GaussianAnalysis mathematics library.">
+<title>Ellipsoid fitting &amp; GaussianAnalysis</title>
+<style>
+:root{--bg:#f7f7f0;--paper:#fffefa;--ink:#22382d;--green:#235c45;--muted:#59685f;--line:#d2dcd0}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main,header,footer{max-width:1120px;margin:auto;padding-left:32px;padding-right:32px}header{display:flex;justify-content:space-between;gap:20px;padding-top:25px;padding-bottom:25px;border-bottom:1px solid var(--line);font-size:13px}header a,footer a{color:var(--green);text-underline-offset:4px}.brand{font-weight:600}main{padding-top:66px}.eyebrow,.label{font-size:11px;font-weight:650;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}h1{font:400 clamp(40px,6vw,66px)/1.12 Georgia,serif;letter-spacing:-.035em;max-width:17ch;margin:16px 0 22px}.intro{font:21px/1.6 Georgia,serif;max-width:67ch;color:var(--muted)}.destinations{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:44px 0}.destination{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--green);padding:30px;display:flex;flex-direction:column;border-radius:4px;min-width:0}h2{font:400 32px/1.2 Georgia,serif;letter-spacing:-.025em;margin:12px 0 18px}.destination p{font-size:15px}.destination ul{padding-left:20px;font-size:14px;color:var(--muted);margin:0 0 27px}.destination li+li{margin-top:9px}.open{margin-top:auto;display:block;color:var(--green);font-weight:600;text-underline-offset:5px}.version{font-size:12px!important;color:var(--muted);margin-bottom:0}.support{display:flex;flex-wrap:wrap;gap:14px 30px;border-top:1px solid var(--line);padding:24px 0}.support a{color:var(--green);font-size:14px;text-underline-offset:4px}footer{padding-top:20px;padding-bottom:30px;color:var(--muted);font-size:12px}a:focus-visible{outline:3px solid #ab7236;outline-offset:5px}@media(max-width:680px){header,main,footer{padding-left:21px;padding-right:21px}main{padding-top:35px}.destinations{grid-template-columns:1fr;gap:22px;margin-top:30px}.destination{padding:25px}.intro{font-size:19px}header{align-items:flex-start}}@media print{.destinations{grid-template-columns:1fr 1fr}.destination{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><span class="brand">Ellipsoid fitting &amp; GaussianAnalysis</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq">Public source ↗</a></header>
+<main id="main">
+<p class="eyebrow">Mathematics formalized in Rocq</p>
+<h1>The paper.<br>The library.</h1>
+<p class="intro">The paper explains results about fitting ellipsoids to random points. The library collects the general mathematics developed along the way, so those proofs can be understood and reused in other problems.</p>
+<div class="destinations">
+<article class="destination"><span class="label">01 / The paper</span><h2>Ellipsoid fitting</h2><p>The mathematical problem, the main theorem and the new results on conditioning, dependent coordinates and translated samples.</p><ul><li>Understand the geometric ideas and explore the condition-number curve.</li><li>Read the hypotheses, proof outline and mathematical notes.</li><li>Find the precise statements and proofs in the released source.</li></ul><a class="open" href="ellipsoid-fitting.html">Read about the paper →</a><p class="version">Exposition and release guide updated 25 October 2026.</p></article>
+<article class="destination"><span class="label">02 / The library</span><h2>GaussianAnalysis</h2><p>A reusable library of Gaussian probability, comparison inequalities, matrix theory, concentration, Fourier analysis and convex geometry.</p><ul><li>Browse subject guides and the index of named results.</li><li>Search individual definitions and theorems.</li><li>Read full Rocq signatures, section hypotheses and links between declarations.</li></ul><a class="open" href="library/index.html">Explore the library →</a><p class="version">The full declaration browser is a dated snapshot of phase 12 (commit 9046883, 13 October 2026). The <a href="results.html#library">current library overview</a> includes all nine subject areas and links to the 128-module release.</p></article>
+</div>
+<nav class="support" aria-label="Companion pages"><a href="results.html">Released results and exact source links →</a><a href="autoformalization-methods.html">How the formalization was carried out →</a></nav>
+</main>
+<footer>Each formal result has its own hypotheses and foundational assumptions. The website separates mathematical exposition, reusable library documentation and the account of how the proofs were produced.</footer>
+</body>
+</html>

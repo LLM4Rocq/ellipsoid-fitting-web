@@ -1,0 +1,28 @@
+GaussianAnalysis and ellipsoid fitting: static website
+
+Open index.html and choose The paper or The library. These are separate
+pages: mathematical exposition and new results on one side, reusable
+library subject guides, search and full declarations on the other.
+The companion results.html describes the released mathematical sources of
+the Rocq repository https://github.com/LLM4Rocq/ellipsoid_fitting_rocq at
+305747af48d4f75e26378888a8111d591145fa52 (tag shifted), with documentation
+through 5893184eb385a81a61c68c3e0b10aabf684c61ce, 25 October 2026.
+
+library/ preserves the detailed phase12 API documentation at 9046883
+(tag phase12, 13 October 2026). Each of its pages states that version and
+date and links to the current library overview. It is not a regenerated
+API reference for the shifted release.
+
+pdf/ellipsoid-fitting-statements.pdf (15 October 2026, 61 pages) holds
+earlier notes; their sources are not published.
+pdf/shifted-gaussian-ellipsoid-fitting.pdf (20 pages) is the shifted-sample
+note, built from doc/shifted-gaussian.tex at 15d9fb22; the note is
+unchanged through 5893184e. The pages identify the scope of each PDF.
+The methods report retains its dated measurements. Only the three
+explicitly selected methods-data records are included; private
+transcripts, excerpts and machine-specific receipts are excluded.
+
+No installation or server is required. The pages load no external fonts
+or scripts. External source links need internet.
+This copy was prepared on 25 October 2026 for publication as a separate
+repository served by GitHub Pages. It has not been deployed.

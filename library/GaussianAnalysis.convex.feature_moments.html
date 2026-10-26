@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.convex.feature_moments</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod current" href="GaussianAnalysis.convex.feature_moments.html" aria-current="page">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>Rintegral_helpers</span></li><li><a href="#Rintegral_EFin">Rintegral_<wbr>EFin</a></li><li><a href="#integrable_cst_prob">integrable_<wbr>cst_<wbr>prob</a></li><li><a href="#Rintegral_cst_prob">Rintegral_<wbr>cst_<wbr>prob</a></li><li><a href="#integrableR_sum">integrableR_<wbr>sum</a></li><li><a href="#Rintegral_sumr">Rintegral_<wbr>sumr</a></li><li><a href="#integrableRD">integrableRD</a></li><li><a href="#integrableRB">integrableRB</a></li><li><a href="#integrableRZl">integrableRZl</a></li><li><a href="#integrableRZr">integrableRZr</a></li><li class="toc-sec"><span>linear_forms</span></li><li><a href="#continuous_mxdotl">continuous_<wbr>mxdotl</a></li><li><a href="#measurable_mxdotl">measurable_<wbr>mxdotl</a></li><li><a href="#mxdot_quadE">mxdot_<wbr>quadE</a></li><li><a href="#measurable_quad">measurable_<wbr>quad</a></li><li><a href="#measurable_norm2">measurable_<wbr>norm2</a></li><li><a href="#mxdot_sqr_sum">mxdot_<wbr>sqr_<wbr>sum</a></li><li><a href="#quad_le_frobenius">quad_<wbr>le_<wbr>frobenius</a></li><li><a href="#form_le_opnorm">form_<wbr>le_<wbr>opnorm</a></li><li class="toc-sec"><span>regular_moments</span></li><li><a href="#reg_lambda_gt0">reg_<wbr>lambda_<wbr>gt0</a></li><li><a href="#reg_int4">reg_<wbr>int4</a></li><li><a href="#reg_moment4">reg_<wbr>moment4</a></li><li><a href="#reg_int_norm4">reg_<wbr>int_<wbr>norm4</a></li><li><a href="#reg_integrable">reg_<wbr>integrable</a></li><li><a href="#le1_sqr">le1_<wbr>sqr</a></li><li><a href="#reg_int_sqr">reg_<wbr>int_<wbr>sqr</a></li><li><a href="#reg_int_lin">reg_<wbr>int_<wbr>lin</a></li><li><a href="#reg_int_lin2">reg_<wbr>int_<wbr>lin2</a></li><li><a href="#reg_int_quad">reg_<wbr>int_<wbr>quad</a></li><li><a href="#quad_sqr_le">quad_<wbr>sqr_<wbr>le</a></li><li><a href="#reg_int_quad2">reg_<wbr>int_<wbr>quad2</a></li><li><a href="#reg_int_resid2">reg_<wbr>int_<wbr>resid2</a></li><li><a href="#reg_int_ell2">reg_<wbr>int_<wbr>ell2</a></li><li><a href="#reg_mean">reg_<wbr>mean</a></li><li><a href="#reg_cov">reg_<wbr>cov</a></li><li><a href="#reg_quad_mean">reg_<wbr>quad_<wbr>mean</a></li><li><a href="#reg_quad_var">reg_<wbr>quad_<wbr>var</a></li><li><a href="#reg_resid2">reg_<wbr>resid2</a></li><li><a href="#resid4_le">resid4_<wbr>le</a></li><li><a href="#reg_int_resid4">reg_<wbr>int_<wbr>resid4</a></li><li><a href="#reg_resid4">reg_<wbr>resid4</a></li><li><a href="#reg_ell_int">reg_<wbr>ell_<wbr>int</a></li><li><a href="#reg_ell_mean">reg_<wbr>ell_<wbr>mean</a></li><li><a href="#reg_ell_var">reg_<wbr>ell_<wbr>var</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.convex.html">convex</a><span aria-hidden="true">/</span><span>feature_moments</span></div>
+<h1 class="page-title">Moments of regular features</h1>
+<div class="page-meta"><code>GaussianAnalysis.convex.feature_moments</code><span>library/convex/feature_moments.v</span><span>544 lines</span><span>42 lemmas and theorems</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>6</b> library modules and 21 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.matrix.opnorm.html">GaussianAnalysis.matrix.opnorm</a></li><li><a href="GaussianAnalysis.convex.least_squares.html">GaussianAnalysis.convex.least_squares</a></li><li><a href="GaussianAnalysis.probability.lindeberg.html">GaussianAnalysis.probability.lindeberg</a></li><li><a href="GaussianAnalysis.probability.efron_stein.html">GaussianAnalysis.probability.efron_stein</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.sesquilinear, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.algebra.arithmetic_tactic</p></div></details><details><summary>Imported by <b>4</b></summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.convex.gauss_feature.html">GaussianAnalysis.convex.gauss_feature</a></li><li><a href="GaussianAnalysis.convex.barrier_lindeberg.html">GaussianAnalysis.convex.barrier_lindeberg</a></li><li><a href="GaussianAnalysis.convex.ridge_comparison.html">GaussianAnalysis.convex.ridge_comparison</a></li><li><a href="GaussianAnalysis.convex.feature_mixture.html">GaussianAnalysis.convex.feature_mixture</a></li></ul></div></details><details><summary>Required by <b>3</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Condition/Slices.v" target="_blank" rel="noopener">extension/Condition/Slices.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Gaussian/Subcritical.v" target="_blank" rel="noopener">extension/Gaussian/Subcritical.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Unsat/Regularized.v" target="_blank" rel="noopener">extension/Unsat/Regularized.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>The moment calculus behind Propositions 2.14 and 2.16 of Koehler and Sohn (arXiv 2608.27372): for a (K, tau)-regular feature mu on 'rV[R]_N with covariance Sigma (<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> of <a href="GaussianAnalysis.convex.least_squares.html">least_squares.v</a>) and lambda = opnorm Sigma, the polynomials of degree at most 4 in the coordinates are integrable, and the first two moments of the linear forms and of the quadratic forms z |-&gt; z T z^T depend only on Sigma. Integrals are Rintegral, with values in R.</p>
+<ul><li><a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a>: a measurable g with |g z| &lt;= a + b |z|^4 is integrable.</li><li><a class="r k-thm" href="#reg_mean" title="GaussianAnalysis.convex.feature_moments.reg_mean">reg_mean</a>, <a class="r k-thm" href="#reg_cov" title="GaussianAnalysis.convex.feature_moments.reg_cov">reg_cov</a>: E &lt;z, theta&gt; = 0 and E &lt;z, theta&gt; &lt;z, theta'&gt; = theta Sigma theta'^T.</li><li><a class="r k-thm" href="#reg_quad_mean" title="GaussianAnalysis.convex.feature_moments.reg_quad_mean">reg_quad_mean</a>: E z T z^T = sum_b (e_b Sigma) . T_(., b), a function of Sigma and T only; <a class="r k-thm" href="#reg_quad_var" title="GaussianAnalysis.convex.feature_moments.reg_quad_var">reg_quad_var</a>: for T symmetric, E (z T z^T - E z T z^T)^2 &lt;= tau^2 |T|_F^2.</li><li><a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>: E (b - &lt;z, theta&gt;)^2 = b^2 + theta Sigma theta^T; <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a>: E (b - &lt;z, theta&gt;)^4 &lt;= 8 (1 + K^4) S^2 with S = lambda |theta|^2 + b^2.</li><li><a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a>, <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a>: for l z = c - 2 &lt;v, z&gt; + z T z^T with T symmetric, E l z = c + E z T z^T and E (l z - E l)^2 &lt;= 2 tau^2 |T|_F^2 + 8 lambda |v|^2.</li><li><a class="r k-thm" href="#form_le_opnorm" title="GaussianAnalysis.convex.feature_moments.form_le_opnorm">form_le_opnorm</a>: v Sigma v^T &lt;= opnorm Sigma |v|^2.</li></ul></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_<wbr>integrable</a></span><span><a class="r k-thm" href="#reg_mean" title="GaussianAnalysis.convex.feature_moments.reg_mean">reg_<wbr>mean</a></span><span><a class="r k-thm" href="#reg_cov" title="GaussianAnalysis.convex.feature_moments.reg_cov">reg_<wbr>cov</a></span><span><a class="r k-thm" href="#reg_quad_mean" title="GaussianAnalysis.convex.feature_moments.reg_quad_mean">reg_<wbr>quad_<wbr>mean</a></span><span><a class="r k-thm" href="#reg_quad_var" title="GaussianAnalysis.convex.feature_moments.reg_quad_var">reg_<wbr>quad_<wbr>var</a></span></div></td><td>For a <code>(K, tau)</code>-regular feature <code>mu</code> with covariance <code>Sigma</code> (Koehler-Sohn, Definition 2.5): every measurable <code>g</code> with <code>|g z| &lt;= a + b |z|^4</code> is integrable, <code>E &lt;z, theta&gt; = 0</code>, <code>E &lt;z, theta&gt; &lt;z, theta&#x27;&gt; = theta Sigma theta&#x27;^T</code>, <code>E z T z^T</code> depends only on <code>Sigma</code> and <code>T</code>, and <code>E (z T z^T - E z T z^T)^2 &lt;= tau^2 |T|_F^2</code> for <code>T</code> symmetric.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_<wbr>resid2</a></span><span><a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_<wbr>resid4</a></span><span><a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_<wbr>ell_<wbr>mean</a></span><span><a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_<wbr>ell_<wbr>var</a></span><span><a class="r k-thm" href="#form_le_opnorm" title="GaussianAnalysis.convex.feature_moments.form_le_opnorm">form_<wbr>le_<wbr>opnorm</a></span></div></td><td><code>E (b - &lt;z, theta&gt;)^2 = b^2 + theta Sigma theta^T</code>, <code>E (b - &lt;z, theta&gt;)^4 &lt;= 8 (1 + K^4) (lambda |theta|^2 + b^2)^2</code> with <code>lambda = opnorm Sigma</code>, and for <code>l z = c - 2 &lt;z, v&gt; + z T z^T</code> with <code>T</code> symmetric, <code>E l = c + E z T z^T</code> and <code>E (l - E l)^2 &lt;= 2 tau^2 |T|_F^2 + 8 lambda |v|^2</code>; <code>v Sigma v^T &lt;= opnorm Sigma |v|^2</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">42 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-Rintegral_helpers-16"><span class="sec-kw">section</span><span class="sec-name">Rintegral_helpers</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (U : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (P : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="bv">U</span> <span class="bv">R</span>).</pre>
+<div class="decl k-thm" id="Rintegral_EFin">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#Rintegral_EFin">Rintegral_EFin</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L50" target="_blank" rel="noopener">source, line 50</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] [f : U -&gt; R],
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o f) -&gt; (\int[P]_x f x)%:E = (\int[P]_x (f x)%:E)%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> Rintegral_EFin (f : <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">f</span>) -&gt; (\int[<span class="sv" title="section variable P of section Rintegral_helpers">P</span>]_x <span class="bv">f</span> <span class="bv">x</span>)%:E = (\int[<span class="sv" title="section variable P of section Rintegral_helpers">P</span>]_x (<span class="bv">f</span> <span class="bv">x</span>)%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 8 declarations in 5 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_moment4" title="GaussianAnalysis.convex.feature_moments.reg_moment4">reg_moment4</a>, <a class="r k-thm" href="#reg_quad_var" title="GaussianAnalysis.convex.feature_moments.reg_quad_var">reg_quad_var</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#lindeberg_telescope" title="GaussianAnalysis.convex.barrier_lindeberg.lindeberg_telescope">lindeberg_telescope</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_variance" title="GaussianAnalysis.convex.barrier_lindeberg.loo_variance">loo_variance</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_variance" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_variance">barrier_lindeberg_variance</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#markov_lt" title="GaussianAnalysis.convex.ridge_comparison.markov_lt">markov_lt</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#quad_expectation" title="GaussianAnalysis.convex.feature_mixture.quad_expectation">quad_expectation</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrable_cst_prob">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_cst_prob">integrable_cst_prob</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L54" target="_blank" rel="noopener">source, line 54</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  (P : probability U R) (c : R),
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="x" title="mathcomp.classical.functions.cst">cst</span> c)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_cst_prob (c : <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) : <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="x" title="mathcomp.classical.functions.cst">cst</span> <span class="bv">c</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 15 declarations in 5 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a>, <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>, <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a>, <a class="r k-thm" href="#reg_ell_int" title="GaussianAnalysis.convex.feature_moments.reg_ell_int">reg_ell_int</a>, <a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_compare" title="GaussianAnalysis.convex.barrier_lindeberg.loo_compare">loo_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi">int_Phi</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi_set" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi_set">int_Phi_set</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_variance" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_variance">barrier_lindeberg_variance</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_int" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_int">ref_objective_int</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_integrable" title="GaussianAnalysis.convex.feature_mixture.moment4_integrable">moment4_integrable</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="Rintegral_cst_prob">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#Rintegral_cst_prob">Rintegral_cst_prob</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L57" target="_blank" rel="noopener">source, line 57</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  (P : probability U R) (c : R),
+\int[P]__ c = c</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> Rintegral_cst_prob (c : <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) : \int[<span class="sv" title="section variable P of section Rintegral_helpers">P</span>]_x <span class="bv">c</span> = <span class="bv">c</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 10 declarations in 4 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#Rintegral_sumr" title="GaussianAnalysis.convex.feature_moments.Rintegral_sumr">Rintegral_sumr</a>, <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>, <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a>, <a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_compare" title="GaussianAnalysis.convex.barrier_lindeberg.loo_compare">loo_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_variance" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_variance">barrier_lindeberg_variance</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrableR_sum">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrableR_sum">integrableR_sum</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L60" target="_blank" rel="noopener">source, line 60</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] [I : <span class="kw">Type</span>] (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> I) [h : I -&gt; U -&gt; R],
+(<span class="kw">forall</span> i : I, P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o h i)) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : U =&gt; \sum_(i &lt;- s) h i x))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrableR_sum I (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> <span class="bv">I</span>) (h : <span class="bv">I</span> -&gt; <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  (<span class="kw">forall</span> i, <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">h</span> <span class="bv">i</span>)) -&gt;
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x =&gt; \sum_(i &lt;- <span class="bv">s</span>) <span class="bv">h</span> <span class="bv">i</span> <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 8 declarations in 4 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#Rintegral_sumr" title="GaussianAnalysis.convex.feature_moments.Rintegral_sumr">Rintegral_sumr</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_diag_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_diag_moments">gauss_diag_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_quad_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_quad_moments">gauss_quad_moments</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi">int_Phi</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_P4" title="GaussianAnalysis.convex.barrier_lindeberg.int_P4">int_P4</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_int" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_int">ref_objective_int</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="Rintegral_sumr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#Rintegral_sumr">Rintegral_sumr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L70" target="_blank" rel="noopener">source, line 70</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] [I : <span class="kw">Type</span>] (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> I) [h : I -&gt; U -&gt; R],
+(<span class="kw">forall</span> i : I, P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o h i)) -&gt;
+\int[P]_x \sum_(i &lt;- s) h i x = \sum_(i &lt;- s) \int[P]_x h i x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> Rintegral_sumr I (s : <span class="x" title="mathcomp.boot.seq.seq">seq</span> <span class="bv">I</span>) (h : <span class="bv">I</span> -&gt; <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  (<span class="kw">forall</span> i, <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">h</span> <span class="bv">i</span>)) -&gt;
+  \int[<span class="sv" title="section variable P of section Rintegral_helpers">P</span>]_x (\sum_(i &lt;- <span class="bv">s</span>) <span class="bv">h</span> <span class="bv">i</span> <span class="bv">x</span>) = \sum_(i &lt;- <span class="bv">s</span>) \int[<span class="sv" title="section variable P of section Rintegral_helpers">P</span>]_x <span class="bv">h</span> <span class="bv">i</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 7 declarations in 5 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_quad_mean" title="GaussianAnalysis.convex.feature_moments.reg_quad_mean">reg_quad_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_diag_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_diag_moments">gauss_diag_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_mxdot_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_mxdot_moments">gauss_mxdot_moments</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_P4" title="GaussianAnalysis.convex.barrier_lindeberg.int_P4">int_P4</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#quad_expectation" title="GaussianAnalysis.convex.feature_mixture.quad_expectation">quad_expectation</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrableRD">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrableRD">integrableRD</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L81" target="_blank" rel="noopener">source, line 81</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] [f g : U -&gt; R],
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o f) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o g) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : U =&gt; f x + g x))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrableRD (f g : <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">f</span>) -&gt; <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">g</span>) -&gt;
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x =&gt; <span class="bv">f</span> <span class="bv">x</span> + <span class="bv">g</span> <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 6 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi">int_Phi</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi_set" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi_set">int_Phi_set</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_variance" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_variance">barrier_lindeberg_variance</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_int" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_int">ref_objective_int</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrableRB">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrableRB">integrableRB</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L89" target="_blank" rel="noopener">source, line 89</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] [f g : U -&gt; R],
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o f) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o g) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : U =&gt; f x - g x))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrableRB (f g : <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">f</span>) -&gt; <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">g</span>) -&gt;
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x =&gt; <span class="bv">f</span> <span class="bv">x</span> - <span class="bv">g</span> <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrableRZl">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrableRZl">integrableRZl</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L97" target="_blank" rel="noopener">source, line 97</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] (c : R) [f : U -&gt; R],
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o f) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : U =&gt; c * f x))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrableRZl (c : <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) (f : <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">f</span>) -&gt;
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x =&gt; <span class="bv">c</span> * <span class="bv">f</span> <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 12 declarations in 4 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integrableRZr" title="GaussianAnalysis.convex.feature_moments.integrableRZr">integrableRZr</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_diag_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_diag_moments">gauss_diag_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_quad_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_quad_moments">gauss_quad_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_mxdot_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_mxdot_moments">gauss_mxdot_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi">int_Phi</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi_set" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi_set">int_Phi_set</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_variance" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_variance">barrier_lindeberg_variance</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_int" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_int">ref_objective_int</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrableRZr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrableRZr">integrableRZr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L106" target="_blank" rel="noopener">source, line 106</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [U : measurableType d] [R : realType] 
+  [P : probability U R] (c : R) [f : U -&gt; R],
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o f) -&gt;
+P.-integrable [set: U] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x : U =&gt; f x * c))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrableRZr (c : <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) (f : <span class="sv" title="section variable U of section Rintegral_helpers">U</span> -&gt; <span class="sv" title="section variable R of section Rintegral_helpers">R</span>) :
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">f</span>) -&gt;
+  <span class="sv" title="section variable P of section Rintegral_helpers">P</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> x =&gt; <span class="bv">f</span> <span class="bv">x</span> * <span class="bv">c</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_compare" title="GaussianAnalysis.convex.barrier_lindeberg.loo_compare">loo_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_variance" title="GaussianAnalysis.convex.barrier_lindeberg.loo_variance">loo_variance</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_variance" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_variance">barrier_lindeberg_variance</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-linear_forms-67"><span class="sec-kw">section</span><span class="sec-name">linear_forms</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.</pre>
+<div class="decl k-thm" id="continuous_mxdotl">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#continuous_mxdotl">continuous_mxdotl</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L119" target="_blank" rel="noopener">source, line 119</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [th : &#x27;rV_N], <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> ((<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (n:=N))^~ th)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> continuous_mxdotl (th : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="kw">fun</span> z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span> =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_mxdotl" title="GaussianAnalysis.convex.feature_moments.measurable_mxdotl">measurable_mxdotl</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#measurable_mxdot_tnth" title="GaussianAnalysis.convex.barrier_lindeberg.measurable_mxdot_tnth">measurable_mxdot_tnth</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_mxdotl">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_mxdotl">measurable_mxdotl</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L130" target="_blank" rel="noopener">source, line 130</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (th : &#x27;rV_N),
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="hb" title="printed as matrix_matrix__canonical__measurable_structure_SigmaRing 1 N">&#x27;rV_N</span>]
+  ((<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (n:=N))^~ th)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_mxdotl (th : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="kw">fun</span> z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span> =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 16 declarations in 5 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_quad" title="GaussianAnalysis.convex.feature_moments.measurable_quad">measurable_quad</a>, <a class="r k-thm" href="#reg_int4" title="GaussianAnalysis.convex.feature_moments.reg_int4">reg_int4</a>, <a class="r k-thm" href="#reg_int_sqr" title="GaussianAnalysis.convex.feature_moments.reg_int_sqr">reg_int_sqr</a>, <a class="r k-thm" href="#reg_int_lin" title="GaussianAnalysis.convex.feature_moments.reg_int_lin">reg_int_lin</a>, <a class="r k-thm" href="#reg_int_lin2" title="GaussianAnalysis.convex.feature_moments.reg_int_lin2">reg_int_lin2</a>, <a class="r k-thm" href="#reg_int_resid2" title="GaussianAnalysis.convex.feature_moments.reg_int_resid2">reg_int_resid2</a>, <a class="r k-thm" href="#reg_int_ell2" title="GaussianAnalysis.convex.feature_moments.reg_int_ell2">reg_int_ell2</a>, <a class="r k-thm" href="#reg_int_resid4" title="GaussianAnalysis.convex.feature_moments.reg_int_resid4">reg_int_resid4</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_P4" title="GaussianAnalysis.convex.barrier_lindeberg.int_P4">int_P4</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int4" title="GaussianAnalysis.convex.feature_mixture.moment4_int4">moment4_int4</a>, <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_lin" title="GaussianAnalysis.convex.feature_mixture.moment4_int_lin">moment4_int_lin</a>, <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_lin2" title="GaussianAnalysis.convex.feature_mixture.moment4_int_lin2">moment4_int_lin2</a>, <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#mixture_regular_feature_dot" title="GaussianAnalysis.convex.feature_mixture.mixture_regular_feature_dot">mixture_regular_feature_dot</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_quadE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_quadE">mxdot_quadE</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L135" target="_blank" rel="noopener">source, line 135</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (T : &#x27;M_N) (z : &#x27;rV_N),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) = \sum_b <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z &#x27;e_b * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (<span class="x" title="mathcomp.algebra.matrix.col">col</span> b T)^T</pre></div>
+<div class="decl-doc"><p>A quadratic form is a sum of products of two linear forms.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_quadE (T : &#x27;M[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) (z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) = \sum_b <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">b</span>) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="x" title="mathcomp.algebra.matrix.col">col</span> <span class="bv">b</span> <span class="bv">T</span>)^T.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_quad" title="GaussianAnalysis.convex.feature_moments.measurable_quad">measurable_quad</a>, <a class="r k-thm" href="#reg_quad_mean" title="GaussianAnalysis.convex.feature_moments.reg_quad_mean">reg_quad_mean</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#quad_expectation" title="GaussianAnalysis.convex.feature_mixture.quad_expectation">quad_expectation</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_quad">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_quad">measurable_quad</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L143" target="_blank" rel="noopener">source, line 143</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (T : &#x27;M_N),
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="hb" title="printed as matrix_matrix__canonical__measurable_structure_SigmaRing 1 N">&#x27;rV_N</span>]
+  (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_quad (T : &#x27;M[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="kw">fun</span> z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span> =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 8 declarations in 3 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_norm2" title="GaussianAnalysis.convex.feature_moments.measurable_norm2">measurable_norm2</a>, <a class="r k-thm" href="#reg_int_quad" title="GaussianAnalysis.convex.feature_moments.reg_int_quad">reg_int_quad</a>, <a class="r k-thm" href="#reg_int_quad2" title="GaussianAnalysis.convex.feature_moments.reg_int_quad2">reg_int_quad2</a>, <a class="r k-thm" href="#reg_int_ell2" title="GaussianAnalysis.convex.feature_moments.reg_int_ell2">reg_int_ell2</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_mxdot_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_mxdot_moments">gauss_mxdot_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_quad" title="GaussianAnalysis.convex.feature_mixture.moment4_int_quad">moment4_int_quad</a>, <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_Lfun2_quad" title="GaussianAnalysis.convex.feature_mixture.moment4_Lfun2_quad">moment4_Lfun2_quad</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_norm2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_norm2">measurable_norm2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L152" target="_blank" rel="noopener">source, line 152</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat},
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="hb" title="printed as matrix_matrix__canonical__measurable_structure_SigmaRing 1 N">&#x27;rV_N</span>]
+  (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z z)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_norm2 : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="kw">fun</span> z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span> =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">z</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_norm4" title="GaussianAnalysis.convex.feature_moments.reg_int_norm4">reg_int_norm4</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_norm4" title="GaussianAnalysis.convex.feature_mixture.moment4_int_norm4">moment4_int_norm4</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_sqr_sum">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_sqr_sum">mxdot_sqr_sum</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L160" target="_blank" rel="noopener">source, line 160</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (z : &#x27;rV_N),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z z ^+ 2 &lt;= N%:R * \sum_a <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z &#x27;e_a ^+ 4</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_sqr_sum (z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">z</span> ^+ 2 &lt;= <span class="sv" title="section variable N of section linear_forms">N</span>%:R * \sum_a <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">a</span>) ^+ 4.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_norm4" title="GaussianAnalysis.convex.feature_moments.reg_int_norm4">reg_int_norm4</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_norm4" title="GaussianAnalysis.convex.feature_mixture.moment4_int_norm4">moment4_int_norm4</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="quad_le_frobenius">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#quad_le_frobenius">quad_le_frobenius</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L173" target="_blank" rel="noopener">source, line 173</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (T : &#x27;M_N) (z : &#x27;rV_N),
+`|<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T)| &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> T * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z z</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> quad_le_frobenius (T : &#x27;M[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) (z : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  `|<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>)| &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">T</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">z</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 3 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_quad" title="GaussianAnalysis.convex.feature_moments.reg_int_quad">reg_int_quad</a>, <a class="r k-thm" href="#quad_sqr_le" title="GaussianAnalysis.convex.feature_moments.quad_sqr_le">quad_sqr_le</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_mxdot_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_mxdot_moments">gauss_mxdot_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_quad" title="GaussianAnalysis.convex.feature_mixture.moment4_int_quad">moment4_int_quad</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="form_le_opnorm">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#form_le_opnorm">form_le_opnorm</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L181" target="_blank" rel="noopener">source, line 181</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (Sigma : &#x27;M_N) (v : &#x27;rV_N),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (v *m Sigma) v &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> Sigma * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> v v</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> form_le_opnorm (Sigma : &#x27;M[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) (v : &#x27;rV[<span class="sv" title="section variable R of section linear_forms">R</span>]_<span class="sv" title="section variable N of section linear_forms">N</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">v</span> *m <span class="bv">Sigma</span>) <span class="bv">v</span> &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">Sigma</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">v</span> <span class="bv">v</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-regular_moments-126"><span class="sec-kw">section</span><span class="sec-name">regular_moments</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variables</span> (K tau : <span class="sv" title="section variable R of section regular_moments">R</span>) (Sigma : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (mu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span> <span class="sv" title="section variable R of section regular_moments">R</span>).
+<span class="vk">Hypothesis</span> reg : <a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> <span class="sv" title="section variable K of section regular_moments">K</span> <span class="sv" title="section variable tau of section regular_moments">tau</span> <span class="sv" title="section variable Sigma of section regular_moments">Sigma</span> <span class="sv" title="section variable mu of section regular_moments">mu</span>.
+<span class="vk">Local Notation</span> lambda := (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="sv" title="section variable Sigma of section regular_moments">Sigma</span>).</pre>
+<div class="decl k-thm" id="reg_lambda_gt0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_lambda_gt0">reg_lambda_gt0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L200" target="_blank" rel="noopener">source, line 200</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt; 0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> Sigma</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_lambda_gt0 : 0 &lt; <span class="ln" title="Local Notation lambda := (opnorm Sigma).">lambda</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 7 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#ins_l_var" title="GaussianAnalysis.convex.barrier_lindeberg.ins_l_var">ins_l_var</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_compare" title="GaussianAnalysis.convex.barrier_lindeberg.loo_compare">loo_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_variance" title="GaussianAnalysis.convex.barrier_lindeberg.loo_variance">loo_variance</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#ref_moment_bound" title="GaussianAnalysis.convex.barrier_lindeberg.ref_moment_bound">ref_moment_bound</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int4">reg_int4</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L203" target="_blank" rel="noopener">source, line 203</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> th : &#x27;rV_N, mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th ^+ 4))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int4 (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span> ^+ 4)).</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_moment4" title="GaussianAnalysis.convex.feature_moments.reg_moment4">reg_moment4</a>, <a class="r k-thm" href="#reg_int_norm4" title="GaussianAnalysis.convex.feature_moments.reg_int_norm4">reg_int_norm4</a>, <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_P4" title="GaussianAnalysis.convex.barrier_lindeberg.int_P4">int_P4</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_moment4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_moment4">reg_moment4</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L215" target="_blank" rel="noopener">source, line 215</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> th : &#x27;rV_N,
+\int[mu]_z <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th ^+ 4 &lt;= K ^+ 4 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> Sigma ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> th th ^+ 2</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_moment4 (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span> ^+ 4) &lt;= <span class="sv" title="section variable K of section regular_moments">K</span> ^+ 4 * <span class="ln" title="Local Notation lambda := (opnorm Sigma).">lambda</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">th</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#barrier_lindeberg_mean" title="GaussianAnalysis.convex.barrier_lindeberg.barrier_lindeberg_mean">barrier_lindeberg_mean</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_P4" title="GaussianAnalysis.convex.barrier_lindeberg.int_P4">int_P4</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_norm4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_norm4">reg_int_norm4</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L223" target="_blank" rel="noopener">source, line 223</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z z ^+ 2))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_norm4 : <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">z</span> ^+ 2)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_integrable">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_integrable">reg_integrable</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L237" target="_blank" rel="noopener">source, line 237</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> [g : &#x27;rV_N -&gt; R] [a b : R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="hb" title="printed as matrix_matrix__canonical__measurable_structure_SigmaRing 1 N">&#x27;rV_N</span>] g -&gt;
+(<span class="kw">forall</span> z : &#x27;rV_N, `|g z| &lt;= a + b * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z z ^+ 2) -&gt;
+mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o g)</pre></div>
+<div class="decl-doc"><p>Domination by a + b |z|^4.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For a <code>(K, tau)</code>-regular feature <code>mu</code> with covariance <code>Sigma</code> (Koehler-Sohn, Definition 2.5): every measurable <code>g</code> with <code>|g z| &lt;= a + b |z|^4</code> is integrable, <code>E &lt;z, theta&gt; = 0</code>, <code>E &lt;z, theta&gt; &lt;z, theta&#x27;&gt; = theta Sigma theta&#x27;^T</code>, <code>E z T z^T</code> depends only on <code>Sigma</code> and <code>T</code>, and <code>E (z T z^T - E z T z^T)^2 &lt;= tau^2 |T|_F^2</code> for <code>T</code> symmetric.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_integrable (g : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span> -&gt; <span class="sv" title="section variable R of section regular_moments">R</span>) (a b : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> <span class="bv">g</span> -&gt; (<span class="kw">forall</span> z, `|<span class="bv">g</span> <span class="bv">z</span>| &lt;= <span class="bv">a</span> + <span class="bv">b</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">z</span> ^+ 2) -&gt;
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <span class="bv">g</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 8 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_sqr" title="GaussianAnalysis.convex.feature_moments.reg_int_sqr">reg_int_sqr</a>, <a class="r k-thm" href="#reg_int_lin" title="GaussianAnalysis.convex.feature_moments.reg_int_lin">reg_int_lin</a>, <a class="r k-thm" href="#reg_int_lin2" title="GaussianAnalysis.convex.feature_moments.reg_int_lin2">reg_int_lin2</a>, <a class="r k-thm" href="#reg_int_quad" title="GaussianAnalysis.convex.feature_moments.reg_int_quad">reg_int_quad</a>, <a class="r k-thm" href="#reg_int_quad2" title="GaussianAnalysis.convex.feature_moments.reg_int_quad2">reg_int_quad2</a>, <a class="r k-thm" href="#reg_int_resid2" title="GaussianAnalysis.convex.feature_moments.reg_int_resid2">reg_int_resid2</a>, <a class="r k-thm" href="#reg_int_ell2" title="GaussianAnalysis.convex.feature_moments.reg_int_ell2">reg_int_ell2</a>, <a class="r k-thm" href="#reg_int_resid4" title="GaussianAnalysis.convex.feature_moments.reg_int_resid4">reg_int_resid4</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="le1_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#le1_sqr">le1_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L250" target="_blank" rel="noopener">source, line 250</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [x : R], 0 &lt;= x -&gt; x &lt;= 1 + x ^+ 2</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> le1_sqr (x : <span class="sv" title="section variable R of section regular_moments">R</span>) : 0 &lt;= <span class="bv">x</span> -&gt; <span class="bv">x</span> &lt;= 1 + <span class="bv">x</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 13 declarations in 3 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_sqr" title="GaussianAnalysis.convex.feature_moments.reg_int_sqr">reg_int_sqr</a>, <a class="r k-thm" href="#reg_int_lin" title="GaussianAnalysis.convex.feature_moments.reg_int_lin">reg_int_lin</a>, <a class="r k-thm" href="#reg_int_lin2" title="GaussianAnalysis.convex.feature_moments.reg_int_lin2">reg_int_lin2</a>, <a class="r k-thm" href="#reg_int_quad" title="GaussianAnalysis.convex.feature_moments.reg_int_quad">reg_int_quad</a>, <a class="r k-thm" href="#reg_int_resid2" title="GaussianAnalysis.convex.feature_moments.reg_int_resid2">reg_int_resid2</a>, <a class="r k-thm" href="#reg_int_ell2" title="GaussianAnalysis.convex.feature_moments.reg_int_ell2">reg_int_ell2</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_diag_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_diag_moments">gauss_diag_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_quad_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_quad_moments">gauss_quad_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_mxdot_moments" title="GaussianAnalysis.convex.gauss_feature.gauss_mxdot_moments">gauss_mxdot_moments</a>, <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_lin" title="GaussianAnalysis.convex.feature_mixture.moment4_int_lin">moment4_int_lin</a>, <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_lin2" title="GaussianAnalysis.convex.feature_mixture.moment4_int_lin2">moment4_int_lin2</a>, <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_int_quad" title="GaussianAnalysis.convex.feature_mixture.moment4_int_quad">moment4_int_quad</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_sqr">reg_int_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L253" target="_blank" rel="noopener">source, line 253</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> th : &#x27;rV_N, mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th ^+ 2))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_sqr (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span> ^+ 2)).</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 3 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi">int_Phi</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#int_Phi_set" title="GaussianAnalysis.convex.barrier_lindeberg.int_Phi_set">int_Phi_set</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_int" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_int">ref_objective_int</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_lin">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_lin">reg_int_lin</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L264" target="_blank" rel="noopener">source, line 264</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> th : &#x27;rV_N, mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (n:=N))^~ th)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_lin (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>, <a class="r k-thm" href="#reg_ell_int" title="GaussianAnalysis.convex.feature_moments.reg_ell_int">reg_ell_int</a>, <a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_lin2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_lin2">reg_int_lin2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L276" target="_blank" rel="noopener">source, line 276</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> th th&#x27; : &#x27;rV_N,
+mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th&#x27;))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_lin2 (th th&#x27; : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th&#x27;</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_quad_mean" title="GaussianAnalysis.convex.feature_moments.reg_quad_mean">reg_quad_mean</a>, <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_quad">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_quad">reg_int_quad</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L293" target="_blank" rel="noopener">source, line 293</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> T : &#x27;M_N, mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T)))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_quad (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>))).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_int" title="GaussianAnalysis.convex.feature_moments.reg_ell_int">reg_ell_int</a>, <a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="quad_sqr_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#quad_sqr_le">quad_sqr_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L303" target="_blank" rel="noopener">source, line 303</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (T : &#x27;M_N) (z : &#x27;rV_N),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) ^+ 2 &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> T ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z z ^+ 2</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> quad_sqr_le (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (z : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) ^+ 2 &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">T</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">z</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 3 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_quad2" title="GaussianAnalysis.convex.feature_moments.reg_int_quad2">reg_int_quad2</a>, <a class="r k-thm" href="#reg_int_ell2" title="GaussianAnalysis.convex.feature_moments.reg_int_ell2">reg_int_ell2</a></li>
+<li><span class="um">GaussianAnalysis.convex.gauss_feature:</span> <a class="r k-thm" href="GaussianAnalysis.convex.gauss_feature.html#gauss_regular_feature" title="GaussianAnalysis.convex.gauss_feature.gauss_regular_feature">gauss_regular_feature</a></li>
+<li><span class="um">GaussianAnalysis.convex.feature_mixture:</span> <a class="r k-thm" href="GaussianAnalysis.convex.feature_mixture.html#moment4_Lfun2_quad" title="GaussianAnalysis.convex.feature_mixture.moment4_Lfun2_quad">moment4_Lfun2_quad</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_quad2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_quad2">reg_int_quad2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L311" target="_blank" rel="noopener">source, line 311</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (T : &#x27;M_N) (c : R),
+mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) - c) ^+ 2))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_quad2 (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (c : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) - <span class="bv">c</span>) ^+ 2)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_quad_var" title="GaussianAnalysis.convex.feature_moments.reg_quad_var">reg_quad_var</a>, <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_resid2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_resid2">reg_int_resid2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L322" target="_blank" rel="noopener">source, line 322</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (th : &#x27;rV_N) (b : R),
+mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; (b - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th) ^+ 2))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_resid2 (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (b : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; (<span class="bv">b</span> - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>) ^+ 2)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_compare" title="GaussianAnalysis.convex.barrier_lindeberg.loo_compare">loo_compare</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_ell2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_ell2">reg_int_ell2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L335" target="_blank" rel="noopener">source, line 335</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (c : R) (v : &#x27;rV_N) (T : &#x27;M_N) (d : R),
+mu.-integrable [set: &#x27;rV_N]
+  (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; (c - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z v + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) - d) ^+ 2))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_ell2 (c : <span class="sv" title="section variable R of section regular_moments">R</span>) (v : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (d : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span>
+    (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; (<span class="bv">c</span> - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">v</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) - <span class="bv">d</span>) ^+ 2)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_mean">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_mean">reg_mean</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L360" target="_blank" rel="noopener">source, line 360</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt; <span class="kw">forall</span> th : &#x27;rV_N, \int[mu]_z <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th = 0</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_mean (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) : \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span> = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>, <a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_cov">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_cov">reg_cov</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L366" target="_blank" rel="noopener">source, line 366</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> th th&#x27; : &#x27;rV_N, \int[mu]_z (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th&#x27;) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (th *m Sigma) th&#x27;</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_cov (th th&#x27; : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th&#x27;</span>) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">th</span> *m <span class="sv" title="section variable Sigma of section regular_moments">Sigma</span>) <span class="bv">th&#x27;</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_quad_mean" title="GaussianAnalysis.convex.feature_moments.reg_quad_mean">reg_quad_mean</a>, <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>, <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ref_objective_mean" title="GaussianAnalysis.convex.ridge_comparison.ref_objective_mean">ref_objective_mean</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_quad_mean">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_quad_mean">reg_quad_mean</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L373" target="_blank" rel="noopener">source, line 373</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> T : &#x27;M_N, \int[mu]_z <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) = \sum_b <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (&#x27;e_b *m Sigma) (<span class="x" title="mathcomp.algebra.matrix.col">col</span> b T)^T</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_quad_mean (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) =
+  \sum_b <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">b</span> *m <span class="sv" title="section variable Sigma of section regular_moments">Sigma</span>) (<span class="x" title="mathcomp.algebra.matrix.col">col</span> <span class="bv">b</span> <span class="bv">T</span>)^T.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_mean" title="GaussianAnalysis.convex.feature_moments.reg_ell_mean">reg_ell_mean</a>, <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_quad_var">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_quad_var">reg_quad_var</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L382" target="_blank" rel="noopener">source, line 382</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> [T : &#x27;M_N],
+T \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt;
+\int[mu]_z (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) - \int[mu]_y <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> y (y *m T)) ^+ 2 &lt;=
+tau ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> T ^+ 2</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_integrable" title="GaussianAnalysis.convex.feature_moments.reg_integrable">reg_integrable</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_quad_var (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) : <span class="bv">T</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt;
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z ((<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) - \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_y <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">y</span> (<span class="bv">y</span> *m <span class="bv">T</span>)) ^+ 2) &lt;=
+  <span class="sv" title="section variable tau of section regular_moments">tau</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">T</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_resid2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_resid2">reg_resid2</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L391" target="_blank" rel="noopener">source, line 391</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (th : &#x27;rV_N) (b : R),
+\int[mu]_z (b - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th) ^+ 2 = b ^+ 2 + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (th *m Sigma) th</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p><code>E (b - &lt;z, theta&gt;)^2 = b^2 + theta Sigma theta^T</code>, <code>E (b - &lt;z, theta&gt;)^4 &lt;= 8 (1 + K^4) (lambda |theta|^2 + b^2)^2</code> with <code>lambda = opnorm Sigma</code>, and for <code>l z = c - 2 &lt;z, v&gt; + z T z^T</code> with <code>T</code> symmetric, <code>E l = c + E z T z^T</code> and <code>E (l - E l)^2 &lt;= 2 tau^2 |T|_F^2 + 8 lambda |v|^2</code>; <code>v Sigma v^T &lt;= opnorm Sigma |v|^2</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_resid2 (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (b : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z ((<span class="bv">b</span> - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>) ^+ 2) = <span class="bv">b</span> ^+ 2 + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">th</span> *m <span class="sv" title="section variable Sigma of section regular_moments">Sigma</span>) <span class="bv">th</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="resid4_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#resid4_le">resid4_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L412" target="_blank" rel="noopener">source, line 412</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (b y : R), (b - y) ^+ 4 &lt;= 8 * b ^+ 4 + 8 * y ^+ 4</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> resid4_le (b y : <span class="sv" title="section variable R of section regular_moments">R</span>) : (<span class="bv">b</span> - <span class="bv">y</span>) ^+ 4 &lt;= 8 * <span class="bv">b</span> ^+ 4 + 8 * <span class="bv">y</span> ^+ 4.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_int_resid4" title="GaussianAnalysis.convex.feature_moments.reg_int_resid4">reg_int_resid4</a>, <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_int_resid4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_int_resid4">reg_int_resid4</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L429" target="_blank" rel="noopener">source, line 429</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (th : &#x27;rV_N) (b : R),
+mu.-integrable [set: &#x27;rV_N] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; (b - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th) ^+ 4))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_int_resid4 (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (b : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; (<span class="bv">b</span> - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>) ^+ 4)).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_resid4" title="GaussianAnalysis.convex.feature_moments.reg_resid4">reg_resid4</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_variance" title="GaussianAnalysis.convex.barrier_lindeberg.loo_variance">loo_variance</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_resid4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_resid4">reg_resid4</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L444" target="_blank" rel="noopener">source, line 444</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (th : &#x27;rV_N) (b : R),
+\int[mu]_z (b - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z th) ^+ 4 &lt;=
+8 * (1 + K ^+ 4) * (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> Sigma * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> th th + b ^+ 2) ^+ 2</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_resid4 (th : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (b : <span class="sv" title="section variable R of section regular_moments">R</span>) :
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z ((<span class="bv">b</span> - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">th</span>) ^+ 4) &lt;=
+  8 * (1 + <span class="sv" title="section variable K of section regular_moments">K</span> ^+ 4) * (<span class="ln" title="Local Notation lambda := (opnorm Sigma).">lambda</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">th</span> + <span class="bv">b</span> ^+ 2) ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_variance" title="GaussianAnalysis.convex.barrier_lindeberg.loo_variance">loo_variance</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_ell_int">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_ell_int">reg_ell_int</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L481" target="_blank" rel="noopener">source, line 481</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (c : R) (v : &#x27;rV_N) (T : &#x27;M_N),
+mu.-integrable [set: &#x27;rV_N]
+  (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z : &#x27;rV_N =&gt; c - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z v + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T)))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_ell_int (c : <span class="sv" title="section variable R of section regular_moments">R</span>) (v : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  <span class="sv" title="section variable mu of section regular_moments">mu</span>.-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span>
+    (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> z =&gt; <span class="bv">c</span> - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">v</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>))).</pre></div></details>
+</div>
+<div class="decl k-thm" id="reg_ell_mean">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_ell_mean">reg_ell_mean</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L493" target="_blank" rel="noopener">source, line 493</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (c : R) (v : &#x27;rV_N) (T : &#x27;M_N),
+\int[mu]_z (c - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z v + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T)) =
+c + \sum_b <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (&#x27;e_b *m Sigma) (<span class="x" title="mathcomp.algebra.matrix.col">col</span> b T)^T</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_ell_mean (c : <span class="sv" title="section variable R of section regular_moments">R</span>) (v : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) :
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z (<span class="bv">c</span> - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">v</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>)) =
+  <span class="bv">c</span> + \sum_b <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">b</span> *m <span class="sv" title="section variable Sigma of section regular_moments">Sigma</span>) (<span class="x" title="mathcomp.algebra.matrix.col">col</span> <span class="bv">b</span> <span class="bv">T</span>)^T.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#reg_ell_var" title="GaussianAnalysis.convex.feature_moments.reg_ell_var">reg_ell_var</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#insertion_compare" title="GaussianAnalysis.convex.barrier_lindeberg.insertion_compare">insertion_compare</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="reg_ell_var">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#reg_ell_var">reg_ell_var</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/feature_moments.v#L510" target="_blank" rel="noopener">source, line 510</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [K tau : R] [Sigma : &#x27;M_N] [mu : probability &#x27;rV_N R],
+<a class="r k-def" href="GaussianAnalysis.convex.least_squares.html#regular_feature" title="GaussianAnalysis.convex.least_squares.regular_feature">regular_feature</a> K tau Sigma mu -&gt;
+<span class="kw">forall</span> (c : R) (v : &#x27;rV_N) [T : &#x27;M_N],
+T \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt;
+\int[mu]_z
+   (c - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z v + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> z (z *m T) -
+    \int[mu]_y (c - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> y v + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> y (y *m T)))
+   ^+ 2 &lt;=
+2 * tau ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> T ^+ 2 + 8 * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> Sigma * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> v v</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#reg_resid2" title="GaussianAnalysis.convex.feature_moments.reg_resid2">reg_resid2</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> reg_ell_var (c : <span class="sv" title="section variable R of section regular_moments">R</span>) (v : &#x27;rV[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) (T : &#x27;M[<span class="sv" title="section variable R of section regular_moments">R</span>]_<span class="sv" title="section variable N of section regular_moments">N</span>) : <span class="bv">T</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt;
+  \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_z ((<span class="bv">c</span> - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> <span class="bv">v</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">z</span> (<span class="bv">z</span> *m <span class="bv">T</span>) -
+     \int[<span class="sv" title="section variable mu of section regular_moments">mu</span>]_y (<span class="bv">c</span> - 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">y</span> <span class="bv">v</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">y</span> (<span class="bv">y</span> *m <span class="bv">T</span>))) ^+ 2) &lt;=
+  2 * <span class="sv" title="section variable tau of section regular_moments">tau</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">T</span> ^+ 2 + 8 * <span class="ln" title="Local Notation lambda := (opnorm Sigma).">lambda</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">v</span> <span class="bv">v</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#ins_l_var" title="GaussianAnalysis.convex.barrier_lindeberg.ins_l_var">ins_l_var</a></li>
+</ul></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>Rintegral_helpers</span></li><li><a href="#Rintegral_EFin">Rintegral_<wbr>EFin</a></li><li><a href="#integrable_cst_prob">integrable_<wbr>cst_<wbr>prob</a></li><li><a href="#Rintegral_cst_prob">Rintegral_<wbr>cst_<wbr>prob</a></li><li><a href="#integrableR_sum">integrableR_<wbr>sum</a></li><li><a href="#Rintegral_sumr">Rintegral_<wbr>sumr</a></li><li><a href="#integrableRD">integrableRD</a></li><li><a href="#integrableRB">integrableRB</a></li><li><a href="#integrableRZl">integrableRZl</a></li><li><a href="#integrableRZr">integrableRZr</a></li><li class="toc-sec"><span>linear_forms</span></li><li><a href="#continuous_mxdotl">continuous_<wbr>mxdotl</a></li><li><a href="#measurable_mxdotl">measurable_<wbr>mxdotl</a></li><li><a href="#mxdot_quadE">mxdot_<wbr>quadE</a></li><li><a href="#measurable_quad">measurable_<wbr>quad</a></li><li><a href="#measurable_norm2">measurable_<wbr>norm2</a></li><li><a href="#mxdot_sqr_sum">mxdot_<wbr>sqr_<wbr>sum</a></li><li><a href="#quad_le_frobenius">quad_<wbr>le_<wbr>frobenius</a></li><li><a href="#form_le_opnorm">form_<wbr>le_<wbr>opnorm</a></li><li class="toc-sec"><span>regular_moments</span></li><li><a href="#reg_lambda_gt0">reg_<wbr>lambda_<wbr>gt0</a></li><li><a href="#reg_int4">reg_<wbr>int4</a></li><li><a href="#reg_moment4">reg_<wbr>moment4</a></li><li><a href="#reg_int_norm4">reg_<wbr>int_<wbr>norm4</a></li><li><a href="#reg_integrable">reg_<wbr>integrable</a></li><li><a href="#le1_sqr">le1_<wbr>sqr</a></li><li><a href="#reg_int_sqr">reg_<wbr>int_<wbr>sqr</a></li><li><a href="#reg_int_lin">reg_<wbr>int_<wbr>lin</a></li><li><a href="#reg_int_lin2">reg_<wbr>int_<wbr>lin2</a></li><li><a href="#reg_int_quad">reg_<wbr>int_<wbr>quad</a></li><li><a href="#quad_sqr_le">quad_<wbr>sqr_<wbr>le</a></li><li><a href="#reg_int_quad2">reg_<wbr>int_<wbr>quad2</a></li><li><a href="#reg_int_resid2">reg_<wbr>int_<wbr>resid2</a></li><li><a href="#reg_int_ell2">reg_<wbr>int_<wbr>ell2</a></li><li><a href="#reg_mean">reg_<wbr>mean</a></li><li><a href="#reg_cov">reg_<wbr>cov</a></li><li><a href="#reg_quad_mean">reg_<wbr>quad_<wbr>mean</a></li><li><a href="#reg_quad_var">reg_<wbr>quad_<wbr>var</a></li><li><a href="#reg_resid2">reg_<wbr>resid2</a></li><li><a href="#resid4_le">resid4_<wbr>le</a></li><li><a href="#reg_int_resid4">reg_<wbr>int_<wbr>resid4</a></li><li><a href="#reg_resid4">reg_<wbr>resid4</a></li><li><a href="#reg_ell_int">reg_<wbr>ell_<wbr>int</a></li><li><a href="#reg_ell_mean">reg_<wbr>ell_<wbr>mean</a></li><li><a href="#reg_ell_var">reg_<wbr>ell_<wbr>var</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

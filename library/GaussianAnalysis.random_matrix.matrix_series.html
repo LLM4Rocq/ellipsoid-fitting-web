@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.random_matrix.matrix_series</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod current" href="GaussianAnalysis.random_matrix.matrix_series.html" aria-current="page">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>trace_inequalities</span></li><li><a href="#exprn_cross_le">exprn_<wbr>cross_<wbr>le</a></li><li><a href="#mxtrace_diag_sandwich">mxtrace_<wbr>diag_<wbr>sandwich</a></li><li><a href="#mxtrace_sandwich_le">mxtrace_<wbr>sandwich_<wbr>le</a></li><li><a href="#mxtrace_mul_psd_le">mxtrace_<wbr>mul_<wbr>psd_<wbr>le</a></li><li><a href="#psdmx_exp_even">psdmx_<wbr>exp_<wbr>even</a></li><li class="toc-sec"><span>moment_root</span></li><li><a href="#young_exprn">young_<wbr>exprn</a></li><li><a href="#moment_root_le">moment_<wbr>root_<wbr>le</a></li><li><a href="#moment_root_powR">moment_<wbr>root_<wbr>powR</a></li><li class="toc-sec"><span>gauss_mx_series</span></li><li><a href="#series_sym">series_<wbr>sym</a></li><li><a href="#mx_polyfun_series">mx_<wbr>polyfun_<wbr>series</a></li><li><a href="#series_lin">series_<wbr>lin</a></li><li><a href="#series_delta">series_<wbr>delta</a></li><li><a href="#is_derive_series_pow">is_<wbr>derive_<wbr>series_<wbr>pow</a></li><li><a href="#gauss_mx_series_ibp_coord">gauss_<wbr>mx_<wbr>series_<wbr>ibp_<wbr>coord</a></li><li><a href="#gauss_mx_series_ibp">gauss_<wbr>mx_<wbr>series_<wbr>ibp</a></li><li><a href="#gauss_mx_series_trace_sqr">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>sqr</a></li><li><a href="#gauss_mx_series_trace_rec">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>rec</a></li><li><a href="#gauss_mx_series_trace_le">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>le</a></li><li><a href="#gauss_mx_series_moment">gauss_<wbr>mx_<wbr>series_<wbr>moment</a></li><li class="toc-sec"><span>sym_dilation</span></li><li><a href="#sym_dilation">sym_<wbr>dilation</a></li><li><a href="#sym_dilation_sym">sym_<wbr>dilation_<wbr>sym</a></li><li><a href="#sym_dilation_series">sym_<wbr>dilation_<wbr>series</a></li><li><a href="#sym_dilation_sqr">sym_<wbr>dilation_<wbr>sqr</a></li><li><a href="#mxdot_col_mx">mxdot_<wbr>col_<wbr>mx</a></li><li><a href="#mxdot_mulmx_opnorm_le">mxdot_<wbr>mulmx_<wbr>opnorm_<wbr>le</a></li><li><a href="#opnorm_block_diag_le">opnorm_<wbr>block_<wbr>diag_<wbr>le</a></li><li><a href="#opnorm_le_sym_dilation">opnorm_<wbr>le_<wbr>sym_<wbr>dilation</a></li><li class="toc-sec"><span>series_log_bound</span></li><li><a href="#expR1_le4">expR1_<wbr>le4</a></li><li><a href="#ln2D_ge">ln2D_<wbr>ge</a></li><li><a href="#series_log_bound">series_<wbr>log_<wbr>bound</a></li><li class="toc-sec"><span>gauss_mx_series_rect</span></li><li><a href="#series_opnorm_lipschitz">series_<wbr>opnorm_<wbr>lipschitz</a></li><li><a href="#measurable_series_opnorm">measurable_<wbr>series_<wbr>opnorm</a></li><li><a href="#gauss_mx_series_opnorm_moment">gauss_<wbr>mx_<wbr>series_<wbr>opnorm_<wbr>moment</a></li><li><a href="#gauss_mx_series_opnorm">gauss_<wbr>mx_<wbr>series_<wbr>opnorm</a></li><li><a href="#gauss_mx_series_opnorm_log">gauss_<wbr>mx_<wbr>series_<wbr>opnorm_<wbr>log</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span aria-hidden="true">/</span><span>matrix_series</span></div>
+<h1 class="page-title">Gaussian matrix series</h1>
+<div class="page-meta"><code>GaussianAnalysis.random_matrix.matrix_series</code><span>library/random_matrix/matrix_series.v</span><span>746 lines</span><span>34 lemmas and theorems, 1 definition</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>11</b> library modules and 27 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.gaussian.gauss_ibp.html">GaussianAnalysis.gaussian.gauss_ibp</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.matrix.opnorm.html">GaussianAnalysis.matrix.opnorm</a></li><li><a href="GaussianAnalysis.matrix.real_spectral.html">GaussianAnalysis.matrix.real_spectral</a></li><li><a href="GaussianAnalysis.matrix.psd_part.html">GaussianAnalysis.matrix.psd_part</a></li><li><a href="GaussianAnalysis.comparison.gauss_smoothing.html">GaussianAnalysis.comparison.gauss_smoothing</a></li><li><a href="GaussianAnalysis.comparison.gauss_concentration.html">GaussianAnalysis.comparison.gauss_concentration</a></li><li><a href="GaussianAnalysis.comparison.escape.html">GaussianAnalysis.comparison.escape</a></li><li><a href="GaussianAnalysis.random_matrix.goe.html">GaussianAnalysis.random_matrix.goe</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.sesquilinear, mathcomp.algebra.archimedean, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.algebra.interval, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.derive, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.numfun, mathcomp.analysis.measurable_realfun, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.arithmetic_tactic, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic</p></div></details><details><summary>Imported by <b>2</b></summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.matrix.tensor_packing.html">GaussianAnalysis.matrix.tensor_packing</a></li><li><a href="GaussianApplications.MatrixSeriesTheorem.html">GaussianApplications.MatrixSeriesTheorem</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>For matrices H_1, ..., H_r in 'M[R]_n and g of law gauss r, the Gaussian matrix series X = \sum_j g_j H_j (written \sum_j g 0 j *: H j) has trace moments bounded by its variance S = \sum_j H_j^2 alone: no dimension of the matrices enters the bounds. Through the symmetric dilation of rectangular matrices, the same holds for the operator norm of \sum_j g_j B_j.</p>
+<p>This file is a Rocq formalization of the credited argument of Lemma 4.2, 'A Gaussian matrix estimate', of 'Pointwise convergence of fourfold ergodic averages for mixing transformations' (OpenAI, 4 October 2026), family 154 of the OpenAI math collection at revision 1581d4cbd. The same lemma is in the section 'Tensor packing' of its companion 'Pointwise Multiple Ergodic Averages for Mixing Transformations'. There is no Lean version. The formalization differs from the manuscript in four points:</p>
+<ul><li>the recursion holds for every q, and the manuscript states it for q &gt;= 2;</li><li>the trace inequality uses x^a y^b + y^a x^b &lt;= x^(a+b) + y^(a+b) for x, y &gt;= 0, where the manuscript uses the weighted arithmetic-geometric mean;</li><li>the hypotheses opnorm S &lt;= sqrt d and tr S &lt;= 2 d on the dilation S are stated on its two diagonal blocks, \sum_j B_j B_j^T and \sum_j B_j^T B_j;</li><li>the constant of the last bound is explicit, 5, with q = floor (ln (2 + d)) + 1, where the manuscript takes q &gt;= 2 comparable to log (2 + d).</li></ul>
+<p>Proved:</p>
+<ul><li><a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_sandwich_le</a>: |tr (K A^a K A^b)| &lt;= tr (K^2 A^(a+b)) for K, A symmetric and a + b even, in an eigenbasis of A; <a class="r k-thm" href="#mxtrace_mul_psd_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_mul_psd_le">mxtrace_mul_psd_le</a>: tr (S T) &lt;= opnorm S tr T for T positive semidefinite.</li><li><a class="r k-thm" href="#moment_root_le" title="GaussianAnalysis.random_matrix.matrix_series.moment_root_le">moment_root_le</a>, <a class="r k-thm" href="#moment_root_powR" title="GaussianAnalysis.random_matrix.matrix_series.moment_root_powR">moment_root_powR</a>: E f &lt;= (E f^(k+1))^(1/(k+1)) for a measurable f &gt;= 0 and a probability, the integrals in the extended reals, from Young's inequality with integer exponents (<a class="r k-thm" href="#young_exprn" title="GaussianAnalysis.random_matrix.matrix_series.young_exprn">young_exprn</a>).</li><li><a class="r k-thm" href="#gauss_mx_series_ibp" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp">gauss_mx_series_ibp</a>: E tr X^(k+1) = \sum_j E tr (H_j D_j), where D_j = <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> X H_j k is the derivative of X^k along H_j, by Gaussian integration by parts in each coordinate (<a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#gauss_ibp_polyfun" title="GaussianAnalysis.random_matrix.goe.gauss_ibp_polyfun">gauss_ibp_polyfun</a>, <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe.html#is_derive_mxpow" title="GaussianAnalysis.random_matrix.goe.is_derive_mxpow">is_derive_mxpow</a>); <a class="r k-thm" href="#gauss_mx_series_trace_sqr" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_sqr">gauss_mx_series_trace_sqr</a>: E tr X^2 = tr S.</li><li><a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a>: for H_j symmetric, E tr X^(2q+2) &lt;= (2q + 1) opnorm S E tr X^(2q).</li><li><a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_mx_series_moment</a>: for H_j symmetric and q &gt;= 1, E tr X^(2q) &lt;= (2q - 1)!! opnorm S^(q-1) tr S, with (2q - 1)!! = \prod_(i &lt; q) (2i + 1), the integral in the extended reals.</li><li><a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B is symmetric, linear in B, with square block_mx (B B^T) 0 0 (B^T B), and opnorm B &lt;= opnorm (<a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B); <a class="r k-thm" href="#opnorm_block_diag_le" title="GaussianAnalysis.random_matrix.matrix_series.opnorm_block_diag_le">opnorm_block_diag_le</a>: the operator norm of block_mx A 0 0 D is at most the larger of opnorm A and opnorm D.</li><li><a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_mx_series_opnorm</a>: for B_j in 'M[R]_(m, p) and q &gt;= 1, E opnorm (\sum_j g_j B_j)^(2q) &lt;= (2q - 1)!! sigma^(2(q-1)) tau, hence E opnorm (\sum_j g_j B_j) &lt;= ((2q - 1)!! sigma^(2(q-1)) tau)^(1/(2q)), where sigma^2 = max (opnorm (\sum_j B_j B_j^T), opnorm (\sum_j B_j^T B_j)) and tau = 2 tr (\sum_j B_j B_j^T).</li><li><a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a>: if opnorm (\sum_j B_j B_j^T) and opnorm (\sum_j B_j^T B_j) are at most sqrt d and tr (\sum_j B_j B_j^T) &lt;= d for a real d &gt;= 1, then E opnorm (\sum_j g_j B_j) &lt;= 5 d^(1/4) sqrt (ln (2 + d)).</li></ul>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_<wbr>dilation</a> B</code></td><td class="g-rhs">the symmetric matrix [[0, B], [B^T, 0]] of size m + p of B : 'M[R]_(m, p)</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_<wbr>mx_<wbr>series_<wbr>moment</a></span><span><a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>rec</a></span><span><a class="r k-thm" href="#gauss_mx_series_ibp" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp">gauss_<wbr>mx_<wbr>series_<wbr>ibp</a></span><span><a class="r k-thm" href="#gauss_mx_series_trace_sqr" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_sqr">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>sqr</a></span></div></td><td>Gaussian matrix series. For symmetric <code>H_1, ..., H_r</code> in <code>&#x27;M[R]_n</code>, <code>S = \sum_j H_j^2</code> and <code>g</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r</code>, the series <code>X = \sum_j g_j H_j</code> satisfies <code>E tr X^(2q) &lt;= (2q - 1)!! opnorm S^(q-1) tr S</code> for every <code>q &gt;= 1</code>, with no dimension in the bound (an integral in the extended reals). It follows from <code>E tr X^2 = tr S</code>, which needs no symmetry, and the recursion <code>E tr X^(2q+2) &lt;= (2q + 1) opnorm S E tr X^(2q)</code>. The recursion comes from Gaussian integration by parts in each coordinate, <code>E tr X^(k+1) = \sum_j E tr (H_j D_j)</code> with <code>D_j</code> the derivative of <code>X^k</code> along <code>H_j</code>. Lemma 4.2 of the fourfold ergodic paper of family 154 of the OpenAI math collection (revision 1581d4cbd).</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_<wbr>mx_<wbr>series_<wbr>opnorm</a></span><span><a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_<wbr>mx_<wbr>series_<wbr>opnorm_<wbr>moment</a></span><span><a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_<wbr>mx_<wbr>series_<wbr>opnorm_<wbr>log</a></span></div></td><td>For <code>B_1, ..., B_r</code> in <code>&#x27;M[R]_(m, p)</code> and <code>g</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r</code>, with <code>sigma^2 = max (opnorm (\sum_j B_j B_j^T), opnorm (\sum_j B_j^T B_j))</code> and <code>tau = 2 tr (\sum_j B_j B_j^T)</code>: <code>E opnorm (\sum_j g_j B_j)^(2q) &lt;= (2q - 1)!! sigma^(2(q-1)) tau</code> and <code>E opnorm (\sum_j g_j B_j) &lt;= ((2q - 1)!! sigma^(2(q-1)) tau)^(1/(2q))</code> for every <code>q &gt;= 1</code>, through the symmetric dilation <code><a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B_j = [[0, B_j], [B_j^T, 0]]</code>. If the two operator norms are at most <code>sqrt d</code> and <code>tr (\sum_j B_j B_j^T) &lt;= d</code> for a real <code>d &gt;= 1</code>, then <code>E opnorm (\sum_j g_j B_j) &lt;= 5 d^(1/4) sqrt (ln (2 + d))</code>. No dimension of the matrices enters.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_<wbr>sandwich_<wbr>le</a></span><span><a class="r k-thm" href="#mxtrace_mul_psd_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_mul_psd_le">mxtrace_<wbr>mul_<wbr>psd_<wbr>le</a></span><span><a class="r k-thm" href="#moment_root_le" title="GaussianAnalysis.random_matrix.matrix_series.moment_root_le">moment_<wbr>root_<wbr>le</a></span><span><a class="r k-thm" href="#moment_root_powR" title="GaussianAnalysis.random_matrix.matrix_series.moment_root_powR">moment_<wbr>root_<wbr>powR</a></span></div></td><td><code>|tr (K A^a K A^b)| &lt;= tr (K^2 A^(a+b))</code> for symmetric <code>K</code> and <code>A</code> and <code>a + b</code> even. <code>tr (S T) &lt;= opnorm S tr T</code> for <code>T</code> positive semidefinite (<code><a class="r k-def" href="GaussianAnalysis.matrix.psd_part.html#psdmx" title="GaussianAnalysis.matrix.psd_part.psdmx">psdmx</a> T</code>) and any square <code>S</code>. For a probability <code>P</code>, a measurable <code>f &gt;= 0</code> and <code>k &gt;= 0</code>, <code>E f &lt;= (E f^(k+1))^(1/(k+1))</code>, the expectations being integrals in the extended reals, and <code>E f^(k+1) &lt;= t^(k+1)</code> with <code>t &gt; 0</code> gives <code>E f &lt;= t</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">35 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-trace_inequalities-21"><span class="sec-kw">section</span><span class="sec-name">trace_inequalities</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.</pre>
+<div class="decl k-thm" id="exprn_cross_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#exprn_cross_le">exprn_cross_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L98" target="_blank" rel="noopener">source, line 98</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [x y : R] (a b : nat),
+0 &lt;= x -&gt; 0 &lt;= y -&gt; x ^+ a * y ^+ b + y ^+ a * x ^+ b &lt;= x ^+ (a + b) + y ^+ (a + b)</pre></div>
+<div class="decl-doc"><p>x^a y^b + y^a x^b &lt;= x^(a+b) + y^(a+b) for x, y &gt;= 0, since (x^a - y^a) (x^b - y^b) &gt;= 0.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> exprn_cross_le (x y : <span class="sv" title="section variable R of section trace_inequalities">R</span>) a b : 0 &lt;= <span class="bv">x</span> -&gt; 0 &lt;= <span class="bv">y</span> -&gt;
+  <span class="bv">x</span> ^+ <span class="bv">a</span> * <span class="bv">y</span> ^+ <span class="bv">b</span> + <span class="bv">y</span> ^+ <span class="bv">a</span> * <span class="bv">x</span> ^+ <span class="bv">b</span> &lt;= <span class="bv">x</span> ^+ (<span class="bv">a</span> + <span class="bv">b</span>) + <span class="bv">y</span> ^+ (<span class="bv">a</span> + <span class="bv">b</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_sandwich_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_diag_sandwich">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_diag_sandwich">mxtrace_diag_sandwich</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L110" target="_blank" rel="noopener">source, line 110</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (C : &#x27;M_n) (x y : &#x27;rV_n),
+\tr (C *m <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> x *m C *m <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> y) = \sum_u \sum_v C u v * C v u * (x 0 v * y 0 u)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_diag_sandwich (C : &#x27;M[<span class="sv" title="section variable R of section trace_inequalities">R</span>]_<span class="sv" title="section variable n of section trace_inequalities">n</span>) (x y : &#x27;rV[<span class="sv" title="section variable R of section trace_inequalities">R</span>]_<span class="sv" title="section variable n of section trace_inequalities">n</span>) :
+  \tr (<span class="bv">C</span> *m <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> <span class="bv">x</span> *m <span class="bv">C</span> *m <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> <span class="bv">y</span>) =
+  \sum_u \sum_v <span class="bv">C</span> <span class="bv">u</span> <span class="bv">v</span> * <span class="bv">C</span> <span class="bv">v</span> <span class="bv">u</span> * (<span class="bv">x</span> 0 <span class="bv">v</span> * <span class="bv">y</span> 0 <span class="bv">u</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_sandwich_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_sandwich_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_sandwich_le">mxtrace_sandwich_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L123" target="_blank" rel="noopener">source, line 123</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K A : &#x27;M_n] [a b : nat],
+K \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt;
+A \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt;
+~~ <span class="x" title="mathcomp.boot.ssrnat.odd">odd</span> (a + b) -&gt; `|\tr (K *m A ^+ a *m K *m A ^+ b)| &lt;= \tr (K ^+ 2 *m A ^+ (a + b))</pre></div>
+<div class="decl-doc"><p>|tr (K A^a K A^b)| &lt;= tr (K^2 A^(a+b)) for K, A symmetric and a + b even. In an eigenbasis of A, with C = P K P^T, the left side is at most \sum_(u, v) C_uv^2 |d_v|^a |d_u|^b, which <a class="r k-thm" href="#exprn_cross_le" title="GaussianAnalysis.random_matrix.matrix_series.exprn_cross_le">exprn_cross_le</a> and the symmetry of C bound by \sum_(u, v) C_uv^2 |d_u|^(a+b).</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p><code>|tr (K A^a K A^b)| &lt;= tr (K^2 A^(a+b))</code> for symmetric <code>K</code> and <code>A</code> and <code>a + b</code> even. <code>tr (S T) &lt;= opnorm S tr T</code> for <code>T</code> positive semidefinite (<code><a class="r k-def" href="GaussianAnalysis.matrix.psd_part.html#psdmx" title="GaussianAnalysis.matrix.psd_part.psdmx">psdmx</a> T</code>) and any square <code>S</code>. For a probability <code>P</code>, a measurable <code>f &gt;= 0</code> and <code>k &gt;= 0</code>, <code>E f &lt;= (E f^(k+1))^(1/(k+1))</code>, the expectations being integrals in the extended reals, and <code>E f^(k+1) &lt;= t^(k+1)</code> with <code>t &gt; 0</code> gives <code>E f &lt;= t</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_sandwich_le (K A : &#x27;M[<span class="sv" title="section variable R of section trace_inequalities">R</span>]_<span class="sv" title="section variable n of section trace_inequalities">n</span>) a b :
+  <span class="bv">K</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt; <span class="bv">A</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt; ~~ <span class="x" title="mathcomp.boot.ssrnat.odd">odd</span> (<span class="bv">a</span> + <span class="bv">b</span>) -&gt;
+  `|\tr (<span class="bv">K</span> *m <span class="bv">A</span> ^+ <span class="bv">a</span> *m <span class="bv">K</span> *m <span class="bv">A</span> ^+ <span class="bv">b</span>)| &lt;= \tr (<span class="bv">K</span> ^+ 2 *m <span class="bv">A</span> ^+ (<span class="bv">a</span> + <span class="bv">b</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_mul_psd_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_mul_psd_le">mxtrace_mul_psd_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L180" target="_blank" rel="noopener">source, line 180</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (S : &#x27;M_n) [T : &#x27;M_n],
+<a class="r k-def" href="GaussianAnalysis.matrix.psd_part.html#psdmx" title="GaussianAnalysis.matrix.psd_part.psdmx">psdmx</a> T -&gt; \tr (S *m T) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> S * \tr T</pre></div>
+<div class="decl-doc"><p>tr (S T) &lt;= opnorm S tr T for T positive semidefinite: in an eigenbasis of T, the diagonal entries of S are at most opnorm S.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_sandwich_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_mul_psd_le (S T : &#x27;M[<span class="sv" title="section variable R of section trace_inequalities">R</span>]_<span class="sv" title="section variable n of section trace_inequalities">n</span>) : <a class="r k-def" href="GaussianAnalysis.matrix.psd_part.html#psdmx" title="GaussianAnalysis.matrix.psd_part.psdmx">psdmx</a> <span class="bv">T</span> -&gt;
+  \tr (<span class="bv">S</span> *m <span class="bv">T</span>) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">S</span> * \tr <span class="bv">T</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="psdmx_exp_even">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#psdmx_exp_even">psdmx_exp_even</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L198" target="_blank" rel="noopener">source, line 198</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [A : &#x27;M_n] (k : nat),
+A \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.psd_part.html#psdmx" title="GaussianAnalysis.matrix.psd_part.psdmx">psdmx</a> (A ^+ k.*2)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> psdmx_exp_even (A : &#x27;M[<span class="sv" title="section variable R of section trace_inequalities">R</span>]_<span class="sv" title="section variable n of section trace_inequalities">n</span>) k : <span class="bv">A</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span> -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.psd_part.html#psdmx" title="GaussianAnalysis.matrix.psd_part.psdmx">psdmx</a> (<span class="bv">A</span> ^+ <span class="bv">k</span>.*2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-moment_root-106"><span class="sec-kw">section</span><span class="sec-name">moment_root</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (P : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> <span class="bv">T</span> <span class="bv">R</span>).</pre>
+<div class="decl k-thm" id="young_exprn">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#young_exprn">young_exprn</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L212" target="_blank" rel="noopener">source, line 212</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [R : realType] [x t : R] (p : nat),
+0 &lt;= x -&gt; 0 &lt;= t -&gt; p.+1%:R * x * t ^+ p &lt;= p%:R * t ^+ p.+1 + x ^+ p.+1</pre></div>
+<div class="decl-doc"><p>Young's inequality with integer exponents: (p + 1) x t^p &lt;= p t^(p+1) + x^(p+1) for x, t &gt;= 0.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> young_exprn (x t : <span class="sv" title="section variable R of section moment_root">R</span>) p : 0 &lt;= <span class="bv">x</span> -&gt; 0 &lt;= <span class="bv">t</span> -&gt;
+  <span class="bv">p</span>.+1%:R * <span class="bv">x</span> * <span class="bv">t</span> ^+ <span class="bv">p</span> &lt;= <span class="bv">p</span>%:R * <span class="bv">t</span> ^+ <span class="bv">p</span>.+1 + <span class="bv">x</span> ^+ <span class="bv">p</span>.+1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#moment_root_le" title="GaussianAnalysis.random_matrix.matrix_series.moment_root_le">moment_root_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="moment_root_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#moment_root_le">moment_root_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L230" target="_blank" rel="noopener">source, line 230</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P : probability T R] [f : T -&gt; R] [k : nat] [t : R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] f -&gt;
+(<span class="kw">forall</span> x : T, 0 &lt;= f x) -&gt;
+0 &lt; t -&gt; (\int[P]_x (f x ^+ k.+1)%:E &lt;= (t ^+ k.+1)%:E)%E -&gt; (\int[P]_x (f x)%:E &lt;= t%:E)%E</pre></div>
+<div class="decl-doc"><p>The moment inequality E f &lt;= (E f^(k+1))^(1/(k+1)) for f &gt;= 0, in the form: E f^(k+1) &lt;= t^(k+1) with t &gt; 0 gives E f &lt;= t. Integrate Young's inequality (k + 1) t^k f &lt;= k t^(k+1) + f^(k+1).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_sandwich_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> moment_root_le (f : <span class="sv" title="section variable T of section moment_root">T</span> -&gt; <span class="sv" title="section variable R of section moment_root">R</span>) k (t : <span class="sv" title="section variable R of section moment_root">R</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section moment_root">T</span>] <span class="bv">f</span> -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">f</span> <span class="bv">x</span>) -&gt; 0 &lt; <span class="bv">t</span> -&gt;
+  (\int[<span class="sv" title="section variable P of section moment_root">P</span>]_x (<span class="bv">f</span> <span class="bv">x</span> ^+ <span class="bv">k</span>.+1)%:E &lt;= (<span class="bv">t</span> ^+ <span class="bv">k</span>.+1)%:E)%E -&gt;
+  (\int[<span class="sv" title="section variable P of section moment_root">P</span>]_x (<span class="bv">f</span> <span class="bv">x</span>)%:E &lt;= <span class="bv">t</span>%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#moment_root_powR" title="GaussianAnalysis.random_matrix.matrix_series.moment_root_powR">moment_root_powR</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="moment_root_powR">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#moment_root_powR">moment_root_powR</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L268" target="_blank" rel="noopener">source, line 268</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  [P : probability T R] [f : T -&gt; R] [k : nat] [M : R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: T] f -&gt;
+(<span class="kw">forall</span> x : T, 0 &lt;= f x) -&gt;
+(\int[P]_x (f x ^+ k.+1)%:E &lt;= M%:E)%E -&gt; (\int[P]_x (f x)%:E &lt;= (M `^ k.+1%:R^-1)%:E)%E</pre></div>
+<div class="decl-doc"><p>The same with a bound M of E f^(k+1): E f &lt;= M^(1/(k+1)).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#mxtrace_sandwich_le" title="GaussianAnalysis.random_matrix.matrix_series.mxtrace_sandwich_le">mxtrace_sandwich_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> moment_root_powR (f : <span class="sv" title="section variable T of section moment_root">T</span> -&gt; <span class="sv" title="section variable R of section moment_root">R</span>) k (M : <span class="sv" title="section variable R of section moment_root">R</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable T of section moment_root">T</span>] <span class="bv">f</span> -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">f</span> <span class="bv">x</span>) -&gt;
+  (\int[<span class="sv" title="section variable P of section moment_root">P</span>]_x (<span class="bv">f</span> <span class="bv">x</span> ^+ <span class="bv">k</span>.+1)%:E &lt;= <span class="bv">M</span>%:E)%E -&gt;
+  (\int[<span class="sv" title="section variable P of section moment_root">P</span>]_x (<span class="bv">f</span> <span class="bv">x</span>)%:E &lt;= (<span class="bv">M</span> `^ <span class="bv">k</span>.+1%:R^-1)%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_mx_series_opnorm</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-gauss_mx_series-168"><span class="sec-kw">section</span><span class="sec-name">gauss_mx_series</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {n r : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Local Notation</span> gauss := (@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section gauss_mx_series">R</span>).
+<span class="vk">Variable</span> H : &#x27;I_<span class="sv" title="section variable r of section gauss_mx_series">r</span> -&gt; &#x27;M[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable n of section gauss_mx_series">n</span>.</pre>
+<div class="decl k-thm" id="series_sym">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#series_sym">series_sym</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L294" target="_blank" rel="noopener">source, line 294</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} [H : &#x27;I_r -&gt; &#x27;M_n] (g : &#x27;rV_r),
+(<span class="kw">forall</span> j : &#x27;I_r, H j \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt; \sum_j g 0 j *: H j \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span></pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> series_sym (g : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series">r</span>) : (<span class="kw">forall</span> j, <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+  \sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mx_polyfun_series">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mx_polyfun_series">mx_polyfun_series</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L301" target="_blank" rel="noopener">source, line 301</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n),
+<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mx_polyfun" title="GaussianAnalysis.random_matrix.goe.mx_polyfun">mx_polyfun</a> (<span class="kw">fun</span> g : &#x27;rV_r =&gt; \sum_j g 0 j *: H j)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mx_polyfun_series : <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mx_polyfun" title="GaussianAnalysis.random_matrix.goe.mx_polyfun">mx_polyfun</a> (<span class="kw">fun</span> g : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series">r</span> =&gt; \sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_ibp_coord" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp_coord">gauss_mx_series_ibp_coord</a>, <a class="r k-thm" href="#gauss_mx_series_ibp" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp">gauss_mx_series_ibp</a>, <a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a>, <a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_mx_series_moment</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="series_lin">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#series_lin">series_lin</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L308" target="_blank" rel="noopener">source, line 308</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n) (h : R) (x v : &#x27;rV_r),
+\sum_j (h *: v + x) 0 j *: H j = h *: \sum_j v 0 j *: H j + \sum_j x 0 j *: H j</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> series_lin (h : <span class="sv" title="section variable R of section gauss_mx_series">R</span>) (x v : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series">r</span>) :
+  \sum_j (<span class="bv">h</span> *: <span class="bv">v</span> + <span class="bv">x</span>) 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> =
+  <span class="bv">h</span> *: (\sum_j <span class="bv">v</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) + \sum_j <span class="bv">x</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#is_derive_series_pow" title="GaussianAnalysis.random_matrix.matrix_series.is_derive_series_pow">is_derive_series_pow</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="series_delta">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#series_delta">series_delta</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L316" target="_blank" rel="noopener">source, line 316</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n) (j : &#x27;I_r),
+\sum_l (&#x27;e_j : &#x27;rV_r) 0 l *: H l = H j</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> series_delta (j : &#x27;I_<span class="sv" title="section variable r of section gauss_mx_series">r</span>) :
+  \sum_l (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span> : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series">r</span>) 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span> = <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_ibp_coord" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp_coord">gauss_mx_series_ibp_coord</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_series_pow">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_series_pow">is_derive_series_pow</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L324" target="_blank" rel="noopener">source, line 324</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n) (k : nat) (u v : &#x27;I_n) (x w : &#x27;rV_r),
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x w (<span class="kw">fun</span> g : &#x27;rV_r =&gt; ((\sum_l g 0 l *: H l) ^+ k) u v)
+  (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> (\sum_l x 0 l *: H l) (\sum_l w 0 l *: H l) k u v)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_series_pow k (u v : &#x27;I_<span class="sv" title="section variable n of section gauss_mx_series">n</span>) (x w : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series">r</span>) :
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> <span class="bv">w</span> (<span class="kw">fun</span> g : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series">r</span> =&gt; ((\sum_l <span class="bv">g</span> 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span>) ^+ <span class="bv">k</span>) <span class="bv">u</span> <span class="bv">v</span>)
+    (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> (\sum_l <span class="bv">x</span> 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span>) (\sum_l <span class="bv">w</span> 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span>) <span class="bv">k</span> <span class="bv">u</span> <span class="bv">v</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_ibp_coord" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp_coord">gauss_mx_series_ibp_coord</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_ibp_coord">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_mx_series_ibp_coord">gauss_mx_series_ibp_coord</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L337" target="_blank" rel="noopener">source, line 337</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n) (k : nat) (j : &#x27;I_r) (A : &#x27;M_n),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g (g 0 j * \tr (A *m (\sum_l g 0 l *: H l) ^+ k)) =
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr (A *m <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> (\sum_l g 0 l *: H l) (H j) k)</pre></div>
+<div class="decl-doc"><p>Gaussian integration by parts in the coordinate g_j: E[g_j tr (A X^k)] = E[tr (A D_j)], where D_j is the derivative of X^k along H_j.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_mx_series_ibp_coord k (j : &#x27;I_<span class="sv" title="section variable r of section gauss_mx_series">r</span>) (A : &#x27;M[<span class="sv" title="section variable R of section gauss_mx_series">R</span>]_<span class="sv" title="section variable n of section gauss_mx_series">n</span>) :
+  \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g (<span class="bv">g</span> 0 <span class="bv">j</span> * \tr (<span class="bv">A</span> *m (\sum_l <span class="bv">g</span> 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span>) ^+ <span class="bv">k</span>)) =
+  \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr (<span class="bv">A</span> *m <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> (\sum_l <span class="bv">g</span> 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span>) (<span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) <span class="bv">k</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_ibp" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_ibp">gauss_mx_series_ibp</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_ibp">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_mx_series_ibp">gauss_mx_series_ibp</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L375" target="_blank" rel="noopener">source, line 375</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n) (k : nat),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr ((\sum_j g 0 j *: H j) ^+ k.+1) =
+\sum_j \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr (H j *m <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> (\sum_l g 0 l *: H l) (H j) k)</pre></div>
+<div class="decl-doc"><p>E tr X^(k+1) = \sum_j E tr (H_j D_j), with D_j the derivative of X^k along H_j: Gaussian integration by parts in every coordinate.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_mx_series_moment</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_mx_series_ibp k :
+  \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr ((\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) ^+ <span class="bv">k</span>.+1) =
+  \sum_j \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr (<span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> *m <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#mxpow_deriv" title="GaussianAnalysis.random_matrix.goe.mxpow_deriv">mxpow_deriv</a> (\sum_l <span class="bv">g</span> 0 <span class="bv">l</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">l</span>) (<span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) <span class="bv">k</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_sqr" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_sqr">gauss_mx_series_trace_sqr</a>, <a class="r k-thm" href="#gauss_mx_series_trace_rec" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_trace_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_mx_series_trace_sqr">gauss_mx_series_trace_sqr</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L393" target="_blank" rel="noopener">source, line 393</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} (H : &#x27;I_r -&gt; &#x27;M_n),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr ((\sum_j g 0 j *: H j) ^+ 2) = \tr (\sum_j H j ^+ 2)</pre></div>
+<div class="decl-doc"><p>E tr X^2 = tr S.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_mx_series_moment</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_mx_series_trace_sqr :
+  \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr ((\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) ^+ 2) = \tr (\sum_j <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> ^+ 2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_le" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_le">gauss_mx_series_trace_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_trace_rec">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_mx_series_trace_rec">gauss_mx_series_trace_rec</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L403" target="_blank" rel="noopener">source, line 403</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} [H : &#x27;I_r -&gt; &#x27;M_n] (q : nat),
+(<span class="kw">forall</span> j : &#x27;I_r, H j \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr ((\sum_j g 0 j *: H j) ^+ q.+1.*2) &lt;=
+q.*2.+1%:R * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j H j ^+ 2) * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr ((\sum_j g 0 j *: H j) ^+ q.*2)</pre></div>
+<div class="decl-doc"><p>The recursion E tr X^(2q+2) &lt;= (2q+1) opnorm S E tr X^(2q).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_mx_series_moment</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_mx_series_trace_rec q : (<span class="kw">forall</span> j, <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+  \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr ((\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) ^+ <span class="bv">q</span>.+1.*2) &lt;=
+  <span class="bv">q</span>.*2.+1%:R * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> ^+ 2) *
+    \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr ((\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) ^+ <span class="bv">q</span>.*2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_trace_le" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_trace_le">gauss_mx_series_trace_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_trace_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#gauss_mx_series_trace_le">gauss_mx_series_trace_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L438" target="_blank" rel="noopener">source, line 438</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} [H : &#x27;I_r -&gt; &#x27;M_n] [q : nat],
+(<span class="kw">forall</span> j : &#x27;I_r, H j \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+(0 &lt; q)%N -&gt;
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g \tr ((\sum_j g 0 j *: H j) ^+ q.*2) &lt;=
+\prod_(i &lt; q) i.*2.+1%:R * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j H j ^+ 2) ^+ q.-1 * \tr (\sum_j H j ^+ 2)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> gauss_mx_series_trace_le q : (<span class="kw">forall</span> j, <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+  (0 &lt; <span class="bv">q</span>)%N -&gt;
+  \int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g \tr ((\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) ^+ <span class="bv">q</span>.*2) &lt;=
+  (\prod_(i &lt; <span class="bv">q</span>) <span class="bv">i</span>.*2.+1%:R) * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> ^+ 2) ^+ <span class="bv">q</span>.-1 *
+    \tr (\sum_j <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> ^+ 2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_moment">gauss_mx_series_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_moment">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_mx_series_moment">gauss_mx_series_moment</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L458" target="_blank" rel="noopener">source, line 458</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n r : nat} [H : &#x27;I_r -&gt; &#x27;M_n] [q : nat],
+(<span class="kw">forall</span> j : &#x27;I_r, H j \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+(0 &lt; q)%N -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g (\tr ((\sum_j g 0 j *: H j) ^+ q.*2))%:E &lt;=
+ (\prod_(i &lt; q) i.*2.+1%:R * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j H j ^+ 2) ^+ q.-1 * \tr (\sum_j H j ^+ 2))%:E)%E</pre></div>
+<div class="decl-doc"><p>The moment bound E tr X^(2q) &lt;= (2q - 1)!! opnorm S^(q-1) tr S, as an integral of a nonnegative function in the extended reals.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Gaussian matrix series. For symmetric <code>H_1, ..., H_r</code> in <code>&#x27;M[R]_n</code>, <code>S = \sum_j H_j^2</code> and <code>g</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r</code>, the series <code>X = \sum_j g_j H_j</code> satisfies <code>E tr X^(2q) &lt;= (2q - 1)!! opnorm S^(q-1) tr S</code> for every <code>q &gt;= 1</code>, with no dimension in the bound (an integral in the extended reals). It follows from <code>E tr X^2 = tr S</code>, which needs no symmetry, and the recursion <code>E tr X^(2q+2) &lt;= (2q + 1) opnorm S E tr X^(2q)</code>. The recursion comes from Gaussian integration by parts in each coordinate, <code>E tr X^(k+1) = \sum_j E tr (H_j D_j)</code> with <code>D_j</code> the derivative of <code>X^k</code> along <code>H_j</code>. Lemma 4.2 of the fourfold ergodic paper of family 154 of the OpenAI math collection (revision 1581d4cbd).</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_mx_series_moment q : (<span class="kw">forall</span> j, <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>) -&gt;
+  (0 &lt; <span class="bv">q</span>)%N -&gt;
+  (\int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series">r</span>]_g (\tr ((\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span>) ^+ <span class="bv">q</span>.*2))%:E &lt;=
+   ((\prod_(i &lt; <span class="bv">q</span>) <span class="bv">i</span>.*2.+1%:R) * <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> ^+ 2) ^+ <span class="bv">q</span>.-1 *
+     \tr (\sum_j <span class="sv" title="section variable H of section gauss_mx_series">H</span> <span class="bv">j</span> ^+ 2))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+<li><span class="um">GaussianApplications.MatrixSeriesTheorem:</span> <a class="r k-thm" href="GaussianApplications.MatrixSeriesTheorem.html#matrix_series_theorem" title="GaussianApplications.MatrixSeriesTheorem.matrix_series_theorem">matrix_series_theorem</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-sym_dilation-301"><span class="sec-kw">section</span><span class="sec-name">sym_dilation</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-def" id="sym_dilation">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#sym_dilation">sym_dilation</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L477" target="_blank" rel="noopener">source, line 477</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} [m p : nat], &#x27;M_(m, p) -&gt; &#x27;M_(m + p)</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> sym_dilation m p (B : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span>, <span class="bv">p</span>)) : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span> + <span class="bv">p</span>) :=
+  <span class="x" title="mathcomp.algebra.matrix.block_mx">block_mx</span> 0 <span class="bv">B</span> <span class="bv">B</span>^T 0.</pre></div>
+<div class="decl-doc"><p>The symmetric dilation [[0, B], [B^T, 0]] of a rectangular matrix.</p></div>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sym_dilation_sym" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation_sym">sym_dilation_sym</a>, <a class="r k-thm" href="#sym_dilation_series" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation_series">sym_dilation_series</a>, <a class="r k-thm" href="#sym_dilation_sqr" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation_sqr">sym_dilation_sqr</a>, <a class="r k-thm" href="#opnorm_le_sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.opnorm_le_sym_dilation">opnorm_le_sym_dilation</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sym_dilation_sym">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sym_dilation_sym">sym_dilation_sym</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L480" target="_blank" rel="noopener">source, line 480</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m p : nat] (B : &#x27;M_(m, p)), <a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span></pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sym_dilation_sym m p (B : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span>, <span class="bv">p</span>)) : <a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> <span class="bv">B</span> \<span class="kw">is</span> <span class="x" title="mathcomp.algebra.sesquilinear.symmetricmx">symmetricmx</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sym_dilation_series">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sym_dilation_series">sym_dilation_series</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L485" target="_blank" rel="noopener">source, line 485</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m p r : nat] (g : &#x27;rV_r) (B : &#x27;I_r -&gt; &#x27;M_(m, p)),
+<a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> (\sum_j g 0 j *: B j) = \sum_j g 0 j *: <a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> (B j)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sym_dilation_series m p r (g : &#x27;rV[<span class="sv" title="section variable R of section sym_dilation">R</span>]_<span class="bv">r</span>) (B : &#x27;I_<span class="bv">r</span> -&gt; &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span>, <span class="bv">p</span>)) :
+  <a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> (\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="bv">B</span> <span class="bv">j</span>) = \sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> (<span class="bv">B</span> <span class="bv">j</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sym_dilation_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sym_dilation_sqr">sym_dilation_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L497" target="_blank" rel="noopener">source, line 497</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m p : nat] (B : &#x27;M_(m, p)),
+<a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B ^+ 2 = <span class="x" title="mathcomp.algebra.matrix.block_mx">block_mx</span> (B *m B^T) 0 0 (B^T *m B)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sym_dilation_sqr m p (B : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span>, <span class="bv">p</span>)) :
+  <a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> <span class="bv">B</span> ^+ 2 = <span class="x" title="mathcomp.algebra.matrix.block_mx">block_mx</span> (<span class="bv">B</span> *m <span class="bv">B</span>^T) 0 0 (<span class="bv">B</span>^T *m <span class="bv">B</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_col_mx">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_col_mx">mxdot_col_mx</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L504" target="_blank" rel="noopener">source, line 504</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m1 m2 n : nat] (A C : &#x27;M_(m1, n)) (B D : &#x27;M_(m2, n)),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="x" title="mathcomp.algebra.matrix.col_mx">col_mx</span> A B) (<span class="x" title="mathcomp.algebra.matrix.col_mx">col_mx</span> C D) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A C + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> B D</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_col_mx m1 m2 n (A C : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m1</span>, <span class="bv">n</span>)) (B D : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m2</span>, <span class="bv">n</span>)) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="x" title="mathcomp.algebra.matrix.col_mx">col_mx</span> <span class="bv">A</span> <span class="bv">B</span>) (<span class="x" title="mathcomp.algebra.matrix.col_mx">col_mx</span> <span class="bv">C</span> <span class="bv">D</span>) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">C</span> + <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">B</span> <span class="bv">D</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#opnorm_block_diag_le" title="GaussianAnalysis.random_matrix.matrix_series.opnorm_block_diag_le">opnorm_block_diag_le</a>, <a class="r k-thm" href="#opnorm_le_sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.opnorm_le_sym_dilation">opnorm_le_sym_dilation</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_mulmx_opnorm_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_mulmx_opnorm_le">mxdot_mulmx_opnorm_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L511" target="_blank" rel="noopener">source, line 511</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m n : nat] [N : &#x27;M_(m, n)] (y : &#x27;cV_n) [b : R],
+<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> N &lt;= b -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (N *m y) (N *m y) &lt;= b ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> y y</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_mulmx_opnorm_le m n (N : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span>, <span class="bv">n</span>)) (y : &#x27;cV[<span class="sv" title="section variable R of section sym_dilation">R</span>]_<span class="bv">n</span>) (b : <span class="sv" title="section variable R of section sym_dilation">R</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">N</span> &lt;= <span class="bv">b</span> -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">N</span> *m <span class="bv">y</span>) (<span class="bv">N</span> *m <span class="bv">y</span>) &lt;= <span class="bv">b</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">y</span> <span class="bv">y</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#opnorm_block_diag_le" title="GaussianAnalysis.random_matrix.matrix_series.opnorm_block_diag_le">opnorm_block_diag_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="opnorm_block_diag_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#opnorm_block_diag_le">opnorm_block_diag_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L520" target="_blank" rel="noopener">source, line 520</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m1 n1 m2 n2 : nat] (A : &#x27;M_(m1, n1)) (D : &#x27;M_(m2, n2)),
+<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="x" title="mathcomp.algebra.matrix.block_mx">block_mx</span> A 0 0 D) &lt;= maxr (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A) (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> D)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> opnorm_block_diag_le m1 n1 m2 n2 (A : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m1</span>, <span class="bv">n1</span>))
+    (D : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m2</span>, <span class="bv">n2</span>)) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="x" title="mathcomp.algebra.matrix.block_mx">block_mx</span> <span class="bv">A</span> 0 0 <span class="bv">D</span>) &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span>) (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">D</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="opnorm_le_sym_dilation">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#opnorm_le_sym_dilation">opnorm_le_sym_dilation</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L533" target="_blank" rel="noopener">source, line 533</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [m p : nat] (B : &#x27;M_(m, p)), <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> B &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> opnorm_le_sym_dilation m p (B : &#x27;M[<span class="sv" title="section variable R of section sym_dilation">R</span>]_(<span class="bv">m</span>, <span class="bv">p</span>)) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">B</span> &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> <span class="bv">B</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-series_log_bound-353"><span class="sec-kw">section</span><span class="sec-name">series_log_bound</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="expR1_le4">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#expR1_le4">expR1_le4</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L550" target="_blank" rel="noopener">source, line 550</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType}, (expR 1 : R) &lt;= (4 : R)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> expR1_le4 : <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> 1 &lt;= 4 :&gt; <span class="sv" title="section variable R of section series_log_bound">R</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.matrix.tensor_packing:</span> <a class="r k-thm" href="GaussianAnalysis.matrix.tensor_packing.html#tensor_packing_net" title="GaussianAnalysis.matrix.tensor_packing.tensor_packing_net">tensor_packing_net</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#series_log_bound" title="GaussianAnalysis.random_matrix.matrix_series.series_log_bound">series_log_bound</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ln2D_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ln2D_ge">ln2D_ge</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L563" target="_blank" rel="noopener">source, line 563</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : R], 1 &lt;= d -&gt; 2 / 3 &lt;= <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + d)</pre></div>
+<div class="decl-doc"><p>ln x &gt;= 1 - 1 / x, at x = 2 + d &gt;= 3.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ln2D_ge (d : <span class="sv" title="section variable R of section series_log_bound">R</span>) : 1 &lt;= <span class="bv">d</span> -&gt; 2 / 3 &lt;= <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + <span class="bv">d</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.matrix.tensor_packing:</span> <a class="r k-thm" href="GaussianAnalysis.matrix.tensor_packing.html#tensor_packing_net" title="GaussianAnalysis.matrix.tensor_packing.tensor_packing_net">tensor_packing_net</a>, <a class="r k-thm" href="GaussianAnalysis.matrix.tensor_packing.html#tensor_packing_separated" title="GaussianAnalysis.matrix.tensor_packing.tensor_packing_separated">tensor_packing_separated</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#series_log_bound" title="GaussianAnalysis.random_matrix.matrix_series.series_log_bound">series_log_bound</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="series_log_bound">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#series_log_bound">series_log_bound</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L574" target="_blank" rel="noopener">source, line 574</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d s2 tau : R],
+1 &lt;= d -&gt;
+0 &lt;= s2 -&gt;
+s2 &lt;= Num.ExtraDef.sqrtr d -&gt;
+0 &lt;= tau -&gt;
+tau &lt;= 2 * d -&gt;
+\prod_(i &lt; (<span class="x" title="mathcomp.algebra.archimedean.Num.Def.truncn">truncn</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + d))).+1) i.*2.+1%:R * s2 ^+ <span class="x" title="mathcomp.algebra.archimedean.Num.Def.truncn">truncn</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + d)) * tau &lt;=
+(5 * d `^ 4^-1 * Num.ExtraDef.sqrtr (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + d))) ^+ (<span class="x" title="mathcomp.algebra.archimedean.Num.Def.truncn">truncn</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + d))).+1.*2</pre></div>
+<div class="decl-doc"><p>The arithmetic of the choice q = floor (ln (2 + d)) + 1: if s2 &lt;= sqrt d and tau &lt;= 2 d with d &gt;= 1, then (2q - 1)!! s2^(q-1) tau &lt;= (5 d^(1/4) sqrt (ln (2 + d)))^(2q).</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> series_log_bound (d s2 tau : <span class="sv" title="section variable R of section series_log_bound">R</span>) : 1 &lt;= <span class="bv">d</span> -&gt; 0 &lt;= <span class="bv">s2</span> -&gt;
+  <span class="bv">s2</span> &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> <span class="bv">d</span> -&gt; 0 &lt;= <span class="bv">tau</span> -&gt; <span class="bv">tau</span> &lt;= 2 * <span class="bv">d</span> -&gt;
+  (\prod_(i &lt; (<span class="x" title="mathcomp.algebra.archimedean.Num.Def.truncn">truncn</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + <span class="bv">d</span>))).+1) <span class="bv">i</span>.*2.+1%:R) *
+    <span class="bv">s2</span> ^+ <span class="x" title="mathcomp.algebra.archimedean.Num.Def.truncn">truncn</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + <span class="bv">d</span>)) * <span class="bv">tau</span> &lt;=
+  (5 * <span class="bv">d</span> `^ 4^-1 * <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + <span class="bv">d</span>))) ^+ (<span class="x" title="mathcomp.algebra.archimedean.Num.Def.truncn">truncn</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + <span class="bv">d</span>))).+1.*2.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-gauss_mx_series_rect-421"><span class="sec-kw">section</span><span class="sec-name">gauss_mx_series_rect</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {m p r : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Local Notation</span> gauss := (@<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable R of section gauss_mx_series_rect">R</span>).
+<span class="vk">Variable</span> B : &#x27;I_<span class="sv" title="section variable r of section gauss_mx_series_rect">r</span> -&gt; &#x27;M[<span class="sv" title="section variable R of section gauss_mx_series_rect">R</span>]_(<span class="sv" title="section variable m of section gauss_mx_series_rect">m</span>, <span class="sv" title="section variable p of section gauss_mx_series_rect">p</span>).</pre>
+<div class="decl k-thm" id="series_opnorm_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#series_opnorm_lipschitz">series_opnorm_lipschitz</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L636" target="_blank" rel="noopener">source, line 636</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m p r : nat} (B : &#x27;I_r -&gt; &#x27;M_(m, p)) (g h : &#x27;rV_r),
+`|<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j g 0 j *: B j) - <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j h 0 j *: B j)| &lt;=
+(\sum_j <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (B j)) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (g - h)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> series_opnorm_lipschitz (g h : &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series_rect">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series_rect">r</span>) :
+  `|<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>) - <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="bv">h</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)| &lt;=
+  (\sum_j <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">g</span> - <span class="bv">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.matrix.tensor_packing:</span> <a class="r k-thm" href="GaussianAnalysis.matrix.tensor_packing.html#sudakov_mx_series" title="GaussianAnalysis.matrix.tensor_packing.sudakov_mx_series">sudakov_mx_series</a>, <a class="r k-thm" href="GaussianAnalysis.matrix.tensor_packing.html#tensor_packing" title="GaussianAnalysis.matrix.tensor_packing.tensor_packing">tensor_packing</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.measurable_series_opnorm">measurable_series_opnorm</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_series_opnorm">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_series_opnorm">measurable_series_opnorm</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L649" target="_blank" rel="noopener">source, line 649</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m p r : nat} (B : &#x27;I_r -&gt; &#x27;M_(m, p)),
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_r]
+  (<span class="kw">fun</span> g : <span class="hb" title="printed as matrix_matrix__canonical__measurable_structure_SigmaRing 1 r">&#x27;rV_r</span> =&gt;
+   <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j g 0 j *: B j))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_series_opnorm :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section gauss_mx_series_rect">R</span>]_<span class="sv" title="section variable r of section gauss_mx_series_rect">r</span>] (<span class="kw">fun</span> g =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_mx_series_opnorm</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_opnorm_moment">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L659" target="_blank" rel="noopener">source, line 659</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m p r : nat} (B : &#x27;I_r -&gt; &#x27;M_(m, p)) [q : nat],
+(0 &lt; q)%N -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j g 0 j *: B j) ^+ q.*2)%:E &lt;=
+ (\prod_(i &lt; q) i.*2.+1%:R *
+  maxr (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j B j *m (B j)^T)) (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j (B j)^T *m B j)) ^+ q.-1 *
+  (2 * \tr (\sum_j B j *m (B j)^T)))%:E)%E</pre></div>
+<div class="decl-doc"><p>E opnorm (\sum_j g_j B_j)^(2q) &lt;= (2q - 1)!! sigma^(2(q-1)) tau, with sigma^2 = max (opnorm (\sum_j B_j B_j^T)) (opnorm (\sum_j B_j^T B_j)) and tau = 2 tr (\sum_j B_j B_j^T), through the symmetric dilation.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_mx_series_opnorm</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_mx_series_opnorm_moment q : (0 &lt; <span class="bv">q</span>)%N -&gt;
+  (\int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series_rect">r</span>]_g (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>) ^+ <span class="bv">q</span>.*2)%:E &lt;=
+   ((\prod_(i &lt; <span class="bv">q</span>) <span class="bv">i</span>.*2.+1%:R) *
+     <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span> *m (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T)) (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T *m <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>))
+       ^+ <span class="bv">q</span>.-1 * (2 * \tr (\sum_j <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span> *m (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_mx_series_opnorm</a>, <a class="r k-thm" href="#gauss_mx_series_opnorm_log" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_opnorm">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_mx_series_opnorm">gauss_mx_series_opnorm</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L702" target="_blank" rel="noopener">source, line 702</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m p r : nat} (B : &#x27;I_r -&gt; &#x27;M_(m, p)) [q : nat],
+(0 &lt; q)%N -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j g 0 j *: B j))%:E &lt;=
+ ((\prod_(i &lt; q) i.*2.+1%:R *
+   maxr (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j B j *m (B j)^T)) (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j (B j)^T *m B j)) ^+ q.-1 *
+   (2 * \tr (\sum_j B j *m (B j)^T)))
+  `^ q.*2%:R^-1)%:E)%E</pre></div>
+<div class="decl-doc"><p>The rectangular bound: E opnorm (\sum_j g_j B_j) &lt;= ((2q - 1)!! sigma^(2(q-1)) tau)^(1/(2q)) for every q &gt;= 1. No dimension of the matrices appears.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>B_1, ..., B_r</code> in <code>&#x27;M[R]_(m, p)</code> and <code>g</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r</code>, with <code>sigma^2 = max (opnorm (\sum_j B_j B_j^T), opnorm (\sum_j B_j^T B_j))</code> and <code>tau = 2 tr (\sum_j B_j B_j^T)</code>: <code>E opnorm (\sum_j g_j B_j)^(2q) &lt;= (2q - 1)!! sigma^(2(q-1)) tau</code> and <code>E opnorm (\sum_j g_j B_j) &lt;= ((2q - 1)!! sigma^(2(q-1)) tau)^(1/(2q))</code> for every <code>q &gt;= 1</code>, through the symmetric dilation <code><a class="r k-def" href="#sym_dilation" title="GaussianAnalysis.random_matrix.matrix_series.sym_dilation">sym_dilation</a> B_j = [[0, B_j], [B_j^T, 0]]</code>. If the two operator norms are at most <code>sqrt d</code> and <code>tr (\sum_j B_j B_j^T) &lt;= d</code> for a real <code>d &gt;= 1</code>, then <code>E opnorm (\sum_j g_j B_j) &lt;= 5 d^(1/4) sqrt (ln (2 + d))</code>. No dimension of the matrices enters.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_mx_series_opnorm q : (0 &lt; <span class="bv">q</span>)%N -&gt;
+  (\int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series_rect">r</span>]_g (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>))%:E &lt;=
+   (((\prod_(i &lt; <span class="bv">q</span>) <span class="bv">i</span>.*2.+1%:R) *
+     <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.max">Num.max</span> (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span> *m (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T)) (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T *m <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>))
+       ^+ <span class="bv">q</span>.-1 * (2 * \tr (\sum_j <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span> *m (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T))) `^ (<span class="bv">q</span>.*2%:R)^-1)%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.MatrixSeriesTheorem:</span> <a class="r k-thm" href="GaussianApplications.MatrixSeriesTheorem.html#matrix_series_theorem" title="GaussianApplications.MatrixSeriesTheorem.matrix_series_theorem">matrix_series_theorem</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_mx_series_opnorm_log">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_mx_series_opnorm_log">gauss_mx_series_opnorm_log</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/matrix_series.v#L720" target="_blank" rel="noopener">source, line 720</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m p r : nat} [B : &#x27;I_r -&gt; &#x27;M_(m, p)] [d : R],
+1 &lt;= d -&gt;
+<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j B j *m (B j)^T) &lt;= Num.ExtraDef.sqrtr d -&gt;
+<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j (B j)^T *m B j) &lt;= Num.ExtraDef.sqrtr d -&gt;
+\tr (\sum_j B j *m (B j)^T) &lt;= d -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> r]_g (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j g 0 j *: B j))%:E &lt;=
+ (5 * d `^ 4^-1 * Num.ExtraDef.sqrtr (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + d)))%:E)%E</pre></div>
+<div class="decl-doc"><p>The form of Lemma 4.2 of the fourfold paper of family 154, with C = 5: E opnorm (\sum_j g_j B_j) &lt;= 5 d^(1/4) sqrt (ln (2 + d)) when the diagonal blocks \sum_j B_j B_j^T and \sum_j B_j^T B_j of the dilation S have operator norms at most sqrt d and tr (\sum_j B_j B_j^T) &lt;= d, that is opnorm S &lt;= sqrt d and tr S &lt;= 2 d, for a real d &gt;= 1. The proof takes q = floor (ln (2 + d)) + 1 in <a class="r k-thm" href="#gauss_mx_series_opnorm_moment" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm_moment">gauss_mx_series_opnorm_moment</a>.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#gauss_mx_series_opnorm" title="GaussianAnalysis.random_matrix.matrix_series.gauss_mx_series_opnorm">gauss_mx_series_opnorm</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_mx_series_opnorm_log (d : <span class="sv" title="section variable R of section gauss_mx_series_rect">R</span>) : 1 &lt;= <span class="bv">d</span> -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span> *m (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T) &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> <span class="bv">d</span> -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T *m <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>) &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> <span class="bv">d</span> -&gt;
+  \tr (\sum_j <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span> *m (<span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>)^T) &lt;= <span class="bv">d</span> -&gt;
+  (\int[<span class="ln" title="Local Notation gauss := (@gauss R).">gauss</span> <span class="sv" title="section variable r of section gauss_mx_series_rect">r</span>]_g (<a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (\sum_j <span class="bv">g</span> 0 <span class="bv">j</span> *: <span class="sv" title="section variable B of section gauss_mx_series_rect">B</span> <span class="bv">j</span>))%:E &lt;=
+   (5 * <span class="bv">d</span> `^ 4^-1 * <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="x" title="mathcomp.analysis.exp.ln">ln</span> (2 + <span class="bv">d</span>)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.matrix.tensor_packing:</span> <a class="r k-thm" href="GaussianAnalysis.matrix.tensor_packing.html#tensor_packing" title="GaussianAnalysis.matrix.tensor_packing.tensor_packing">tensor_packing</a></li>
+<li><span class="um">GaussianApplications.MatrixSeriesTheorem:</span> <a class="r k-thm" href="GaussianApplications.MatrixSeriesTheorem.html#matrix_series_theorem" title="GaussianApplications.MatrixSeriesTheorem.matrix_series_theorem">matrix_series_theorem</a></li>
+</ul></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>trace_inequalities</span></li><li><a href="#exprn_cross_le">exprn_<wbr>cross_<wbr>le</a></li><li><a href="#mxtrace_diag_sandwich">mxtrace_<wbr>diag_<wbr>sandwich</a></li><li><a href="#mxtrace_sandwich_le">mxtrace_<wbr>sandwich_<wbr>le</a></li><li><a href="#mxtrace_mul_psd_le">mxtrace_<wbr>mul_<wbr>psd_<wbr>le</a></li><li><a href="#psdmx_exp_even">psdmx_<wbr>exp_<wbr>even</a></li><li class="toc-sec"><span>moment_root</span></li><li><a href="#young_exprn">young_<wbr>exprn</a></li><li><a href="#moment_root_le">moment_<wbr>root_<wbr>le</a></li><li><a href="#moment_root_powR">moment_<wbr>root_<wbr>powR</a></li><li class="toc-sec"><span>gauss_mx_series</span></li><li><a href="#series_sym">series_<wbr>sym</a></li><li><a href="#mx_polyfun_series">mx_<wbr>polyfun_<wbr>series</a></li><li><a href="#series_lin">series_<wbr>lin</a></li><li><a href="#series_delta">series_<wbr>delta</a></li><li><a href="#is_derive_series_pow">is_<wbr>derive_<wbr>series_<wbr>pow</a></li><li><a href="#gauss_mx_series_ibp_coord">gauss_<wbr>mx_<wbr>series_<wbr>ibp_<wbr>coord</a></li><li><a href="#gauss_mx_series_ibp">gauss_<wbr>mx_<wbr>series_<wbr>ibp</a></li><li><a href="#gauss_mx_series_trace_sqr">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>sqr</a></li><li><a href="#gauss_mx_series_trace_rec">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>rec</a></li><li><a href="#gauss_mx_series_trace_le">gauss_<wbr>mx_<wbr>series_<wbr>trace_<wbr>le</a></li><li><a href="#gauss_mx_series_moment">gauss_<wbr>mx_<wbr>series_<wbr>moment</a></li><li class="toc-sec"><span>sym_dilation</span></li><li><a href="#sym_dilation">sym_<wbr>dilation</a></li><li><a href="#sym_dilation_sym">sym_<wbr>dilation_<wbr>sym</a></li><li><a href="#sym_dilation_series">sym_<wbr>dilation_<wbr>series</a></li><li><a href="#sym_dilation_sqr">sym_<wbr>dilation_<wbr>sqr</a></li><li><a href="#mxdot_col_mx">mxdot_<wbr>col_<wbr>mx</a></li><li><a href="#mxdot_mulmx_opnorm_le">mxdot_<wbr>mulmx_<wbr>opnorm_<wbr>le</a></li><li><a href="#opnorm_block_diag_le">opnorm_<wbr>block_<wbr>diag_<wbr>le</a></li><li><a href="#opnorm_le_sym_dilation">opnorm_<wbr>le_<wbr>sym_<wbr>dilation</a></li><li class="toc-sec"><span>series_log_bound</span></li><li><a href="#expR1_le4">expR1_<wbr>le4</a></li><li><a href="#ln2D_ge">ln2D_<wbr>ge</a></li><li><a href="#series_log_bound">series_<wbr>log_<wbr>bound</a></li><li class="toc-sec"><span>gauss_mx_series_rect</span></li><li><a href="#series_opnorm_lipschitz">series_<wbr>opnorm_<wbr>lipschitz</a></li><li><a href="#measurable_series_opnorm">measurable_<wbr>series_<wbr>opnorm</a></li><li><a href="#gauss_mx_series_opnorm_moment">gauss_<wbr>mx_<wbr>series_<wbr>opnorm_<wbr>moment</a></li><li><a href="#gauss_mx_series_opnorm">gauss_<wbr>mx_<wbr>series_<wbr>opnorm</a></li><li><a href="#gauss_mx_series_opnorm_log">gauss_<wbr>mx_<wbr>series_<wbr>opnorm_<wbr>log</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

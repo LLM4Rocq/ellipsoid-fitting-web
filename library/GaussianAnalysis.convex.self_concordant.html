@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.convex.self_concordant</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod current" href="GaussianAnalysis.convex.self_concordant.html" aria-current="page">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>self_concordant_definitions</span></li><li><a href="#rel_open_convex">rel_<wbr>open_<wbr>convex</a></li><li><a href="#sc_function">sc_<wbr>function</a></li><li><a href="#sc_barrier">sc_<wbr>barrier</a></li><li><a href="#sc_norm">sc_<wbr>norm</a></li><li><a href="#bregman_div">bregman_<wbr>div</a></li><li><a href="#sc_omega">sc_<wbr>omega</a></li><li><a href="#sc_omega_star">sc_<wbr>omega_<wbr>star</a></li><li class="toc-sec"><span>one_dimensional</span></li><li><a href="#derive_ge0_le">derive_<wbr>ge0_<wbr>le</a></li><li><a href="#derive_le0_le">derive_<wbr>le0_<wbr>le</a></li><li><a href="#derive2_ge0_tangent">derive2_<wbr>ge0_<wbr>tangent</a></li><li><a href="#sc_ode_inv">sc_<wbr>ode_<wbr>inv</a></li><li><a href="#sc_ode_ge">sc_<wbr>ode_<wbr>ge</a></li><li><a href="#sc_ode_le">sc_<wbr>ode_<wbr>le</a></li><li><a href="#is_derive_sc_omega">is_<wbr>derive_<wbr>sc_<wbr>omega</a></li><li><a href="#is_derive_sc_omega_star">is_<wbr>derive_<wbr>sc_<wbr>omega_<wbr>star</a></li><li><a href="#is_derive_omega_line">is_<wbr>derive_<wbr>omega_<wbr>line</a></li><li><a href="#is_derive_omega_line1">is_<wbr>derive_<wbr>omega_<wbr>line1</a></li><li><a href="#is_derive_omega_star_line">is_<wbr>derive_<wbr>omega_<wbr>star_<wbr>line</a></li><li><a href="#is_derive_omega_star_line1">is_<wbr>derive_<wbr>omega_<wbr>star_<wbr>line1</a></li><li><a href="#sc_omega0">sc_<wbr>omega0</a></li><li><a href="#sc_omega_star0">sc_<wbr>omega_<wbr>star0</a></li><li><a href="#sc_omega_ge0">sc_<wbr>omega_<wbr>ge0</a></li><li><a href="#sc_omega_ge">sc_<wbr>omega_<wbr>ge</a></li><li><a href="#sc_omega_le">sc_<wbr>omega_<wbr>le</a></li><li><a href="#sc_omega_taylor">sc_<wbr>omega_<wbr>taylor</a></li><li><a href="#sc_omega_star_taylor">sc_<wbr>omega_<wbr>star_<wbr>taylor</a></li><li><a href="#sc_omega_gt_half">sc_<wbr>omega_<wbr>gt_<wbr>half</a></li><li class="toc-sec"><span>line</span></li><li><a href="#is_derive_line">is_<wbr>derive_<wbr>line</a></li><li><a href="#is_derive_line_inv">is_<wbr>derive_<wbr>line_<wbr>inv</a></li><li><a href="#lin_form_vec">lin_<wbr>form_<wbr>vec</a></li><li><a href="#bilin_form_mx">bilin_<wbr>form_<wbr>mx</a></li><li class="toc-sec"><span>sc_line</span></li><li><a href="#rel_open_convex_segment">rel_<wbr>open_<wbr>convex_<wbr>segment</a></li><li><a href="#rel_open_convex_line">rel_<wbr>open_<wbr>convex_<wbr>line</a></li><li><a href="#line_derive3">line_<wbr>derive3</a></li><li><a href="#sc_line_derive">sc_<wbr>line_<wbr>derive</a></li><li><a href="#sc_hessian_line_ge">sc_<wbr>hessian_<wbr>line_<wbr>ge</a></li><li><a href="#sc_hessian_line_le">sc_<wbr>hessian_<wbr>line_<wbr>le</a></li><li><a href="#bregman_div_add">bregman_<wbr>div_<wbr>add</a></li><li><a href="#sc_line_taylor_le">sc_<wbr>line_<wbr>taylor_<wbr>le</a></li><li><a href="#sc_dikin">sc_<wbr>dikin</a></li><li><a href="#sc_bregman_ge">sc_<wbr>bregman_<wbr>ge</a></li><li><a href="#sc_bregman_le">sc_<wbr>bregman_<wbr>le</a></li><li><a href="#sc_bregman_small">sc_<wbr>bregman_<wbr>small</a></li><li><a href="#sc_taylor3">sc_<wbr>taylor3</a></li><li><a href="#sc_function_convex">sc_<wbr>function_<wbr>convex</a></li><li><a href="#sc_function_continuous">sc_<wbr>function_<wbr>continuous</a></li><li class="toc-sec"><span>sc_barrier_lemmas</span></li><li><a href="#sc_barrier_grad_le">sc_<wbr>barrier_<wbr>grad_<wbr>le</a></li><li><a href="#sc_barrier_contraction">sc_<wbr>barrier_<wbr>contraction</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.convex.html">convex</a><span aria-hidden="true">/</span><span>self_concordant</span></div>
+<h1 class="page-title">Self-concordant functions and barriers</h1>
+<div class="page-meta"><code>GaussianAnalysis.convex.self_concordant</code><span>library/convex/self_concordant.v</span><span>1,247 lines</span><span>41 lemmas and theorems, 7 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>2</b> library modules and 20 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.matrix.real_spectral.html">GaussianAnalysis.matrix.real_spectral</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.vector, mathcomp.algebra.interval, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.classical.set_interval, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.derive, mathcomp.analysis.realfun, mathcomp.analysis.exp, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.algebra.arithmetic_tactic</p></div></details><details><summary>Imported by <b>7</b></summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.probability.measurable_minimizer.html">GaussianAnalysis.probability.measurable_minimizer</a></li><li><a href="GaussianAnalysis.convex.logdet_barrier.html">GaussianAnalysis.convex.logdet_barrier</a></li><li><a href="GaussianAnalysis.convex.minimizers.html">GaussianAnalysis.convex.minimizers</a></li><li><a href="GaussianAnalysis.convex.ls_insertion.html">GaussianAnalysis.convex.ls_insertion</a></li><li><a href="GaussianAnalysis.convex.barrier_removal.html">GaussianAnalysis.convex.barrier_removal</a></li><li><a href="GaussianAnalysis.convex.barrier_lindeberg.html">GaussianAnalysis.convex.barrier_lindeberg</a></li><li><a href="GaussianAnalysis.convex.ridge_comparison.html">GaussianAnalysis.convex.ridge_comparison</a></li></ul></div></details><details><summary>Required by <b>3</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Condition/Slices.v" target="_blank" rel="noopener">extension/Condition/Slices.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Sat/ApproximateFit.v" target="_blank" rel="noopener">extension/Sat/ApproximateFit.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Unsat/Regularized.v" target="_blank" rel="noopener">extension/Unsat/Regularized.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>Self-concordant functions and barriers in the sense of Nesterov and Nemirovskii (Interior-point polynomial algorithms, Definition 2.3.1), on a convex set D of 'rV[R]_N that is open in its affine hull z + V, with V a subspace. Derivatives are taken along the directions h of V, with MathComp's directional derivative 'D_h. A self-concordant function is convex, three times differentiable along V, its first and second derivatives are a linear and a quadratic form, it tends to +oo at the relative boundary of D, and</p>
+<pre class="display">(SC)  |D^3 B(z)[h, h, h]| &lt;= 2 (D^2 B(z)[h, h])^(3/2),</pre>
+<p>written (D^3 B(z)[h, h, h])^2 &lt;= 4 (D^2 B(z)[h, h])^3. A theta-self-concordant barrier satisfies moreover</p>
+<pre class="display">(BP)  (D B(z)[h])^2 &lt;= theta D^2 B(z)[h, h].</pre>
+<p>These are the notions of Koehler and Sohn, Universality and sharp thresholds for ellipsoid fitting (arXiv 2608.27372), Definition 2.7.</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_<wbr>open_<wbr>convex</a> V D</code></td><td class="g-rhs">D is convex, y - z is in V for y, z in D, and around each z of D, D contains the points z + h with h in V and `|h| &lt; e for some e &gt; 0: D is relatively open in its affine hull z + V</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_<wbr>function</a> V D B</code></td><td class="g-rhs">B is a self-concordant function on D with directions V: three times differentiable along V, with a gradient vector and a Hessian matrix, convex, (SC), and B (z + t h) tends to +oo when t tends to 1 from the left, if z + t h is in D for 0 &lt;= t &lt; 1 and z + h is not</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#sc_barrier" title="GaussianAnalysis.convex.self_concordant.sc_barrier">sc_<wbr>barrier</a> V D theta B</code></td><td class="g-rhs">B is a theta-self-concordant barrier: a self-concordant function with (BP)</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_<wbr>norm</a> B z h</code></td><td class="g-rhs">the local norm sqrt (D^2 B(z)[h, h])</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_<wbr>div</a> B y z</code></td><td class="g-rhs">the Bregman divergence B y - B z - D B(z)[y - z]</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_<wbr>omega</a> r</code></td><td class="g-rhs">r - ln (1 + r)</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_<wbr>omega_<wbr>star</a> r</code></td><td class="g-rhs">- r - ln (1 - r)</td></tr></table></div>
+<p>Main results, for D relatively open and convex with directions V, B a self-concordant function on D, z in D, h in V and r = <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h:</p>
+<ul><li><a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>, <a class="r k-thm" href="#sc_hessian_line_le" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_le">sc_hessian_line_le</a>: for t &gt;= 0 with z + t h in D, r^2 / (1 + t r)^2 &lt;= D^2 B(z + t h)[h, h], and D^2 B(z + t h)[h, h] is at most r^2 / (1 - t r)^2 when moreover t r &lt; 1 (Koehler-Sohn, proof of Lemma 2.15); the one-dimensional comparison is <a class="r k-thm" href="#sc_ode_ge" title="GaussianAnalysis.convex.self_concordant.sc_ode_ge">sc_ode_ge</a>, <a class="r k-thm" href="#sc_ode_le" title="GaussianAnalysis.convex.self_concordant.sc_ode_le">sc_ode_le</a>.</li><li><a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_dikin</a>: the Dikin ellipsoid: if r &lt; 1, then z + h is in D (Nesterov-Nemirovskii, Theorem 2.1.1).</li><li><a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>: <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r &lt;= <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z when z + h is in D, and <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z &lt;= <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> r when r &lt; 1.</li><li><a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a> (Lemma 2.15 (i)): if z + h is in D and <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (1/2), then r &lt;= 1/2 and r^2 / 3 &lt;= <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z.</li><li><a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a> (Lemma 2.15 (ii)): if r &lt;= 1/2, then z + h is in D and |B (z + h) - B z - D B(z)[h] - r^2 / 2| &lt;= 2 r^3 / 3.</li><li><a class="r k-thm" href="#sc_function_convex" title="GaussianAnalysis.convex.self_concordant.sc_function_convex">sc_function_convex</a>, <a class="r k-thm" href="#sc_function_continuous" title="GaussianAnalysis.convex.self_concordant.sc_function_continuous">sc_function_continuous</a>: B is convex on D, and continuous at every point of D for the points of D.</li><li><a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_barrier_grad_le</a> (Lemma 2.10, Nesterov Theorem 4.2.4): for a theta-self-concordant barrier with theta &gt;= 0 and y, z in D, D B(z)[y - z] &lt;= theta.</li><li><a class="r k-thm" href="#sc_barrier_contraction" title="GaussianAnalysis.convex.self_concordant.sc_barrier_contraction">sc_barrier_contraction</a> (Lemma 2.10): for x0, x in D and 0 &lt; eps &lt; 1, B ((1 - eps) x + eps x0) &lt;= B x0 + theta ln (1 / eps).</li><li><a class="r k-thm" href="#line_derive3" title="GaussianAnalysis.convex.self_concordant.line_derive3">line_derive3</a>: if B agrees on the line through z along h with a function of one variable with three derivatives, these are the derivatives of B along h at the points of the line in D; with <a class="r k-thm" href="#lin_form_vec" title="GaussianAnalysis.convex.self_concordant.lin_form_vec">lin_form_vec</a> and <a class="r k-thm" href="#bilin_form_mx" title="GaussianAnalysis.convex.self_concordant.bilin_form_mx">bilin_form_mx</a> (a linear form is mxdot g h and a bilinear form is h M h^T), this reduces the conditions of <a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> to facts in one variable (<a href="GaussianAnalysis.convex.logdet_barrier.html">convex/logdet_barrier.v</a>).</li></ul></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_<wbr>open_<wbr>convex</a></span><span><a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_<wbr>function</a></span><span><a class="r k-def" href="#sc_barrier" title="GaussianAnalysis.convex.self_concordant.sc_barrier">sc_<wbr>barrier</a></span><span><a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_<wbr>norm</a></span><span><a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_<wbr>div</a></span></div></td><td>Self-concordant functions and barriers (Nesterov-Nemirovskii; Koehler-Sohn, Definition 2.7) on a convex set <code>D</code> of <code>&#x27;rV[R]_N</code> that is relatively open in <code>z + V</code> for a subspace <code>V</code>: derivatives along the directions of <code>V</code> (MathComp's <code>&#x27;D_h</code>) up to order 3, a gradient vector and a Hessian matrix, convexity, <code>(D^3 B[h,h,h])^2 &lt;= 4 (D^2 B[h,h])^3</code>, and <code>B</code> tends to <code>+oo</code> along segments that leave <code>D</code>; a <code>theta</code>-barrier also has <code>(D B[h])^2 &lt;= theta D^2 B[h,h]</code>. <code><a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h</code> is the local norm <code>sqrt (D^2 B(z)[h,h])</code>, <code><a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B y z = B y - B z - D B(z)[y - z]</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_<wbr>hessian_<wbr>line_<wbr>ge</a></span><span><a class="r k-thm" href="#sc_hessian_line_le" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_le">sc_<wbr>hessian_<wbr>line_<wbr>le</a></span><span><a class="r k-thm" href="#sc_ode_ge" title="GaussianAnalysis.convex.self_concordant.sc_ode_ge">sc_<wbr>ode_<wbr>ge</a></span><span><a class="r k-thm" href="#sc_ode_le" title="GaussianAnalysis.convex.self_concordant.sc_ode_le">sc_<wbr>ode_<wbr>le</a></span></div></td><td>Along a segment <code>z + t h</code> in <code>D</code>, with <code>r = sc_norm B z h</code>: <code>r^2 / (1 + t r)^2 &lt;= D^2 B(z + t h)[h,h]</code>, and <code>D^2 B(z + t h)[h,h] &lt;= r^2 / (1 - t r)^2</code> when <code>t r &lt; 1</code>. The one-dimensional comparison behind it compares <code>1 / sqrt (psi + e)</code> with <code>t</code> for a function <code>psi &gt;= 0</code> with <code>psi&#x27;^2 &lt;= 4 psi^3</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_<wbr>dikin</a></span></div></td><td>The Dikin ellipsoid: if <code><a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt; 1</code> then <code>z + h</code> is in <code>D</code> (Nesterov-Nemirovskii, Theorem 2.1.1); proved from the bound above and the blow-up of <code>B</code> at the exit point of the segment.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_<wbr>bregman_<wbr>ge</a></span><span><a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_<wbr>bregman_<wbr>le</a></span><span><a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_<wbr>bregman_<wbr>small</a></span><span><a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_<wbr>taylor3</a></span></div></td><td>Lemma 2.15 of Koehler and Sohn: <code>r - ln (1 + r) &lt;= bregman_div B (z + h) z</code> when <code>z + h</code> is in <code>D</code>, and <code><a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z &lt;= - r - ln (1 - r)</code> when <code>r &lt; 1</code>; hence (i) if the Bregman divergence is at most <code>1/2 - ln (3/2)</code> then <code>r &lt;= 1/2</code> and it is at least <code>r^2 / 3</code>, and (ii) if <code>r &lt;= 1/2</code> then <code>z + h</code> is in <code>D</code> and <code>|B (z + h) - B z - D B(z)[h] - r^2 / 2| &lt;= 2 r^3 / 3</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#sc_function_convex" title="GaussianAnalysis.convex.self_concordant.sc_function_convex">sc_<wbr>function_<wbr>convex</a></span><span><a class="r k-thm" href="#sc_function_continuous" title="GaussianAnalysis.convex.self_concordant.sc_function_continuous">sc_<wbr>function_<wbr>continuous</a></span></div></td><td>A self-concordant function is convex on <code>D</code>, and continuous at every point of <code>D</code> for the points of <code>D</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_<wbr>barrier_<wbr>grad_<wbr>le</a></span><span><a class="r k-thm" href="#sc_barrier_contraction" title="GaussianAnalysis.convex.self_concordant.sc_barrier_contraction">sc_<wbr>barrier_<wbr>contraction</a></span></div></td><td>Lemma 2.10 of Koehler and Sohn, for a <code>theta</code>-self-concordant barrier with <code>theta &gt;= 0</code>: <code>D B(z)[y - z] &lt;= theta</code> for <code>y</code>, <code>z</code> in <code>D</code> (Nesterov, Theorem 4.2.4), and <code>B ((1 - eps) x + eps x0) &lt;= B x0 + theta ln (1 / eps)</code> for <code>x0</code>, <code>x</code> in <code>D</code> and <code>0 &lt; eps &lt; 1</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#derive_ge0_le" title="GaussianAnalysis.convex.self_concordant.derive_ge0_le">derive_<wbr>ge0_<wbr>le</a></span><span><a class="r k-thm" href="#derive_le0_le" title="GaussianAnalysis.convex.self_concordant.derive_le0_le">derive_<wbr>le0_<wbr>le</a></span><span><a class="r k-thm" href="#derive2_ge0_tangent" title="GaussianAnalysis.convex.self_concordant.derive2_ge0_tangent">derive2_<wbr>ge0_<wbr>tangent</a></span></div></td><td>Monotonicity on <code>[a, b]</code> from the sign of the derivative, and a function with a nonnegative second derivative on <code>[a, b]</code> lies above its tangents there.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#line_derive3" title="GaussianAnalysis.convex.self_concordant.line_derive3">line_<wbr>derive3</a></span><span><a class="r k-thm" href="#lin_form_vec" title="GaussianAnalysis.convex.self_concordant.lin_form_vec">lin_<wbr>form_<wbr>vec</a></span><span><a class="r k-thm" href="#bilin_form_mx" title="GaussianAnalysis.convex.self_concordant.bilin_form_mx">bilin_<wbr>form_<wbr>mx</a></span></div></td><td>If <code>B</code> agrees on <code>D</code>, along the line through <code>z</code> in the direction <code>h</code> of <code>V</code>, with a function of one variable that has three derivatives, these are the derivatives of <code>B</code> along <code>h</code> at the points of the line in <code>D</code>. A linear form on row vectors is <code><a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> g h</code> and a bilinear form <code>Q</code> has <code>Q h h = h M h^T</code>, for the vector and the matrix of their values on the basis.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">48 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-self_concordant_definitions-14"><span class="sec-kw">section</span><span class="sec-name">self_concordant_definitions</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Implicit Types</span> (V : {vspace &#x27;rV[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span>}) (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span>)
+  (B : &#x27;rV[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span> -&gt; <span class="sv" title="section variable R of section self_concordant_definitions">R</span>).</pre>
+<div class="decl k-def" id="rel_open_convex">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#rel_open_convex">rel_open_convex</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L92" target="_blank" rel="noopener">source, line 92</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat}, {vspace &#x27;rV_N} -&gt; set &#x27;rV_N -&gt; <span class="kw">Prop</span></pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> rel_open_convex V D :=
+  [/\ <span class="kw">forall</span> z y (t : <span class="sv" title="section variable R of section self_concordant_definitions">R</span>), <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">D</span> <span class="bv">y</span> -&gt; 0 &lt;= <span class="bv">t</span> &lt;= 1 -&gt; <span class="bv">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: (<span class="bv">y</span> - <span class="bv">z</span>)),
+      <span class="kw">forall</span> z y, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">D</span> <span class="bv">y</span> -&gt; <span class="bv">y</span> - <span class="bv">z</span> \<span class="kw">in</span> <span class="bv">V</span> &amp;
+      <span class="kw">forall</span> z, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="kw">exists2</span> e : <span class="sv" title="section variable R of section self_concordant_definitions">R</span>, 0 &lt; <span class="bv">e</span> &amp;
+        <span class="kw">forall</span> h, <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt; `|<span class="bv">h</span>| &lt; <span class="bv">e</span> -&gt; <span class="bv">D</span> (<span class="bv">z</span> + <span class="bv">h</span>)].</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Self-concordant functions and barriers (Nesterov-Nemirovskii; Koehler-Sohn, Definition 2.7) on a convex set <code>D</code> of <code>&#x27;rV[R]_N</code> that is relatively open in <code>z + V</code> for a subspace <code>V</code>: derivatives along the directions of <code>V</code> (MathComp's <code>&#x27;D_h</code>) up to order 3, a gradient vector and a Hessian matrix, convexity, <code>(D^3 B[h,h,h])^2 &lt;= 4 (D^2 B[h,h])^3</code>, and <code>B</code> tends to <code>+oo</code> along segments that leave <code>D</code>; a <code>theta</code>-barrier also has <code>(D B[h])^2 &lt;= theta D^2 B[h,h]</code>. <code><a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h</code> is the local norm <code>sqrt (D^2 B(z)[h,h])</code>, <code><a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B y z = B y - B z - D B(z)[y - z]</code>.</p>
+</div>
+<details class="decl-used"><summary>Used by 9 declarations in 5 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.measurable_minimizer:</span> <a class="r k-thm" href="GaussianAnalysis.probability.measurable_minimizer.html#rel_open_dense_seq" title="GaussianAnalysis.probability.measurable_minimizer.rel_open_dense_seq">rel_open_dense_seq</a></li>
+<li><span class="um">GaussianAnalysis.convex.logdet_barrier:</span> <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#rel_open_convex_pd_slice" title="GaussianAnalysis.convex.logdet_barrier.rel_open_convex_pd_slice">rel_open_convex_pd_slice</a>, <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#rel_open_convex_pd_slice2" title="GaussianAnalysis.convex.logdet_barrier.rel_open_convex_pd_slice2">rel_open_convex_pd_slice2</a>, <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logsum_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logsum_sc_barrier">logsum_sc_barrier</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#rel_open_convex_closure" title="GaussianAnalysis.convex.minimizers.rel_open_convex_closure">rel_open_convex_closure</a>, <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_sublevel_closed" title="GaussianAnalysis.convex.minimizers.sc_sublevel_closed">sc_sublevel_closed</a>, <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_minimizer" title="GaussianAnalysis.convex.minimizers.sc_minimizer">sc_minimizer</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#measurable_inf_rel_open" title="GaussianAnalysis.convex.barrier_lindeberg.measurable_inf_rel_open">measurable_inf_rel_open</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#measurable_ls_value" title="GaussianAnalysis.convex.ridge_comparison.measurable_ls_value">measurable_ls_value</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="sc_function">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#sc_function">sc_function</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L98" target="_blank" rel="noopener">source, line 98</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat}, {vspace &#x27;rV_N} -&gt; set &#x27;rV_N -&gt; (&#x27;rV_N -&gt; R) -&gt; <span class="kw">Prop</span></pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> sc_function V D B :=
+  [/\ <span class="kw">forall</span> z h, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt;
+        [/\ <span class="x" title="mathcomp.analysis.derive.derivable">derivable</span> <span class="bv">B</span> <span class="bv">z</span> <span class="bv">h</span>, <span class="x" title="mathcomp.analysis.derive.derivable">derivable</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>) <span class="bv">z</span> <span class="bv">h</span> &amp;
+            <span class="x" title="mathcomp.analysis.derive.derivable">derivable</span> (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>)) <span class="bv">z</span> <span class="bv">h</span>],
+      <span class="kw">forall</span> z, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="kw">exists</span> (g : &#x27;rV[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span>) (M : &#x27;M[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span>),
+        <span class="kw">forall</span> h, <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt;
+          &#x27;D_<span class="bv">h</span> <span class="bv">B</span> <span class="bv">z</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">g</span> <span class="bv">h</span> /\ &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>) <span class="bv">z</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">h</span> (<span class="bv">h</span> *m <span class="bv">M</span>),
+      <span class="kw">forall</span> z h, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt; 0 &lt;= &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>) <span class="bv">z</span>,
+      <span class="kw">forall</span> z h, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt;
+        (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>)) <span class="bv">z</span>) ^+ 2 &lt;= 4%:R * (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>) <span class="bv">z</span>) ^+ 3 &amp;
+      <span class="kw">forall</span> z h, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt;
+        (<span class="kw">forall</span> t, 0 &lt;= <span class="bv">t</span> &lt; 1 -&gt; <span class="bv">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>)) -&gt; ~ <span class="bv">D</span> (<span class="bv">z</span> + <span class="bv">h</span>) -&gt;
+        <span class="bv">B</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) @[t --&gt; (1 : <span class="sv" title="section variable R of section self_concordant_definitions">R</span>)^&#x27;-] --&gt; +oo].</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a>.</p></div>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-def" href="#sc_barrier" title="GaussianAnalysis.convex.self_concordant.sc_barrier">sc_barrier</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_sublevel_closed" title="GaussianAnalysis.convex.minimizers.sc_sublevel_closed">sc_sublevel_closed</a>, <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_minimizer" title="GaussianAnalysis.convex.minimizers.sc_minimizer">sc_minimizer</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="sc_barrier">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#sc_barrier">sc_barrier</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L112" target="_blank" rel="noopener">source, line 112</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat}, {vspace &#x27;rV_N} -&gt; set &#x27;rV_N -&gt; R -&gt; (&#x27;rV_N -&gt; R) -&gt; <span class="kw">Prop</span></pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> sc_barrier V D (theta : <span class="sv" title="section variable R of section self_concordant_definitions">R</span>) B :=
+  <a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> <span class="bv">V</span> <span class="bv">D</span> <span class="bv">B</span> /\
+  <span class="kw">forall</span> z h, <span class="bv">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="bv">V</span> -&gt; (&#x27;D_<span class="bv">h</span> <span class="bv">B</span> <span class="bv">z</span>) ^+ 2 &lt;= <span class="bv">theta</span> * &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>) <span class="bv">z</span>.</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a>.</p></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.logdet_barrier:</span> <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logsum_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logsum_sc_barrier">logsum_sc_barrier</a>, <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logdet_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logdet_sc_barrier">logdet_sc_barrier</a>, <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logdet2_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logdet2_sc_barrier">logdet2_sc_barrier</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="sc_norm">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#sc_norm">sc_norm</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L116" target="_blank" rel="noopener">source, line 116</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat}, (&#x27;rV_N -&gt; R) -&gt; &#x27;rV_N -&gt; &#x27;rV_N -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> sc_norm B (z h : &#x27;rV[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span>) : <span class="sv" title="section variable R of section self_concordant_definitions">R</span> := <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="bv">B</span>) <span class="bv">z</span>).</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a>.</p></div>
+<details class="decl-used"><summary>Used by 11 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>, <a class="r k-thm" href="#sc_hessian_line_le" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_le">sc_hessian_line_le</a>, <a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_dikin</a>, <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a>, <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a>, <a class="r k-thm" href="#sc_function_continuous" title="GaussianAnalysis.convex.self_concordant.sc_function_continuous">sc_function_continuous</a></li>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_rem_le" title="GaussianAnalysis.convex.ls_insertion.ins_rem_le">ins_rem_le</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_cost_upper" title="GaussianAnalysis.convex.ls_insertion.ins_cost_upper">ins_cost_upper</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_cost_lower" title="GaussianAnalysis.convex.ls_insertion.ins_cost_lower">ins_cost_lower</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="bregman_div">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#bregman_div">bregman_div</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L118" target="_blank" rel="noopener">source, line 118</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat}, (&#x27;rV_N -&gt; R) -&gt; &#x27;rV_N -&gt; &#x27;rV_N -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> bregman_div B (y z : &#x27;rV[<span class="sv" title="section variable R of section self_concordant_definitions">R</span>]_<span class="sv" title="section variable N of section self_concordant_definitions">N</span>) : <span class="sv" title="section variable R of section self_concordant_definitions">R</span> := <span class="bv">B</span> <span class="bv">y</span> - <span class="bv">B</span> <span class="bv">z</span> - &#x27;D_(<span class="bv">y</span> - <span class="bv">z</span>) <span class="bv">B</span> <span class="bv">z</span>.</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a>.</p></div>
+<details class="decl-used"><summary>Used by 9 declarations in 4 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.measurable_minimizer:</span> <a class="r k-thm" href="GaussianAnalysis.probability.measurable_minimizer.html#ls_min_growth" title="GaussianAnalysis.probability.measurable_minimizer.ls_min_growth">ls_min_growth</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bregman_div_add" title="GaussianAnalysis.convex.self_concordant.bregman_div_add">bregman_div_add</a>, <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#ls_taylor" title="GaussianAnalysis.convex.minimizers.ls_taylor">ls_taylor</a></li>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-def" href="GaussianAnalysis.convex.ls_insertion.html#ins_rem" title="GaussianAnalysis.convex.ls_insertion.ins_rem">ins_rem</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_rem_le" title="GaussianAnalysis.convex.ls_insertion.ins_rem_le">ins_rem_le</a>, <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_cost_lower" title="GaussianAnalysis.convex.ls_insertion.ins_cost_lower">ins_cost_lower</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="sc_omega">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#sc_omega">sc_omega</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L120" target="_blank" rel="noopener">source, line 120</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType}, R -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> sc_omega (r : <span class="sv" title="section variable R of section self_concordant_definitions">R</span>) : <span class="sv" title="section variable R of section self_concordant_definitions">R</span> := <span class="bv">r</span> - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 + <span class="bv">r</span>).</pre></div>
+<details class="decl-used"><summary>Used by 10 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#is_derive_sc_omega" title="GaussianAnalysis.convex.self_concordant.is_derive_sc_omega">is_derive_sc_omega</a>, <a class="r k-thm" href="#sc_omega0" title="GaussianAnalysis.convex.self_concordant.sc_omega0">sc_omega0</a>, <a class="r k-thm" href="#sc_omega_ge0" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge0">sc_omega_ge0</a>, <a class="r k-thm" href="#sc_omega_ge" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge">sc_omega_ge</a>, <a class="r k-thm" href="#sc_omega_le" title="GaussianAnalysis.convex.self_concordant.sc_omega_le">sc_omega_le</a>, <a class="r k-thm" href="#sc_omega_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_taylor">sc_omega_taylor</a>, <a class="r k-thm" href="#sc_omega_gt_half" title="GaussianAnalysis.convex.self_concordant.sc_omega_gt_half">sc_omega_gt_half</a>, <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a></li>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_cost_lower" title="GaussianAnalysis.convex.ls_insertion.ins_cost_lower">ins_cost_lower</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="sc_omega_star">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#sc_omega_star">sc_omega_star</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L122" target="_blank" rel="noopener">source, line 122</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType}, R -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> sc_omega_star (r : <span class="sv" title="section variable R of section self_concordant_definitions">R</span>) : <span class="sv" title="section variable R of section self_concordant_definitions">R</span> := - <span class="bv">r</span> - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 - <span class="bv">r</span>).</pre></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#is_derive_sc_omega_star" title="GaussianAnalysis.convex.self_concordant.is_derive_sc_omega_star">is_derive_sc_omega_star</a>, <a class="r k-thm" href="#sc_omega_star0" title="GaussianAnalysis.convex.self_concordant.sc_omega_star0">sc_omega_star0</a>, <a class="r k-thm" href="#sc_omega_star_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_star_taylor">sc_omega_star_taylor</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-one_dimensional-25"><span class="sec-kw">section</span><span class="sec-name">one_dimensional</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Implicit Types</span> (f df : <span class="sv" title="section variable R of section one_dimensional">R</span> -&gt; <span class="sv" title="section variable R of section one_dimensional">R</span>) (a b : <span class="sv" title="section variable R of section one_dimensional">R</span>).</pre>
+<div class="decl k-thm" id="derive_ge0_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#derive_ge0_le">derive_ge0_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L132" target="_blank" rel="noopener">source, line 132</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f df : R -&gt; R] [a b : R],
+a &lt;= b -&gt;
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 f (df x)) -&gt;
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; 0 &lt;= df x) -&gt; f a &lt;= f b</pre></div>
+<div class="decl-doc"><p>A function with a nonnegative derivative on [a, b] is nondecreasing on [a, b].</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Monotonicity on <code>[a, b]</code> from the sign of the derivative, and a function with a nonnegative second derivative on <code>[a, b]</code> lies above its tangents there.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> derive_ge0_le f df a b : <span class="bv">a</span> &lt;= <span class="bv">b</span> -&gt;
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">f</span> (<span class="bv">df</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; 0 &lt;= <span class="bv">df</span> <span class="bv">x</span>) -&gt; <span class="bv">f</span> <span class="bv">a</span> &lt;= <span class="bv">f</span> <span class="bv">b</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 10 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#derive_le0_le" title="GaussianAnalysis.convex.self_concordant.derive_le0_le">derive_le0_le</a>, <a class="r k-thm" href="#derive2_ge0_tangent" title="GaussianAnalysis.convex.self_concordant.derive2_ge0_tangent">derive2_ge0_tangent</a>, <a class="r k-thm" href="#sc_ode_inv" title="GaussianAnalysis.convex.self_concordant.sc_ode_inv">sc_ode_inv</a>, <a class="r k-thm" href="#sc_omega_ge0" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge0">sc_omega_ge0</a>, <a class="r k-thm" href="#sc_omega_ge" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge">sc_omega_ge</a>, <a class="r k-thm" href="#sc_omega_le" title="GaussianAnalysis.convex.self_concordant.sc_omega_le">sc_omega_le</a>, <a class="r k-thm" href="#sc_omega_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_taylor">sc_omega_taylor</a>, <a class="r k-thm" href="#sc_omega_star_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_star_taylor">sc_omega_star_taylor</a>, <a class="r k-thm" href="#sc_omega_gt_half" title="GaussianAnalysis.convex.self_concordant.sc_omega_gt_half">sc_omega_gt_half</a>, <a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_barrier_grad_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="derive_le0_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#derive_le0_le">derive_le0_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L150" target="_blank" rel="noopener">source, line 150</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f df : R -&gt; R] [a b : R],
+a &lt;= b -&gt;
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 f (df x)) -&gt;
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; df x &lt;= 0) -&gt; f b &lt;= f a</pre></div>
+<div class="decl-doc"><p>A function with a nonpositive derivative on [a, b] is nonincreasing on [a, b].</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#derive_ge0_le" title="GaussianAnalysis.convex.self_concordant.derive_ge0_le">derive_ge0_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> derive_le0_le f df a b : <span class="bv">a</span> &lt;= <span class="bv">b</span> -&gt;
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">f</span> (<span class="bv">df</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; <span class="bv">df</span> <span class="bv">x</span> &lt;= 0) -&gt; <span class="bv">f</span> <span class="bv">b</span> &lt;= <span class="bv">f</span> <span class="bv">a</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#derive2_ge0_tangent" title="GaussianAnalysis.convex.self_concordant.derive2_ge0_tangent">derive2_ge0_tangent</a>, <a class="r k-thm" href="#sc_ode_inv" title="GaussianAnalysis.convex.self_concordant.sc_ode_inv">sc_ode_inv</a>, <a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_barrier_grad_le</a>, <a class="r k-thm" href="#sc_barrier_contraction" title="GaussianAnalysis.convex.self_concordant.sc_barrier_contraction">sc_barrier_contraction</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="derive2_ge0_tangent">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#derive2_ge0_tangent">derive2_ge0_tangent</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L162" target="_blank" rel="noopener">source, line 162</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [f f1 f2 : R -&gt; R] [a b s t : R],
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 f (f1 x)) -&gt;
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 f1 (f2 x)) -&gt;
+(<span class="kw">forall</span> x : R, a &lt;= x &lt;= b -&gt; 0 &lt;= f2 x) -&gt;
+a &lt;= s &lt;= b -&gt; a &lt;= t &lt;= b -&gt; f t + f1 t * (s - t) &lt;= f s</pre></div>
+<div class="decl-doc"><p>A function whose second derivative is nonnegative on [a, b] lies above its tangents there.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#derive_ge0_le" title="GaussianAnalysis.convex.self_concordant.derive_ge0_le">derive_ge0_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> derive2_ge0_tangent f f1 f2 a b s t :
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">f</span> (<span class="bv">f1</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">f1</span> (<span class="bv">f2</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, <span class="bv">a</span> &lt;= <span class="bv">x</span> &lt;= <span class="bv">b</span> -&gt; 0 &lt;= <span class="bv">f2</span> <span class="bv">x</span>) -&gt;
+  <span class="bv">a</span> &lt;= <span class="bv">s</span> &lt;= <span class="bv">b</span> -&gt; <span class="bv">a</span> &lt;= <span class="bv">t</span> &lt;= <span class="bv">b</span> -&gt; <span class="bv">f</span> <span class="bv">t</span> + <span class="bv">f1</span> <span class="bv">t</span> * (<span class="bv">s</span> - <span class="bv">t</span>) &lt;= <span class="bv">f</span> <span class="bv">s</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_line_taylor_le" title="GaussianAnalysis.convex.self_concordant.sc_line_taylor_le">sc_line_taylor_le</a>, <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_function_convex" title="GaussianAnalysis.convex.self_concordant.sc_function_convex">sc_function_convex</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_ode_inv">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_ode_inv">sc_ode_inv</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L196" target="_blank" rel="noopener">source, line 196</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [psi dpsi : R -&gt; R] [T e : R],
+0 &lt;= T -&gt;
+0 &lt; e -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 psi (dpsi x)) -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; 0 &lt;= psi x) -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; dpsi x ^+ 2 &lt;= 4 * psi x ^+ 3) -&gt;
+(Num.ExtraDef.sqrtr (psi T + e))^-1 - T &lt;= (Num.ExtraDef.sqrtr (psi 0 + e))^-1 &lt;=
+(Num.ExtraDef.sqrtr (psi T + e))^-1 + T</pre></div>
+<div class="decl-doc"><p>The comparison behind Lemma 2.15 of Koehler and Sohn: let psi &gt;= 0 have the derivative dpsi on [0, T] with dpsi^2 &lt;= 4 psi^3. Then for e &gt; 0, t |-&gt; 1 / sqrt (psi t + e) has a derivative of absolute value at most 1 on [0, T].</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_ode_inv (psi dpsi : <span class="sv" title="section variable R of section one_dimensional">R</span> -&gt; <span class="sv" title="section variable R of section one_dimensional">R</span>) (T e : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">T</span> -&gt; 0 &lt; <span class="bv">e</span> -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">psi</span> (<span class="bv">dpsi</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; 0 &lt;= <span class="bv">psi</span> <span class="bv">x</span>) -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; <span class="bv">dpsi</span> <span class="bv">x</span> ^+ 2 &lt;= 4%:R * <span class="bv">psi</span> <span class="bv">x</span> ^+ 3) -&gt;
+  (<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="bv">psi</span> <span class="bv">T</span> + <span class="bv">e</span>))^-1 - <span class="bv">T</span> &lt;= (<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="bv">psi</span> 0 + <span class="bv">e</span>))^-1 &lt;=
+    (<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="bv">psi</span> <span class="bv">T</span> + <span class="bv">e</span>))^-1 + <span class="bv">T</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_ode_ge" title="GaussianAnalysis.convex.self_concordant.sc_ode_ge">sc_ode_ge</a>, <a class="r k-thm" href="#sc_ode_le" title="GaussianAnalysis.convex.self_concordant.sc_ode_le">sc_ode_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_ode_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_ode_ge">sc_ode_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L250" target="_blank" rel="noopener">source, line 250</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [psi dpsi : R -&gt; R] [T : R],
+0 &lt;= T -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 psi (dpsi x)) -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; 0 &lt;= psi x) -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; dpsi x ^+ 2 &lt;= 4 * psi x ^+ 3) -&gt;
+psi 0 / (1 + T * Num.ExtraDef.sqrtr (psi 0)) ^+ 2 &lt;= psi T</pre></div>
+<div class="decl-doc"><p>Then r^2 / (1 + t r)^2 &lt;= psi t, and psi t &lt;= r^2 / (1 - t r)^2 when t r &lt; 1, for t = T and r^2 = psi 0.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_ode_ge (psi dpsi : <span class="sv" title="section variable R of section one_dimensional">R</span> -&gt; <span class="sv" title="section variable R of section one_dimensional">R</span>) (T : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">T</span> -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">psi</span> (<span class="bv">dpsi</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; 0 &lt;= <span class="bv">psi</span> <span class="bv">x</span>) -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; <span class="bv">dpsi</span> <span class="bv">x</span> ^+ 2 &lt;= 4%:R * <span class="bv">psi</span> <span class="bv">x</span> ^+ 3) -&gt;
+  <span class="bv">psi</span> 0 / (1 + <span class="bv">T</span> * <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="bv">psi</span> 0)) ^+ 2 &lt;= <span class="bv">psi</span> <span class="bv">T</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_ode_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_ode_le">sc_ode_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L281" target="_blank" rel="noopener">source, line 281</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [psi dpsi : R -&gt; R] [T : R],
+0 &lt;= T -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 psi (dpsi x)) -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; 0 &lt;= psi x) -&gt;
+(<span class="kw">forall</span> x : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= x &lt;= T -&gt; dpsi x ^+ 2 &lt;= 4 * psi x ^+ 3) -&gt;
+T * Num.ExtraDef.sqrtr (psi 0) &lt; 1 -&gt;
+psi T &lt;= psi 0 / (1 - T * Num.ExtraDef.sqrtr (psi 0)) ^+ 2</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_ode_le (psi dpsi : <span class="sv" title="section variable R of section one_dimensional">R</span> -&gt; <span class="sv" title="section variable R of section one_dimensional">R</span>) (T : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">T</span> -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <span class="bv">psi</span> (<span class="bv">dpsi</span> <span class="bv">x</span>)) -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; 0 &lt;= <span class="bv">psi</span> <span class="bv">x</span>) -&gt;
+  (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">x</span> &lt;= <span class="bv">T</span> -&gt; <span class="bv">dpsi</span> <span class="bv">x</span> ^+ 2 &lt;= 4%:R * <span class="bv">psi</span> <span class="bv">x</span> ^+ 3) -&gt;
+  <span class="bv">T</span> * <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="bv">psi</span> 0) &lt; 1 -&gt;
+  <span class="bv">psi</span> <span class="bv">T</span> &lt;= <span class="bv">psi</span> 0 / (1 - <span class="bv">T</span> * <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (<span class="bv">psi</span> 0)) ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_hessian_line_le" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_le">sc_hessian_line_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_sc_omega">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_sc_omega">is_derive_sc_omega</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L343" target="_blank" rel="noopener">source, line 343</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [x : R], -1 &lt; x -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (x / (1 + x))</pre></div>
+<div class="decl-doc"><p>The derivatives of omega and omega_star, and of the functions t |-&gt; omega (t r) and t |-&gt; omega_star (t r) of the Bregman bounds.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_sc_omega (x : <span class="sv" title="section variable R of section one_dimensional">R</span>) : -1 &lt; <span class="bv">x</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (<span class="bv">x</span> / (1 + <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_omega_ge0" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge0">sc_omega_ge0</a>, <a class="r k-thm" href="#sc_omega_ge" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge">sc_omega_ge</a>, <a class="r k-thm" href="#sc_omega_le" title="GaussianAnalysis.convex.self_concordant.sc_omega_le">sc_omega_le</a>, <a class="r k-thm" href="#sc_omega_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_taylor">sc_omega_taylor</a>, <a class="r k-thm" href="#sc_omega_gt_half" title="GaussianAnalysis.convex.self_concordant.sc_omega_gt_half">sc_omega_gt_half</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_sc_omega_star">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_sc_omega_star">is_derive_sc_omega_star</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L358" target="_blank" rel="noopener">source, line 358</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [x : R], x &lt; 1 -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> x 1 <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> (x / (1 - x))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_sc_omega_star (x : <span class="sv" title="section variable R of section one_dimensional">R</span>) : <span class="bv">x</span> &lt; 1 -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> 1 <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> (<span class="bv">x</span> / (1 - <span class="bv">x</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_omega_star_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_star_taylor">sc_omega_star_taylor</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_omega_line">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_omega_line">is_derive_omega_line</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L373" target="_blank" rel="noopener">source, line 373</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r t : R],
+0 &lt; 1 + t * r -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   s * r - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 + s * r))
+  (r - r / (1 + t * r))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_omega_line (r t : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt; 1 + <span class="bv">t</span> * <span class="bv">r</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">s</span> * <span class="bv">r</span> - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 + <span class="bv">s</span> * <span class="bv">r</span>)) (<span class="bv">r</span> - <span class="bv">r</span> / (1 + <span class="bv">t</span> * <span class="bv">r</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_omega_line1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_omega_line1">is_derive_omega_line1</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L390" target="_blank" rel="noopener">source, line 390</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r t : R],
+0 &lt; 1 + t * r -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   r - r / (1 + s * r))
+  (r ^+ 2 / (1 + t * r) ^+ 2)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_omega_line1 (r t : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt; 1 + <span class="bv">t</span> * <span class="bv">r</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">r</span> - <span class="bv">r</span> / (1 + <span class="bv">s</span> * <span class="bv">r</span>)) (<span class="bv">r</span> ^+ 2 / (1 + <span class="bv">t</span> * <span class="bv">r</span>) ^+ 2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_omega_star_line">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_omega_star_line">is_derive_omega_star_line</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L405" target="_blank" rel="noopener">source, line 405</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r t : R],
+0 &lt; 1 - t * r -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   - (s * r) - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 - s * r))
+  (r / (1 - t * r) - r)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_omega_star_line (r t : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt; 1 - <span class="bv">t</span> * <span class="bv">r</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; - (<span class="bv">s</span> * <span class="bv">r</span>) - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 - <span class="bv">s</span> * <span class="bv">r</span>)) (<span class="bv">r</span> / (1 - <span class="bv">t</span> * <span class="bv">r</span>) - <span class="bv">r</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_omega_star_line1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_omega_star_line1">is_derive_omega_star_line1</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L423" target="_blank" rel="noopener">source, line 423</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r t : R],
+0 &lt; 1 - t * r -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   r / (1 - s * r) - r)
+  (r ^+ 2 / (1 - t * r) ^+ 2)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_omega_star_line1 (r t : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt; 1 - <span class="bv">t</span> * <span class="bv">r</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">r</span> / (1 - <span class="bv">s</span> * <span class="bv">r</span>) - <span class="bv">r</span>) (<span class="bv">r</span> ^+ 2 / (1 - <span class="bv">t</span> * <span class="bv">r</span>) ^+ 2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega0">sc_omega0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L438" target="_blank" rel="noopener">source, line 438</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType}, <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (0 : R) = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega0 : <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (0 : <span class="sv" title="section variable R of section one_dimensional">R</span>) = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_omega_ge0" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge0">sc_omega_ge0</a>, <a class="r k-thm" href="#sc_omega_ge" title="GaussianAnalysis.convex.self_concordant.sc_omega_ge">sc_omega_ge</a>, <a class="r k-thm" href="#sc_omega_le" title="GaussianAnalysis.convex.self_concordant.sc_omega_le">sc_omega_le</a>, <a class="r k-thm" href="#sc_omega_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_taylor">sc_omega_taylor</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega_star0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_star0">sc_omega_star0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L441" target="_blank" rel="noopener">source, line 441</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType}, <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> (0 : R) = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_star0 : <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> (0 : <span class="sv" title="section variable R of section one_dimensional">R</span>) = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_omega_star_taylor" title="GaussianAnalysis.convex.self_concordant.sc_omega_star_taylor">sc_omega_star_taylor</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_ge0">sc_omega_ge0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L444" target="_blank" rel="noopener">source, line 444</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r : R], 0 &lt;= r -&gt; 0 &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_ge0 (r : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">r</span> -&gt; 0 &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> <span class="bv">r</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.measurable_minimizer:</span> <a class="r k-thm" href="GaussianAnalysis.probability.measurable_minimizer.html#ls_min_growth" title="GaussianAnalysis.probability.measurable_minimizer.ls_min_growth">ls_min_growth</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_ge">sc_omega_ge</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L454" target="_blank" rel="noopener">source, line 454</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r : R], 0 &lt;= r -&gt; r &lt;= 2^-1 -&gt; r ^+ 2 / 3 &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r</pre></div>
+<div class="decl-doc"><p>r^2 / 3 &lt;= omega r &lt;= r^2 / 2 for 0 &lt;= r &lt;= 1/2, and the Taylor bounds of order 3 that the second part of Lemma 2.15 uses.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_ge (r : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">r</span> -&gt; <span class="bv">r</span> &lt;= 2^-1 -&gt; <span class="bv">r</span> ^+ 2 / 3%:R &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> <span class="bv">r</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a></li>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_cost_lower" title="GaussianAnalysis.convex.ls_insertion.ins_cost_lower">ins_cost_lower</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_le">sc_omega_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L475" target="_blank" rel="noopener">source, line 475</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r : R], 0 &lt;= r -&gt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r &lt;= r ^+ 2 / 2</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_le (r : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">r</span> -&gt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> <span class="bv">r</span> &lt;= <span class="bv">r</span> ^+ 2 / 2.</pre></div></details>
+</div>
+<div class="decl k-thm" id="sc_omega_taylor">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_taylor">sc_omega_taylor</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L492" target="_blank" rel="noopener">source, line 492</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r : R], 0 &lt;= r -&gt; r ^+ 2 / 2 - r ^+ 3 / 3 &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_taylor (r : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">r</span> -&gt;
+  <span class="bv">r</span> ^+ 2 / 2 - <span class="bv">r</span> ^+ 3 / 3%:R &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> <span class="bv">r</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega_star_taylor">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_star_taylor">sc_omega_star_taylor</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L512" target="_blank" rel="noopener">source, line 512</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r : R],
+0 &lt;= r -&gt; r &lt;= 2^-1 -&gt; <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> r &lt;= r ^+ 2 / 2 + 2 * r ^+ 3 / 3</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_star_taylor (r : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 0 &lt;= <span class="bv">r</span> -&gt; <span class="bv">r</span> &lt;= 2^-1 -&gt;
+  <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> <span class="bv">r</span> &lt;= <span class="bv">r</span> ^+ 2 / 2 + 2 * <span class="bv">r</span> ^+ 3 / 3%:R.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_omega_gt_half">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_omega_gt_half">sc_omega_gt_half</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L534" target="_blank" rel="noopener">source, line 534</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [r : R], 2^-1 &lt; r -&gt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> 2^-1 &lt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_omega_gt_half (r : <span class="sv" title="section variable R of section one_dimensional">R</span>) : 2^-1 &lt; <span class="bv">r</span> -&gt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> 2^-1 &lt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> <span class="bv">r</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-line-369"><span class="sec-kw">section</span><span class="sec-name">line</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Implicit Types</span> (f : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="sv" title="section variable N of section line">N</span> -&gt; <span class="sv" title="section variable R of section line">R</span>) (a h : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="sv" title="section variable N of section line">N</span>).</pre>
+<div class="decl k-thm" id="is_derive_line">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_line">is_derive_line</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L559" target="_blank" rel="noopener">source, line 559</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [f : &#x27;rV_N -&gt; R] [a h : &#x27;rV_N] [t : R],
+<span class="x" title="mathcomp.analysis.derive.derivable">derivable</span> f (a + t *: h) h -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   f (a + s *: h))
+  (&#x27;D_h f (a + t *: h))</pre></div>
+<div class="decl-doc"><p>The derivative of t |-&gt; f (a + t h) at t is the derivative of f at a + t h along h.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_line f a h (t : <span class="sv" title="section variable R of section line">R</span>) : <span class="x" title="mathcomp.analysis.derive.derivable">derivable</span> <span class="bv">f</span> (<span class="bv">a</span> + <span class="bv">t</span> *: <span class="bv">h</span>) <span class="bv">h</span> -&gt;
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">f</span> (<span class="bv">a</span> + <span class="bv">s</span> *: <span class="bv">h</span>)) (&#x27;D_<span class="bv">h</span> <span class="bv">f</span> (<span class="bv">a</span> + <span class="bv">t</span> *: <span class="bv">h</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_line_derive" title="GaussianAnalysis.convex.self_concordant.sc_line_derive">sc_line_derive</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#ls_first_order" title="GaussianAnalysis.convex.minimizers.ls_first_order">ls_first_order</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="is_derive_line_inv">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#is_derive_line_inv">is_derive_line_inv</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L575" target="_blank" rel="noopener">source, line 575</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [f : &#x27;rV_N -&gt; R] [a h : &#x27;rV_N] [t d : R],
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+  (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+   f (a + s *: h))
+  d -&gt;
+<span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (a + t *: h) h f d</pre></div>
+<div class="decl-doc"><p>Conversely, a derivative of t |-&gt; f (a + t h) is a derivative of f along h.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> is_derive_line_inv f a h (t d : <span class="sv" title="section variable R of section line">R</span>) :
+  <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="bv">f</span> (<span class="bv">a</span> + <span class="bv">s</span> *: <span class="bv">h</span>)) <span class="bv">d</span> -&gt; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (<span class="bv">a</span> + <span class="bv">t</span> *: <span class="bv">h</span>) <span class="bv">h</span> <span class="bv">f</span> <span class="bv">d</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#line_derive3" title="GaussianAnalysis.convex.self_concordant.line_derive3">line_derive3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="lin_form_vec">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#lin_form_vec">lin_form_vec</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L592" target="_blank" rel="noopener">source, line 592</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [k : nat] [L : &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> (c : R) (u v : &#x27;rV_k), L (c *: u + v) = c * L u + L v) -&gt;
+<span class="kw">forall</span> u : &#x27;rV_k, L u = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (\row_j L (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j)) u</pre></div>
+<div class="decl-doc"><p>A linear form on row vectors is the inner product with the row of its values on the basis, and a bilinear form is h M h^T for the matrix of its values on the basis.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#line_derive3" title="GaussianAnalysis.convex.self_concordant.line_derive3">line_derive3</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> lin_form_vec k (L : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="bv">k</span> -&gt; <span class="sv" title="section variable R of section line">R</span>) :
+  (<span class="kw">forall</span> (c : <span class="sv" title="section variable R of section line">R</span>) (u v : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="bv">k</span>), <span class="bv">L</span> (<span class="bv">c</span> *: <span class="bv">u</span> + <span class="bv">v</span>) = <span class="bv">c</span> * <span class="bv">L</span> <span class="bv">u</span> + <span class="bv">L</span> <span class="bv">v</span>) -&gt;
+  <span class="kw">forall</span> u, <span class="bv">L</span> <span class="bv">u</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (\row_j <span class="bv">L</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>)) <span class="bv">u</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#bilin_form_mx" title="GaussianAnalysis.convex.self_concordant.bilin_form_mx">bilin_form_mx</a></li>
+<li><span class="um">GaussianAnalysis.convex.logdet_barrier:</span> <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logsum_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logsum_sc_barrier">logsum_sc_barrier</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bilin_form_mx">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bilin_form_mx">bilin_form_mx</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L608" target="_blank" rel="noopener">source, line 608</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [k : nat] [Q : &#x27;rV_k -&gt; &#x27;rV_k -&gt; R],
+(<span class="kw">forall</span> (c : R) (u v w : &#x27;rV_k), Q (c *: u + v) w = c * Q u w + Q v w) -&gt;
+(<span class="kw">forall</span> (c : R) (u v w : &#x27;rV_k), Q w (c *: u + v) = c * Q w u + Q w v) -&gt;
+<span class="kw">forall</span> u : &#x27;rV_k, Q u u = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> u (u *m \matrix_(i, j) Q (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 i) (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j))</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#line_derive3" title="GaussianAnalysis.convex.self_concordant.line_derive3">line_derive3</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bilin_form_mx k (Q : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="bv">k</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="bv">k</span> -&gt; <span class="sv" title="section variable R of section line">R</span>) :
+  (<span class="kw">forall</span> (c : <span class="sv" title="section variable R of section line">R</span>) (u v w : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="bv">k</span>), <span class="bv">Q</span> (<span class="bv">c</span> *: <span class="bv">u</span> + <span class="bv">v</span>) <span class="bv">w</span> = <span class="bv">c</span> * <span class="bv">Q</span> <span class="bv">u</span> <span class="bv">w</span> + <span class="bv">Q</span> <span class="bv">v</span> <span class="bv">w</span>) -&gt;
+  (<span class="kw">forall</span> (c : <span class="sv" title="section variable R of section line">R</span>) (u v w : &#x27;rV[<span class="sv" title="section variable R of section line">R</span>]_<span class="bv">k</span>), <span class="bv">Q</span> <span class="bv">w</span> (<span class="bv">c</span> *: <span class="bv">u</span> + <span class="bv">v</span>) = <span class="bv">c</span> * <span class="bv">Q</span> <span class="bv">w</span> <span class="bv">u</span> + <span class="bv">Q</span> <span class="bv">w</span> <span class="bv">v</span>) -&gt;
+  <span class="kw">forall</span> u,
+    <span class="bv">Q</span> <span class="bv">u</span> <span class="bv">u</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">u</span> (<span class="bv">u</span> *m \matrix_(i, j) <span class="bv">Q</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">i</span>) (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 3 files</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.logdet_barrier:</span> <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logsum_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logsum_sc_barrier">logsum_sc_barrier</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#continuous_ls_reduced" title="GaussianAnalysis.convex.minimizers.continuous_ls_reduced">continuous_ls_reduced</a></li>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_hessianE" title="GaussianAnalysis.convex.ls_insertion.ins_hessianE">ins_hessianE</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-sc_line-419"><span class="sec-kw">section</span><span class="sec-name">sc_line</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variables</span> (V : {vspace &#x27;rV[<span class="sv" title="section variable R of section sc_line">R</span>]_<span class="sv" title="section variable N of section sc_line">N</span>}) (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section sc_line">R</span>]_<span class="sv" title="section variable N of section sc_line">N</span>) (B : &#x27;rV[<span class="sv" title="section variable R of section sc_line">R</span>]_<span class="sv" title="section variable N of section sc_line">N</span> -&gt; <span class="sv" title="section variable R of section sc_line">R</span>).
+<span class="vk">Hypothesis</span> DV : <a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> <span class="sv" title="section variable V of section sc_line">V</span> <span class="sv" title="section variable D of section sc_line">D</span>.</pre>
+<div class="decl k-thm" id="rel_open_convex_segment">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rel_open_convex_segment">rel_open_convex_segment</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L637" target="_blank" rel="noopener">source, line 637</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<span class="kw">forall</span> [z : &#x27;rV_N] [h : <span class="hb" title="printed as matrix_matrix__canonical__GRing_LSemiModule R 1 N">&#x27;rV[R]_N</span>] [t s : R],
+D z -&gt; D (z + t *: h) -&gt; 0 &lt;= s &lt;= t -&gt; D (z + s *: h)</pre></div>
+<div class="decl-doc"><p>D contains the segment from z to z + t h.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rel_open_convex_segment z h (t s : <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt;
+  0 &lt;= <span class="bv">s</span> &lt;= <span class="bv">t</span> -&gt; <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">s</span> *: <span class="bv">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 9 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>, <a class="r k-thm" href="#sc_hessian_line_le" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_le">sc_hessian_line_le</a>, <a class="r k-thm" href="#sc_line_taylor_le" title="GaussianAnalysis.convex.self_concordant.sc_line_taylor_le">sc_line_taylor_le</a>, <a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_dikin</a>, <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_function_convex" title="GaussianAnalysis.convex.self_concordant.sc_function_convex">sc_function_convex</a>, <a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_barrier_grad_le</a>, <a class="r k-thm" href="#sc_barrier_contraction" title="GaussianAnalysis.convex.self_concordant.sc_barrier_contraction">sc_barrier_contraction</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="rel_open_convex_line">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rel_open_convex_line">rel_open_convex_line</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L653" target="_blank" rel="noopener">source, line 653</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt;
+<span class="kw">exists2</span> e : R,
+  0 &lt; e &amp;
+  <span class="kw">forall</span> t : join_Num_NumDomain_between_GRing_PzSemiRing_and_Num_SemiNormedZmodule R,
+  `|t| &lt; e -&gt; D (z + t *: h)</pre></div>
+<div class="decl-doc"><p>D contains z + t h for t near 0, when z is in D and h in V.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rel_open_convex_line z h : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt;
+  <span class="kw">exists2</span> e : <span class="sv" title="section variable R of section sc_line">R</span>, 0 &lt; <span class="bv">e</span> &amp; <span class="kw">forall</span> t, `|<span class="bv">t</span>| &lt; <span class="bv">e</span> -&gt; <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#line_derive3" title="GaussianAnalysis.convex.self_concordant.line_derive3">line_derive3</a>, <a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_dikin</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#ls_first_order" title="GaussianAnalysis.convex.minimizers.ls_first_order">ls_first_order</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="line_derive3">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#line_derive3">line_derive3</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L668" target="_blank" rel="noopener">source, line 668</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N] [phi phi1 phi2 phi3 : R -&gt; R],
+h \<span class="kw">in</span> V -&gt;
+(<span class="kw">forall</span> t : R, D (z + t *: h) -&gt; B (z + t *: h) = phi t) -&gt;
+(<span class="kw">forall</span> t : R,
+ D (z + t *: h) -&gt;
+ [/\ <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 phi (phi1 t), <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 phi1 (phi2 t) &amp; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1 phi2 (phi3 t)]) -&gt;
+<span class="kw">forall</span> [t : R],
+D (z + t *: h) -&gt;
+[/\ <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (z + t *: h) h B (phi1 t), <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (z + t *: h) h (&#x27;D_h B) (phi2 t)
+  &amp; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (z + t *: h) h (&#x27;D_h (&#x27;D_h B)) (phi3 t)]</pre></div>
+<div class="decl-doc"><p>The directional derivatives of a function that agrees on D, along a line, with a function of one variable with three derivatives.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>If <code>B</code> agrees on <code>D</code>, along the line through <code>z</code> in the direction <code>h</code> of <code>V</code>, with a function of one variable that has three derivatives, these are the derivatives of <code>B</code> along <code>h</code> at the points of the line in <code>D</code>. A linear form on row vectors is <code><a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> g h</code> and a bilinear form <code>Q</code> has <code>Q h h = h M h^T</code>, for the vector and the matrix of their values on the basis.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> line_derive3 z h (phi phi1 phi2 phi3 : <span class="sv" title="section variable R of section sc_line">R</span> -&gt; <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt;
+  (<span class="kw">forall</span> t, <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt; <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) = <span class="bv">phi</span> <span class="bv">t</span>) -&gt;
+  (<span class="kw">forall</span> t, <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt; [/\ <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 <span class="bv">phi</span> (<span class="bv">phi1</span> <span class="bv">t</span>),
+     <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 <span class="bv">phi1</span> (<span class="bv">phi2</span> <span class="bv">t</span>) &amp; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 <span class="bv">phi2</span> (<span class="bv">phi3</span> <span class="bv">t</span>)]) -&gt;
+  <span class="kw">forall</span> t, <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt;
+  [/\ <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) <span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">phi1</span> <span class="bv">t</span>),
+      <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) <span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>) (<span class="bv">phi2</span> <span class="bv">t</span>) &amp;
+      <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) <span class="bv">h</span> (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>)) (<span class="bv">phi3</span> <span class="bv">t</span>)].</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.logdet_barrier:</span> <a class="r k-thm" href="GaussianAnalysis.convex.logdet_barrier.html#logsum_sc_barrier" title="GaussianAnalysis.convex.logdet_barrier.logsum_sc_barrier">logsum_sc_barrier</a></li>
+</ul></details>
+</div>
+<pre class="code ctx"><span class="vk">Hypothesis</span> scB : <a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> <span class="sv" title="section variable V of section sc_line">V</span> <span class="sv" title="section variable D of section sc_line">D</span> <span class="sv" title="section variable B of section sc_line">B</span>.</pre>
+<div class="decl k-thm" id="sc_line_derive">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_line_derive">sc_line_derive</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L707" target="_blank" rel="noopener">source, line 707</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : <span class="hb" title="printed as matrix_matrix__canonical__GRing_LSemiModule R 1 N">&#x27;rV[R]_N</span>] [t : R],
+D (z + t *: h) -&gt;
+h \<span class="kw">in</span> V -&gt;
+[/\ <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+      (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+       B (z + s *: h))
+      (&#x27;D_h B (z + t *: h)),
+    <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+      (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+       &#x27;D_h B (z + s *: h))
+      (&#x27;D_h (&#x27;D_h B) (z + t *: h))
+  &amp; <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> t 1
+      (<span class="kw">fun</span> s : <span class="hb" title="printed as numFieldNormedType.Real_sort__canonical__normed_module_NormedModule R">R</span> =&gt;
+       &#x27;D_h (&#x27;D_h B) (z + s *: h))
+      (&#x27;D_h (&#x27;D_h (&#x27;D_h B)) (z + t *: h))]</pre></div>
+<div class="decl-doc"><p>The derivatives of B along a line through D.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_line_derive z h (t : <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt;
+  [/\ <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">s</span> *: <span class="bv">h</span>)) (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>)),
+      <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; &#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">s</span> *: <span class="bv">h</span>))
+        (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>) (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>)) &amp;
+      <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">t</span> 1 (<span class="kw">fun</span> s =&gt; &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>) (<span class="bv">z</span> + <span class="bv">s</span> *: <span class="bv">h</span>))
+        (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>)) (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>))].</pre></div></details>
+<details class="decl-used"><summary>Used by 8 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>, <a class="r k-thm" href="#sc_hessian_line_le" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_le">sc_hessian_line_le</a>, <a class="r k-thm" href="#sc_line_taylor_le" title="GaussianAnalysis.convex.self_concordant.sc_line_taylor_le">sc_line_taylor_le</a>, <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_function_convex" title="GaussianAnalysis.convex.self_concordant.sc_function_convex">sc_function_convex</a>, <a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_barrier_grad_le</a>, <a class="r k-thm" href="#sc_barrier_contraction" title="GaussianAnalysis.convex.self_concordant.sc_barrier_contraction">sc_barrier_contraction</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_hessian_line_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_hessian_line_ge">sc_hessian_line_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L722" target="_blank" rel="noopener">source, line 722</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N] [t : R],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt;
+0 &lt;= t -&gt;
+D (z + t *: h) -&gt;
+<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h ^+ 2 / (1 + t * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h) ^+ 2 &lt;= &#x27;D_h (&#x27;D_h B) (z + t *: h)</pre></div>
+<div class="decl-doc"><p>The bounds of the proof of Lemma 2.15 of Koehler and Sohn on the second derivative along h, with r = <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Along a segment <code>z + t h</code> in <code>D</code>, with <code>r = sc_norm B z h</code>: <code>r^2 / (1 + t r)^2 &lt;= D^2 B(z + t h)[h,h]</code>, and <code>D^2 B(z + t h)[h,h] &lt;= r^2 / (1 - t r)^2</code> when <code>t r &lt; 1</code>. The one-dimensional comparison behind it compares <code>1 / sqrt (psi + e)</code> with <code>t</code> for a function <code>psi &gt;= 0</code> with <code>psi&#x27;^2 &lt;= 4 psi^3</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_hessian_line_ge z h (t : <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; 0 &lt;= <span class="bv">t</span> -&gt;
+  <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt;
+  <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> ^+ 2 / (1 + <span class="bv">t</span> * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span>) ^+ 2 &lt;=
+    &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>) (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_hessian_line_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_hessian_line_le">sc_hessian_line_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L741" target="_blank" rel="noopener">source, line 741</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N] [t : R],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt;
+0 &lt;= t -&gt;
+D (z + t *: h) -&gt;
+t * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt; 1 -&gt;
+&#x27;D_h (&#x27;D_h B) (z + t *: h) &lt;= <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h ^+ 2 / (1 - t * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h) ^+ 2</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_hessian_line_ge" title="GaussianAnalysis.convex.self_concordant.sc_hessian_line_ge">sc_hessian_line_ge</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_hessian_line_le z h (t : <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; 0 &lt;= <span class="bv">t</span> -&gt;
+  <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) -&gt; <span class="bv">t</span> * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> &lt; 1 -&gt;
+  &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>) (<span class="bv">z</span> + <span class="bv">t</span> *: <span class="bv">h</span>) &lt;=
+    <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> ^+ 2 / (1 - <span class="bv">t</span> * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span>) ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_dikin</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="bregman_div_add">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#bregman_div_add">bregman_div_add</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L764" target="_blank" rel="noopener">source, line 764</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} (B : &#x27;rV_N -&gt; R)
+  (z h : <span class="hb" title="printed as matrix_matrix__canonical__Algebra_BaseAddMagma R 1 N">&#x27;rV[R]_N</span>),
+<a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z = B (z + h) - B z - &#x27;D_h B z</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> bregman_div_add z h :
+  <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) <span class="bv">z</span> = <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) - <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> - &#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>, <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_line_taylor_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_line_taylor_le">sc_line_taylor_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L771" target="_blank" rel="noopener">source, line 771</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N] [u K : R],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt;
+0 &lt;= u -&gt;
+D (z + u *: h) -&gt;
+(<span class="kw">forall</span> v : join_Num_POrderNmodule_between_Algebra_BaseAddUMagma_and_Order_Preorder R,
+ 0 &lt;= v &lt;= u -&gt; &#x27;D_h (&#x27;D_h B) (z + v *: h) &lt;= K) -&gt;
+B (z + u *: h) &lt;= B z + u * &#x27;D_h B z + u ^+ 2 / 2 * K</pre></div>
+<div class="decl-doc"><p>B lies above its tangents along a segment of D, with an upper bound by the second derivative: on the segment from z to z + u h, B (z + u h) &lt;= B z + u D B(z)[h] + u^2 K / 2 when D^2 B &lt;= K there.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_line_taylor_le z h (u K : <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; 0 &lt;= <span class="bv">u</span> -&gt;
+  <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">u</span> *: <span class="bv">h</span>) -&gt;
+  (<span class="kw">forall</span> v, 0 &lt;= <span class="bv">v</span> &lt;= <span class="bv">u</span> -&gt; &#x27;D_<span class="bv">h</span> (&#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span>) (<span class="bv">z</span> + <span class="bv">v</span> *: <span class="bv">h</span>) &lt;= <span class="bv">K</span>) -&gt;
+  <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">u</span> *: <span class="bv">h</span>) &lt;= <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> + <span class="bv">u</span> * &#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> + <span class="bv">u</span> ^+ 2 / 2 * <span class="bv">K</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_dikin" title="GaussianAnalysis.convex.self_concordant.sc_dikin">sc_dikin</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_dikin">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_dikin">sc_dikin</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L808" target="_blank" rel="noopener">source, line 808</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt; <span class="kw">forall</span> [z h : &#x27;rV_N], D z -&gt; h \<span class="kw">in</span> V -&gt; <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt; 1 -&gt; D (z + h)</pre></div>
+<div class="decl-doc"><p>The Dikin ellipsoid (Nesterov and Nemirovskii, Theorem 2.1.1): if the local norm of h at z is less than 1, then z + h is in D.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The Dikin ellipsoid: if <code><a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt; 1</code> then <code>z + h</code> is in <code>D</code> (Nesterov-Nemirovskii, Theorem 2.1.1); proved from the bound above and the blow-up of <code>B</code> at the exit point of the segment.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_dikin z h : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> &lt; 1 -&gt; <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_le" title="GaussianAnalysis.convex.self_concordant.sc_bregman_le">sc_bregman_le</a>, <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_bregman_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_bregman_ge">sc_bregman_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L900" target="_blank" rel="noopener">source, line 900</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N],
+D z -&gt; h \<span class="kw">in</span> V -&gt; D (z + h) -&gt; <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h) &lt;= <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z</pre></div>
+<div class="decl-doc"><p>The Bregman bounds of the proof of Lemma 2.15: <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> r &lt;= D_B(z + h, z) &lt;= <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> r, r = <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Lemma 2.15 of Koehler and Sohn: <code>r - ln (1 + r) &lt;= bregman_div B (z + h) z</code> when <code>z + h</code> is in <code>D</code>, and <code><a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z &lt;= - r - ln (1 - r)</code> when <code>r &lt; 1</code>; hence (i) if the Bregman divergence is at most <code>1/2 - ln (3/2)</code> then <code>r &lt;= 1/2</code> and it is at least <code>r^2 / 3</code>, and (ii) if <code>r &lt;= 1/2</code> then <code>z + h</code> is in <code>D</code> and <code>|B (z + h) - B z - D B(z)[h] - r^2 / 2| &lt;= 2 r^3 / 3</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_bregman_ge z h : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">h</span>) -&gt;
+  <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> (<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span>) &lt;= <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) <span class="bv">z</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.measurable_minimizer:</span> <a class="r k-thm" href="GaussianAnalysis.probability.measurable_minimizer.html#ls_min_growth" title="GaussianAnalysis.probability.measurable_minimizer.ls_min_growth">ls_min_growth</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_bregman_small" title="GaussianAnalysis.convex.self_concordant.sc_bregman_small">sc_bregman_small</a>, <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_bregman_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_bregman_le">sc_bregman_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L937" target="_blank" rel="noopener">source, line 937</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt; <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt; 1 -&gt; <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z &lt;= <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> (<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_bregman_le z h : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> &lt; 1 -&gt;
+  <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) <span class="bv">z</span> &lt;= <a class="r k-def" href="#sc_omega_star" title="GaussianAnalysis.convex.self_concordant.sc_omega_star">sc_omega_star</a> (<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_taylor3" title="GaussianAnalysis.convex.self_concordant.sc_taylor3">sc_taylor3</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_bregman_small">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_bregman_small">sc_bregman_small</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L977" target="_blank" rel="noopener">source, line 977</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt;
+D (z + h) -&gt;
+<a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> 2^-1 -&gt;
+<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt;= 2^-1 /\ <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h ^+ 2 / 3 &lt;= <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> B (z + h) z</pre></div>
+<div class="decl-doc"><p>Lemma 2.15 (i) of Koehler and Sohn: a small Bregman divergence bounds the local norm.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_bregman_small z h : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">h</span>) -&gt;
+  <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) <span class="bv">z</span> &lt;= <a class="r k-def" href="#sc_omega" title="GaussianAnalysis.convex.self_concordant.sc_omega">sc_omega</a> 2^-1 -&gt;
+  <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> &lt;= 2^-1 /\ <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> ^+ 2 / 3%:R &lt;= <a class="r k-def" href="#bregman_div" title="GaussianAnalysis.convex.self_concordant.bregman_div">bregman_div</a> <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) <span class="bv">z</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_cost_lower" title="GaussianAnalysis.convex.ls_insertion.ins_cost_lower">ins_cost_lower</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_taylor3">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_taylor3">sc_taylor3</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L991" target="_blank" rel="noopener">source, line 991</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z h : &#x27;rV_N],
+D z -&gt;
+h \<span class="kw">in</span> V -&gt;
+<a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h &lt;= 2^-1 -&gt;
+D (z + h) /\
+`|B (z + h) - B z - &#x27;D_h B z - <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h ^+ 2 / 2| &lt;= 2 * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> B z h ^+ 3 / 3</pre></div>
+<div class="decl-doc"><p>Lemma 2.15 (ii): the Taylor expansion of order 2 with a remainder of order 3 in the local norm.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_bregman_ge" title="GaussianAnalysis.convex.self_concordant.sc_bregman_ge">sc_bregman_ge</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_taylor3 z h : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="bv">h</span> \<span class="kw">in</span> <span class="sv" title="section variable V of section sc_line">V</span> -&gt; <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> &lt;= 2^-1 -&gt;
+  <span class="sv" title="section variable D of section sc_line">D</span> (<span class="bv">z</span> + <span class="bv">h</span>) /\
+  `|<span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">h</span>) - <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> - &#x27;D_<span class="bv">h</span> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> - <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> ^+ 2 / 2| &lt;=
+    2 * <a class="r k-def" href="#sc_norm" title="GaussianAnalysis.convex.self_concordant.sc_norm">sc_norm</a> <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> <span class="bv">h</span> ^+ 3 / 3%:R.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_function_continuous" title="GaussianAnalysis.convex.self_concordant.sc_function_continuous">sc_function_continuous</a></li>
+<li><span class="um">GaussianAnalysis.convex.ls_insertion:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ls_insertion.html#ins_rem_le" title="GaussianAnalysis.convex.ls_insertion.ins_rem_le">ins_rem_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_function_convex">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_function_convex">sc_function_convex</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L1009" target="_blank" rel="noopener">source, line 1009</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z y : &#x27;rV_N] [t : R],
+D z -&gt; D y -&gt; 0 &lt;= t &lt;= 1 -&gt; B (z + t *: (y - z)) &lt;= (1 - t) * B z + t * B y</pre></div>
+<div class="decl-doc"><p>B is convex on D.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>A self-concordant function is convex on <code>D</code>, and continuous at every point of <code>D</code> for the points of <code>D</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_function_convex z y (t : <span class="sv" title="section variable R of section sc_line">R</span>) : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">y</span> -&gt; 0 &lt;= <span class="bv">t</span> &lt;= 1 -&gt;
+  <span class="sv" title="section variable B of section sc_line">B</span> (<span class="bv">z</span> + <span class="bv">t</span> *: (<span class="bv">y</span> - <span class="bv">z</span>)) &lt;= (1 - <span class="bv">t</span>) * <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span> + <span class="bv">t</span> * <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">y</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_sublevel_closed" title="GaussianAnalysis.convex.minimizers.sc_sublevel_closed">sc_sublevel_closed</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_function_continuous">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_function_continuous">sc_function_continuous</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L1040" target="_blank" rel="noopener">source, line 1040</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_function" title="GaussianAnalysis.convex.self_concordant.sc_function">sc_function</a> V D B -&gt;
+<span class="kw">forall</span> [z : &#x27;rV_N],
+D z -&gt;
+<span class="kw">forall</span> [e : R],
+0 &lt; e -&gt; <span class="kw">exists2</span> d : R, 0 &lt; d &amp; <span class="kw">forall</span> y : &#x27;rV_N, D y -&gt; `|y - z| &lt; d -&gt; `|B y - B z| &lt; e</pre></div>
+<div class="decl-doc"><p>B is continuous on D.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_function_convex" title="GaussianAnalysis.convex.self_concordant.sc_function_convex">sc_function_convex</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_function_continuous z : <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">z</span> -&gt; <span class="kw">forall</span> e : <span class="sv" title="section variable R of section sc_line">R</span>, 0 &lt; <span class="bv">e</span> -&gt;
+  <span class="kw">exists2</span> d : <span class="sv" title="section variable R of section sc_line">R</span>, 0 &lt; <span class="bv">d</span> &amp; <span class="kw">forall</span> y, <span class="sv" title="section variable D of section sc_line">D</span> <span class="bv">y</span> -&gt; `|<span class="bv">y</span> - <span class="bv">z</span>| &lt; <span class="bv">d</span> -&gt; `|<span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">y</span> - <span class="sv" title="section variable B of section sc_line">B</span> <span class="bv">z</span>| &lt; <span class="bv">e</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 6 declarations in 4 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.measurable_minimizer:</span> <a class="r k-thm" href="GaussianAnalysis.probability.measurable_minimizer.html#measurable_ls_min" title="GaussianAnalysis.probability.measurable_minimizer.measurable_ls_min">measurable_ls_min</a></li>
+<li><span class="um">GaussianAnalysis.convex.minimizers:</span> <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_sublevel_closed" title="GaussianAnalysis.convex.minimizers.sc_sublevel_closed">sc_sublevel_closed</a>, <a class="r k-thm" href="GaussianAnalysis.convex.minimizers.html#sc_minimizer" title="GaussianAnalysis.convex.minimizers.sc_minimizer">sc_minimizer</a></li>
+<li><span class="um">GaussianAnalysis.convex.barrier_lindeberg:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#loo_compare" title="GaussianAnalysis.convex.barrier_lindeberg.loo_compare">loo_compare</a>, <a class="r k-thm" href="GaussianAnalysis.convex.barrier_lindeberg.html#Phi_meas" title="GaussianAnalysis.convex.barrier_lindeberg.Phi_meas">Phi_meas</a></li>
+<li><span class="um">GaussianAnalysis.convex.ridge_comparison:</span> <a class="r k-thm" href="GaussianAnalysis.convex.ridge_comparison.html#ridge_comparison" title="GaussianAnalysis.convex.ridge_comparison.ridge_comparison">ridge_comparison</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-sc_barrier_lemmas-805"><span class="sec-kw">section</span><span class="sec-name">sc_barrier_lemmas</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {N : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variables</span> (V : {vspace &#x27;rV[<span class="sv" title="section variable R of section sc_barrier_lemmas">R</span>]_<span class="sv" title="section variable N of section sc_barrier_lemmas">N</span>}) (D : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section sc_barrier_lemmas">R</span>]_<span class="sv" title="section variable N of section sc_barrier_lemmas">N</span>) (theta : <span class="sv" title="section variable R of section sc_barrier_lemmas">R</span>)
+  (B : &#x27;rV[<span class="sv" title="section variable R of section sc_barrier_lemmas">R</span>]_<span class="sv" title="section variable N of section sc_barrier_lemmas">N</span> -&gt; <span class="sv" title="section variable R of section sc_barrier_lemmas">R</span>).
+<span class="vk">Hypothesis</span> DV : <a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> <span class="sv" title="section variable V of section sc_barrier_lemmas">V</span> <span class="sv" title="section variable D of section sc_barrier_lemmas">D</span>.
+<span class="vk">Hypothesis</span> scB : <a class="r k-def" href="#sc_barrier" title="GaussianAnalysis.convex.self_concordant.sc_barrier">sc_barrier</a> <span class="sv" title="section variable V of section sc_barrier_lemmas">V</span> <span class="sv" title="section variable D of section sc_barrier_lemmas">D</span> <span class="sv" title="section variable theta of section sc_barrier_lemmas">theta</span> <span class="sv" title="section variable B of section sc_barrier_lemmas">B</span>.
+<span class="vk">Hypothesis</span> theta0 : 0 &lt;= <span class="sv" title="section variable theta of section sc_barrier_lemmas">theta</span>.</pre>
+<div class="decl k-thm" id="sc_barrier_grad_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_barrier_grad_le">sc_barrier_grad_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L1124" target="_blank" rel="noopener">source, line 1124</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] 
+  [theta : R] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_barrier" title="GaussianAnalysis.convex.self_concordant.sc_barrier">sc_barrier</a> V D theta B -&gt;
+0 &lt;= theta -&gt; <span class="kw">forall</span> [z y : &#x27;rV_N], D z -&gt; D y -&gt; &#x27;D_(y - z) B z &lt;= theta</pre></div>
+<div class="decl-doc"><p>Lemma 2.10 of Koehler and Sohn, first part (Nesterov, Theorem 4.2.4): D B(z)[y - z] &lt;= theta for z, y in D.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Lemma 2.10 of Koehler and Sohn, for a <code>theta</code>-self-concordant barrier with <code>theta &gt;= 0</code>: <code>D B(z)[y - z] &lt;= theta</code> for <code>y</code>, <code>z</code> in <code>D</code> (Nesterov, Theorem 4.2.4), and <code>B ((1 - eps) x + eps x0) &lt;= B x0 + theta ln (1 / eps)</code> for <code>x0</code>, <code>x</code> in <code>D</code> and <code>0 &lt; eps &lt; 1</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_barrier_grad_le z y : <span class="sv" title="section variable D of section sc_barrier_lemmas">D</span> <span class="bv">z</span> -&gt; <span class="sv" title="section variable D of section sc_barrier_lemmas">D</span> <span class="bv">y</span> -&gt; &#x27;D_(<span class="bv">y</span> - <span class="bv">z</span>) <span class="sv" title="section variable B of section sc_barrier_lemmas">B</span> <span class="bv">z</span> &lt;= <span class="sv" title="section variable theta of section sc_barrier_lemmas">theta</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#sc_barrier_contraction" title="GaussianAnalysis.convex.self_concordant.sc_barrier_contraction">sc_barrier_contraction</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="sc_barrier_contraction">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#sc_barrier_contraction">sc_barrier_contraction</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/convex/self_concordant.v#L1186" target="_blank" rel="noopener">source, line 1186</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {N : nat} [V : {vspace &#x27;rV_N}] [D : set &#x27;rV_N] 
+  [theta : R] [B : &#x27;rV_N -&gt; R],
+<a class="r k-def" href="#rel_open_convex" title="GaussianAnalysis.convex.self_concordant.rel_open_convex">rel_open_convex</a> V D -&gt;
+<a class="r k-def" href="#sc_barrier" title="GaussianAnalysis.convex.self_concordant.sc_barrier">sc_barrier</a> V D theta B -&gt;
+0 &lt;= theta -&gt;
+<span class="kw">forall</span> [x0 x : &#x27;rV_N] [eps : R],
+D x0 -&gt; D x -&gt; 0 &lt; eps &lt; 1 -&gt; B ((1 - eps) *: x + eps *: x0) &lt;= B x0 + theta * <span class="x" title="mathcomp.analysis.exp.ln">ln</span> eps^-1</pre></div>
+<div class="decl-doc"><p>Lemma 2.10: contracting toward x0 costs at most theta ln (1 / eps).</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#sc_barrier_grad_le" title="GaussianAnalysis.convex.self_concordant.sc_barrier_grad_le">sc_barrier_grad_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> sc_barrier_contraction x0 x (eps : <span class="sv" title="section variable R of section sc_barrier_lemmas">R</span>) : <span class="sv" title="section variable D of section sc_barrier_lemmas">D</span> <span class="bv">x0</span> -&gt; <span class="sv" title="section variable D of section sc_barrier_lemmas">D</span> <span class="bv">x</span> -&gt; 0 &lt; <span class="bv">eps</span> &lt; 1 -&gt;
+  <span class="sv" title="section variable B of section sc_barrier_lemmas">B</span> ((1 - <span class="bv">eps</span>) *: <span class="bv">x</span> + <span class="bv">eps</span> *: <span class="bv">x0</span>) &lt;= <span class="sv" title="section variable B of section sc_barrier_lemmas">B</span> <span class="bv">x0</span> + <span class="sv" title="section variable theta of section sc_barrier_lemmas">theta</span> * <span class="x" title="mathcomp.analysis.exp.ln">ln</span> <span class="bv">eps</span>^-1.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.convex.barrier_removal:</span> <a class="r k-thm" href="GaussianAnalysis.convex.barrier_removal.html#barrier_removal" title="GaussianAnalysis.convex.barrier_removal.barrier_removal">barrier_removal</a></li>
+</ul></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>self_concordant_definitions</span></li><li><a href="#rel_open_convex">rel_<wbr>open_<wbr>convex</a></li><li><a href="#sc_function">sc_<wbr>function</a></li><li><a href="#sc_barrier">sc_<wbr>barrier</a></li><li><a href="#sc_norm">sc_<wbr>norm</a></li><li><a href="#bregman_div">bregman_<wbr>div</a></li><li><a href="#sc_omega">sc_<wbr>omega</a></li><li><a href="#sc_omega_star">sc_<wbr>omega_<wbr>star</a></li><li class="toc-sec"><span>one_dimensional</span></li><li><a href="#derive_ge0_le">derive_<wbr>ge0_<wbr>le</a></li><li><a href="#derive_le0_le">derive_<wbr>le0_<wbr>le</a></li><li><a href="#derive2_ge0_tangent">derive2_<wbr>ge0_<wbr>tangent</a></li><li><a href="#sc_ode_inv">sc_<wbr>ode_<wbr>inv</a></li><li><a href="#sc_ode_ge">sc_<wbr>ode_<wbr>ge</a></li><li><a href="#sc_ode_le">sc_<wbr>ode_<wbr>le</a></li><li><a href="#is_derive_sc_omega">is_<wbr>derive_<wbr>sc_<wbr>omega</a></li><li><a href="#is_derive_sc_omega_star">is_<wbr>derive_<wbr>sc_<wbr>omega_<wbr>star</a></li><li><a href="#is_derive_omega_line">is_<wbr>derive_<wbr>omega_<wbr>line</a></li><li><a href="#is_derive_omega_line1">is_<wbr>derive_<wbr>omega_<wbr>line1</a></li><li><a href="#is_derive_omega_star_line">is_<wbr>derive_<wbr>omega_<wbr>star_<wbr>line</a></li><li><a href="#is_derive_omega_star_line1">is_<wbr>derive_<wbr>omega_<wbr>star_<wbr>line1</a></li><li><a href="#sc_omega0">sc_<wbr>omega0</a></li><li><a href="#sc_omega_star0">sc_<wbr>omega_<wbr>star0</a></li><li><a href="#sc_omega_ge0">sc_<wbr>omega_<wbr>ge0</a></li><li><a href="#sc_omega_ge">sc_<wbr>omega_<wbr>ge</a></li><li><a href="#sc_omega_le">sc_<wbr>omega_<wbr>le</a></li><li><a href="#sc_omega_taylor">sc_<wbr>omega_<wbr>taylor</a></li><li><a href="#sc_omega_star_taylor">sc_<wbr>omega_<wbr>star_<wbr>taylor</a></li><li><a href="#sc_omega_gt_half">sc_<wbr>omega_<wbr>gt_<wbr>half</a></li><li class="toc-sec"><span>line</span></li><li><a href="#is_derive_line">is_<wbr>derive_<wbr>line</a></li><li><a href="#is_derive_line_inv">is_<wbr>derive_<wbr>line_<wbr>inv</a></li><li><a href="#lin_form_vec">lin_<wbr>form_<wbr>vec</a></li><li><a href="#bilin_form_mx">bilin_<wbr>form_<wbr>mx</a></li><li class="toc-sec"><span>sc_line</span></li><li><a href="#rel_open_convex_segment">rel_<wbr>open_<wbr>convex_<wbr>segment</a></li><li><a href="#rel_open_convex_line">rel_<wbr>open_<wbr>convex_<wbr>line</a></li><li><a href="#line_derive3">line_<wbr>derive3</a></li><li><a href="#sc_line_derive">sc_<wbr>line_<wbr>derive</a></li><li><a href="#sc_hessian_line_ge">sc_<wbr>hessian_<wbr>line_<wbr>ge</a></li><li><a href="#sc_hessian_line_le">sc_<wbr>hessian_<wbr>line_<wbr>le</a></li><li><a href="#bregman_div_add">bregman_<wbr>div_<wbr>add</a></li><li><a href="#sc_line_taylor_le">sc_<wbr>line_<wbr>taylor_<wbr>le</a></li><li><a href="#sc_dikin">sc_<wbr>dikin</a></li><li><a href="#sc_bregman_ge">sc_<wbr>bregman_<wbr>ge</a></li><li><a href="#sc_bregman_le">sc_<wbr>bregman_<wbr>le</a></li><li><a href="#sc_bregman_small">sc_<wbr>bregman_<wbr>small</a></li><li><a href="#sc_taylor3">sc_<wbr>taylor3</a></li><li><a href="#sc_function_convex">sc_<wbr>function_<wbr>convex</a></li><li><a href="#sc_function_continuous">sc_<wbr>function_<wbr>continuous</a></li><li class="toc-sec"><span>sc_barrier_lemmas</span></li><li><a href="#sc_barrier_grad_le">sc_<wbr>barrier_<wbr>grad_<wbr>le</a></li><li><a href="#sc_barrier_contraction">sc_<wbr>barrier_<wbr>contraction</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

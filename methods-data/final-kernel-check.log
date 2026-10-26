@@ -1,0 +1,286 @@
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ + _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ - _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ <= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ < _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ >= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ > _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ <= _ <= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ < _ <= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ <= _ < _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ < _ < _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ * _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ ^ _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "\min^d_ ( _ < _ ) _" was already used in scope
+order_scope. [notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "\max^d_ ( _ < _ ) _" was already used in scope
+order_scope. [notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "\min_ ( _ < _ ) _" was already used in scope order_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "\max_ ( _ < _ ) _" was already used in scope order_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subring_closedM; GRing.smulr_closedN] : GRing.subring_closed >-> Algebra.oppr_closed is ambiguous with existing 
+[GRing.subring_closedB; Algebra.zmod_closedN] : GRing.subring_closed >-> Algebra.oppr_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subring_closed_semi; GRing.semiring_closedM] : GRing.subring_closed >-> GRing.mulr_closed is ambiguous with existing 
+[GRing.subring_closedM; GRing.smulr_closedM] : GRing.subring_closed >-> GRing.mulr_closed.
+New coercion path [GRing.subring_closed_semi; GRing.semiring_closedD] : GRing.subring_closed >-> Algebra.addumagma_closed is ambiguous with existing 
+[GRing.subring_closedB; Algebra.zmod_closed0D] : GRing.subring_closed >-> Algebra.addumagma_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.submod_closed_semi; GRing.subsemimod_closedD] : GRing.submod_closed >-> Algebra.addumagma_closed is ambiguous with existing 
+[GRing.submod_closedB; Algebra.zmod_closed0D] : GRing.submod_closed >-> Algebra.addumagma_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subsemialg_closedM; GRing.semiring_closedD] : GRing.subsemialg_closed >-> Algebra.addumagma_closed is ambiguous with existing 
+[GRing.subsemialg_closedZ; GRing.subsemimod_closedD] : GRing.subsemialg_closed >-> Algebra.addumagma_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subalg_closedBM; GRing.subring_closedB] : GRing.subalg_closed >-> Algebra.zmod_closed is ambiguous with existing 
+[GRing.subalg_closedZ; GRing.submod_closedB] : GRing.subalg_closed >-> Algebra.zmod_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subalg_closed_semi; GRing.subsemialg_closedZ] : GRing.subalg_closed >-> GRing.subsemimod_closed is ambiguous with existing 
+[GRing.subalg_closedZ; GRing.submod_closed_semi] : GRing.subalg_closed >-> GRing.subsemimod_closed.
+New coercion path [GRing.subalg_closed_semi; GRing.subsemialg_closedM] : GRing.subalg_closed >-> GRing.semiring_closed is ambiguous with existing 
+[GRing.subalg_closedBM; GRing.subring_closed_semi] : GRing.subalg_closed >-> GRing.semiring_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "1" was already used in scope ring_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "- 1" was already used in scope ring_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning: Notation "_ %:R" was already used in scope ring_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.sdivr_closedM; GRing.smulr_closedM] : GRing.sdivr_closed >-> GRing.mulr_closed is ambiguous with existing 
+[GRing.sdivr_closed_div; GRing.divr_closedM] : GRing.sdivr_closed >-> GRing.mulr_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.divring_closed_div; GRing.sdivr_closedM] : GRing.divring_closed >-> GRing.smulr_closed is ambiguous with existing 
+[GRing.divring_closedBM; GRing.subring_closedM] : GRing.divring_closed >-> GRing.smulr_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.divalg_closedZ; GRing.subalg_closedBM] : GRing.divalg_closed >-> GRing.subring_closed is ambiguous with existing 
+[GRing.divalg_closedBdiv; GRing.divring_closedBM] : GRing.divalg_closed >-> GRing.subring_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainResults.v", line 8, characters 0-61:
+Warning: Notations "'M_ _" defined at level 0 with arguments constr
+at level 2 and "'M_ _ _" defined at level 5 with arguments constr at level 4
+have incompatible prefixes. One of them will likely not work.
+[notation-incompatible-prefix,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ + _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ - _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ <= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ < _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ >= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ > _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ <= _ <= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ < _ <= _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ <= _ < _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ < _ < _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ * _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ ^ _" was already used in scope nat_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "\min^d_ ( _ < _ ) _" was already used in scope
+order_scope. [notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "\max^d_ ( _ < _ ) _" was already used in scope
+order_scope. [notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "\min_ ( _ < _ ) _" was already used in scope order_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "\max_ ( _ < _ ) _" was already used in scope order_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subring_closedM; GRing.smulr_closedN] : GRing.subring_closed >-> Algebra.oppr_closed is ambiguous with existing 
+[GRing.subring_closedB; Algebra.zmod_closedN] : GRing.subring_closed >-> Algebra.oppr_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subring_closed_semi; GRing.semiring_closedM] : GRing.subring_closed >-> GRing.mulr_closed is ambiguous with existing 
+[GRing.subring_closedM; GRing.smulr_closedM] : GRing.subring_closed >-> GRing.mulr_closed.
+New coercion path [GRing.subring_closed_semi; GRing.semiring_closedD] : GRing.subring_closed >-> Algebra.addumagma_closed is ambiguous with existing 
+[GRing.subring_closedB; Algebra.zmod_closed0D] : GRing.subring_closed >-> Algebra.addumagma_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.submod_closed_semi; GRing.subsemimod_closedD] : GRing.submod_closed >-> Algebra.addumagma_closed is ambiguous with existing 
+[GRing.submod_closedB; Algebra.zmod_closed0D] : GRing.submod_closed >-> Algebra.addumagma_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subsemialg_closedM; GRing.semiring_closedD] : GRing.subsemialg_closed >-> Algebra.addumagma_closed is ambiguous with existing 
+[GRing.subsemialg_closedZ; GRing.subsemimod_closedD] : GRing.subsemialg_closed >-> Algebra.addumagma_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subalg_closedBM; GRing.subring_closedB] : GRing.subalg_closed >-> Algebra.zmod_closed is ambiguous with existing 
+[GRing.subalg_closedZ; GRing.submod_closedB] : GRing.subalg_closed >-> Algebra.zmod_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.subalg_closed_semi; GRing.subsemialg_closedZ] : GRing.subalg_closed >-> GRing.subsemimod_closed is ambiguous with existing 
+[GRing.subalg_closedZ; GRing.submod_closed_semi] : GRing.subalg_closed >-> GRing.subsemimod_closed.
+New coercion path [GRing.subalg_closed_semi; GRing.subsemialg_closedM] : GRing.subalg_closed >-> GRing.semiring_closed is ambiguous with existing 
+[GRing.subalg_closedBM; GRing.subring_closed_semi] : GRing.subalg_closed >-> GRing.semiring_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "1" was already used in scope ring_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "- 1" was already used in scope ring_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning: Notation "_ %:R" was already used in scope ring_scope.
+[notation-overridden,parsing,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.sdivr_closedM; GRing.smulr_closedM] : GRing.sdivr_closed >-> GRing.mulr_closed is ambiguous with existing 
+[GRing.sdivr_closed_div; GRing.divr_closedM] : GRing.sdivr_closed >-> GRing.mulr_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.divring_closed_div; GRing.sdivr_closedM] : GRing.divring_closed >-> GRing.smulr_closed is ambiguous with existing 
+[GRing.divring_closedBM; GRing.subring_closedM] : GRing.divring_closed >-> GRing.smulr_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 4, characters 0-71:
+Warning:
+New coercion path [GRing.divalg_closedZ; GRing.subalg_closedBM] : GRing.divalg_closed >-> GRing.subring_closed is ambiguous with existing 
+[GRing.divalg_closedBdiv; GRing.divring_closedBM] : GRing.divalg_closed >-> GRing.subring_closed.
+[ambiguous-paths,coercions,default]
+File "./analysis/PaperMainPolicy.v", line 8, characters 0-61:
+Warning: Notations "'M_ _" defined at level 0 with arguments constr
+at level 2 and "'M_ _ _" defined at level 5 with arguments constr at level 4
+have incompatible prefixes. One of them will likely not work.
+[notation-incompatible-prefix,parsing,default]
+Axioms:
+ClassicalDedekindReals.sig_not_dec : forall P : Prop, {~ ~ P} + {~ P}
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+boolp.propositional_extensionality : forall P Q : Prop, P <-> Q -> P = Q
+boolp.functional_extensionality_dep :
+  forall (A : Type) (B : A -> Type) (f g : forall x : A, B x),
+  (forall x : A, f x = g x) -> f = g
+FunctionalExtensionality.functional_extensionality_dep :
+  forall (A : Type) (B : A -> Type) (f g : forall x : A, B x),
+  (forall x : A, f x = g x) -> f = g
+Epsilon.epsilon_statement :
+  forall (A : Type) (P : A -> Prop),
+  inhabited A -> {x : A | (exists x0 : A, P x0) -> P x}
+boolp.constructive_indefinite_description :
+  forall (A : Type) (P : A -> Prop), (exists x : A, P x) -> {x : A | P x}
+Classical_Prop.classic : forall P : Prop, P \/ ~ P
+Axioms:
+boolp.propositional_extensionality : forall P Q : Prop, P <-> Q -> P = Q
+Axioms:
+boolp.functional_extensionality_dep :
+  forall (A : Type) (B : A -> Type) (f g : forall x : A, B x),
+  (forall x : A, f x = g x) -> f = g
+Axioms:
+boolp.constructive_indefinite_description :
+  forall (A : Type) (P : A -> Prop), (exists x : A, P x) -> {x : A | P x}
+Axioms:
+FunctionalExtensionality.functional_extensionality_dep :
+  forall (A : Type) (B : A -> Type) (f g : forall x : A, B x),
+  (forall x : A, f x = g x) -> f = g
+Axioms:
+Epsilon.epsilon_statement :
+  forall (A : Type) (P : A -> Prop),
+  inhabited A -> {x : A | (exists x0 : A, P x0) -> P x}
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+Axioms:
+ClassicalDedekindReals.sig_not_dec : forall P : Prop, {~ ~ P} + {~ P}
+Axioms:
+Classical_Prop.classic : forall P : Prop, P \/ ~ P
+Axioms:
+ClassicalDedekindReals.sig_not_dec : forall P : Prop, {~ ~ P} + {~ P}
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+boolp.propositional_extensionality : forall P Q : Prop, P <-> Q -> P = Q
+boolp.functional_extensionality_dep :
+  forall (A : Type) (B : A -> Type) (f g : forall x : A, B x),
+  (forall x : A, f x = g x) -> f = g
+FunctionalExtensionality.functional_extensionality_dep :
+  forall (A : Type) (B : A -> Type) (f g : forall x : A, B x),
+  (forall x : A, f x = g x) -> f = g
+Epsilon.epsilon_statement :
+  forall (A : Type) (P : A -> Prop),
+  inhabited A -> {x : A | (exists x0 : A, P x0) -> P x}
+boolp.constructive_indefinite_description :
+  forall (A : Type) (P : A -> Prop), (exists x : A, P x) -> {x : A | P x}
+Classical_Prop.classic : forall P : Prop, P \/ ~ P

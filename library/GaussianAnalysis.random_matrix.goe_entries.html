@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.random_matrix.goe_entries</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod current" href="GaussianAnalysis.random_matrix.goe_entries.html" aria-current="page">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>opnorm_diag</span></li><li><a href="#opnorm_diag_mx_le">opnorm_<wbr>diag_<wbr>mx_<wbr>le</a></li><li><a href="#opnorm_sub_diag_le">opnorm_<wbr>sub_<wbr>diag_<wbr>le</a></li><li class="toc-sec"><span>union_bound</span></li><li><a href="#measure_bigcup_fin_le">measure_<wbr>bigcup_<wbr>fin_<wbr>le</a></li><li class="toc-sec"><span>exp_poly</span></li><li><a href="#exprn_expRN_le">exprn_<wbr>expRN_<wbr>le</a></li><li class="toc-sec"><span>goe_entries</span></li><li><a href="#goe_coef">goe_<wbr>coef</a></li><li><a href="#goe_mx_mxdot">goe_<wbr>mx_<wbr>mxdot</a></li><li><a href="#delta_mxvec_index">delta_<wbr>mxvec_<wbr>index</a></li><li><a href="#mxdot_goe_coef_row">mxdot_<wbr>goe_<wbr>coef_<wbr>row</a></li><li><a href="#frobenius_goe_coef_diag">frobenius_<wbr>goe_<wbr>coef_<wbr>diag</a></li><li><a href="#goe_mx_diag_tail">goe_<wbr>mx_<wbr>diag_<wbr>tail</a></li><li><a href="#goe_mx_offdiag_tail">goe_<wbr>mx_<wbr>offdiag_<wbr>tail</a></li><li><a href="#goe_mx_row_tail">goe_<wbr>mx_<wbr>row_<wbr>tail</a></li><li><a href="#measurable_goe_entry">measurable_<wbr>goe_<wbr>entry</a></li><li><a href="#measurable_goe_entry_ge">measurable_<wbr>goe_<wbr>entry_<wbr>ge</a></li><li><a href="#measurable_goe_row_ge">measurable_<wbr>goe_<wbr>row_<wbr>ge</a></li><li><a href="#measurable_goe_opnorm_ge">measurable_<wbr>goe_<wbr>opnorm_<wbr>ge</a></li><li><a href="#measurable_goe_diag_max">measurable_<wbr>goe_<wbr>diag_<wbr>max</a></li><li><a href="#measurable_goe_offdiag_max">measurable_<wbr>goe_<wbr>offdiag_<wbr>max</a></li><li><a href="#measurable_goe_row_max">measurable_<wbr>goe_<wbr>row_<wbr>max</a></li><li><a href="#goe_mx_diag_max_tail">goe_<wbr>mx_<wbr>diag_<wbr>max_<wbr>tail</a></li><li><a href="#goe_mx_offdiag_max_tail">goe_<wbr>mx_<wbr>offdiag_<wbr>max_<wbr>tail</a></li><li><a href="#goe_mx_row_max_tail">goe_<wbr>mx_<wbr>row_<wbr>max_<wbr>tail</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span aria-hidden="true">/</span><span>goe_entries</span></div>
+<h1 class="page-title">Tails of the entries of the GOE matrix</h1>
+<div class="page-meta"><code>GaussianAnalysis.random_matrix.goe_entries</code><span>library/random_matrix/goe_entries.v</span><span>528 lines</span><span>21 lemmas and theorems, 1 definition</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>10</b> library modules and 26 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.matrix.opnorm.html">GaussianAnalysis.matrix.opnorm</a></li><li><a href="GaussianAnalysis.comparison.gauss_linear.html">GaussianAnalysis.comparison.gauss_linear</a></li><li><a href="GaussianAnalysis.comparison.chi_square.html">GaussianAnalysis.comparison.chi_square</a></li><li><a href="GaussianAnalysis.comparison.gauss_law.html">GaussianAnalysis.comparison.gauss_law</a></li><li><a href="GaussianAnalysis.comparison.gauss_smoothing.html">GaussianAnalysis.comparison.gauss_smoothing</a></li><li><a href="GaussianAnalysis.random_matrix.goe.html">GaussianAnalysis.random_matrix.goe</a></li><li><a href="GaussianAnalysis.random_matrix.goe_rotation.html">GaussianAnalysis.random_matrix.goe_rotation</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.sesquilinear, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.algebra.interval, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.derive, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.numfun, mathcomp.analysis.measurable_realfun, mathcomp.analysis.probability_theory.probability, mathcomp.algebra.arithmetic_tactic, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic</p></div></details><details><summary>Imported by <b>1</b></summary><div class="dep-body"><ul><li><a href="GaussianApplications.SKGap.Disorder.html">GaussianApplications.SKGap.Disorder</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>For a of law gauss (d * d) and the GOE matrix W = <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a of <a href="GaussianAnalysis.random_matrix.goe.html">random_matrix/goe.v</a>, each entry of W is a linear form of a: W_ij = &lt;a, <a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i j&gt; (<a class="r k-thm" href="#goe_mx_mxdot" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_mxdot">goe_mx_mxdot</a>). The coefficient vector of a diagonal entry has squared norm 2 / d (<a class="r k-thm" href="#frobenius_goe_coef_diag" title="GaussianAnalysis.random_matrix.goe_entries.frobenius_goe_coef_diag">frobenius_goe_coef_diag</a>), and the coefficient vectors of the entries of a row outside the diagonal are orthogonal, of squared norm 1 / d (<a class="r k-thm" href="#mxdot_goe_coef_row" title="GaussianAnalysis.random_matrix.goe_entries.mxdot_goe_coef_row">mxdot_goe_coef_row</a>). Hence, for s &gt;= 0 and u &gt; 0,</p>
+<pre class="display">P(|W_ii| &gt;= s) &lt;= 2 exp (- d s^2 / 4)               (<a class="r k-thm" href="#goe_mx_diag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_tail">goe_mx_diag_tail</a>),
+P(|W_ij| &gt;= s) &lt;= 2 exp (- d s^2 / 2) if i != j  (<a class="r k-thm" href="#goe_mx_offdiag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_tail">goe_mx_offdiag_tail</a>),
+P(sum_(j != i) W_ij^2 &gt;= 1 + u) &lt;= exp (- d u^2 / (4 (1 + u))),</pre>
+<p>the last one (<a class="r k-thm" href="#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a>) because d sum_(j != i) W_ij^2 has the law of a chi-square with d - 1 degrees of freedom (<a class="r k-thm" href="GaussianAnalysis.comparison.gauss_law.html#gauss_mulmx_law" title="GaussianAnalysis.comparison.gauss_law.gauss_mulmx_law">gauss_mulmx_law</a>, then <a class="r k-thm" href="GaussianAnalysis.comparison.chi_square.html#gauss_centered_chi2_upper_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_upper_tail">gauss_centered_chi2_upper_tail</a> of <a href="GaussianAnalysis.comparison.chi_square.html">comparison/chi_square.v</a>). Union bounds over the d diagonal entries, the d^2 entries and the d rows give the tails of the maxima, with the factors 2 d, 2 d^2 and d (<a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>, <a class="r k-thm" href="#goe_mx_offdiag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_max_tail">goe_mx_offdiag_max_tail</a>, <a class="r k-thm" href="#goe_mx_row_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_max_tail">goe_mx_row_max_tail</a>); their events are measurable (<a class="r k-thm" href="#measurable_goe_diag_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_diag_max">measurable_goe_diag_max</a> and the next two).</p>
+<p>Three general facts are proved on the way: removing the diagonal of a square matrix A costs at most max_i |A_ii| in operator norm (<a class="r k-thm" href="#opnorm_sub_diag_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_sub_diag_le">opnorm_sub_diag_le</a>, from <a class="r k-thm" href="#opnorm_diag_mx_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_diag_mx_le">opnorm_diag_mx_le</a>); the union bound mu (\bigcup_i F i) &lt;= \sum_i mu (F i) for a measure mu, a finite index type and measurable sets F i (<a class="r k-thm" href="#measure_bigcup_fin_le" title="GaussianAnalysis.random_matrix.goe_entries.measure_bigcup_fin_le">measure_bigcup_fin_le</a>); and x^k exp (- x c) &lt;= 6 / (c^3 x) for c &gt; 0, x &gt;= 1 and k &lt;= 2 (<a class="r k-thm" href="#exprn_expRN_le" title="GaussianAnalysis.random_matrix.goe_entries.exprn_expRN_le">exprn_expRN_le</a>), so that such tails, times at most d^2 events, are of order 1 / d.</p>
+<p>Part of target T4 of phase 12: a Rocq formalization of the credited argument of the proof of the proposition 'Good disorder' (rcut:prop:good-disorder) of 'Cutoff throughout the high-temperature Sherrington-Kirkpatrick phase' (family 227 of the OpenAI math collection, revision 1581d4cbd, file appendices/entropy.tex), for the diagonal entries, the off-diagonal entries and the row sums of squares of the GOE matrix; the proposition itself belongs to target T4. It follows the TeX, not a Lean module of the collection. The manuscript bounds a row sum by the exponential Markov bound with E exp (theta (g^2 - 1)) &lt;= exp (C theta^2) for |theta| &lt;= 1/4; the chi-square tail used here has the same form with explicit constants.</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_<wbr>coef</a> i j</code></td><td class="g-rhs">the row vector c of 'rV[R]_(d * d) such that <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j = &lt;a, c&gt; for every a</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#goe_mx_mxdot" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_mxdot">goe_<wbr>mx_<wbr>mxdot</a></span><span><a class="r k-thm" href="#goe_mx_diag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_tail">goe_<wbr>mx_<wbr>diag_<wbr>tail</a></span><span><a class="r k-thm" href="#goe_mx_offdiag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_tail">goe_<wbr>mx_<wbr>offdiag_<wbr>tail</a></span><span><a class="r k-thm" href="#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_<wbr>mx_<wbr>row_<wbr>tail</a></span></div></td><td>For <code>a</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)</code> and the GOE matrix <code>W = goe_mx a</code>, every entry is a linear form of <code>a</code>: <code>W_ij = &lt;a, goe_coef i j&gt;</code>. For <code>s &gt;= 0</code>: <code>P(|W_ii| &gt;= s) &lt;= 2 exp (- d s^2 / 4)</code>, and <code>P(|W_ij| &gt;= s) &lt;= 2 exp (- d s^2 / 2)</code> if <code>i != j</code>. For <code>u &gt; 0</code> and every <code>i</code>: <code>P(sum_(j != i) W_ij^2 &gt;= 1 + u) &lt;= exp (- d u^2 / (4 (1 + u)))</code>, since <code>d sum_(j != i) W_ij^2</code> has the law of a chi-square with <code>d - 1</code> degrees of freedom. A Rocq formalization of the credited argument of a proposition of family 227 of the OpenAI math collection (see the header).</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_<wbr>mx_<wbr>diag_<wbr>max_<wbr>tail</a></span><span><a class="r k-thm" href="#goe_mx_offdiag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_max_tail">goe_<wbr>mx_<wbr>offdiag_<wbr>max_<wbr>tail</a></span><span><a class="r k-thm" href="#goe_mx_row_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_max_tail">goe_<wbr>mx_<wbr>row_<wbr>max_<wbr>tail</a></span><span><a class="r k-thm" href="#measurable_goe_diag_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_diag_max">measurable_<wbr>goe_<wbr>diag_<wbr>max</a></span><span><a class="r k-thm" href="#measurable_goe_offdiag_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_offdiag_max">measurable_<wbr>goe_<wbr>offdiag_<wbr>max</a></span><span><a class="r k-thm" href="#measurable_goe_row_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_row_max">measurable_<wbr>goe_<wbr>row_<wbr>max</a></span><span><a class="r k-thm" href="#measurable_goe_opnorm_ge" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_opnorm_ge">measurable_<wbr>goe_<wbr>opnorm_<wbr>ge</a></span></div></td><td>Union bounds over the entries and the rows: for <code>s &gt;= 0</code> and <code>u &gt; 0</code>, <code>P(max_i |W_ii| &gt;= s) &lt;= 2 d exp (- d s^2 / 4)</code>, <code>P(max_(i != j) |W_ij| &gt;= s) &lt;= 2 d^2 exp (- d s^2 / 2)</code> and <code>P(max_i sum_(j != i) W_ij^2 &gt;= 1 + u) &lt;= d exp (- d u^2 / (4 (1 + u)))</code>. These events, and <code>{opnorm W &gt;= c}</code> for every real <code>c</code>, are measurable.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#opnorm_sub_diag_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_sub_diag_le">opnorm_<wbr>sub_<wbr>diag_<wbr>le</a></span><span><a class="r k-thm" href="#opnorm_diag_mx_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_diag_mx_le">opnorm_<wbr>diag_<wbr>mx_<wbr>le</a></span><span><a class="r k-thm" href="#measure_bigcup_fin_le" title="GaussianAnalysis.random_matrix.goe_entries.measure_bigcup_fin_le">measure_<wbr>bigcup_<wbr>fin_<wbr>le</a></span><span><a class="r k-thm" href="#exprn_expRN_le" title="GaussianAnalysis.random_matrix.goe_entries.exprn_expRN_le">exprn_<wbr>expRN_<wbr>le</a></span></div></td><td>For a square matrix <code>A</code> and <code>b &gt;= 0</code> with <code>|A_ii| &lt;= b</code> for every <code>i</code>: <code><a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (A - diag A) &lt;= opnorm A + b</code>, because <code><a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (diag_mx v) &lt;= b</code> when every <code>|v_i| &lt;= b</code>. For a measure <code>mu</code>, a finite index type and measurable sets <code>F i</code>: <code>mu (\bigcup_i F i) &lt;= \sum_i mu (F i)</code>. For <code>c &gt; 0</code>, <code>x &gt;= 1</code> and <code>k &lt;= 2</code>: <code>x^k exp (- x c) &lt;= 6 / (c^3 x)</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">22 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-opnorm_diag-20"><span class="sec-kw">section</span><span class="sec-name">opnorm_diag</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="opnorm_diag_mx_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#opnorm_diag_mx_le">opnorm_diag_mx_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L77" target="_blank" rel="noopener">source, line 77</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [v : &#x27;rV_n] [b : R],
+0 &lt;= b -&gt; (<span class="kw">forall</span> i : &#x27;I_n, `|v 0 i| &lt;= b) -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> v) &lt;= b</pre></div>
+<div class="decl-doc"><p>The operator norm of a diagonal matrix is at most a bound of its entries.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#opnorm_sub_diag_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_sub_diag_le">opnorm_sub_diag_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> opnorm_diag_mx_le n (v : &#x27;rV[<span class="sv" title="section variable R of section opnorm_diag">R</span>]_<span class="bv">n</span>) (b : <span class="sv" title="section variable R of section opnorm_diag">R</span>) : 0 &lt;= <span class="bv">b</span> -&gt;
+  (<span class="kw">forall</span> i, `|<span class="bv">v</span> 0 <span class="bv">i</span>| &lt;= <span class="bv">b</span>) -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> <span class="bv">v</span>) &lt;= <span class="bv">b</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#opnorm_sub_diag_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_sub_diag_le">opnorm_sub_diag_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="opnorm_sub_diag_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#opnorm_sub_diag_le">opnorm_sub_diag_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L93" target="_blank" rel="noopener">source, line 93</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [A : &#x27;M_n] [b : R],
+0 &lt;= b -&gt;
+(<span class="kw">forall</span> i : &#x27;I_n, `|A i i| &lt;= b) -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (A - <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> (\row_i A i i)) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> A + b</pre></div>
+<div class="decl-doc"><p>Removing the diagonal of A costs at most a bound of its entries.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For a square matrix <code>A</code> and <code>b &gt;= 0</code> with <code>|A_ii| &lt;= b</code> for every <code>i</code>: <code><a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (A - diag A) &lt;= opnorm A + b</code>, because <code><a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (diag_mx v) &lt;= b</code> when every <code>|v_i| &lt;= b</code>. For a measure <code>mu</code>, a finite index type and measurable sets <code>F i</code>: <code>mu (\bigcup_i F i) &lt;= \sum_i mu (F i)</code>. For <code>c &gt; 0</code>, <code>x &gt;= 1</code> and <code>k &lt;= 2</code>: <code>x^k exp (- x c) &lt;= 6 / (c^3 x)</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> opnorm_sub_diag_le n (A : &#x27;M[<span class="sv" title="section variable R of section opnorm_diag">R</span>]_<span class="bv">n</span>) (b : <span class="sv" title="section variable R of section opnorm_diag">R</span>) : 0 &lt;= <span class="bv">b</span> -&gt;
+  (<span class="kw">forall</span> i, `|<span class="bv">A</span> <span class="bv">i</span> <span class="bv">i</span>| &lt;= <span class="bv">b</span>) -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<span class="bv">A</span> - <span class="x" title="mathcomp.algebra.matrix.diag_mx">diag_mx</span> (\row_i <span class="bv">A</span> <span class="bv">i</span> <span class="bv">i</span>)) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> <span class="bv">A</span> + <span class="bv">b</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_coupling_opnorm_le" title="GaussianApplications.SKGap.Disorder.sk_coupling_opnorm_le">sk_coupling_opnorm_le</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-union_bound-42"><span class="sec-kw">section</span><span class="sec-name">union_bound</span></div>
+<pre class="code ctx"><span class="vk">Context</span> d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>).
+<span class="vk">Variable</span> mu : {measure set <span class="sv" title="section variable T of section union_bound">T</span> -&gt; \bar <span class="sv" title="section variable R of section union_bound">R</span>}.
+<span class="vk">Local Open Scope</span> ereal_scope.</pre>
+<div class="decl k-thm" id="measure_bigcup_fin_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measure_bigcup_fin_le">measure_bigcup_fin_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L110" target="_blank" rel="noopener">source, line 110</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> [d : measure_display] [T : measurableType d] [R : realType] 
+  (mu : measure T R) [I : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>] [F : I -&gt; <span class="x" title="mathcomp.classical.classical_sets.set">set</span> T],
+(<span class="kw">forall</span> i : I, d.-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> (F i)) -&gt; (mu (\bigcup_i F i) &lt;= (\sum_i mu (F i))%R)%E</pre></div>
+<div class="decl-doc"><p>The union bound for a family indexed by a finite type.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#opnorm_sub_diag_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_sub_diag_le">opnorm_sub_diag_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measure_bigcup_fin_le (I : <span class="x" title="mathcomp.boot.fintype.Finite.Exports.finType">finType</span>) (F : <span class="bv">I</span> -&gt; <span class="x" title="mathcomp.classical.classical_sets.set">set</span> <span class="sv" title="section variable T of section union_bound">T</span>) :
+  (<span class="kw">forall</span> i, <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> (<span class="bv">F</span> <span class="bv">i</span>)) -&gt; <span class="sv" title="section variable mu of section union_bound">mu</span> (\bigcup_i <span class="bv">F</span> <span class="bv">i</span>) &lt;= \sum_i <span class="sv" title="section variable mu of section union_bound">mu</span> (<span class="bv">F</span> <span class="bv">i</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>, <a class="r k-thm" href="#goe_mx_offdiag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_max_tail">goe_mx_offdiag_max_tail</a>, <a class="r k-thm" href="#goe_mx_row_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_max_tail">goe_mx_row_max_tail</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-exp_poly-58"><span class="sec-kw">section</span><span class="sec-name">exp_poly</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="exprn_expRN_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#exprn_expRN_le">exprn_expRN_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L129" target="_blank" rel="noopener">source, line 129</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [c x : R] [k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>],
+0 &lt; c -&gt; 1 &lt;= x -&gt; (k &lt;= 2)%N -&gt; x ^+ k * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (x * c)) &lt;= 6 / c ^+ 3 / x</pre></div>
+<div class="decl-doc"><p>x^k exp (- x c) &lt;= 6 / (c^3 x) for c &gt; 0, x &gt;= 1 and k &lt;= 2.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#opnorm_sub_diag_le" title="GaussianAnalysis.random_matrix.goe_entries.opnorm_sub_diag_le">opnorm_sub_diag_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> exprn_expRN_le (c x : <span class="sv" title="section variable R of section exp_poly">R</span>) (k : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>) : 0 &lt; <span class="bv">c</span> -&gt; 1 &lt;= <span class="bv">x</span> -&gt; (<span class="bv">k</span> &lt;= 2)%N -&gt;
+  <span class="bv">x</span> ^+ <span class="bv">k</span> * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="bv">x</span> * <span class="bv">c</span>)) &lt;= 6 / <span class="bv">c</span> ^+ 3 / <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-goe_entries-81"><span class="sec-kw">section</span><span class="sec-name">goe_entries</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} (d : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>).</pre>
+<div class="decl k-def" id="goe_coef">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#goe_coef">goe_coef</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L157" target="_blank" rel="noopener">source, line 157</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat], &#x27;I_d -&gt; &#x27;I_d -&gt; &#x27;rV_(d * d)</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> goe_coef (i j : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) :=
+  (<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (2 * <span class="sv" title="section variable d of section goe_entries">d</span>%:R))^-1 *:
+    (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 (<span class="x" title="mathcomp.algebra.matrix.mxvec_index">mxvec_index</span> <span class="bv">i</span> <span class="bv">j</span>) + <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 (<span class="x" title="mathcomp.algebra.matrix.mxvec_index">mxvec_index</span> <span class="bv">j</span> <span class="bv">i</span>)).</pre></div>
+<div class="decl-doc"><p>The entry (i, j) of <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a is the inner product of a with <a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i j.</p></div>
+<details class="decl-used"><summary>Used by 6 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_mxdot" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_mxdot">goe_mx_mxdot</a>, <a class="r k-thm" href="#mxdot_goe_coef_row" title="GaussianAnalysis.random_matrix.goe_entries.mxdot_goe_coef_row">mxdot_goe_coef_row</a>, <a class="r k-thm" href="#frobenius_goe_coef_diag" title="GaussianAnalysis.random_matrix.goe_entries.frobenius_goe_coef_diag">frobenius_goe_coef_diag</a>, <a class="r k-thm" href="#goe_mx_diag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_tail">goe_mx_diag_tail</a>, <a class="r k-thm" href="#goe_mx_offdiag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_tail">goe_mx_offdiag_tail</a>, <a class="r k-thm" href="#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_mxdot">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#goe_mx_mxdot">goe_mx_mxdot</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L161" target="_blank" rel="noopener">source, line 161</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (a : &#x27;rV_(d * d)) (i j : &#x27;I_d),
+<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i j)</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>a</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)</code> and the GOE matrix <code>W = goe_mx a</code>, every entry is a linear form of <code>a</code>: <code>W_ij = &lt;a, goe_coef i j&gt;</code>. For <code>s &gt;= 0</code>: <code>P(|W_ii| &gt;= s) &lt;= 2 exp (- d s^2 / 4)</code>, and <code>P(|W_ij| &gt;= s) &lt;= 2 exp (- d s^2 / 2)</code> if <code>i != j</code>. For <code>u &gt; 0</code> and every <code>i</code>: <code>P(sum_(j != i) W_ij^2 &gt;= 1 + u) &lt;= exp (- d u^2 / (4 (1 + u)))</code>, since <code>d sum_(j != i) W_ij^2</code> has the law of a chi-square with <code>d - 1</code> degrees of freedom. A Rocq formalization of the credited argument of a proposition of family 227 of the OpenAI math collection (see the header).</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> goe_mx_mxdot (a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>)) i j :
+  <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> <span class="bv">i</span> <span class="bv">j</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_diag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_tail">goe_mx_diag_tail</a>, <a class="r k-thm" href="#goe_mx_offdiag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_tail">goe_mx_offdiag_tail</a>, <a class="r k-thm" href="#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="delta_mxvec_index">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#delta_mxvec_index">delta_mxvec_index</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L165" target="_blank" rel="noopener">source, line 165</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i j i&#x27; j&#x27; : &#x27;I_d),
+(&#x27;e_(<span class="x" title="mathcomp.algebra.matrix.mxvec_index">mxvec_index</span> i j) : &#x27;rV_(d * d)) 0 (<span class="x" title="mathcomp.algebra.matrix.mxvec_index">mxvec_index</span> i&#x27; j&#x27;) = ((i&#x27; == i) &amp;&amp; (j&#x27; == j))%:R</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> delta_mxvec_index (i j i&#x27; j&#x27; : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) :
+  (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 (<span class="x" title="mathcomp.algebra.matrix.mxvec_index">mxvec_index</span> <span class="bv">i</span> <span class="bv">j</span>) : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>)) 0 (<span class="x" title="mathcomp.algebra.matrix.mxvec_index">mxvec_index</span> <span class="bv">i&#x27;</span> <span class="bv">j&#x27;</span>) =
+  ((<span class="bv">i&#x27;</span> == <span class="bv">i</span>) &amp;&amp; (<span class="bv">j&#x27;</span> == <span class="bv">j</span>))%:R.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#mxdot_goe_coef_row" title="GaussianAnalysis.random_matrix.goe_entries.mxdot_goe_coef_row">mxdot_goe_coef_row</a>, <a class="r k-thm" href="#frobenius_goe_coef_diag" title="GaussianAnalysis.random_matrix.goe_entries.frobenius_goe_coef_diag">frobenius_goe_coef_diag</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_goe_coef_row">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_goe_coef_row">mxdot_goe_coef_row</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L175" target="_blank" rel="noopener">source, line 175</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] [i j j&#x27; : &#x27;I_d],
+j != i -&gt; j&#x27; != i -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i j) (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i j&#x27;) = (j == j&#x27;)%:R / d%:R</pre></div>
+<div class="decl-doc"><p>Within the row i, the vectors <a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i j, j != i, are orthogonal, of squared norm 1 / d.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_goe_coef_row (i j j&#x27; : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) : <span class="bv">j</span> != <span class="bv">i</span> -&gt; <span class="bv">j&#x27;</span> != <span class="bv">i</span> -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> <span class="bv">i</span> <span class="bv">j</span>) (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> <span class="bv">i</span> <span class="bv">j&#x27;</span>) = (<span class="bv">j</span> == <span class="bv">j&#x27;</span>)%:R / <span class="sv" title="section variable d of section goe_entries">d</span>%:R.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_offdiag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_tail">goe_mx_offdiag_tail</a>, <a class="r k-thm" href="#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="frobenius_goe_coef_diag">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#frobenius_goe_coef_diag">frobenius_goe_coef_diag</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L191" target="_blank" rel="noopener">source, line 191</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i : &#x27;I_d), <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> i i) ^+ 2 = 2 / d%:R</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> frobenius_goe_coef_diag (i : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<a class="r k-def" href="#goe_coef" title="GaussianAnalysis.random_matrix.goe_entries.goe_coef">goe_coef</a> <span class="bv">i</span> <span class="bv">i</span>) ^+ 2 = 2 / <span class="sv" title="section variable d of section goe_entries">d</span>%:R.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_diag_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_tail">goe_mx_diag_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_diag_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_mx_diag_tail">goe_mx_diag_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L207" target="_blank" rel="noopener">source, line 207</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i : &#x27;I_d) [s : R],
+0 &lt;= s -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) [set a | (s &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i i|)%R] &lt;= (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (d%:R * s ^+ 2 / 4)))%:E)%E</pre></div>
+<div class="decl-doc"><p>Gaussian tails of the entries, of variance 2 / d on the diagonal and 1 / d off the diagonal.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_mxdot" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_mxdot">goe_mx_mxdot</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_mx_diag_tail (i : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) (s : <span class="sv" title="section variable R of section goe_entries">R</span>) : 0 &lt;= <span class="bv">s</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) [set a | <span class="bv">s</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">i</span>|]%R &lt;=
+   (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="bv">s</span> ^+ 2 / 4)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_offdiag_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_mx_offdiag_tail">goe_mx_offdiag_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L226" target="_blank" rel="noopener">source, line 226</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] [i j : &#x27;I_d] [s : R],
+i != j -&gt;
+0 &lt;= s -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) [set a | (s &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j|)%R] &lt;= (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (d%:R * s ^+ 2 / 2)))%:E)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_mxdot" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_mxdot">goe_mx_mxdot</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_mx_offdiag_tail (i j : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) (s : <span class="sv" title="section variable R of section goe_entries">R</span>) : <span class="bv">i</span> != <span class="bv">j</span> -&gt; 0 &lt;= <span class="bv">s</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) [set a | <span class="bv">s</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span>|]%R &lt;=
+   (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="bv">s</span> ^+ 2 / 2)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_offdiag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_max_tail">goe_mx_offdiag_max_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_row_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_mx_row_tail">goe_mx_row_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L249" target="_blank" rel="noopener">source, line 249</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i : &#x27;I_d) [u : R],
+0 &lt; u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) [set a | (1 + u &lt;= \sum_(j | j != i) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j ^+ 2)%R] &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (d%:R * u ^+ 2 / (4 * (1 + u)))))%:E)%E</pre></div>
+<div class="decl-doc"><p>The squares of the row i off the diagonal sum to 1 / d times a chi-square with d - 1 degrees of freedom: their tail above 1 + u.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_mxdot" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_mxdot">goe_mx_mxdot</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_mx_row_tail (i : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) (u : <span class="sv" title="section variable R of section goe_entries">R</span>) : 0 &lt; <span class="bv">u</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) [set a | 1 + <span class="bv">u</span> &lt;= \sum_(j | <span class="bv">j</span> != <span class="bv">i</span>) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span> ^+ 2]%R &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="bv">u</span> ^+ 2 / (4 * (1 + <span class="bv">u</span>)))))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#goe_mx_row_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_max_tail">goe_mx_row_max_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_entry">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_entry">measurable_goe_entry</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L355" target="_blank" rel="noopener">source, line 355</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i j : &#x27;I_d),
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_(d * d)]
+  (<span class="kw">fun</span> a : <span class="hb" title="printed as matrix_matrix__canonical__measurable_structure_SigmaRing 1 (d * d)">&#x27;rV_(d * d)</span> =&gt;
+   <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_entry (i j : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>)] (<span class="kw">fun</span> a =&gt; <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_goe_entry_ge" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_entry_ge">measurable_goe_entry_ge</a>, <a class="r k-thm" href="#measurable_goe_row_ge" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_row_ge">measurable_goe_row_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_entry_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_entry_ge">measurable_goe_entry_ge</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L361" target="_blank" rel="noopener">source, line 361</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i j : &#x27;I_d) (c : R),
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> [set a | c &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j|]</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_entry_ge (i j : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) (c : <span class="sv" title="section variable R of section goe_entries">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> [set a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) | <span class="bv">c</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span>|]%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_goe_diag_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_diag_max">measurable_goe_diag_max</a>, <a class="r k-thm" href="#measurable_goe_offdiag_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_offdiag_max">measurable_goe_offdiag_max</a>, <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>, <a class="r k-thm" href="#goe_mx_offdiag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_offdiag_max_tail">goe_mx_offdiag_max_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_row_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_row_ge">measurable_goe_row_ge</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L374" target="_blank" rel="noopener">source, line 374</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (i : &#x27;I_d) (c : R),
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>
+  [set a | c &lt;= \sum_(j | j != i) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j ^+ 2]</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_row_ge (i : &#x27;I_<span class="sv" title="section variable d of section goe_entries">d</span>) (c : <span class="sv" title="section variable R of section goe_entries">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>
+    [set a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) | <span class="bv">c</span> &lt;= \sum_(j | <span class="bv">j</span> != <span class="bv">i</span>) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span> ^+ 2]%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_goe_row_max" title="GaussianAnalysis.random_matrix.goe_entries.measurable_goe_row_max">measurable_goe_row_max</a>, <a class="r k-thm" href="#goe_mx_row_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_max_tail">goe_mx_row_max_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_opnorm_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_opnorm_ge">measurable_goe_opnorm_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L393" target="_blank" rel="noopener">source, line 393</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (c : R),
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>
+  [set a | c &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a)]</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_opnorm_ge (c : <span class="sv" title="section variable R of section goe_entries">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> [set a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) | <span class="bv">c</span> &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.opnorm.html#opnorm" title="GaussianAnalysis.matrix.opnorm.opnorm">opnorm</a> (<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span>)]%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_diag_max">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_diag_max">measurable_goe_diag_max</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L417" target="_blank" rel="noopener">source, line 417</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (s : R),
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>
+  [set a | (<span class="kw">exists</span> i : &#x27;I_d, s &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i i|)]</pre></div>
+<div class="decl-doc"><p>The events of the three maxima below are measurable.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_diag_max (s : <span class="sv" title="section variable R of section goe_entries">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> [set a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) | <span class="kw">exists</span> i, <span class="bv">s</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">i</span>|]%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_offdiag_max">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_offdiag_max">measurable_goe_offdiag_max</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L429" target="_blank" rel="noopener">source, line 429</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (s : R),
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>
+  [set a | (<span class="kw">exists</span> i j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality d">&#x27;I_d</span>,
+              i != j /\ s &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j|)]</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_offdiag_max (s : <span class="sv" title="section variable R of section goe_entries">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> [set a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) |
+    <span class="kw">exists</span> i j, <span class="bv">i</span> != <span class="bv">j</span> /\ <span class="bv">s</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span>|]%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_goe_row_max">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_goe_row_max">measurable_goe_row_max</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L445" target="_blank" rel="noopener">source, line 445</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [d : nat] (c : R),
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span>
+  [set a | (<span class="kw">exists</span> i : <span class="hb" title="printed as fintype_ordinal__canonical__fintype_Finite d">&#x27;I_d</span>,
+              c &lt;= \sum_(j | j != i) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j ^+ 2)]</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_goe_row_max (c : <span class="sv" title="section variable R of section goe_entries">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> [set a : &#x27;rV[<span class="sv" title="section variable R of section goe_entries">R</span>]_(<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) |
+    <span class="kw">exists</span> i, <span class="bv">c</span> &lt;= \sum_(j | <span class="bv">j</span> != <span class="bv">i</span>) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span> ^+ 2]%R.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_diag_max_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L461" target="_blank" rel="noopener">source, line 461</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (d : nat) [s : R],
+0 &lt;= s -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d) [set a | (<span class="kw">exists</span> i : &#x27;I_d, (s &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i i|)%R)] &lt;=
+ (2 * d%:R * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (d%:R * s ^+ 2 / 4)))%:E)%E</pre></div>
+<div class="decl-doc"><p>The largest diagonal entry, the largest entry off the diagonal and the largest row sum of squares off the diagonal, by the union bound.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Union bounds over the entries and the rows: for <code>s &gt;= 0</code> and <code>u &gt; 0</code>, <code>P(max_i |W_ii| &gt;= s) &lt;= 2 d exp (- d s^2 / 4)</code>, <code>P(max_(i != j) |W_ij| &gt;= s) &lt;= 2 d^2 exp (- d s^2 / 2)</code> and <code>P(max_i sum_(j != i) W_ij^2 &gt;= 1 + u) &lt;= d exp (- d u^2 / (4 (1 + u)))</code>. These events, and <code>{opnorm W &gt;= c}</code> for every real <code>c</code>, are measurable.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_mx_diag_max_tail (s : <span class="sv" title="section variable R of section goe_entries">R</span>) : 0 &lt;= <span class="bv">s</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>) [set a | <span class="kw">exists</span> i, <span class="bv">s</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">i</span>|]%R &lt;=
+   (2 * <span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="bv">s</span> ^+ 2 / 4)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_offdiag_max_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_mx_offdiag_max_tail">goe_mx_offdiag_max_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L480" target="_blank" rel="noopener">source, line 480</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (d : nat) [s : R],
+0 &lt;= s -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)
+   [set a | (<span class="kw">exists</span> i j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality d">&#x27;I_d</span>,
+               i != j /\ (s &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j|)%R)] &lt;=
+ (2 * d%:R ^+ 2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (d%:R * s ^+ 2 / 2)))%:E)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_mx_offdiag_max_tail (s : <span class="sv" title="section variable R of section goe_entries">R</span>) : 0 &lt;= <span class="bv">s</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>)
+     [set a | <span class="kw">exists</span> i j, <span class="bv">i</span> != <span class="bv">j</span> /\ <span class="bv">s</span> &lt;= `|<a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span>|]%R &lt;=
+   (2 * <span class="sv" title="section variable d of section goe_entries">d</span>%:R ^+ 2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="bv">s</span> ^+ 2 / 2)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="goe_mx_row_max_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#goe_mx_row_max_tail">goe_mx_row_max_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/random_matrix/goe_entries.v#L507" target="_blank" rel="noopener">source, line 507</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (d : nat) [u : R],
+0 &lt; u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (d * d)
+   [set a | (<span class="kw">exists</span> i : <span class="hb" title="printed as fintype_ordinal__canonical__fintype_Finite d">&#x27;I_d</span>,
+               (1 + u &lt;= \sum_(j | j != i) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> a i j ^+ 2)%R)] &lt;=
+ (d%:R * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (d%:R * u ^+ 2 / (4 * (1 + u)))))%:E)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#goe_mx_diag_max_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_diag_max_tail">goe_mx_diag_max_tail</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> goe_mx_row_max_tail (u : <span class="sv" title="section variable R of section goe_entries">R</span>) : 0 &lt; <span class="bv">u</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> (<span class="sv" title="section variable d of section goe_entries">d</span> * <span class="sv" title="section variable d of section goe_entries">d</span>)
+     [set a | <span class="kw">exists</span> i, 1 + <span class="bv">u</span> &lt;= \sum_(j | <span class="bv">j</span> != <span class="bv">i</span>) <a class="r k-def" href="GaussianAnalysis.random_matrix.goe.html#goe_mx" title="GaussianAnalysis.random_matrix.goe.goe_mx">goe_mx</a> <span class="bv">a</span> <span class="bv">i</span> <span class="bv">j</span> ^+ 2]%R &lt;=
+   (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="sv" title="section variable d of section goe_entries">d</span>%:R * <span class="bv">u</span> ^+ 2 / (4 * (1 + <span class="bv">u</span>)))))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianApplications.SKGap.Disorder:</span> <a class="r k-thm" href="GaussianApplications.SKGap.Disorder.html#sk_good_disorder_prob" title="GaussianApplications.SKGap.Disorder.sk_good_disorder_prob">sk_good_disorder_prob</a></li>
+</ul></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>opnorm_diag</span></li><li><a href="#opnorm_diag_mx_le">opnorm_<wbr>diag_<wbr>mx_<wbr>le</a></li><li><a href="#opnorm_sub_diag_le">opnorm_<wbr>sub_<wbr>diag_<wbr>le</a></li><li class="toc-sec"><span>union_bound</span></li><li><a href="#measure_bigcup_fin_le">measure_<wbr>bigcup_<wbr>fin_<wbr>le</a></li><li class="toc-sec"><span>exp_poly</span></li><li><a href="#exprn_expRN_le">exprn_<wbr>expRN_<wbr>le</a></li><li class="toc-sec"><span>goe_entries</span></li><li><a href="#goe_coef">goe_<wbr>coef</a></li><li><a href="#goe_mx_mxdot">goe_<wbr>mx_<wbr>mxdot</a></li><li><a href="#delta_mxvec_index">delta_<wbr>mxvec_<wbr>index</a></li><li><a href="#mxdot_goe_coef_row">mxdot_<wbr>goe_<wbr>coef_<wbr>row</a></li><li><a href="#frobenius_goe_coef_diag">frobenius_<wbr>goe_<wbr>coef_<wbr>diag</a></li><li><a href="#goe_mx_diag_tail">goe_<wbr>mx_<wbr>diag_<wbr>tail</a></li><li><a href="#goe_mx_offdiag_tail">goe_<wbr>mx_<wbr>offdiag_<wbr>tail</a></li><li><a href="#goe_mx_row_tail">goe_<wbr>mx_<wbr>row_<wbr>tail</a></li><li><a href="#measurable_goe_entry">measurable_<wbr>goe_<wbr>entry</a></li><li><a href="#measurable_goe_entry_ge">measurable_<wbr>goe_<wbr>entry_<wbr>ge</a></li><li><a href="#measurable_goe_row_ge">measurable_<wbr>goe_<wbr>row_<wbr>ge</a></li><li><a href="#measurable_goe_opnorm_ge">measurable_<wbr>goe_<wbr>opnorm_<wbr>ge</a></li><li><a href="#measurable_goe_diag_max">measurable_<wbr>goe_<wbr>diag_<wbr>max</a></li><li><a href="#measurable_goe_offdiag_max">measurable_<wbr>goe_<wbr>offdiag_<wbr>max</a></li><li><a href="#measurable_goe_row_max">measurable_<wbr>goe_<wbr>row_<wbr>max</a></li><li><a href="#goe_mx_diag_max_tail">goe_<wbr>mx_<wbr>diag_<wbr>max_<wbr>tail</a></li><li><a href="#goe_mx_offdiag_max_tail">goe_<wbr>mx_<wbr>offdiag_<wbr>max_<wbr>tail</a></li><li><a href="#goe_mx_row_max_tail">goe_<wbr>mx_<wbr>row_<wbr>max_<wbr>tail</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

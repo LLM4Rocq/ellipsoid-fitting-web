@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.matrix.trace_projection</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod current" href="GaussianAnalysis.matrix.trace_projection.html" aria-current="page">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>trace_facts</span></li><li><a href="#mxdot1l">mxdot1l</a></li><li><a href="#mxtrace_divK">mxtrace_<wbr>divK</a></li><li><a href="#mxtrace_sqr_le">mxtrace_<wbr>sqr_<wbr>le</a></li><li><a href="#trace_pen_ge">trace_<wbr>pen_<wbr>ge</a></li><li><a href="#mxtraceB">mxtraceB</a></li><li><a href="#mxdot_conjmx">mxdot_<wbr>conjmx</a></li><li><a href="#mxtrace_conj">mxtrace_<wbr>conj</a></li><li class="toc-sec"><span>trace_scale</span></li><li><a href="#trace_scale">trace_<wbr>scale</a></li><li><a href="#trace_quad">trace_<wbr>quad</a></li><li><a href="#trace_argmax">trace_<wbr>argmax</a></li><li><a href="#trace_scaleD">trace_<wbr>scaleD</a></li><li><a href="#trace_scaleZ">trace_<wbr>scaleZ</a></li><li><a href="#trace_scaleN">trace_<wbr>scaleN</a></li><li><a href="#trace_scaleB">trace_<wbr>scaleB</a></li><li><a href="#trace_scale0">trace_<wbr>scale0</a></li><li><a href="#trace_scale_id">trace_<wbr>scale_<wbr>id</a></li><li><a href="#mxtrace_scale">mxtrace_<wbr>scale</a></li><li><a href="#trace_scaleK">trace_<wbr>scaleK</a></li><li><a href="#mxdot_trace_scalel">mxdot_<wbr>trace_<wbr>scalel</a></li><li><a href="#trace_scale_adj">trace_<wbr>scale_<wbr>adj</a></li><li><a href="#trace_scale_conj">trace_<wbr>scale_<wbr>conj</a></li><li><a href="#trace_quad_expand">trace_<wbr>quad_<wbr>expand</a></li><li class="toc-sec"><span>trace_argmax</span></li><li class="is-local"><a href="#sc_gt0">sc_<wbr>gt0</a></li><li class="is-local"><a href="#UV">UV</a></li><li class="is-local"><a href="#VU">VU</a></li><li class="is-local"><a href="#UU">UU</a></li><li class="is-local"><a href="#mxdot_vecE">mxdot_<wbr>vecE</a></li><li class="is-local"><a href="#mxtrace_vec_mx">mxtrace_<wbr>vec_<wbr>mx</a></li><li class="is-local"><a href="#Vvec">Vvec</a></li><li class="is-local"><a href="#KU_closed">KU_<wbr>closed</a></li><li class="is-local"><a href="#KU_n0">KU_<wbr>n0</a></li><li class="is-local"><a href="#KU_convex">KU_<wbr>convex</a></li><li class="is-local"><a href="#vi_transfer">vi_<wbr>transfer</a></li><li><a href="#trace_argmaxP">trace_<wbr>argmaxP</a></li><li><a href="#trace_argmax_eq">trace_<wbr>argmax_<wbr>eq</a></li><li><a href="#trace_argmax_ge">trace_<wbr>argmax_<wbr>ge</a></li><li><a href="#trace_argmax_unique">trace_<wbr>argmax_<wbr>unique</a></li><li><a href="#trace_argmax_lipschitz">trace_<wbr>argmax_<wbr>lipschitz</a></li><li><a href="#trace_argmax0">trace_<wbr>argmax0</a></li><li><a href="#trace_argmax_norm">trace_<wbr>argmax_<wbr>norm</a></li><li><a href="#trace_argmax_cone">trace_<wbr>argmax_<wbr>cone</a></li><li><a href="#trace_argmax_conj">trace_<wbr>argmax_<wbr>conj</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.matrix.html">matrix</a><span aria-hidden="true">/</span><span>trace_projection</span></div>
+<h1 class="page-title">The maximizer of a trace-penalized quadratic on a closed convex set</h1>
+<div class="page-meta"><code>GaussianAnalysis.matrix.trace_projection</code><span>library/matrix/trace_projection.v</span><span>443 lines</span><span>28 lemmas and theorems, 3 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>3</b> library modules and 14 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.convex.moreau.html">GaussianAnalysis.convex.moreau</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.algebra.arithmetic_tactic</p></div></details><details><summary>Required by <b>2</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/ConditionKappa/GaussianLimit.v" target="_blank" rel="noopener">extension/ConditionKappa/GaussianLimit.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/ConditionKappa/Geometry.v" target="_blank" rel="noopener">extension/ConditionKappa/Geometry.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>For c &gt; -1 and real n x n matrices H and S, let <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S = 2 &lt;H, S&gt; - |S|_F^2 - (c / n) (tr S)^2, with the Frobenius product &lt;., .&gt; and norm |.|_F of <a href="GaussianAnalysis.matrix.euclidean.html">matrix/euclidean.v</a>. With A = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> c, that is A S = S + (c / n) tr(S) I, the quadratic part is &lt;S, A S&gt; = |S|_F^2 + (c / n) (tr S)^2. Since (tr S)^2 &lt;= n |S|_F^2, it is coercive: &lt;S, A S&gt; &gt;= min(1, 1 + c) |S|_F^2. So <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H is strictly concave, and it has a unique maximizer X(H) on every nonempty closed convex set K of matrices. Since <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S = &lt;H, A^-1 H&gt; - &lt;S - A^-1 H, A (S - A^-1 H)&gt;, X(H) is the nearest point of K to A^-1 H = H - (c / (1 + c)) (tr H / n) I for the scalar product &lt;S, A T&gt; = &lt;S, T&gt; + (c / n) tr S tr T, with A^-1 = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (- c / (1 + c)). It is not the nearest point of K to H: for K the whole space, X(H) = A^-1 H. X(H) is computed by the projection of <a href="GaussianAnalysis.convex.moreau.html">convex/moreau.v</a>. U = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (sqrt (1 + c) - 1) multiplies the component of a matrix along the identity by sqrt (1 + c) and fixes the matrices of trace 0; U U = A, and X(H) = U^-1 Pi_{U K}(U^-1 H), with Pi_{U K} the Frobenius projection onto U K. The definition applies U^-1 = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (1 / sqrt (1 + c) - 1) to H, projects onto U K in the coordinates of mxvec, and applies U^-1 to the result.</p>
+<ul><li><a class="r k-thm" href="#trace_scaleK" title="GaussianAnalysis.matrix.trace_projection.trace_scaleK">trace_scaleK</a>: <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> b S) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> ((1 + a) (1 + b) - 1) S, so <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a is invertible when a != -1; <a class="r k-thm" href="#trace_scale_adj" title="GaussianAnalysis.matrix.trace_projection.trace_scale_adj">trace_scale_adj</a>, it is self-adjoint for the Frobenius product; <a class="r k-thm" href="#mxtrace_scale" title="GaussianAnalysis.matrix.trace_projection.mxtrace_scale">mxtrace_scale</a>, tr (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S) = (1 + a) tr S.</li><li><a class="r k-thm" href="#mxtrace_sqr_le" title="GaussianAnalysis.matrix.trace_projection.mxtrace_sqr_le">mxtrace_sqr_le</a>: (tr S)^2 / n &lt;= |S|_F^2; <a class="r k-thm" href="#trace_pen_ge" title="GaussianAnalysis.matrix.trace_projection.trace_pen_ge">trace_pen_ge</a>, the coercivity above, for every real c.</li><li><a class="r k-thm" href="#trace_quad_expand" title="GaussianAnalysis.matrix.trace_projection.trace_quad_expand">trace_quad_expand</a>: the exact expansion of <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H at any X: <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S - <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H X equals 2 &lt;H - X - (c / n) tr(X) I, S - X&gt; minus |S - X|_F^2 + (c / n) (tr (S - X))^2.</li></ul>
+<p>In what follows, K is a set of n x n matrices that is closed in the coordinates of mxvec, convex and nonempty, c &gt; -1 and X = <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H.</p>
+<ul><li><a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>: X is in K and satisfies the variational inequality &lt;H - X - (c / n) tr(X) I, S - X&gt; &lt;= 0 for every S in K; <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a>, X is the only point of K that does.</li><li><a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_argmax_ge</a>: <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S + min(1, 1 + c) |S - X|_F^2 &lt;= <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H X for every S in K; <a class="r k-thm" href="#trace_argmax_unique" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_unique">trace_argmax_unique</a>, X is the only maximizer of <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H on K.</li><li><a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>: |X(H) - X(H')|_F &lt;= |H - H'|_F / min(1, 1 + c).</li><li><a class="r k-thm" href="#trace_argmax0" title="GaussianAnalysis.matrix.trace_projection.trace_argmax0">trace_argmax0</a> and <a class="r k-thm" href="#trace_argmax_norm" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_norm">trace_argmax_norm</a>: if 0 is in K, then X(0) = 0 and |X(H)|_F &lt;= |H|_F / min(1, 1 + c). <a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_argmax_cone</a>: if K is a cone, then &lt;H, X&gt; = |X|_F^2 + (c / n) (tr X)^2 = <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H X.</li><li><a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_argmax_conj</a>: if K is invariant under the conjugations S |-&gt; Q S Q^T by the orthogonal matrices Q, then X(Q H Q^T) = Q X(H) Q^T.</li></ul>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_<wbr>scale</a> a S</code></td><td class="g-rhs">S + a (tr S / n) I</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_<wbr>quad</a> c H S</code></td><td class="g-rhs">2 &lt;H, S&gt; - |S|_F^2 - (c / n) (tr S)^2</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_<wbr>argmax</a> K c H</code></td><td class="g-rhs">the maximizer of <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H on K</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_<wbr>scale</a></span><span><a class="r k-thm" href="#trace_scaleK" title="GaussianAnalysis.matrix.trace_projection.trace_scaleK">trace_<wbr>scaleK</a></span><span><a class="r k-thm" href="#trace_scale_adj" title="GaussianAnalysis.matrix.trace_projection.trace_scale_adj">trace_<wbr>scale_<wbr>adj</a></span><span><a class="r k-thm" href="#mxtrace_scale" title="GaussianAnalysis.matrix.trace_projection.mxtrace_scale">mxtrace_<wbr>scale</a></span><span><a class="r k-thm" href="#mxtrace_sqr_le" title="GaussianAnalysis.matrix.trace_projection.mxtrace_sqr_le">mxtrace_<wbr>sqr_<wbr>le</a></span><span><a class="r k-thm" href="#trace_pen_ge" title="GaussianAnalysis.matrix.trace_projection.trace_pen_ge">trace_<wbr>pen_<wbr>ge</a></span><span><a class="r k-thm" href="#trace_quad_expand" title="GaussianAnalysis.matrix.trace_projection.trace_quad_expand">trace_<wbr>quad_<wbr>expand</a></span></div></td><td><code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S = S + a (tr S / n) I</code> multiplies the component of <code>S</code> along the identity by <code>1 + a</code>: <code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (trace_scale b S) = trace_scale ((1 + a) (1 + b) - 1) S</code>, it is self-adjoint for the Frobenius product, and <code>tr (trace_scale a S) = (1 + a) tr S</code>. <code>(tr S)^2 / n &lt;= |S|_F^2</code>, so <code>|S|_F^2 + (c / n) (tr S)^2 &gt;= min(1, 1 + c) |S|_F^2</code> for every real <code>c</code>. <code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S = 2 &lt;H, S&gt; - |S|_F^2 - (c / n) (tr S)^2</code> has an exact second-order expansion at every <code>X</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_<wbr>argmax</a></span><span><a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_<wbr>argmaxP</a></span><span><a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_<wbr>argmax_<wbr>eq</a></span><span><a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_<wbr>argmax_<wbr>ge</a></span><span><a class="r k-thm" href="#trace_argmax_unique" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_unique">trace_<wbr>argmax_<wbr>unique</a></span></div></td><td>For <code>c &gt; -1</code> and a nonempty convex set <code>K</code> of <code>n x n</code> matrices, closed in the coordinates of <code>mxvec</code>, <code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H</code> has a unique maximizer <code>X = trace_argmax K c H</code> on <code>K</code>. <code>X</code> is the only point of <code>K</code> with <code>&lt;H - X - (c / n) tr(X) I, S - X&gt; &lt;= 0</code> for every <code>S</code> in <code>K</code>, and <code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S + min(1, 1 + c) |S - X|_F^2 &lt;= trace_quad c H X</code> for <code>S</code> in <code>K</code>. Proved by the projection of <a class="code-link" href="GaussianAnalysis.convex.moreau.html"><code>convex/<wbr>moreau.v</code></a> after <code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (sqrt (1 + c) - 1)</code>, which turns the quadratic part into <code>|.|_F^2</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_<wbr>argmax_<wbr>lipschitz</a></span><span><a class="r k-thm" href="#trace_argmax0" title="GaussianAnalysis.matrix.trace_projection.trace_argmax0">trace_<wbr>argmax0</a></span><span><a class="r k-thm" href="#trace_argmax_norm" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_norm">trace_<wbr>argmax_<wbr>norm</a></span><span><a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_<wbr>argmax_<wbr>cone</a></span><span><a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_<wbr>argmax_<wbr>conj</a></span></div></td><td>With the same hypotheses, <code>|X(H) - X(H&#x27;)|_F &lt;= |H - H&#x27;|_F / min(1, 1 + c)</code>. If <code>0</code> is in <code>K</code>, then <code>X(0) = 0</code> and <code>|X(H)|_F &lt;= |H|_F / min(1, 1 + c)</code>. If <code>K</code> is a cone, then <code>&lt;H, X&gt; = |X|_F^2 + (c / n) (tr X)^2 = trace_quad c H X</code>. If <code>K</code> is invariant under the conjugations <code>S |-&gt; P S P^T</code> by orthogonal matrices, then <code>X(Q H Q^T) = Q X(H) Q^T</code> for every orthogonal <code>Q</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">31 exported, 11 local</span></h2>
+<div class="decl-toolbar"><label><input type="checkbox" id="show-local"> Show the 11 local declarations (<code>Let</code>, <code>Local</code>)</label><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-trace_facts-15"><span class="sec-kw">section</span><span class="sec-name">trace_facts</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.</pre>
+<div class="decl k-thm" id="mxdot1l">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot1l">mxdot1l</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L84" target="_blank" rel="noopener">source, line 84</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (A : &#x27;M_n), <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> 1%:M A = \tr A</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot1l n (A : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) : <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> 1%:M <span class="bv">A</span> = \tr <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#mxtrace_sqr_le" title="GaussianAnalysis.matrix.trace_projection.mxtrace_sqr_le">mxtrace_sqr_le</a>, <a class="r k-thm" href="#mxdot_trace_scalel" title="GaussianAnalysis.matrix.trace_projection.mxdot_trace_scalel">mxdot_trace_scalel</a>, <a class="r k-let" href="#mxtrace_vec_mx" title="GaussianAnalysis.matrix.trace_projection.mxtrace_vec_mx (section-local)">mxtrace_vec_mx</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_divK">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_divK">mxtrace_divK</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L87" target="_blank" rel="noopener">source, line 87</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (A : &#x27;M_n), \tr A / n%:R * n%:R = \tr A</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_divK n (A : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) : \tr <span class="bv">A</span> / <span class="bv">n</span>%:R * <span class="bv">n</span>%:R = \tr <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#mxtrace_scale" title="GaussianAnalysis.matrix.trace_projection.mxtrace_scale">mxtrace_scale</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_sqr_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_sqr_le">mxtrace_sqr_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L94" target="_blank" rel="noopener">source, line 94</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (A : &#x27;M_n), \tr A ^+ 2 / n%:R &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A</pre></div>
+<div class="decl-doc"><p>Cauchy-Schwarz for the Frobenius product with the identity.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_sqr_le n (A : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) : \tr <span class="bv">A</span> ^+ 2 / <span class="bv">n</span>%:R &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_pen_ge" title="GaussianAnalysis.matrix.trace_projection.trace_pen_ge">trace_pen_ge</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_pen_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_pen_ge">trace_pen_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L102" target="_blank" rel="noopener">source, line 102</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (c : R) (A : &#x27;M_n),
+minr 1 (1 + c) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A A + c / n%:R * \tr A ^+ 2</pre></div>
+<div class="decl-doc"><p>The coercivity of the quadratic part, for every real c.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_pen_ge n (c : <span class="sv" title="section variable R of section trace_facts">R</span>) (A : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) :
+  <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (1 + <span class="bv">c</span>) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span> &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">A</span> + <span class="bv">c</span> / <span class="bv">n</span>%:R * \tr <span class="bv">A</span> ^+ 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_argmax_ge</a>, <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtraceB">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtraceB">mxtraceB</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L116" target="_blank" rel="noopener">source, line 116</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (A B : &#x27;M_n), \tr (A - B) = \tr A - \tr B</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtraceB n (A B : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) : \tr (<span class="bv">A</span> - <span class="bv">B</span>) = \tr <span class="bv">A</span> - \tr <span class="bv">B</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_quad_expand" title="GaussianAnalysis.matrix.trace_projection.trace_quad_expand">trace_quad_expand</a>, <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_conjmx">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_conjmx">mxdot_conjmx</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L119" target="_blank" rel="noopener">source, line 119</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [Q : &#x27;M_n] (A B : &#x27;M_n),
+Q \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (Q *m A *m Q^T) (Q *m B *m Q^T) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> A B</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_conjmx n (Q A B : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) : <span class="bv">Q</span> \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">Q</span> *m <span class="bv">A</span> *m <span class="bv">Q</span>^T) (<span class="bv">Q</span> *m <span class="bv">B</span> *m <span class="bv">Q</span>^T) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">B</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_argmax_conj</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_conj">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_conj">mxtrace_conj</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L126" target="_blank" rel="noopener">source, line 126</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [Q : &#x27;M_n] (A : &#x27;M_n),
+Q \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt; \tr (Q *m A *m Q^T) = \tr A</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_conj n (Q A : &#x27;M[<span class="sv" title="section variable R of section trace_facts">R</span>]_<span class="bv">n</span>) : <span class="bv">Q</span> \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt;
+  \tr (<span class="bv">Q</span> *m <span class="bv">A</span> *m <span class="bv">Q</span>^T) = \tr <span class="bv">A</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_scale_conj" title="GaussianAnalysis.matrix.trace_projection.trace_scale_conj">trace_scale_conj</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-trace_scale-58"><span class="sec-kw">section</span><span class="sec-name">trace_scale</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Implicit Types</span> (a b c k : <span class="sv" title="section variable R of section trace_scale">R</span>) (H S T X : &#x27;M[<span class="sv" title="section variable R of section trace_scale">R</span>]_<span class="sv" title="section variable n of section trace_scale">n</span>).</pre>
+<div class="decl k-def" id="trace_scale">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#trace_scale">trace_scale</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L137" target="_blank" rel="noopener">source, line 137</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat}, R -&gt; &#x27;M_n -&gt; &#x27;M_n</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> trace_scale a S : &#x27;M[<span class="sv" title="section variable R of section trace_scale">R</span>]_<span class="sv" title="section variable n of section trace_scale">n</span> := <span class="bv">S</span> + (<span class="bv">a</span> * (\tr <span class="bv">S</span> / <span class="sv" title="section variable n of section trace_scale">n</span>%:R)) *: 1%:M.</pre></div>
+<div class="decl-doc"><p>Multiplies the component of S along the identity by 1 + a.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p><code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S = S + a (tr S / n) I</code> multiplies the component of <code>S</code> along the identity by <code>1 + a</code>: <code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (trace_scale b S) = trace_scale ((1 + a) (1 + b) - 1) S</code>, it is self-adjoint for the Frobenius product, and <code>tr (trace_scale a S) = (1 + a) tr S</code>. <code>(tr S)^2 / n &lt;= |S|_F^2</code>, so <code>|S|_F^2 + (c / n) (tr S)^2 &gt;= min(1, 1 + c) |S|_F^2</code> for every real <code>c</code>. <code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S = 2 &lt;H, S&gt; - |S|_F^2 - (c / n) (tr S)^2</code> has an exact second-order expansion at every <code>X</code>.</p>
+</div>
+<details class="decl-used"><summary>Used by 25 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a>, <a class="r k-thm" href="#trace_scaleD" title="GaussianAnalysis.matrix.trace_projection.trace_scaleD">trace_scaleD</a>, <a class="r k-thm" href="#trace_scaleZ" title="GaussianAnalysis.matrix.trace_projection.trace_scaleZ">trace_scaleZ</a>, <a class="r k-thm" href="#trace_scaleN" title="GaussianAnalysis.matrix.trace_projection.trace_scaleN">trace_scaleN</a>, <a class="r k-thm" href="#trace_scaleB" title="GaussianAnalysis.matrix.trace_projection.trace_scaleB">trace_scaleB</a>, <a class="r k-thm" href="#trace_scale0" title="GaussianAnalysis.matrix.trace_projection.trace_scale0">trace_scale0</a>, <a class="r k-thm" href="#trace_scale_id" title="GaussianAnalysis.matrix.trace_projection.trace_scale_id">trace_scale_id</a>, <a class="r k-thm" href="#mxtrace_scale" title="GaussianAnalysis.matrix.trace_projection.mxtrace_scale">mxtrace_scale</a>, <a class="r k-thm" href="#trace_scaleK" title="GaussianAnalysis.matrix.trace_projection.trace_scaleK">trace_scaleK</a>, <a class="r k-thm" href="#mxdot_trace_scalel" title="GaussianAnalysis.matrix.trace_projection.mxdot_trace_scalel">mxdot_trace_scalel</a>, <a class="r k-thm" href="#trace_scale_adj" title="GaussianAnalysis.matrix.trace_projection.trace_scale_adj">trace_scale_adj</a>, <a class="r k-thm" href="#trace_scale_conj" title="GaussianAnalysis.matrix.trace_projection.trace_scale_conj">trace_scale_conj</a>, <a class="r k-thm" href="#trace_quad_expand" title="GaussianAnalysis.matrix.trace_projection.trace_quad_expand">trace_quad_expand</a>, <a class="r k-let" href="#UV" title="GaussianAnalysis.matrix.trace_projection.UV (section-local)">UV</a>, <a class="r k-let" href="#VU" title="GaussianAnalysis.matrix.trace_projection.VU (section-local)">VU</a>, <a class="r k-let" href="#UU" title="GaussianAnalysis.matrix.trace_projection.UU (section-local)">UU</a>, <a class="r k-let" href="#Vvec" title="GaussianAnalysis.matrix.trace_projection.Vvec (section-local)">Vvec</a>, <a class="r k-let" href="#KU_closed" title="GaussianAnalysis.matrix.trace_projection.KU_closed (section-local)">KU_closed</a>, <a class="r k-let" href="#KU_n0" title="GaussianAnalysis.matrix.trace_projection.KU_n0 (section-local)">KU_n0</a>, <a class="r k-let" href="#KU_convex" title="GaussianAnalysis.matrix.trace_projection.KU_convex (section-local)">KU_convex</a>, <a class="r k-let" href="#vi_transfer" title="GaussianAnalysis.matrix.trace_projection.vi_transfer (section-local)">vi_transfer</a>, <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a>, <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>, <a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_argmax_cone</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="trace_quad">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#trace_quad">trace_quad</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L139" target="_blank" rel="noopener">source, line 139</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat}, R -&gt; &#x27;M_n -&gt; &#x27;M_n -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> trace_quad c H S : <span class="sv" title="section variable R of section trace_scale">R</span> :=
+  2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">H</span> <span class="bv">S</span> - <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">S</span> <span class="bv">S</span> - <span class="bv">c</span> / <span class="sv" title="section variable n of section trace_scale">n</span>%:R * \tr <span class="bv">S</span> ^+ 2.</pre></div>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_quad_expand" title="GaussianAnalysis.matrix.trace_projection.trace_quad_expand">trace_quad_expand</a>, <a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_argmax_ge</a>, <a class="r k-thm" href="#trace_argmax_unique" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_unique">trace_argmax_unique</a>, <a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_argmax_cone</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="trace_argmax">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#trace_argmax">trace_argmax</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L142" target="_blank" rel="noopener">source, line 142</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat}, <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;M_n -&gt; R -&gt; &#x27;M_n -&gt; &#x27;M_n</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> trace_argmax (K : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;M[<span class="sv" title="section variable R of section trace_scale">R</span>]_<span class="sv" title="section variable n of section trace_scale">n</span>) c H : &#x27;M[<span class="sv" title="section variable R of section trace_scale">R</span>]_<span class="sv" title="section variable n of section trace_scale">n</span> :=
+  <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> ((<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 + <span class="bv">c</span>))^-1 - 1) (<span class="x" title="mathcomp.algebra.matrix.vec_mx">vec_mx</span> (<a class="r k-def" href="GaussianAnalysis.convex.moreau.html#proj" title="GaussianAnalysis.convex.moreau.proj">proj</a>
+    [set v | <span class="bv">K</span> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> ((<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 + <span class="bv">c</span>))^-1 - 1) (<span class="x" title="mathcomp.algebra.matrix.vec_mx">vec_mx</span> <span class="bv">v</span>))]
+    (<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> ((<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 + <span class="bv">c</span>))^-1 - 1) <span class="bv">H</span>)))).</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>c &gt; -1</code> and a nonempty convex set <code>K</code> of <code>n x n</code> matrices, closed in the coordinates of <code>mxvec</code>, <code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H</code> has a unique maximizer <code>X = trace_argmax K c H</code> on <code>K</code>. <code>X</code> is the only point of <code>K</code> with <code>&lt;H - X - (c / n) tr(X) I, S - X&gt; &lt;= 0</code> for every <code>S</code> in <code>K</code>, and <code><a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S + min(1, 1 + c) |S - X|_F^2 &lt;= trace_quad c H X</code> for <code>S</code> in <code>K</code>. Proved by the projection of <a class="code-link" href="GaussianAnalysis.convex.moreau.html"><code>convex/<wbr>moreau.v</code></a> after <code><a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (sqrt (1 + c) - 1)</code>, which turns the quadratic part into <code>|.|_F^2</code>.</p>
+</div>
+<details class="decl-used"><summary>Used by 9 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a>, <a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_argmax_ge</a>, <a class="r k-thm" href="#trace_argmax_unique" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_unique">trace_argmax_unique</a>, <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>, <a class="r k-thm" href="#trace_argmax0" title="GaussianAnalysis.matrix.trace_projection.trace_argmax0">trace_argmax0</a>, <a class="r k-thm" href="#trace_argmax_norm" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_norm">trace_argmax_norm</a>, <a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_argmax_cone</a>, <a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_argmax_conj</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scaleD">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scaleD">trace_scaleD</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L147" target="_blank" rel="noopener">source, line 147</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) (S T : &#x27;M_n),
+<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (S + T) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S + <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a T</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scaleD a S T :
+  <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> (<span class="bv">S</span> + <span class="bv">T</span>) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span> + <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">T</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_scaleB" title="GaussianAnalysis.matrix.trace_projection.trace_scaleB">trace_scaleB</a>, <a class="r k-let" href="#KU_convex" title="GaussianAnalysis.matrix.trace_projection.KU_convex (section-local)">KU_convex</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scaleZ">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scaleZ">trace_scaleZ</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L151" target="_blank" rel="noopener">source, line 151</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a k : R) (S : &#x27;M_n),
+<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (k *: S) = k *: <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scaleZ a k S : <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> (<span class="bv">k</span> *: <span class="bv">S</span>) = <span class="bv">k</span> *: <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_scaleN" title="GaussianAnalysis.matrix.trace_projection.trace_scaleN">trace_scaleN</a>, <a class="r k-let" href="#KU_convex" title="GaussianAnalysis.matrix.trace_projection.KU_convex (section-local)">KU_convex</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scaleN">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scaleN">trace_scaleN</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L157" target="_blank" rel="noopener">source, line 157</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) (S : &#x27;M_n), <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (- S) = - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scaleN a S : <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> (- <span class="bv">S</span>) = - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_scaleB" title="GaussianAnalysis.matrix.trace_projection.trace_scaleB">trace_scaleB</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scaleB">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scaleB">trace_scaleB</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L160" target="_blank" rel="noopener">source, line 160</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) (S T : &#x27;M_n),
+<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (S - T) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a T</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scaleB a S T :
+  <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> (<span class="bv">S</span> - <span class="bv">T</span>) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span> - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">T</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#KU_convex" title="GaussianAnalysis.matrix.trace_projection.KU_convex (section-local)">KU_convex</a>, <a class="r k-let" href="#vi_transfer" title="GaussianAnalysis.matrix.trace_projection.vi_transfer (section-local)">vi_transfer</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scale0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scale0">trace_scale0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L164" target="_blank" rel="noopener">source, line 164</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R), <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a 0 = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scale0 a : <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> 0 = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax0" title="GaussianAnalysis.matrix.trace_projection.trace_argmax0">trace_argmax0</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scale_id">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scale_id">trace_scale_id</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L167" target="_blank" rel="noopener">source, line 167</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (S : &#x27;M_n), <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> 0 S = S</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scale_id S : <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> 0 <span class="bv">S</span> = <span class="bv">S</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#UV" title="GaussianAnalysis.matrix.trace_projection.UV (section-local)">UV</a>, <a class="r k-let" href="#VU" title="GaussianAnalysis.matrix.trace_projection.VU (section-local)">VU</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxtrace_scale">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxtrace_scale">mxtrace_scale</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L170" target="_blank" rel="noopener">source, line 170</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) (S : &#x27;M_n), \tr (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S) = (1 + a) * \tr S</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxtrace_scale a S : \tr (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span>) = (1 + <span class="bv">a</span>) * \tr <span class="bv">S</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_scaleK" title="GaussianAnalysis.matrix.trace_projection.trace_scaleK">trace_scaleK</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scaleK">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scaleK">trace_scaleK</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L176" target="_blank" rel="noopener">source, line 176</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a b : R) (S : &#x27;M_n),
+<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> b S) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> ((1 + a) * (1 + b) - 1) S</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scaleK a b S :
+  <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">b</span> <span class="bv">S</span>) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> ((1 + <span class="bv">a</span>) * (1 + <span class="bv">b</span>) - 1) <span class="bv">S</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#UV" title="GaussianAnalysis.matrix.trace_projection.UV (section-local)">UV</a>, <a class="r k-let" href="#VU" title="GaussianAnalysis.matrix.trace_projection.VU (section-local)">VU</a>, <a class="r k-let" href="#UU" title="GaussianAnalysis.matrix.trace_projection.UU (section-local)">UU</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mxdot_trace_scalel">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mxdot_trace_scalel">mxdot_trace_scalel</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L183" target="_blank" rel="noopener">source, line 183</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) (S T : &#x27;M_n),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S) T = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> S T + a / n%:R * (\tr S * \tr T)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mxdot_trace_scalel a S T :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span>) <span class="bv">T</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">S</span> <span class="bv">T</span> + <span class="bv">a</span> / <span class="sv" title="section variable n of section trace_scale">n</span>%:R * (\tr <span class="bv">S</span> * \tr <span class="bv">T</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_scale_adj" title="GaussianAnalysis.matrix.trace_projection.trace_scale_adj">trace_scale_adj</a>, <a class="r k-thm" href="#trace_quad_expand" title="GaussianAnalysis.matrix.trace_projection.trace_quad_expand">trace_quad_expand</a>, <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>, <a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_argmax_cone</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scale_adj">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scale_adj">trace_scale_adj</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L187" target="_blank" rel="noopener">source, line 187</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) (S T : &#x27;M_n),
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S) T = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> S (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a T)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scale_adj a S T :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span>) <span class="bv">T</span> = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">S</span> (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">T</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#vi_transfer" title="GaussianAnalysis.matrix.trace_projection.vi_transfer (section-local)">vi_transfer</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_scale_conj">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_scale_conj">trace_scale_conj</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L194" target="_blank" rel="noopener">source, line 194</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (a : R) [Q : &#x27;M_n] (S : &#x27;M_n),
+Q \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt; <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a (Q *m S *m Q^T) = Q *m <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> a S *m Q^T</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_scale_conj a Q S : <span class="bv">Q</span> \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt;
+  <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> (<span class="bv">Q</span> *m <span class="bv">S</span> *m <span class="bv">Q</span>^T) = <span class="bv">Q</span> *m <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">a</span> <span class="bv">S</span> *m <span class="bv">Q</span>^T.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_argmax_conj</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_quad_expand">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_quad_expand">trace_quad_expand</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L202" target="_blank" rel="noopener">source, line 202</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (c : R) (H S0 X : &#x27;M_n),
+<a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S0 =
+<a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H X + 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (H - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> c X) (S0 - X) -
+(<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (S0 - X) (S0 - X) + c / n%:R * \tr (S0 - X) ^+ 2)</pre></div>
+<div class="decl-doc"><p>The second-order expansion of <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H at X.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_quad_expand c H S X :
+  <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="bv">c</span> <span class="bv">H</span> <span class="bv">S</span> = <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="bv">c</span> <span class="bv">H</span> <span class="bv">X</span> +
+    2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">H</span> - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="bv">c</span> <span class="bv">X</span>) (<span class="bv">S</span> - <span class="bv">X</span>) -
+    (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">S</span> - <span class="bv">X</span>) (<span class="bv">S</span> - <span class="bv">X</span>) + <span class="bv">c</span> / <span class="sv" title="section variable n of section trace_scale">n</span>%:R * \tr (<span class="bv">S</span> - <span class="bv">X</span>) ^+ 2).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_argmax_ge</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-trace_argmax-119"><span class="sec-kw">section</span><span class="sec-name">trace_argmax</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variable</span> K : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;M[<span class="sv" title="section variable R of section trace_argmax">R</span>]_<span class="sv" title="section variable n of section trace_argmax">n</span>.
+<span class="vk">Hypothesis</span> Kc : <span class="x" title="mathcomp.analysis.topology_theory.topology_structure.closed">closed</span> [set v : &#x27;rV[<span class="sv" title="section variable R of section trace_argmax">R</span>]_(<span class="sv" title="section variable n of section trace_argmax">n</span> * <span class="sv" title="section variable n of section trace_argmax">n</span>) | <span class="sv" title="section variable K of section trace_argmax">K</span> (<span class="x" title="mathcomp.algebra.matrix.vec_mx">vec_mx</span> <span class="bv">v</span>)].
+<span class="vk">Hypothesis</span> Kn : <span class="sv" title="section variable K of section trace_argmax">K</span> !=set0.
+<span class="vk">Hypothesis</span> Kcvx : <span class="kw">forall</span> (S T : &#x27;M[<span class="sv" title="section variable R of section trace_argmax">R</span>]_<span class="sv" title="section variable n of section trace_argmax">n</span>) (t : <span class="sv" title="section variable R of section trace_argmax">R</span>), <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt; <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">T</span> -&gt; 0 &lt;= <span class="bv">t</span> &lt;= 1 -&gt;
+  <span class="sv" title="section variable K of section trace_argmax">K</span> (<span class="bv">S</span> + <span class="bv">t</span> *: (<span class="bv">T</span> - <span class="bv">S</span>)).
+<span class="vk">Variable</span> c : <span class="sv" title="section variable R of section trace_argmax">R</span>.
+<span class="vk">Hypothesis</span> c1 : -1 &lt; <span class="sv" title="section variable c of section trace_argmax">c</span>.
+<span class="vk">Implicit Types</span> (H S T X Y : &#x27;M[<span class="sv" title="section variable R of section trace_argmax">R</span>]_<span class="sv" title="section variable n of section trace_argmax">n</span>).
+<span class="vk">Local Notation</span> sc := (<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 + <span class="sv" title="section variable c of section trace_argmax">c</span>)).
+<span class="vk">Local Notation</span> Uc := (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (<span class="ln" title="Local Notation sc := (Num.sqrt (1 + c)).">sc</span> - 1)).
+<span class="vk">Local Notation</span> Vc := (<a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> (<span class="ln" title="Local Notation sc := (Num.sqrt (1 + c)).">sc</span>^-1 - 1)).
+<span class="vk">Local Notation</span> KU := [set v : &#x27;rV[<span class="sv" title="section variable R of section trace_argmax">R</span>]_(<span class="sv" title="section variable n of section trace_argmax">n</span> * <span class="sv" title="section variable n of section trace_argmax">n</span>) | <span class="sv" title="section variable K of section trace_argmax">K</span> (<span class="ln" title="Local Notation Vc := (trace_scale (sc^-1 - 1)).">Vc</span> (<span class="x" title="mathcomp.algebra.matrix.vec_mx">vec_mx</span> <span class="bv">v</span>))].
+<span class="vk">Local Notation</span> Mv := (1%:M + ((<span class="ln" title="Local Notation sc := (Num.sqrt (1 + c)).">sc</span>^-1 - 1) / <span class="sv" title="section variable n of section trace_argmax">n</span>%:R) *:
+  ((<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (1%:M : &#x27;M[<span class="sv" title="section variable R of section trace_argmax">R</span>]_<span class="sv" title="section variable n of section trace_argmax">n</span>))^T *m <span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (1%:M : &#x27;M[<span class="sv" title="section variable R of section trace_argmax">R</span>]_<span class="sv" title="section variable n of section trace_argmax">n</span>))).</pre>
+<div class="decl k-let is-local" id="sc_gt0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#sc_gt0">sc_gt0</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L231" target="_blank" rel="noopener">source, line 231</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> sc_gt0 : 0 &lt; <span class="ln" title="Local Notation sc := (Num.sqrt (1 + c)).">sc</span>.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#UV" title="GaussianAnalysis.matrix.trace_projection.UV (section-local)">UV</a>, <a class="r k-let" href="#VU" title="GaussianAnalysis.matrix.trace_projection.VU (section-local)">VU</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="UV">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#UV">UV</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L234" target="_blank" rel="noopener">source, line 234</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> UV S : <span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> (<span class="ln" title="Local Notation Vc := (trace_scale (sc^-1 - 1)).">Vc</span> <span class="bv">S</span>) = <span class="bv">S</span>.</pre></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#vi_transfer" title="GaussianAnalysis.matrix.trace_projection.vi_transfer (section-local)">vi_transfer</a>, <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="VU">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#VU">VU</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L242" target="_blank" rel="noopener">source, line 242</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> VU S : <span class="ln" title="Local Notation Vc := (trace_scale (sc^-1 - 1)).">Vc</span> (<span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> <span class="bv">S</span>) = <span class="bv">S</span>.</pre></div>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#KU_n0" title="GaussianAnalysis.matrix.trace_projection.KU_n0 (section-local)">KU_n0</a>, <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="UU">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#UU">UU</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L250" target="_blank" rel="noopener">source, line 250</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> UU S : <span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> (<span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> <span class="bv">S</span>) = <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">S</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#vi_transfer" title="GaussianAnalysis.matrix.trace_projection.vi_transfer (section-local)">vi_transfer</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="mxdot_vecE">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mxdot_vecE">mxdot_vecE</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L257" target="_blank" rel="noopener">source, line 257</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mxdot_vecE (A B : &#x27;M[<span class="sv" title="section variable R of section trace_argmax">R</span>]_<span class="sv" title="section variable n of section trace_argmax">n</span>) : <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> <span class="bv">A</span>) (<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> <span class="bv">B</span>) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">A</span> <span class="bv">B</span>.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#mxtrace_vec_mx" title="GaussianAnalysis.matrix.trace_projection.mxtrace_vec_mx (section-local)">mxtrace_vec_mx</a>, <a class="r k-let" href="#vi_transfer" title="GaussianAnalysis.matrix.trace_projection.vi_transfer (section-local)">vi_transfer</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="mxtrace_vec_mx">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#mxtrace_vec_mx">mxtrace_vec_mx</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L265" target="_blank" rel="noopener">source, line 265</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> mxtrace_vec_mx (v : &#x27;rV[<span class="sv" title="section variable R of section trace_argmax">R</span>]_(<span class="sv" title="section variable n of section trace_argmax">n</span> * <span class="sv" title="section variable n of section trace_argmax">n</span>)) :
+  \tr (<span class="x" title="mathcomp.algebra.matrix.vec_mx">vec_mx</span> <span class="bv">v</span>) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">v</span> (<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> 1%:M).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#Vvec" title="GaussianAnalysis.matrix.trace_projection.Vvec (section-local)">Vvec</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="Vvec">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#Vvec">Vvec</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L270" target="_blank" rel="noopener">source, line 270</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> Vvec (v : &#x27;rV[<span class="sv" title="section variable R of section trace_argmax">R</span>]_(<span class="sv" title="section variable n of section trace_argmax">n</span> * <span class="sv" title="section variable n of section trace_argmax">n</span>)) : <span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (<span class="ln" title="Local Notation Vc := (trace_scale (sc^-1 - 1)).">Vc</span> (<span class="x" title="mathcomp.algebra.matrix.vec_mx">vec_mx</span> <span class="bv">v</span>)) = <span class="bv">v</span> *m <span class="ln" title="Local Notation Mv := (1%:M + ((sc^-1 - 1) / n%:R) *: ((mxvec (1%:M : &#x27;M[R]_n))^T *m mxvec (1%:M : &#x27;M[R]_n))).">Mv</span>.</pre></div>
+<div class="decl-doc"><p>In the coordinates of mxvec, Vc is the right multiplication by Mv.</p></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#KU_closed" title="GaussianAnalysis.matrix.trace_projection.KU_closed (section-local)">KU_closed</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="KU_closed">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#KU_closed">KU_closed</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L277" target="_blank" rel="noopener">source, line 277</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> KU_closed : <span class="x" title="mathcomp.analysis.topology_theory.topology_structure.closed">closed</span> <span class="ln" title="Local Notation KU := [set v : &#x27;rV[R]_(n * n) | K (Vc (vec_mx v))].">KU</span>.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="KU_n0">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#KU_n0">KU_n0</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L284" target="_blank" rel="noopener">source, line 284</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> KU_n0 : <span class="ln" title="Local Notation KU := [set v : &#x27;rV[R]_(n * n) | K (Vc (vec_mx v))].">KU</span> !=set0.</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="KU_convex">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#KU_convex">KU_convex</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L287" target="_blank" rel="noopener">source, line 287</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> KU_convex (x y : &#x27;rV[<span class="sv" title="section variable R of section trace_argmax">R</span>]_(<span class="sv" title="section variable n of section trace_argmax">n</span> * <span class="sv" title="section variable n of section trace_argmax">n</span>)) (t : <span class="sv" title="section variable R of section trace_argmax">R</span>) : <span class="ln" title="Local Notation KU := [set v : &#x27;rV[R]_(n * n) | K (Vc (vec_mx v))].">KU</span> <span class="bv">x</span> -&gt; <span class="ln" title="Local Notation KU := [set v : &#x27;rV[R]_(n * n) | K (Vc (vec_mx v))].">KU</span> <span class="bv">y</span> -&gt; 0 &lt;= <span class="bv">t</span> &lt;= 1 -&gt;
+  <span class="ln" title="Local Notation KU := [set v : &#x27;rV[R]_(n * n) | K (Vc (vec_mx v))].">KU</span> (<span class="bv">x</span> + <span class="bv">t</span> *: (<span class="bv">y</span> - <span class="bv">x</span>)).</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="vi_transfer">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#vi_transfer">vi_transfer</a>
+<span class="tag local" title="Let: local to section trace_argmax, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L295" target="_blank" rel="noopener">source, line 295</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> vi_transfer H X S :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (<span class="ln" title="Local Notation Vc := (trace_scale (sc^-1 - 1)).">Vc</span> <span class="bv">H</span>) - <span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (<span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> <span class="bv">X</span>)) (<span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (<span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> <span class="bv">S</span>) - <span class="x" title="mathcomp.algebra.matrix.mxvec">mxvec</span> (<span class="ln" title="Local Notation Uc := (trace_scale (sc - 1)).">Uc</span> <span class="bv">X</span>)) =
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">H</span> - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">X</span>) (<span class="bv">S</span> - <span class="bv">X</span>).</pre></div>
+<div class="decl-doc"><p>The variational inequality of the projection, read on matrices.</p></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmaxP" title="GaussianAnalysis.matrix.trace_projection.trace_argmaxP">trace_argmaxP</a>, <a class="r k-thm" href="#trace_argmax_eq" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_eq">trace_argmax_eq</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_argmaxP">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#trace_argmaxP">trace_argmaxP</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L308" target="_blank" rel="noopener">source, line 308</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> H : &#x27;M_n,
+K (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) /\
+(<span class="kw">forall</span> S : &#x27;M_n,
+ K S -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (H - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> c (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H)) (S - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) &lt;= 0)</pre></div>
+<div class="decl-doc"><p>The maximizer is in K and satisfies the variational inequality &lt;H - X - (c / n) tr(X) I, S - X&gt; &lt;= 0 for every S in K.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> trace_argmaxP H : <span class="sv" title="section variable K of section trace_argmax">K</span> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) /\
+  <span class="kw">forall</span> S, <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt;
+    <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">H</span> - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="sv" title="section variable c of section trace_argmax">c</span> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>)) (<span class="bv">S</span> - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>)
+      &lt;= 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_ge" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_ge">trace_argmax_ge</a>, <a class="r k-thm" href="#trace_argmax_unique" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_unique">trace_argmax_unique</a>, <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>, <a class="r k-thm" href="#trace_argmax_cone" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_cone">trace_argmax_cone</a>, <a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_argmax_conj</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_eq">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_eq">trace_argmax_eq</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L322" target="_blank" rel="noopener">source, line 322</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> [H Y : &#x27;M_n],
+K Y -&gt;
+(<span class="kw">forall</span> S : &#x27;M_n, K S -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (H - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> c Y) (S - Y) &lt;= 0) -&gt;
+<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H = Y</pre></div>
+<div class="decl-doc"><p>The variational inequality characterizes the maximizer.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_eq H Y : <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">Y</span> -&gt;
+  (<span class="kw">forall</span> S, <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">H</span> - <a class="r k-def" href="#trace_scale" title="GaussianAnalysis.matrix.trace_projection.trace_scale">trace_scale</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">Y</span>) (<span class="bv">S</span> - <span class="bv">Y</span>) &lt;= 0) -&gt;
+  <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> = <span class="bv">Y</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax0" title="GaussianAnalysis.matrix.trace_projection.trace_argmax0">trace_argmax0</a>, <a class="r k-thm" href="#trace_argmax_conj" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_conj">trace_argmax_conj</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_ge">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_ge">trace_argmax_ge</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L338" target="_blank" rel="noopener">source, line 338</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> (H : &#x27;M_n) [S : &#x27;M_n],
+K S -&gt;
+<a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S + minr 1 (1 + c) * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (S - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) (S - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) &lt;=
+<a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H)</pre></div>
+<div class="decl-doc"><p>The maximizer beats every point of K by min(1, 1 + c) |S - X|_F^2.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_ge H S : <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt;
+  <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> <span class="bv">S</span> + <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (1 + <span class="sv" title="section variable c of section trace_argmax">c</span>) *
+    <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">S</span> - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) (<span class="bv">S</span> - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) &lt;=
+  <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_unique" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_unique">trace_argmax_unique</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_unique">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_unique">trace_argmax_unique</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L350" target="_blank" rel="noopener">source, line 350</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> [H Y : &#x27;M_n],
+K Y -&gt;
+(<span class="kw">forall</span> S : &#x27;M_n, K S -&gt; <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H S &lt;= <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H Y) -&gt; <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H = Y</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_unique H Y : <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">Y</span> -&gt;
+  (<span class="kw">forall</span> S, <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt; <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> <span class="bv">S</span> &lt;= <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> <span class="bv">Y</span>) -&gt;
+  <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> = <span class="bv">Y</span>.</pre></div></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_lipschitz">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_lipschitz">trace_argmax_lipschitz</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L362" target="_blank" rel="noopener">source, line 362</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> H H&#x27; : &#x27;M_n,
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H&#x27;) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (H - H&#x27;) / minr 1 (1 + c)</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>With the same hypotheses, <code>|X(H) - X(H&#x27;)|_F &lt;= |H - H&#x27;|_F / min(1, 1 + c)</code>. If <code>0</code> is in <code>K</code>, then <code>X(0) = 0</code> and <code>|X(H)|_F &lt;= |H|_F / min(1, 1 + c)</code>. If <code>K</code> is a cone, then <code>&lt;H, X&gt; = |X|_F^2 + (c / n) (tr X)^2 = trace_quad c H X</code>. If <code>K</code> is invariant under the conjugations <code>S |-&gt; P S P^T</code> by orthogonal matrices, then <code>X(Q H Q^T) = Q X(H) Q^T</code> for every orthogonal <code>Q</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_lipschitz H H&#x27; :
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> - <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H&#x27;</span>) &lt;=
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">H</span> - <span class="bv">H&#x27;</span>) / <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (1 + <span class="sv" title="section variable c of section trace_argmax">c</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_norm" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_norm">trace_argmax_norm</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_argmax0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax0">trace_argmax0</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L389" target="_blank" rel="noopener">source, line 389</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R], -1 &lt; c -&gt; K 0 -&gt; <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c 0 = 0</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax0 : <span class="sv" title="section variable K of section trace_argmax">K</span> 0 -&gt; <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> 0 = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#trace_argmax_norm" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_norm">trace_argmax_norm</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_norm">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_norm">trace_argmax_norm</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L395" target="_blank" rel="noopener">source, line 395</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> H : &#x27;M_n, K 0 -&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> H / minr 1 (1 + c)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_norm H : <span class="sv" title="section variable K of section trace_argmax">K</span> 0 -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) &lt;= <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> <span class="bv">H</span> / <span class="x" title="mathcomp.algebra.numeric_hierarchy.orderedzmod.Num.min">Num.min</span> 1 (1 + <span class="sv" title="section variable c of section trace_argmax">c</span>).</pre></div></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_cone">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_cone">trace_argmax_cone</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L403" target="_blank" rel="noopener">source, line 403</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> H : &#x27;M_n,
+(<span class="kw">forall</span> (S : &#x27;M_n) (k : R), K S -&gt; 0 &lt;= k -&gt; K (k *: S)) -&gt;
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> H (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) =
+<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) + c / n%:R * \tr (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) ^+ 2 /\
+<a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> c H (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> H (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H)</pre></div>
+<div class="decl-doc"><p>On a cone, the value of the maximum is &lt;H, X&gt;.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_cone H :
+  (<span class="kw">forall</span> S (k : <span class="sv" title="section variable R of section trace_argmax">R</span>), <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt; 0 &lt;= <span class="bv">k</span> -&gt; <span class="sv" title="section variable K of section trace_argmax">K</span> (<span class="bv">k</span> *: <span class="bv">S</span>)) -&gt;
+  <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">H</span> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) =
+    <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) +
+    <span class="sv" title="section variable c of section trace_argmax">c</span> / <span class="sv" title="section variable n of section trace_argmax">n</span>%:R * \tr (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) ^+ 2 /\
+  <a class="r k-def" href="#trace_quad" title="GaussianAnalysis.matrix.trace_projection.trace_quad">trace_quad</a> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>) = <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">H</span> (<a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span>).</pre></div></details>
+</div>
+<div class="decl k-thm" id="trace_argmax_conj">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#trace_argmax_conj">trace_argmax_conj</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/matrix/trace_projection.v#L426" target="_blank" rel="noopener">source, line 426</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [K : set &#x27;M_n],
+closed [set v | K (vec_mx v)] -&gt;
+K !=set0 -&gt;
+(<span class="kw">forall</span> (S T : &#x27;M_n) (t : R), K S -&gt; K T -&gt; 0 &lt;= t &lt;= 1 -&gt; K (S + t *: (T - S))) -&gt;
+<span class="kw">forall</span> [c : R],
+-1 &lt; c -&gt;
+<span class="kw">forall</span> (H : &#x27;M_n) [Q : &#x27;M_n],
+(<span class="kw">forall</span> P S : &#x27;M_n, P \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt; K S -&gt; K (P *m S *m P^T)) -&gt;
+Q \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt; <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c (Q *m H *m Q^T) = Q *m <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> K c H *m Q^T</pre></div>
+<div class="decl-doc"><p>Equivariance under the orthogonal conjugations, from uniqueness.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#trace_argmax_lipschitz" title="GaussianAnalysis.matrix.trace_projection.trace_argmax_lipschitz">trace_argmax_lipschitz</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> trace_argmax_conj H Q :
+  (<span class="kw">forall</span> P S, <span class="bv">P</span> \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt; <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="bv">S</span> -&gt; <span class="sv" title="section variable K of section trace_argmax">K</span> (<span class="bv">P</span> *m <span class="bv">S</span> *m <span class="bv">P</span>^T)) -&gt;
+  <span class="bv">Q</span> \<span class="kw">is</span> <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#orthogonalmx" title="GaussianAnalysis.matrix.euclidean.orthogonalmx">orthogonalmx</a> -&gt;
+  <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> (<span class="bv">Q</span> *m <span class="bv">H</span> *m <span class="bv">Q</span>^T) = <span class="bv">Q</span> *m <a class="r k-def" href="#trace_argmax" title="GaussianAnalysis.matrix.trace_projection.trace_argmax">trace_argmax</a> <span class="sv" title="section variable K of section trace_argmax">K</span> <span class="sv" title="section variable c of section trace_argmax">c</span> <span class="bv">H</span> *m <span class="bv">Q</span>^T.</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>trace_facts</span></li><li><a href="#mxdot1l">mxdot1l</a></li><li><a href="#mxtrace_divK">mxtrace_<wbr>divK</a></li><li><a href="#mxtrace_sqr_le">mxtrace_<wbr>sqr_<wbr>le</a></li><li><a href="#trace_pen_ge">trace_<wbr>pen_<wbr>ge</a></li><li><a href="#mxtraceB">mxtraceB</a></li><li><a href="#mxdot_conjmx">mxdot_<wbr>conjmx</a></li><li><a href="#mxtrace_conj">mxtrace_<wbr>conj</a></li><li class="toc-sec"><span>trace_scale</span></li><li><a href="#trace_scale">trace_<wbr>scale</a></li><li><a href="#trace_quad">trace_<wbr>quad</a></li><li><a href="#trace_argmax">trace_<wbr>argmax</a></li><li><a href="#trace_scaleD">trace_<wbr>scaleD</a></li><li><a href="#trace_scaleZ">trace_<wbr>scaleZ</a></li><li><a href="#trace_scaleN">trace_<wbr>scaleN</a></li><li><a href="#trace_scaleB">trace_<wbr>scaleB</a></li><li><a href="#trace_scale0">trace_<wbr>scale0</a></li><li><a href="#trace_scale_id">trace_<wbr>scale_<wbr>id</a></li><li><a href="#mxtrace_scale">mxtrace_<wbr>scale</a></li><li><a href="#trace_scaleK">trace_<wbr>scaleK</a></li><li><a href="#mxdot_trace_scalel">mxdot_<wbr>trace_<wbr>scalel</a></li><li><a href="#trace_scale_adj">trace_<wbr>scale_<wbr>adj</a></li><li><a href="#trace_scale_conj">trace_<wbr>scale_<wbr>conj</a></li><li><a href="#trace_quad_expand">trace_<wbr>quad_<wbr>expand</a></li><li class="toc-sec"><span>trace_argmax</span></li><li class="is-local"><a href="#sc_gt0">sc_<wbr>gt0</a></li><li class="is-local"><a href="#UV">UV</a></li><li class="is-local"><a href="#VU">VU</a></li><li class="is-local"><a href="#UU">UU</a></li><li class="is-local"><a href="#mxdot_vecE">mxdot_<wbr>vecE</a></li><li class="is-local"><a href="#mxtrace_vec_mx">mxtrace_<wbr>vec_<wbr>mx</a></li><li class="is-local"><a href="#Vvec">Vvec</a></li><li class="is-local"><a href="#KU_closed">KU_<wbr>closed</a></li><li class="is-local"><a href="#KU_n0">KU_<wbr>n0</a></li><li class="is-local"><a href="#KU_convex">KU_<wbr>convex</a></li><li class="is-local"><a href="#vi_transfer">vi_<wbr>transfer</a></li><li><a href="#trace_argmaxP">trace_<wbr>argmaxP</a></li><li><a href="#trace_argmax_eq">trace_<wbr>argmax_<wbr>eq</a></li><li><a href="#trace_argmax_ge">trace_<wbr>argmax_<wbr>ge</a></li><li><a href="#trace_argmax_unique">trace_<wbr>argmax_<wbr>unique</a></li><li><a href="#trace_argmax_lipschitz">trace_<wbr>argmax_<wbr>lipschitz</a></li><li><a href="#trace_argmax0">trace_<wbr>argmax0</a></li><li><a href="#trace_argmax_norm">trace_<wbr>argmax_<wbr>norm</a></li><li><a href="#trace_argmax_cone">trace_<wbr>argmax_<wbr>cone</a></li><li><a href="#trace_argmax_conj">trace_<wbr>argmax_<wbr>conj</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

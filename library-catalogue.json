@@ -1,0 +1,1186 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "title": "Ellipsoid fitting and GaussianAnalysis: source catalogue",
+    "repository": "LLM4Rocq/ellipsoid_fitting_rocq",
+    "repository_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq",
+    "source_commit": "305747af48d4f75e26378888a8111d591145fa52",
+    "source_release_tag": "shifted",
+    "phase14_commit": "5f81a422a9b430f98a3ae8be97fdd9f2ae91e8f7",
+    "local_head_at_inventory": "15d9fb22dbd0326982b2bed9056604a3d2a5a260",
+    "result_cards": 26,
+    "topic_cards": 9,
+    "library_modules": 128,
+    "library_lines": 72337,
+    "application_modules": 57,
+    "extension_modules": 177,
+    "checked_theorem_reports": 37,
+    "checked_report_breakdown": {
+      "original_bundle": 1,
+      "earlier_extensions": 16,
+      "applications": 13,
+      "shifted": 7
+    },
+    "notes": [
+      "The original bundle contains three mathematical results. The 37 checked reports are not a count of all mathematical theorems or all library lemmas.",
+      "Application targets are T1–T7 and T9–T14; there is no T8.",
+      "Source paths, declaration names and line anchors were validated locally against source_commit. Live GitHub responses were not checked.",
+      "Every entry links a proved theorem; statement-only files are secondary links.",
+      "The existing doc/libdoc/site is a historical phase12 rendering at 904688306c080bccbf2acc617c523a59cfc6899b and is not the current catalogue."
+    ]
+  },
+  "entries": [
+    {
+      "id": "gaussian-main",
+      "kind": "result",
+      "title": "Three Gaussian ellipsoid-fitting results",
+      "category": "Original Gaussian results",
+      "summary": "The probability of a positive semidefinite fit tends to one below density 1/4 and to zero above it. Below the threshold, fits can also have trace d and fixed positive spectral bounds. Balanced positive-definite combinations of sample outer products have the opposite transition.",
+      "assumptions": [
+        "Independent standard Gaussian points in dimension d; sample sizes n(d).",
+        "The fitting transition uses limsup n/d² < 1/4 or liminf n/d² > 1/4.",
+        "For every alpha < 1/4, the well-conditioned result assumes limsup n/d² ≤ alpha; its spectral constants depend only on alpha."
+      ],
+      "source": "theories/MainTheorem.v",
+      "source_line": 7,
+      "statement": "theories/MainStatement.v",
+      "statement_line": 45,
+      "theorem": "ellipsoid_fitting_main",
+      "statement_identifier": "main_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/theories/MainTheorem.v#L7",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/theories/MainStatement.v#L45",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "One formal theorem bundles three mathematical results and includes measurability of their events.",
+        "No claim at the critical density follows from these threshold statements.",
+        "Formalization of the three main results of Misiakiewicz and Wen."
+      ]
+    },
+    {
+      "id": "universality-mixtures",
+      "kind": "result",
+      "title": "Universality and finite or countable mixtures",
+      "category": "Extensions",
+      "summary": "A sharp fitting transition at alpha_*(kappa), bounded-condition positive definite fits below it, and a deterministic limiting fitting error extend from independent coordinates to finite and countable mixtures of product laws.",
+      "assumptions": [
+        "Samples are independent and identically distributed; n/d² tends to alpha > 0.",
+        "Within each mixture component, coordinates are independent, mean zero, variance one, and uniformly subgaussian with one constant K > 0.",
+        "Every coordinate has unconditional fourth moment kappa > 1 after averaging over the mixture.",
+        "Mixture families and their weights may depend on dimension."
+      ],
+      "source": "extension/CountableTheorem.v",
+      "source_line": 14,
+      "statement": "extension/CountableMixtureStatement.v",
+      "statement_line": 120,
+      "theorem": "countable_theorem",
+      "statement_identifier": "countable_theorem_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/CountableTheorem.v#L14",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/CountableMixtureStatement.v#L120",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "Coordinates of a point may be dependent under the mixture.",
+        "A component need not itself have fourth moment kappa.",
+        "The independent-coordinate result formalizes Koehler and Sohn; the mixture extension is stated separately."
+      ],
+      "related": [
+        {
+          "source": "extension/UniversalityTheorem.v",
+          "source_line": 20,
+          "statement": "extension/UniversalityStatement.v",
+          "statement_line": 67,
+          "theorem": "universality_theorem",
+          "statement_identifier": "universality_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/UniversalityTheorem.v#L20",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/UniversalityStatement.v#L67"
+        },
+        {
+          "source": "extension/MixtureTheorem.v",
+          "source_line": 17,
+          "statement": "extension/MixtureStatement.v",
+          "statement_line": 129,
+          "theorem": "mixture_theorem",
+          "statement_identifier": "mixture_theorem_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/MixtureTheorem.v#L17",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/MixtureStatement.v#L129"
+        }
+      ]
+    },
+    {
+      "id": "optimal-condition",
+      "kind": "result",
+      "title": "The optimal condition number",
+      "category": "Extensions",
+      "summary": "For every C > 1, the probability of an exact fit with condition number at most C has threshold alpha(C,kappa). Below alpha_*(kappa), the optimal condition number converges in probability to C_*(alpha,kappa), the inverse curve.",
+      "assumptions": [
+        "Admissible finite or countable mixtures of product laws, with common subgaussian bound K > 0 and unconditional fourth moment kappa > 1.",
+        "n/d² tends to alpha > 0; convergence of the optimum assumes 0 < alpha < alpha_*(kappa)."
+      ],
+      "source": "extension/ConditionKappaTheorem.v",
+      "source_line": 23,
+      "statement": "extension/ConditionKappaStatement.v",
+      "statement_line": 151,
+      "theorem": "condition_kappa_theorem",
+      "statement_identifier": "condition_kappa_theorem_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ConditionKappaTheorem.v#L23",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ConditionKappaStatement.v#L151",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "Nothing is asserted at alpha = alpha(C,kappa).",
+        "The condition number is the matrix eigenvalue ratio; the ellipsoid semiaxis ratio is its square root.",
+        "At kappa = 3, alpha_*(3) = 1/4."
+      ],
+      "related": [
+        {
+          "source": "extension/ConditionKappaCurveTheorem.v",
+          "source_line": 21,
+          "statement": "extension/ConditionKappaCurveStatement.v",
+          "statement_line": 135,
+          "theorem": "condition_kappa_curve_theorem",
+          "statement_identifier": "condition_kappa_curve_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ConditionKappaCurveTheorem.v#L21",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ConditionKappaCurveStatement.v#L135"
+        }
+      ]
+    },
+    {
+      "id": "total-variation-robustness",
+      "kind": "result",
+      "title": "Robustness to small changes of law",
+      "category": "Extensions",
+      "summary": "The condition-number threshold and limiting optimum persist when the point law is within o(d⁻²) in total variation of an admissible finite or countable mixture.",
+      "assumptions": [
+        "Reference families satisfy the mixture assumptions with kappa > 1 and K > 0.",
+        "d² times the total-variation discrepancy tends to zero.",
+        "The threshold comparison is away from alpha(C,kappa); the optimum limit is below alpha_*(kappa)."
+      ],
+      "source": "extension/ConditionKappaRobustTheorem.v",
+      "source_line": 19,
+      "statement": "extension/ConditionKappaRobustStatement.v",
+      "statement_line": 162,
+      "theorem": "condition_kappa_robust_theorem",
+      "statement_identifier": "condition_kappa_robust_theorem_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ConditionKappaRobustTheorem.v#L19",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ConditionKappaRobustStatement.v#L162",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "A separate contamination example shows that O(d⁻²) cannot replace o(d⁻²) in general."
+      ],
+      "related": [
+        {
+          "source": "extension/RobustTheorem.v",
+          "source_line": 17,
+          "statement": "extension/RobustStatement.v",
+          "statement_line": 162,
+          "theorem": "robust_theorem",
+          "statement_identifier": "robust_theorem_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/RobustTheorem.v#L17",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/RobustStatement.v#L162"
+        }
+      ]
+    },
+    {
+      "id": "dependent-examples",
+      "kind": "result",
+      "title": "Explicit dependent point laws",
+      "category": "Extensions",
+      "summary": "Paired coordinates and a single latent sign shared across all coordinates yield explicit dependent laws with sharp fitting transitions. The latent-sign theorem also gives the limiting fitting error and small-residual interpolation.",
+      "assumptions": [
+        "Paired-law parameter −1 ≤ eps ≤ 7/3.",
+        "Latent-sign parameter 0 ≤ s ≤ 1, allowed to depend on dimension; the unconditional coordinate fourth moment is 9/5.",
+        "Independent samples with n/d² tending to a positive density."
+      ],
+      "source": "extension/LatentSignTheorem.v",
+      "source_line": 10,
+      "statement": "extension/LatentSignStatement.v",
+      "statement_line": 64,
+      "theorem": "latent_sign_theorem",
+      "statement_identifier": "latent_sign_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentSignTheorem.v#L10",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentSignStatement.v#L64",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The condition and interpolation constants in the latent-sign result are uniform over s in [0,1]."
+      ],
+      "related": [
+        {
+          "source": "extension/PairedTheorem.v",
+          "source_line": 11,
+          "statement": "extension/PairedStatement.v",
+          "statement_line": 58,
+          "theorem": "paired_theorem",
+          "statement_identifier": "paired_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/PairedTheorem.v#L11",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/PairedStatement.v#L58"
+        },
+        {
+          "source": "extension/LatentScopeTheorem.v",
+          "source_line": 24,
+          "statement": "extension/LatentSignScope.v",
+          "statement_line": 102,
+          "theorem": "latent_scope_theorem",
+          "statement_identifier": "latent_scope_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentScopeTheorem.v#L24",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentSignScope.v#L102"
+        }
+      ]
+    },
+    {
+      "id": "dependence-boundaries",
+      "kind": "result",
+      "title": "Dependence and the limits of the mixture model",
+      "category": "Extensions",
+      "summary": "For the latent-sign law, variance-tensorization constants can grow exponentially with dimension, despite exact fitting below the threshold. A continuous latent mixture can remain at total-variation distance one from every countable mixture of product laws.",
+      "assumptions": [
+        "The exponential lower-bound result concerns a fixed latent-sign parameter s > 0 in the specified latent-sign family.",
+        "The matching upper-bound theorem covers 0 ≤ s ≤ 1.",
+        "The continuous-mixture result concerns its explicitly constructed law; it is not a claim about every continuous mixture."
+      ],
+      "source": "extension/LatentTensorTheorem.v",
+      "source_line": 419,
+      "statement": "extension/LatentTensorization.v",
+      "statement_line": 112,
+      "theorem": "latent_tensor_theorem",
+      "statement_identifier": "latent_tensorization_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentTensorTheorem.v#L419",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentTensorization.v#L112",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The upper tensorization bound is 2 ((1+s)/(1−3s/7))^d."
+      ],
+      "related": [
+        {
+          "source": "extension/LatentTensorUpperTheorem.v",
+          "source_line": 10,
+          "statement": "extension/LatentTensorUpper.v",
+          "statement_line": 62,
+          "theorem": "latent_tensor_upper_theorem",
+          "statement_identifier": "latent_tensor_upper_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentTensorUpperTheorem.v#L10",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/LatentTensorUpper.v#L62"
+        },
+        {
+          "source": "extension/ContinuousLatentTheorem.v",
+          "source_line": 16,
+          "statement": "extension/ContinuousLatent.v",
+          "statement_line": 77,
+          "theorem": "continuous_latent_theorem",
+          "statement_identifier": "continuous_latent_statement",
+          "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ContinuousLatentTheorem.v#L16",
+          "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ContinuousLatent.v#L77"
+        }
+      ]
+    },
+    {
+      "id": "shifted-s1",
+      "kind": "result",
+      "title": "S1 · Small Gaussian shifts preserve the optimum",
+      "category": "Translated samples",
+      "summary": "The centered-Gaussian condition-number threshold and limiting optimum are unchanged by deterministic shifts small compared with sqrt(d).",
+      "assumptions": [
+        "Independent N(m_d,I_d) points; n/d² → alpha > 0.",
+        "||m_d||/sqrt(d) → 0; C > 1 for the threshold.",
+        "The optimal-condition limit assumes 0 < alpha < 1/4."
+      ],
+      "source": "extension/Shifted/ConditionTheorem.v",
+      "source_line": 8,
+      "statement": "extension/ShiftedConditionStatement.v",
+      "statement_line": 72,
+      "theorem": "shifted_condition_theorem",
+      "statement_identifier": "shifted_condition_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/ConditionTheorem.v#L8",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedConditionStatement.v#L72",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "Equality at the condition-number threshold is left open."
+      ],
+      "target": "S1"
+    },
+    {
+      "id": "shifted-s2",
+      "kind": "result",
+      "title": "S2 · Arbitrary Gaussian shifts: the cost of translation",
+      "category": "Translated samples",
+      "summary": "Below density 1/4, positive definite fits exist and the optimal condition number is of order 1 + ||m_d||/sqrt(d). A lower bound on that scale holds uniformly over translations at every positive density.",
+      "assumptions": [
+        "Independent standard Gaussian samples translated by a deterministic sequence m_d.",
+        "n/d² → alpha > 0; the existence and two-sided bounds require alpha < 1/4.",
+        "No bound is imposed on the shift magnitudes."
+      ],
+      "source": "extension/Shifted/GaussianTheorem.v",
+      "source_line": 22,
+      "statement": "extension/ShiftedGaussianStatement.v",
+      "statement_line": 70,
+      "theorem": "shifted_gaussian_theorem",
+      "statement_identifier": "shifted_gaussian_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/GaussianTheorem.v#L22",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedGaussianStatement.v#L70",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The lower bound holds on one high-probability event for all translations. The upper/existence statement applies to each deterministic shift sequence."
+      ],
+      "target": "S2"
+    },
+    {
+      "id": "shifted-s3",
+      "kind": "result",
+      "title": "S3 · Above the Gaussian threshold: no PSD quadric",
+      "category": "Translated samples",
+      "summary": "One high-probability event excludes every quadric whose quadratic part is positive semidefinite and nonzero, whatever its linear and constant terms. It therefore excludes a centered fit after every translation.",
+      "assumptions": [
+        "Independent standard Gaussian points; n/d² → alpha > 1/4."
+      ],
+      "source": "extension/Shifted/QuadricTheorem.v",
+      "source_line": 6,
+      "statement": "extension/ShiftedQuadricStatement.v",
+      "statement_line": 22,
+      "theorem": "shifted_quadric_theorem",
+      "statement_identifier": "shifted_quadric_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/QuadricTheorem.v#L6",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedQuadricStatement.v#L22",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The event is chosen before the quadric; this is simultaneous over all such quadrics."
+      ],
+      "target": "S3"
+    },
+    {
+      "id": "shifted-s4",
+      "kind": "result",
+      "title": "S4 · Fitting error is unchanged by Gaussian shifts",
+      "category": "Translated samples",
+      "summary": "At every positive density, arbitrary deterministic shifts preserve the limiting fitting error e_*(alpha,3). Taking the infimum over all translations has the same limit.",
+      "assumptions": [
+        "Independent standard Gaussian samples; n/d² → alpha > 0.",
+        "Arbitrary deterministic shift sequences."
+      ],
+      "source": "extension/Shifted/ErrorTheorem.v",
+      "source_line": 62,
+      "statement": "extension/ShiftedErrorStatement.v",
+      "statement_line": 59,
+      "theorem": "shifted_error_theorem",
+      "statement_identifier": "shifted_error_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/ErrorTheorem.v#L62",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedErrorStatement.v#L59",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The density alpha = 1/4 is included for the error limit. A zero limiting error does not prove exact fitting at that density."
+      ],
+      "target": "S4"
+    },
+    {
+      "id": "shifted-s5",
+      "kind": "result",
+      "title": "S5 · Symmetric mixtures exclude all PSD quadrics",
+      "category": "Translated samples",
+      "summary": "Above alpha_*(kappa), symmetric mixture point laws have a positive fitting-error margin uniform over translations, and no quadric with nonzero positive semidefinite quadratic part fits all points.",
+      "assumptions": [
+        "Finite or countable admissible mixtures; kappa > 1 and a uniform subgaussian bound K > 0.",
+        "The point law is centrally symmetric; individual mixture components need not be.",
+        "n/d² → alpha > alpha_*(kappa)."
+      ],
+      "source": "extension/Shifted/MixtureUnsatTheorem.v",
+      "source_line": 16,
+      "statement": "extension/ShiftedMixtureUnsatStatement.v",
+      "statement_line": 72,
+      "theorem": "shifted_mixture_unsat_theorem",
+      "statement_identifier": "shifted_mixture_unsat_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/MixtureUnsatTheorem.v#L16",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedMixtureUnsatStatement.v#L72",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The positive margin is chosen from kappa and alpha before K and the family.",
+        "The theorem supplies measurable good events; it does not assert measurability of the existential arbitrary-quadric event."
+      ],
+      "target": "S5"
+    },
+    {
+      "id": "shifted-s6",
+      "kind": "result",
+      "title": "S6 · Sparse shifts preserve mixture fitting",
+      "category": "Translated samples",
+      "summary": "Below alpha_*(kappa), deterministic shifts supported on o(d) coordinates preserve positive definite fits with probability tending to one.",
+      "assumptions": [
+        "Finite or countable admissible mixtures; kappa > 1, K > 0, and n/d² → alpha in (0,alpha_*(kappa)).",
+        "The number of nonzero shift coordinates divided by d tends to zero."
+      ],
+      "source": "extension/Shifted/MixtureSatTheorem.v",
+      "source_line": 18,
+      "statement": "extension/ShiftedMixtureSatStatement.v",
+      "statement_line": 70,
+      "theorem": "shifted_mixture_sat_theorem",
+      "statement_identifier": "shifted_mixture_sat_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/MixtureSatTheorem.v#L18",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedMixtureSatStatement.v#L70",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "No symmetry and no bound on shift magnitudes are required. The support may change with dimension.",
+        "The assertion is for each shift sequence, not one event simultaneously covering all shifts."
+      ],
+      "target": "S6"
+    },
+    {
+      "id": "shifted-s7",
+      "kind": "result",
+      "title": "S7 · Opposite shifts have the same fitting statistics",
+      "category": "Translated samples",
+      "summary": "For a centrally symmetric point law, a mixture of its translates by m and −m has exactly the same joint outer-product law as the translate by m. Centered-fit probabilities, optimal condition numbers and fitting errors therefore agree.",
+      "assumptions": [
+        "Independent samples from a centrally symmetric point law.",
+        "Any mixture weight in [0,1], including endpoints.",
+        "The stated Gaussian and admissible-mixture asymptotic consequences use the hypotheses of S1, S2, S5 or S6 as applicable."
+      ],
+      "source": "extension/Shifted/SignTheorem.v",
+      "source_line": 8,
+      "statement": "extension/ShiftedSignStatement.v",
+      "statement_line": 186,
+      "theorem": "shifted_sign_theorem",
+      "statement_identifier": "shifted_sign_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/Shifted/SignTheorem.v#L8",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/extension/ShiftedSignStatement.v#L186",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "This does not transfer arbitrary-center quadric events or an infimum over additional translations."
+      ],
+      "target": "S7"
+    },
+    {
+      "id": "application-t1",
+      "kind": "result",
+      "title": "T1 · Gaussian matrix series",
+      "category": "Applications",
+      "summary": "Even trace-moment bounds for symmetric Gaussian matrix series, operator-norm bounds for rectangular series, and a quantitative bound under variance and trace control.",
+      "assumptions": [
+        "An arbitrary realType; fixed real matrices and independent standard Gaussian coefficients.",
+        "Symmetry is required for the trace-moment clause; moment order q is positive."
+      ],
+      "source": "applications/MatrixSeriesTheorem.v",
+      "source_line": 34,
+      "statement": "applications/MatrixSeriesStatement.v",
+      "statement_line": 64,
+      "theorem": "matrix_series_theorem",
+      "statement_identifier": "matrix_series_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/MatrixSeriesTheorem.v#L34",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/MatrixSeriesStatement.v#L64",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T1"
+    },
+    {
+      "id": "application-t2",
+      "kind": "result",
+      "title": "T2 · Tensor packing",
+      "category": "Applications",
+      "summary": "Bounds how many tensor pairs can have large projection onto a low-dimensional matrix subspace, given controlled correlations.",
+      "assumptions": [
+        "An arbitrary realType; vector families in Euclidean unit balls.",
+        "Correlation graphs have degree at most L; correlations outside them are at most eta ≤ eps²/10000.",
+        "0 < eps ≤ 1; an orthonormal matrix family has size at most d, with d > 0."
+      ],
+      "source": "applications/TensorPackingTheorem.v",
+      "source_line": 27,
+      "statement": "applications/TensorPackingStatement.v",
+      "statement_line": 51,
+      "theorem": "tensor_packing_theorem",
+      "statement_identifier": "tensor_packing_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/TensorPackingTheorem.v#L27",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/TensorPackingStatement.v#L51",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T2"
+    },
+    {
+      "id": "application-t3",
+      "kind": "result",
+      "title": "T3 · The upper spectral edge of the GOE",
+      "category": "Applications",
+      "summary": "The normalized GOE has expected largest eigenvalue at most 2 and Gaussian upper tails; analogous bounds control the negative edge and operator norm.",
+      "assumptions": [
+        "An arbitrary realType; the normalized Gaussian orthogonal ensemble in dimension d ≥ 1.",
+        "Tail parameter t ≥ 0."
+      ],
+      "source": "applications/GoeEdgeTheorem.v",
+      "source_line": 34,
+      "statement": "applications/GoeEdgeStatement.v",
+      "statement_line": 68,
+      "theorem": "goe_edge_theorem",
+      "statement_identifier": "goe_edge_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/GoeEdgeTheorem.v#L34",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/GoeEdgeStatement.v#L68",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T3"
+    },
+    {
+      "id": "application-t4",
+      "kind": "result",
+      "title": "T4 · The high-temperature SK spectral gap",
+      "category": "Applications",
+      "summary": "With high probability over the Gaussian disorder, the SK heat-bath spectral gap is at least (1−2 beta)/2, with a corresponding covariance bound, uniformly over external fields and interaction scalings.",
+      "assumptions": [
+        "An arbitrary realType; 0 ≤ beta < 1/2.",
+        "Interaction scaling s in [0,1]; arbitrary external fields."
+      ],
+      "source": "applications/SKGapTheorem.v",
+      "source_line": 47,
+      "statement": "applications/SKGapStatement.v",
+      "statement_line": 76,
+      "theorem": "sk_gap_theorem",
+      "statement_identifier": "sk_gap_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/SKGapTheorem.v#L47",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/SKGapStatement.v#L76",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T4"
+    },
+    {
+      "id": "application-t5",
+      "kind": "result",
+      "title": "T5 · Orthogonal splitting of PSD matrices",
+      "category": "Applications",
+      "summary": "Splits the identity into orthogonal projections and controls the cross-energy of a finite PSD matrix family by its pairwise trace overlaps.",
+      "assumptions": [
+        "An arbitrary realType; a nonempty finite family of positive semidefinite square matrices."
+      ],
+      "source": "applications/PsdSplittingTheorem.v",
+      "source_line": 23,
+      "statement": "applications/PsdSplittingStatement.v",
+      "statement_line": 50,
+      "theorem": "psd_splitting_theorem",
+      "statement_identifier": "psd_splitting_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdSplittingTheorem.v#L23",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdSplittingStatement.v#L50",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T5"
+    },
+    {
+      "id": "application-t6",
+      "kind": "result",
+      "title": "T6 · Sign/Gaussian comparison for the perceptron",
+      "category": "Applications",
+      "summary": "The expected Ising-perceptron pressures for sign and Gaussian patterns differ by at most C M N^(−3/2).",
+      "assumptions": [
+        "An arbitrary realType; N > 0 variables and M patterns.",
+        "The test function and its first three derivatives satisfy the stated uniform bounds; C depends on those bounds."
+      ],
+      "source": "applications/PerceptronSignTheorem.v",
+      "source_line": 34,
+      "statement": "applications/PerceptronSignStatement.v",
+      "statement_line": 52,
+      "theorem": "perceptron_sign_theorem",
+      "statement_identifier": "perceptron_sign_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PerceptronSignTheorem.v#L34",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PerceptronSignStatement.v#L52",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T6"
+    },
+    {
+      "id": "application-t7",
+      "kind": "result",
+      "title": "T7 · Concentration of random SAT lifetime",
+      "category": "Applications",
+      "summary": "The variance of the capped largest satisfiable prefix of independent uniform proper signed k-clauses is O_k(n^(1+2/k)).",
+      "assumptions": [
+        "An arbitrary realType; fixed k ≥ 3 and n ≥ k+1.",
+        "The prefix length is capped at 2^(k+1)n."
+      ],
+      "source": "applications/SatVarianceTheorem.v",
+      "source_line": 36,
+      "statement": "applications/SatVarianceStatement.v",
+      "statement_line": 45,
+      "theorem": "sat_variance_theorem",
+      "statement_identifier": "sat_variance_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/SatVarianceTheorem.v#L36",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/SatVarianceStatement.v#L45",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T7"
+    },
+    {
+      "id": "application-t9",
+      "kind": "result",
+      "title": "T9 · A limiting threshold for every fixed k-SAT",
+      "category": "Applications",
+      "summary": "For every fixed k ≥ 3, a positive limiting density separates asymptotically satisfiable and unsatisfiable random k-SAT instances.",
+      "assumptions": [
+        "An arbitrary realType; independent uniform proper signed k-clauses on n variables.",
+        "The clause count is floor(c n), for a fixed density c on either side of the threshold."
+      ],
+      "source": "applications/SatThresholdTheorem.v",
+      "source_line": 30,
+      "statement": "applications/SatThresholdStatement.v",
+      "statement_line": 46,
+      "theorem": "sat_threshold_theorem",
+      "statement_identifier": "sat_threshold_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/SatThresholdTheorem.v#L30",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/SatThresholdStatement.v#L46",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence.",
+        "The theorem establishes existence of the limiting threshold, not an explicit formula for its value; equality is not asserted."
+      ],
+      "target": "T9"
+    },
+    {
+      "id": "application-t10",
+      "kind": "result",
+      "title": "T10 · Exact normalization of PSD factors",
+      "category": "Applications",
+      "summary": "Preserves every trace pairing and factor size while bounding the traces of one factor family by m and the other by the factor dimension r.",
+      "assumptions": [
+        "An arbitrary realType; finite PSD matrix families F_i and G_j of size r, with the second index set nonempty.",
+        "Every trace pairing tr(F_i G_j) is at most m."
+      ],
+      "source": "applications/PsdNormalizationTheorem.v",
+      "source_line": 23,
+      "statement": "applications/PsdNormalizationStatement.v",
+      "statement_line": 56,
+      "theorem": "psd_normalization_theorem",
+      "statement_identifier": "psd_normalization_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdNormalizationTheorem.v#L23",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdNormalizationStatement.v#L56",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T10"
+    },
+    {
+      "id": "application-t11",
+      "kind": "result",
+      "title": "T11 · Product smoothing of matrix squares",
+      "category": "Applications",
+      "summary": "A product-averaged PSD matrix-valued function admits a sum-of-squares representation with quantitative weighted Fourier-coefficient bounds.",
+      "assumptions": [
+        "An arbitrary realType; finite product spaces and the stated smoothing_hyps.",
+        "The matrix-valued function is positive semidefinite with trace at most B.",
+        "The positive weight lambda and smoothing parameters satisfy the explicit smallness inequality in the statement."
+      ],
+      "source": "applications/ProductSmoothingTheorem.v",
+      "source_line": 27,
+      "statement": "applications/ProductSmoothingStatement.v",
+      "statement_line": 87,
+      "theorem": "product_smoothing_theorem",
+      "statement_identifier": "product_smoothing_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/ProductSmoothingTheorem.v#L27",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/ProductSmoothingStatement.v#L87",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T11"
+    },
+    {
+      "id": "application-t12",
+      "kind": "result",
+      "title": "T12 · Convergence from approximate minimum inequalities",
+      "category": "Applications",
+      "summary": "Bounded sequences satisfying balanced approximate minimum inequalities and a neighboring-term lower bound converge, with an explicit lower estimate for the limit.",
+      "assumptions": [
+        "An arbitrary realType; nonnegative error constant A and exponent beta > 0.",
+        "Beyond a fixed index, the two lower inequalities hold with error A min(r,s)^(−beta) or A s^(−beta).",
+        "Boundedness is needed for convergence; the finite-index lower estimate is also proved without it."
+      ],
+      "source": "applications/MinSuperadditiveTheorem.v",
+      "source_line": 29,
+      "statement": "applications/MinSuperadditiveStatement.v",
+      "statement_line": 61,
+      "theorem": "min_superadditive_theorem",
+      "statement_identifier": "min_superadditive_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/MinSuperadditiveTheorem.v#L29",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/MinSuperadditiveStatement.v#L61",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence."
+      ],
+      "target": "T12"
+    },
+    {
+      "id": "application-t13",
+      "kind": "result",
+      "title": "T13 · Exponential PSD rank of shifted matching matrices",
+      "category": "Applications",
+      "summary": "There is a positive integer K, uniform in 0 < rho < 1, such that every size-r PSD factorization of A_n(rho) satisfies 2^n ≤ r^K for sufficiently large even n.",
+      "assumptions": [
+        "An arbitrary realType; 0 < rho < 1; even n beyond a threshold that may depend on rho.",
+        "A_n(rho) has entries |M ∩ delta(U)| − 1 + rho, indexed by odd vertex sets and perfect matchings."
+      ],
+      "source": "applications/PsdRankTheorem.v",
+      "source_line": 179,
+      "statement": "applications/PsdRankStatement.v",
+      "statement_line": 53,
+      "theorem": "psd_rank_theorem",
+      "statement_identifier": "psd_rank_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdRankTheorem.v#L179",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdRankStatement.v#L53",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence.",
+        "Quantifier order: for every realType R, there is K > 0; for every rho in (0,1), there is n0. Do not claim n0 is uniform in rho.",
+        "The source header distinguishes this exponential conclusion from the different superpolynomial Lean statement in the collection."
+      ],
+      "target": "T13"
+    },
+    {
+      "id": "application-t14",
+      "kind": "result",
+      "title": "T14 · Exponential lower bounds for exact PSD lifts",
+      "category": "Applications",
+      "summary": "The unshifted matching matrix, its full slack matrix and exact semidefinite lifts of the perfect matching polytope all satisfy exponential size lower bounds.",
+      "assumptions": [
+        "An arbitrary realType; all sufficiently large even n.",
+        "A PSD factorization of A_n(0) or T_n(0), or an exact semidefinite lift of the perfect matching polytope."
+      ],
+      "source": "applications/PsdLiftTheorem.v",
+      "source_line": 20,
+      "statement": "applications/PsdLiftStatement.v",
+      "statement_line": 48,
+      "theorem": "psd_lift_theorem",
+      "statement_identifier": "psd_lift_statement",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdLiftTheorem.v#L20",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/applications/PsdLiftStatement.v#L48",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "phase14",
+      "notes": [
+        "Formalization of a credited argument from the OpenAI math collection, revision 1581d4cbd; the source header records the precise correspondence.",
+        "The source header distinguishes this exponential conclusion from the different superpolynomial Lean statement in the collection."
+      ],
+      "target": "T14"
+    },
+    {
+      "id": "library-gaussian",
+      "kind": "topic",
+      "title": "Gaussian measures and integration",
+      "category": "Reusable library",
+      "summary": "Gaussian measures on vectors and matrices, moments, Gaussian integration by parts, parameter integrals and covariance interpolation.",
+      "assumptions": [
+        "The representative integration-by-parts result is over an arbitrary realType.",
+        "The function and its continuous coordinate derivative satisfy the stated polynomial-growth bounds."
+      ],
+      "source": "library/gaussian/gauss_ibp.v",
+      "source_line": 427,
+      "statement": "library/gaussian/gauss_ibp.v",
+      "statement_line": 427,
+      "theorem": "gauss_ibp",
+      "statement_identifier": "gauss_ibp",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/gaussian/gauss_ibp.v#L427",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/gaussian/gauss_ibp.v#L427",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/gaussian",
+      "module_count": 9,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/gaussian",
+      "keywords": [
+        "gauss",
+        "gauss_ibp",
+        "gauss_interpolation",
+        "gauss_moments",
+        "lebesgue_rV",
+        "measurable_matrix",
+        "normal_integral",
+        "parameter_integral",
+        "partial_derivative"
+      ]
+    },
+    {
+      "id": "library-comparison",
+      "kind": "topic",
+      "title": "Gaussian comparison and concentration",
+      "category": "Reusable library",
+      "summary": "Gaussian concentration and Poincare inequalities; Slepian, Sudakov–Fernique, Gordon, CGMT and Brascamp–Lieb inequalities.",
+      "assumptions": [
+        "The representative Sudakov–Fernique theorem compares finite centered Gaussian linear processes.",
+        "Every increment variance of the first process is at most the corresponding increment variance of the second."
+      ],
+      "source": "library/comparison/slepian.v",
+      "source_line": 389,
+      "statement": "library/comparison/slepian.v",
+      "statement_line": 389,
+      "theorem": "sudakov_fernique",
+      "statement_identifier": "sudakov_fernique",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/comparison/slepian.v#L389",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/comparison/slepian.v#L389",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/comparison",
+      "module_count": 19,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/comparison",
+      "keywords": [
+        "brascamp_lieb",
+        "brascamp_lieb_lebesgue",
+        "cgmt",
+        "chi_square",
+        "cone_escape",
+        "escape",
+        "gauss_concentration",
+        "gauss_law",
+        "gauss_linear",
+        "gauss_matrix_law",
+        "gauss_rotation",
+        "gauss_shift",
+        "gauss_smoothing",
+        "gordon",
+        "normal_linear",
+        "normal_mgf",
+        "ornstein_uhlenbeck",
+        "slepian",
+        "sudakov"
+      ]
+    },
+    {
+      "id": "library-matrix",
+      "kind": "topic",
+      "title": "Matrix geometry and PSD factorizations",
+      "category": "Reusable library",
+      "summary": "Spectral decompositions, matrix norms, projections, effective rank, PSD factorizations, spectral multiplicity and centered matrix corrections.",
+      "assumptions": [
+        "The representative trace-penalized maximization result assumes a nonempty closed convex set of real matrices and penalty parameter c > −1."
+      ],
+      "source": "library/matrix/trace_projection.v",
+      "source_line": 308,
+      "statement": "library/matrix/trace_projection.v",
+      "statement_line": 308,
+      "theorem": "trace_argmaxP",
+      "statement_identifier": "trace_argmaxP",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/matrix/trace_projection.v#L308",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/matrix/trace_projection.v#L308",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/matrix",
+      "module_count": 27,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/matrix",
+      "keywords": [
+        "centered_correction",
+        "centered_quadratic_correction",
+        "centered_translation",
+        "condition_cone",
+        "condition_perturbation",
+        "coordinate_blocks",
+        "covering",
+        "effective_rank",
+        "euclidean",
+        "lambda_max",
+        "multiplicity",
+        "nets",
+        "nuclear",
+        "opnorm",
+        "psd_duality",
+        "psd_factorization",
+        "psd_part",
+        "psd_splitting",
+        "quadratic_series_variance",
+        "quadric_certificate",
+        "random_opnorm",
+        "real_spectral",
+        "spectral_gap",
+        "tensor_packing",
+        "trace_projection",
+        "von_neumann",
+        "whitening"
+      ]
+    },
+    {
+      "id": "library-probability",
+      "kind": "topic",
+      "title": "Probability and replacement arguments",
+      "category": "Reusable library",
+      "summary": "Product laws, Lindeberg replacement, Efron–Stein and Hanson–Wright inequalities, subgaussian and subexponential bounds, mixtures and symmetric row laws.",
+      "assumptions": [
+        "The representative Efron–Stein result concerns independent coordinates under a finite product law and a square-integrable function."
+      ],
+      "source": "library/probability/efron_stein.v",
+      "source_line": 690,
+      "statement": "library/probability/efron_stein.v",
+      "statement_line": 690,
+      "theorem": "efron_stein",
+      "statement_identifier": "efron_stein",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/probability/efron_stein.v#L690",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/probability/efron_stein.v#L690",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/probability",
+      "module_count": 31,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/probability",
+      "keywords": [
+        "atoms",
+        "binomial_mean",
+        "clip_profile",
+        "commuting_operators",
+        "conditioning",
+        "countable_mixture",
+        "density_law",
+        "efron_stein",
+        "efron_stein_omission",
+        "finite_gap",
+        "finite_mean",
+        "hanson_wright",
+        "independent_matrix_blocks",
+        "independent_row_signs",
+        "isotropic_mixtures",
+        "lindeberg",
+        "log_partition",
+        "measurable_minimizer",
+        "mixture",
+        "moments",
+        "rademacher_lindeberg",
+        "semicircle_law",
+        "sign_shift_sample",
+        "small_ball_method",
+        "subgaussian",
+        "subgaussian_matrix",
+        "symmetric_shift",
+        "symmetrization",
+        "total_variation",
+        "tuple_rows",
+        "variational"
+      ]
+    },
+    {
+      "id": "library-fourier",
+      "kind": "topic",
+      "title": "Fourier analysis and small-ball estimates",
+      "category": "Reusable library",
+      "summary": "Characteristic functions, Fourier inversion, concentration functions, vector small-ball bounds and Fourier analysis on Boolean products.",
+      "assumptions": [
+        "The representative vector small-ball estimate assumes independent scalar variables with uniformly bounded second moments and a uniform anticoncentration bound.",
+        "Coefficient vectors satisfy a lower-frame bound and a maximum-norm bound; the ball scale is above the stated multiple of that maximum norm."
+      ],
+      "source": "library/fourier/small_ball.v",
+      "source_line": 658,
+      "statement": "library/fourier/small_ball.v",
+      "statement_line": 658,
+      "theorem": "vector_small_ball",
+      "statement_identifier": "vector_small_ball",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/fourier/small_ball.v#L658",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/fourier/small_ball.v#L658",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/fourier",
+      "module_count": 8,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/fourier",
+      "keywords": [
+        "boolean_fourier",
+        "charfun",
+        "charfun_rV",
+        "esseen",
+        "gauss_factor",
+        "inversion",
+        "product_smoothing",
+        "small_ball"
+      ]
+    },
+    {
+      "id": "library-convex",
+      "kind": "topic",
+      "title": "Convex geometry and optimization",
+      "category": "Reusable library",
+      "summary": "Self-concordant barriers, regularized minimizers, Moreau decomposition, image projections and residual directions of PSD trace slices.",
+      "assumptions": [
+        "The representative Moreau theorem assumes a closed convex cone in a finite-dimensional real space."
+      ],
+      "source": "library/convex/moreau.v",
+      "source_line": 266,
+      "statement": "library/convex/moreau.v",
+      "statement_line": 266,
+      "theorem": "moreau",
+      "statement_identifier": "moreau",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/convex/moreau.v#L266",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/convex/moreau.v#L266",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/convex",
+      "module_count": 14,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/convex",
+      "keywords": [
+        "barrier_lindeberg",
+        "barrier_removal",
+        "feature_mixture",
+        "feature_moments",
+        "gauss_feature",
+        "image_projection",
+        "least_squares",
+        "logdet_barrier",
+        "ls_insertion",
+        "minimizers",
+        "moreau",
+        "psd_residual",
+        "ridge_comparison",
+        "self_concordant"
+      ]
+    },
+    {
+      "id": "library-random_matrix",
+      "kind": "topic",
+      "title": "Random matrices and reserve corrections",
+      "category": "Reusable library",
+      "summary": "GOE spectral estimates, restricted isometry, Gaussian and Rademacher matrix series, isotropic rows, row-sign invariance and reserve corrections.",
+      "assumptions": [
+        "The representative matrix-series theorem uses fixed symmetric real matrices of size n ≥ 1 and independent uniform signs.",
+        "Its expected operator-norm bound is 40 sqrt(log(2n)) sqrt(||sum A_j²||)."
+      ],
+      "source": "library/random_matrix/rademacher_series.v",
+      "source_line": 469,
+      "statement": "library/random_matrix/rademacher_series.v",
+      "statement_line": 469,
+      "theorem": "rademacher_mx_series_variance",
+      "statement_identifier": "rademacher_mx_series_variance",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/random_matrix/rademacher_series.v#L469",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/random_matrix/rademacher_series.v#L469",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/random_matrix",
+      "module_count": 14,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/random_matrix",
+      "keywords": [
+        "even_weights",
+        "gaussian_rows_bounds",
+        "goe",
+        "goe_edge",
+        "goe_entries",
+        "goe_rotation",
+        "isotropic_rows",
+        "matrix_series",
+        "rademacher_series",
+        "reserve_convergence",
+        "reserve_row_conditions",
+        "restricted_isometry",
+        "symmetric_reserve",
+        "wigner"
+      ]
+    },
+    {
+      "id": "library-analysis",
+      "kind": "topic",
+      "title": "Analysis of limits and measurable infima",
+      "category": "Reusable library",
+      "summary": "Convergence from approximate minimum inequalities, measurable infima of continuous functions and transfer along cofinal dimension maps.",
+      "assumptions": [
+        "The representative transfer theorem assumes a property eventually valid for every admissible full family with the specified limiting statistic.",
+        "An admissible baseline with that statistic limit exists; the new dimension map is cofinal and the reindexed family has the same limit."
+      ],
+      "source": "library/analysis/family_reindexing.v",
+      "source_line": 122,
+      "statement": "library/analysis/family_reindexing.v",
+      "statement_line": 122,
+      "theorem": "family_eventually_reindex",
+      "statement_identifier": "family_eventually_reindex",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/analysis/family_reindexing.v#L122",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/analysis/family_reindexing.v#L122",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/analysis",
+      "module_count": 3,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/analysis",
+      "keywords": [
+        "family_reindexing",
+        "infimum_measurability",
+        "min_superadditive"
+      ]
+    },
+    {
+      "id": "library-combinatorics",
+      "kind": "topic",
+      "title": "Finite combinatorics",
+      "category": "Reusable library",
+      "summary": "Binomial coefficient estimates, finite permutation expanders and the harmonic-number bound H_n ≤ 1 + ln n.",
+      "assumptions": [
+        "The representative expander existence theorem assumes a positive natural size l.",
+        "One hundred permutations yield the stated bipartite multigraph cut-expansion property."
+      ],
+      "source": "library/combinatorics/expander.v",
+      "source_line": 570,
+      "statement": "library/combinatorics/expander.v",
+      "statement_line": 570,
+      "theorem": "expander",
+      "statement_identifier": "expander",
+      "source_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/combinatorics/expander.v#L570",
+      "statement_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/305747af48d4f75e26378888a8111d591145fa52/library/combinatorics/expander.v#L570",
+      "release_commit": "305747af48d4f75e26378888a8111d591145fa52",
+      "release_tag": "shifted",
+      "notes": [
+        "The linked theorem is one representative result; its assumptions do not describe every result in this directory.",
+        "GaussianAnalysis is written over arbitrary MathComp real structures. This catalog does not assert that every library statement has received human review."
+      ],
+      "directory": "library/combinatorics",
+      "module_count": 3,
+      "browse_url": "https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/305747af48d4f75e26378888a8111d591145fa52/library/combinatorics",
+      "keywords": [
+        "binomial_bounds",
+        "expander",
+        "harmonic"
+      ]
+    }
+  ]
+}

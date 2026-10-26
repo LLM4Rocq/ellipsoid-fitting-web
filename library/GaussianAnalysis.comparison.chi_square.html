@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.comparison.chi_square</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod current" href="GaussianAnalysis.comparison.chi_square.html" aria-current="page">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>normal_sqr_mgf</span></li><li><a href="#normal_pdf_expR_sqr">normal_<wbr>pdf_<wbr>expR_<wbr>sqr</a></li><li><a href="#measurable_expR_sqr">measurable_<wbr>expR_<wbr>sqr</a></li><li><a href="#integral_normal_expR_sqr">integral_<wbr>normal_<wbr>expR_<wbr>sqr</a></li><li><a href="#integrable_normal_expR_sqr">integrable_<wbr>normal_<wbr>expR_<wbr>sqr</a></li><li><a href="#integral_normal_expR_sqrB1">integral_<wbr>normal_<wbr>expR_<wbr>sqrB1</a></li><li class="toc-sec"><span>subgamma</span></li><li><a href="#ln_ge_half_sub_inv">ln_<wbr>ge_<wbr>half_<wbr>sub_<wbr>inv</a></li><li><a href="#ln_ge_sub_half_sqr">ln_<wbr>ge_<wbr>sub_<wbr>half_<wbr>sqr</a></li><li><a href="#ln_subgamma">ln_<wbr>subgamma</a></li><li class="toc-sec"><span>normal_sqr_mgf_le</span></li><li><a href="#integral_normal_expR_sqrB1_le">integral_<wbr>normal_<wbr>expR_<wbr>sqrB1_<wbr>le</a></li><li class="toc-sec"><span>centered_chi2</span></li><li><a href="#centered_chi2">centered_<wbr>chi2</a></li><li><a href="#measurable_centered_chi2">measurable_<wbr>centered_<wbr>chi2</a></li><li><a href="#integral_gauss_expR_centered_chi2">integral_<wbr>gauss_<wbr>expR_<wbr>centered_<wbr>chi2</a></li><li><a href="#integral_gauss_expR_centered_chi2_le">integral_<wbr>gauss_<wbr>expR_<wbr>centered_<wbr>chi2_<wbr>le</a></li><li><a href="#gauss_centered_chi2_upper_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>upper_<wbr>tail</a></li><li><a href="#centered_chi2N">centered_<wbr>chi2N</a></li><li><a href="#gauss_centered_chi2_lower_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>lower_<wbr>tail</a></li><li><a href="#gauss_centered_chi2_abs_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>abs_<wbr>tail</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.comparison.html">comparison</a><span aria-hidden="true">/</span><span>chi_square</span></div>
+<h1 class="page-title">Exponential moments and tails of chi-square variables</h1>
+<div class="page-meta"><code>GaussianAnalysis.comparison.chi_square</code><span>library/comparison/chi_square.v</span><span>374 lines</span><span>16 lemmas and theorems, 1 definition</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>5</b> library modules and 27 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.normal_integral.html">GaussianAnalysis.gaussian.normal_integral</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.comparison.normal_mgf.html">GaussianAnalysis.comparison.normal_mgf</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.interval, mathcomp.algebra.matrix, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.algebra.arithmetic_tactic, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.derive, mathcomp.analysis.realfun, mathcomp.analysis.exp, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.numfun, mathcomp.analysis.measurable_realfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.probability_theory.probability, mathcomp.analysis.probability_theory.normal_distribution</p></div></details><details><summary>Imported by <b>3</b></summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.probability.subgaussian.html">GaussianAnalysis.probability.subgaussian</a></li><li><a href="GaussianAnalysis.probability.hanson_wright.html">GaussianAnalysis.probability.hanson_wright</a></li><li><a href="GaussianAnalysis.random_matrix.goe_entries.html">GaussianAnalysis.random_matrix.goe_entries</a></li></ul></div></details><details><summary>Required by <b>4</b> files of the paper proofs</summary><div class="dep-body"><ul><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Gaussian/FittingError.v" target="_blank" rel="noopener">extension/Gaussian/FittingError.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/extension/Gaussian/Subcritical.v" target="_blank" rel="noopener">extension/Gaussian/Subcritical.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Law/LibraryBridge.v" target="_blank" rel="noopener">theories/Gaussian/Law/LibraryBridge.v</a></li><li><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Orthogonal/WeightedSquareTail.v" target="_blank" rel="noopener">theories/Gaussian/Orthogonal/WeightedSquareTail.v</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>For X of law normal_prob 0 s and 2 t s^2 &lt; 1, E[expR (t X^2)] = 1 / sqrt (1 - 2 t s^2) (<a class="r k-thm" href="#integral_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqr">integral_normal_expR_sqr</a>). For the standard normal law, E[expR (t (X^2 - 1))] = expR (- t) / sqrt (1 - 2 t), which is at most expR (t^2 / (1 - 2 |t|)) when |2 t| &lt; 1 (<a class="r k-thm" href="#integral_normal_expR_sqrB1_le" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1_le">integral_normal_expR_sqrB1_le</a>), by the inequality - ln (1 - u) - u &lt;= u^2 / (2 (1 - |u|)) for |u| &lt; 1 (<a class="r k-thm" href="#ln_subgamma" title="GaussianAnalysis.comparison.chi_square.ln_subgamma">ln_subgamma</a>).</p>
+<p>For x of law gauss n and a row vector of weights a, <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x is a centered weighted chi-square variable. Its moment generating function is the product of the one-dimensional ones (<a class="r k-thm" href="#integral_gauss_expR_centered_chi2" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2">integral_gauss_expR_centered_chi2</a>) and is sub-gamma: if |a_i| &lt;= L for every i, then E[expR (t <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x)] &lt;= expR (t^2 |a|^2 / (1 - 2 |t| L)) when 2 |t| L &lt; 1 (<a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a>). It follows that P(|<a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x| &gt;= u) &lt;= 2 expR (- u^2 / (4 (|a|^2 + L u))) for u &gt; 0 (<a class="r k-thm" href="#gauss_centered_chi2_abs_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_abs_tail">gauss_centered_chi2_abs_tail</a>), with one-sided versions.</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_<wbr>chi2</a> a x</code></td><td class="g-rhs">\sum_i a_i (x_i^2 - 1), for a x : 'rV[R]_n</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th><th class="c-used">Used by <code>theories/</code></th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#integral_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqr">integral_<wbr>normal_<wbr>expR_<wbr>sqr</a></span><span><a class="r k-thm" href="#integral_normal_expR_sqrB1" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1">integral_<wbr>normal_<wbr>expR_<wbr>sqrB1</a></span></div></td><td>For <code>X</code> of law <code>normal_prob 0 s</code> and <code>2 t s^2 &lt; 1</code>, <code>E[expR (t X^2)] = 1 / sqrt (1 - 2 t s^2)</code>; for the standard law, <code>E[expR (t (X^2 - 1))] = expR (- t) / sqrt (1 - 2 t)</code>.</td><td class="used"><a class="code-link ext-link" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Law/LibraryBridge.v" target="_blank" rel="noopener" title="theories/Gaussian/Law/LibraryBridge.v"><code>Gaussian/<wbr>Law/<wbr>LibraryBridge</code></a>, for <a class="code-link ext-link" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Line/QuadraticMGF.v" target="_blank" rel="noopener" title="theories/Gaussian/Line/QuadraticMGF.v"><code>Gaussian/<wbr>Line/<wbr>QuadraticMGF</code></a></td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#ln_subgamma" title="GaussianAnalysis.comparison.chi_square.ln_subgamma">ln_<wbr>subgamma</a></span><span><a class="r k-thm" href="#integral_normal_expR_sqrB1_le" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1_le">integral_<wbr>normal_<wbr>expR_<wbr>sqrB1_<wbr>le</a></span></div></td><td><code>- ln (1 - u) - u &lt;= u^2 / (2 (1 - |u|))</code> for <code>|u| &lt; 1</code>; hence <code>E[expR (t (X^2 - 1))] &lt;= expR (t^2 / (1 - 2 |t|))</code> for the standard normal law and <code>|2 t| &lt; 1</code>.</td><td class="used"></td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_<wbr>gauss_<wbr>expR_<wbr>centered_<wbr>chi2_<wbr>le</a></span><span><a class="r k-thm" href="#gauss_centered_chi2_abs_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_abs_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>abs_<wbr>tail</a></span></div></td><td>For <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code> and weights <code>a</code> with <code>|a_i| &lt;= L</code>, <code>Q = sum_i a_i (x_i^2 - 1)</code> satisfies <code>E[expR (t Q)] &lt;= expR (t^2 |a|^2 / (1 - 2 |t| L))</code> when <code>2 |t| L &lt; 1</code>, and <code>P(|Q| &gt;= u) &lt;= 2 expR (- u^2 / (4 (|a|^2 + L u)))</code> for <code>u &gt; 0</code>.</td><td class="used"><a class="code-link ext-link" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Orthogonal/WeightedSquareTail.v" target="_blank" rel="noopener" title="theories/Gaussian/Orthogonal/WeightedSquareTail.v"><code>Gaussian/<wbr>Orthogonal/<wbr>WeightedSquareTail</code></a></td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">17 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-normal_sqr_mgf-19"><span class="sec-kw">section</span><span class="sec-name">normal_sqr_mgf</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Implicit Types</span> s t u x : <span class="sv" title="section variable R of section normal_sqr_mgf">R</span>.</pre>
+<div class="decl k-thm" id="normal_pdf_expR_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#normal_pdf_expR_sqr">normal_pdf_expR_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L52" target="_blank" rel="noopener">source, line 52</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [s t : R] (x : R),
+s != 0 -&gt;
+2 * t * s ^+ 2 &lt; 1 -&gt;
+<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * x ^+ 2) * <span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_pdf">normal_pdf</span> 0 s x =
+(Num.ExtraDef.sqrtr (1 - 2 * t * s ^+ 2))^-1 *
+<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_pdf">normal_pdf</span> 0 (s / Num.ExtraDef.sqrtr (1 - 2 * t * s ^+ 2)) x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> normal_pdf_expR_sqr s t x : <span class="bv">s</span> != 0 -&gt; 2 * <span class="bv">t</span> * <span class="bv">s</span> ^+ 2 &lt; 1 -&gt;
+  <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <span class="bv">x</span> ^+ 2) * <span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_pdf">normal_pdf</span> 0 <span class="bv">s</span> <span class="bv">x</span> =
+  (<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 - 2 * <span class="bv">t</span> * <span class="bv">s</span> ^+ 2))^-1 *
+    <span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_pdf">normal_pdf</span> 0 (<span class="bv">s</span> / <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 - 2 * <span class="bv">t</span> * <span class="bv">s</span> ^+ 2)) <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqr">integral_normal_expR_sqr</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_expR_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_expR_sqr">measurable_expR_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L80" target="_blank" rel="noopener">source, line 80</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} (t : R), <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: R] (<span class="kw">fun</span> x : R =&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * x ^+ 2))</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_expR_sqr t :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="sv" title="section variable R of section normal_sqr_mgf">R</span>] (<span class="kw">fun</span> x : <span class="sv" title="section variable R of section normal_sqr_mgf">R</span> =&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <span class="bv">x</span> ^+ 2)).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqr">integral_normal_expR_sqr</a>, <a class="r k-thm" href="#integrable_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integrable_normal_expR_sqr">integrable_normal_expR_sqr</a>, <a class="r k-thm" href="#integral_normal_expR_sqrB1" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1">integral_normal_expR_sqrB1</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_normal_expR_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_normal_expR_sqr">integral_normal_expR_sqr</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L86" target="_blank" rel="noopener">source, line 86</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [s t : R],
+s != 0 -&gt;
+2 * t * s ^+ 2 &lt; 1 -&gt;
+(\int[<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 s]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * x ^+ 2))%:E)%E =
+((Num.ExtraDef.sqrtr (1 - 2 * t * s ^+ 2))^-1)%:E</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>X</code> of law <code>normal_prob 0 s</code> and <code>2 t s^2 &lt; 1</code>, <code>E[expR (t X^2)] = 1 / sqrt (1 - 2 t s^2)</code>; for the standard law, <code>E[expR (t (X^2 - 1))] = expR (- t) / sqrt (1 - 2 t)</code>.</p>
+<div class="used">Used in <code>theories/</code> by: <a class="code-link ext-link" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Law/LibraryBridge.v" target="_blank" rel="noopener" title="theories/Gaussian/Law/LibraryBridge.v"><code>Gaussian/<wbr>Law/<wbr>LibraryBridge</code></a>, for <a class="code-link ext-link" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Line/QuadraticMGF.v" target="_blank" rel="noopener" title="theories/Gaussian/Line/QuadraticMGF.v"><code>Gaussian/<wbr>Line/<wbr>QuadraticMGF</code></a></div>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_normal_expR_sqr s t : <span class="bv">s</span> != 0 -&gt; 2 * <span class="bv">t</span> * <span class="bv">s</span> ^+ 2 &lt; 1 -&gt;
+  (\int[<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 <span class="bv">s</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <span class="bv">x</span> ^+ 2))%:E =
+   ((<span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 - 2 * <span class="bv">t</span> * <span class="bv">s</span> ^+ 2))^-1)%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.subgaussian:</span> <a class="r k-thm" href="GaussianAnalysis.probability.subgaussian.html#subgaussian_of_mgf" title="GaussianAnalysis.probability.subgaussian.subgaussian_of_mgf">subgaussian_of_mgf</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integrable_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integrable_normal_expR_sqr">integrable_normal_expR_sqr</a>, <a class="r k-thm" href="#integral_normal_expR_sqrB1" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1">integral_normal_expR_sqrB1</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrable_normal_expR_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_normal_expR_sqr">integrable_normal_expR_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L99" target="_blank" rel="noopener">source, line 99</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [s t : R],
+s != 0 -&gt;
+2 * t * s ^+ 2 &lt; 1 -&gt;
+(<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 s).-integrable
+  [set: <span class="hb" title="printed as measurable_structure_g_sigma_algebraType__canonical__measurable_structure_Measurable">g_sigma_algebraType</span>
+          (R.-ocitv).-measurable]
+  (<span class="kw">fun</span> x : R =&gt; (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * x ^+ 2))%:E)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_normal_expR_sqr s t : <span class="bv">s</span> != 0 -&gt; 2 * <span class="bv">t</span> * <span class="bv">s</span> ^+ 2 &lt; 1 -&gt;
+  (<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 <span class="bv">s</span>).-integrable <span class="x" title="mathcomp.classical.classical_sets.setT">setT</span> (<span class="kw">fun</span> x =&gt; (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <span class="bv">x</span> ^+ 2))%:E).</pre></div></details>
+</div>
+<div class="decl k-thm" id="integral_normal_expR_sqrB1">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_normal_expR_sqrB1">integral_normal_expR_sqrB1</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L108" target="_blank" rel="noopener">source, line 108</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [t : R],
+2 * t &lt; 1 -&gt;
+(\int[<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 1]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * (x ^+ 2 - 1)))%:E)%E =
+(<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- t) / Num.ExtraDef.sqrtr (1 - 2 * t))%:E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#integral_normal_expR_sqr" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqr">integral_normal_expR_sqr</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_normal_expR_sqrB1 t : 2 * <span class="bv">t</span> &lt; 1 -&gt;
+  (\int[<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 1]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * (<span class="bv">x</span> ^+ 2 - 1)))%:E =
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">t</span>) / <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 - 2 * <span class="bv">t</span>))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_normal_expR_sqrB1_le" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1_le">integral_normal_expR_sqrB1_le</a>, <a class="r k-thm" href="#integral_gauss_expR_centered_chi2" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2">integral_gauss_expR_centered_chi2</a>, <a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-subgamma-74"><span class="sec-kw">section</span><span class="sec-name">subgamma</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Implicit Types</span> t u y : <span class="sv" title="section variable R of section subgamma">R</span>.</pre>
+<div class="decl k-thm" id="ln_ge_half_sub_inv">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ln_ge_half_sub_inv">ln_ge_half_sub_inv</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L125" target="_blank" rel="noopener">source, line 125</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [y : R], 0 &lt; y &lt;= 1 -&gt; (y - y^-1) / 2 &lt;= <span class="x" title="mathcomp.analysis.exp.ln">ln</span> y</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ln_ge_half_sub_inv y : 0 &lt; <span class="bv">y</span> &lt;= 1 -&gt; (<span class="bv">y</span> - <span class="bv">y</span>^-1) / 2 &lt;= <span class="x" title="mathcomp.analysis.exp.ln">ln</span> <span class="bv">y</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ln_subgamma" title="GaussianAnalysis.comparison.chi_square.ln_subgamma">ln_subgamma</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ln_ge_sub_half_sqr">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ln_ge_sub_half_sqr">ln_ge_sub_half_sqr</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L157" target="_blank" rel="noopener">source, line 157</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [y : R], 1 &lt;= y -&gt; y - 1 - (y - 1) ^+ 2 / 2 &lt;= <span class="x" title="mathcomp.analysis.exp.ln">ln</span> y</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ln_ge_sub_half_sqr y : 1 &lt;= <span class="bv">y</span> -&gt; (<span class="bv">y</span> - 1) - (<span class="bv">y</span> - 1) ^+ 2 / 2 &lt;= <span class="x" title="mathcomp.analysis.exp.ln">ln</span> <span class="bv">y</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ln_subgamma" title="GaussianAnalysis.comparison.chi_square.ln_subgamma">ln_subgamma</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ln_subgamma">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ln_subgamma">ln_subgamma</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L189" target="_blank" rel="noopener">source, line 189</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [u : R], `|u| &lt; 1 -&gt; - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 - u) - u &lt;= u ^+ 2 / (2 * (1 - `|u|))</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p><code>- ln (1 - u) - u &lt;= u^2 / (2 (1 - |u|))</code> for <code>|u| &lt; 1</code>; hence <code>E[expR (t (X^2 - 1))] &lt;= expR (t^2 / (1 - 2 |t|))</code> for the standard normal law and <code>|2 t| &lt; 1</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ln_subgamma u : `|<span class="bv">u</span>| &lt; 1 -&gt; - <span class="x" title="mathcomp.analysis.exp.ln">ln</span> (1 - <span class="bv">u</span>) - <span class="bv">u</span> &lt;= <span class="bv">u</span> ^+ 2 / (2 * (1 - `|<span class="bv">u</span>|)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_normal_expR_sqrB1_le" title="GaussianAnalysis.comparison.chi_square.integral_normal_expR_sqrB1_le">integral_normal_expR_sqrB1_le</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-normal_sqr_mgf_le-158"><span class="sec-kw">section</span><span class="sec-name">normal_sqr_mgf_le</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Implicit Types</span> t : <span class="sv" title="section variable R of section normal_sqr_mgf_le">R</span>.</pre>
+<div class="decl k-thm" id="integral_normal_expR_sqrB1_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_normal_expR_sqrB1_le">integral_normal_expR_sqrB1_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L215" target="_blank" rel="noopener">source, line 215</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [t : R],
+`|2 * t| &lt; 1 -&gt;
+(\int[<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 1]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * (x ^+ 2 - 1)))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t ^+ 2 / (1 - 2 * `|t|)))%:E)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#ln_subgamma" title="GaussianAnalysis.comparison.chi_square.ln_subgamma">ln_subgamma</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_normal_expR_sqrB1_le t : `|2 * <span class="bv">t</span>| &lt; 1 -&gt;
+  (\int[<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> 0 1]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * (<span class="bv">x</span> ^+ 2 - 1)))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> ^+ 2 / (1 - 2 * `|<span class="bv">t</span>|)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-centered_chi2-177"><span class="sec-kw">section</span><span class="sec-name">centered_chi2</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>}.
+<span class="vk">Local Notation</span> N := (@<span class="x" title="mathcomp.analysis.probability_theory.normal_distribution.normal_prob">normal_prob</span> <span class="sv" title="section variable R of section centered_chi2">R</span> 0 1).
+<span class="vk">Implicit Types</span> (t u L : <span class="sv" title="section variable R of section centered_chi2">R</span>).</pre>
+<div class="decl k-def" id="centered_chi2">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#centered_chi2">centered_chi2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L240" target="_blank" rel="noopener">source, line 240</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat], &#x27;rV_n -&gt; &#x27;rV_n -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> centered_chi2 n (a x : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) : <span class="sv" title="section variable R of section centered_chi2">R</span> := \sum_i <span class="bv">a</span> 0 <span class="bv">i</span> * (<span class="bv">x</span> 0 <span class="bv">i</span> ^+ 2 - 1).</pre></div>
+<details class="decl-used"><summary>Used by 9 declarations in 3 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.hanson_wright:</span> <a class="r k-thm" href="GaussianAnalysis.probability.hanson_wright.html#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a></li>
+<li><span class="um">GaussianAnalysis.random_matrix.goe_entries:</span> <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe_entries.html#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_centered_chi2" title="GaussianAnalysis.comparison.chi_square.measurable_centered_chi2">measurable_centered_chi2</a>, <a class="r k-thm" href="#integral_gauss_expR_centered_chi2" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2">integral_gauss_expR_centered_chi2</a>, <a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a>, <a class="r k-thm" href="#gauss_centered_chi2_upper_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_upper_tail">gauss_centered_chi2_upper_tail</a>, <a class="r k-thm" href="#centered_chi2N" title="GaussianAnalysis.comparison.chi_square.centered_chi2N">centered_chi2N</a>, <a class="r k-thm" href="#gauss_centered_chi2_lower_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_lower_tail">gauss_centered_chi2_lower_tail</a>, <a class="r k-thm" href="#gauss_centered_chi2_abs_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_abs_tail">gauss_centered_chi2_abs_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_centered_chi2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_centered_chi2">measurable_centered_chi2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L242" target="_blank" rel="noopener">source, line 242</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (a : &#x27;rV_n), <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_n] (<a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_centered_chi2 n (a : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>] (<a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 3 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.hanson_wright:</span> <a class="r k-thm" href="GaussianAnalysis.probability.hanson_wright.html#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a></li>
+<li><span class="um">GaussianAnalysis.random_matrix.goe_entries:</span> <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe_entries.html#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_centered_chi2_upper_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_upper_tail">gauss_centered_chi2_upper_tail</a>, <a class="r k-thm" href="#gauss_centered_chi2_abs_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_abs_tail">gauss_centered_chi2_abs_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_gauss_expR_centered_chi2">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_gauss_expR_centered_chi2">integral_gauss_expR_centered_chi2</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L250" target="_blank" rel="noopener">source, line 250</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [a : &#x27;rV_n] [t : R],
+(<span class="kw">forall</span> i : &#x27;I_n, 2 * (t * a 0 i) &lt; 1) -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x))%:E)%E =
+(\prod_i (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (t * a 0 i)) / Num.ExtraDef.sqrtr (1 - 2 * (t * a 0 i))))%:E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_gauss_expR_centered_chi2 n (a : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) t :
+  (<span class="kw">forall</span> i, 2 * (<span class="bv">t</span> * <span class="bv">a</span> 0 <span class="bv">i</span>) &lt; 1) -&gt;
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span> <span class="bv">x</span>))%:E =
+   (\prod_i (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- (<span class="bv">t</span> * <span class="bv">a</span> 0 <span class="bv">i</span>)) / <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (1 - 2 * (<span class="bv">t</span> * <span class="bv">a</span> 0 <span class="bv">i</span>))))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_gauss_expR_centered_chi2_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L268" target="_blank" rel="noopener">source, line 268</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [a : &#x27;rV_n] [t L : R],
+(<span class="kw">forall</span> i : &#x27;I_n, `|a 0 i| &lt;= L) -&gt;
+`|2 * t| * L &lt; 1 -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t * <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x))%:E &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (t ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a / (1 - 2 * `|t| * L)))%:E)%E</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For <code>x</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n</code> and weights <code>a</code> with <code>|a_i| &lt;= L</code>, <code>Q = sum_i a_i (x_i^2 - 1)</code> satisfies <code>E[expR (t Q)] &lt;= expR (t^2 |a|^2 / (1 - 2 |t| L))</code> when <code>2 |t| L &lt; 1</code>, and <code>P(|Q| &gt;= u) &lt;= 2 expR (- u^2 / (4 (|a|^2 + L u)))</code> for <code>u &gt; 0</code>.</p>
+<div class="used">Used in <code>theories/</code> by: <a class="code-link ext-link" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/theories/Gaussian/Orthogonal/WeightedSquareTail.v" target="_blank" rel="noopener" title="theories/Gaussian/Orthogonal/WeightedSquareTail.v"><code>Gaussian/<wbr>Orthogonal/<wbr>WeightedSquareTail</code></a></div>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_gauss_expR_centered_chi2_le n (a : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) t L :
+  (<span class="kw">forall</span> i, `|<span class="bv">a</span> 0 <span class="bv">i</span>| &lt;= <span class="bv">L</span>) -&gt; `|2 * <span class="bv">t</span>| * <span class="bv">L</span> &lt; 1 -&gt;
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span>]_x (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> * <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span> <span class="bv">x</span>))%:E &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (<span class="bv">t</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> / (1 - 2 * `|<span class="bv">t</span>| * <span class="bv">L</span>)))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.probability.hanson_wright:</span> <a class="r k-thm" href="GaussianAnalysis.probability.hanson_wright.html#gauss_chaos_mgf" title="GaussianAnalysis.probability.hanson_wright.gauss_chaos_mgf">gauss_chaos_mgf</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_centered_chi2_upper_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_upper_tail">gauss_centered_chi2_upper_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_centered_chi2_upper_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_centered_chi2_upper_tail">gauss_centered_chi2_upper_tail</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L295" target="_blank" rel="noopener">source, line 295</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [a : &#x27;rV_n] [L u : R],
+0 &lt;= L -&gt;
+(<span class="kw">forall</span> i : &#x27;I_n, `|a 0 i| &lt;= L) -&gt;
+0 &lt; u -&gt;
+0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a + L * u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n [set x | (u &lt;= <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x)%R] &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- u ^+ 2 / (4 * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a + L * u))))%:E)%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_centered_chi2_upper_tail n (a : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) L u :
+  0 &lt;= <span class="bv">L</span> -&gt; (<span class="kw">forall</span> i, `|<span class="bv">a</span> 0 <span class="bv">i</span>| &lt;= <span class="bv">L</span>) -&gt; 0 &lt; <span class="bv">u</span> -&gt; 0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> + <span class="bv">L</span> * <span class="bv">u</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span> [set x | <span class="bv">u</span> &lt;= <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span> <span class="bv">x</span>]%R &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">u</span> ^+ 2 / (4 * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> + <span class="bv">L</span> * <span class="bv">u</span>))))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 2 files</summary><ul>
+<li><span class="um">GaussianAnalysis.random_matrix.goe_entries:</span> <a class="r k-thm" href="GaussianAnalysis.random_matrix.goe_entries.html#goe_mx_row_tail" title="GaussianAnalysis.random_matrix.goe_entries.goe_mx_row_tail">goe_mx_row_tail</a></li>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_centered_chi2_lower_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_lower_tail">gauss_centered_chi2_lower_tail</a>, <a class="r k-thm" href="#gauss_centered_chi2_abs_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_abs_tail">gauss_centered_chi2_abs_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="centered_chi2N">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#centered_chi2N">centered_chi2N</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L330" target="_blank" rel="noopener">source, line 330</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] (a x : &#x27;rV_n), <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> (- a) x = - <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> centered_chi2N n (a x : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) :
+  <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> (- <span class="bv">a</span>) <span class="bv">x</span> = - <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_centered_chi2_lower_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_lower_tail">gauss_centered_chi2_lower_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_centered_chi2_lower_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_centered_chi2_lower_tail">gauss_centered_chi2_lower_tail</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L336" target="_blank" rel="noopener">source, line 336</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [a : &#x27;rV_n] [L u : R],
+0 &lt;= L -&gt;
+(<span class="kw">forall</span> i : &#x27;I_n, `|a 0 i| &lt;= L) -&gt;
+0 &lt; u -&gt;
+0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a + L * u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n [set x | (<a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x &lt;= - u)%R] &lt;=
+ (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- u ^+ 2 / (4 * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a + L * u))))%:E)%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_centered_chi2_lower_tail n (a : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) L u :
+  0 &lt;= <span class="bv">L</span> -&gt; (<span class="kw">forall</span> i, `|<span class="bv">a</span> 0 <span class="bv">i</span>| &lt;= <span class="bv">L</span>) -&gt; 0 &lt; <span class="bv">u</span> -&gt; 0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> + <span class="bv">L</span> * <span class="bv">u</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span> [set x | <a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span> <span class="bv">x</span> &lt;= - <span class="bv">u</span>]%R &lt;=
+   (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">u</span> ^+ 2 / (4 * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> + <span class="bv">L</span> * <span class="bv">u</span>))))%:E)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#gauss_centered_chi2_abs_tail" title="GaussianAnalysis.comparison.chi_square.gauss_centered_chi2_abs_tail">gauss_centered_chi2_abs_tail</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="gauss_centered_chi2_abs_tail">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#gauss_centered_chi2_abs_tail">gauss_centered_chi2_abs_tail</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/comparison/chi_square.v#L351" target="_blank" rel="noopener">source, line 351</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} [n : nat] [a : &#x27;rV_n] [L u : R],
+0 &lt;= L -&gt;
+(<span class="kw">forall</span> i : &#x27;I_n, `|a 0 i| &lt;= L) -&gt;
+0 &lt; u -&gt;
+0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a + L * u -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> n [set x | (u &lt;= `|<a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> a x|)%R] &lt;=
+ (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- u ^+ 2 / (4 * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> a a + L * u))))%:E)%E</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#integral_gauss_expR_centered_chi2_le" title="GaussianAnalysis.comparison.chi_square.integral_gauss_expR_centered_chi2_le">integral_gauss_expR_centered_chi2_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> gauss_centered_chi2_abs_tail n (a : &#x27;rV[<span class="sv" title="section variable R of section centered_chi2">R</span>]_<span class="bv">n</span>) L u :
+  0 &lt;= <span class="bv">L</span> -&gt; (<span class="kw">forall</span> i, `|<span class="bv">a</span> 0 <span class="bv">i</span>| &lt;= <span class="bv">L</span>) -&gt; 0 &lt; <span class="bv">u</span> -&gt; 0 &lt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> + <span class="bv">L</span> * <span class="bv">u</span> -&gt;
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="bv">n</span> [set x | <span class="bv">u</span> &lt;= `|<a class="r k-def" href="#centered_chi2" title="GaussianAnalysis.comparison.chi_square.centered_chi2">centered_chi2</a> <span class="bv">a</span> <span class="bv">x</span>|]%R &lt;=
+   (2 * <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">u</span> ^+ 2 / (4 * (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">a</span> <span class="bv">a</span> + <span class="bv">L</span> * <span class="bv">u</span>))))%:E)%E.</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>normal_sqr_mgf</span></li><li><a href="#normal_pdf_expR_sqr">normal_<wbr>pdf_<wbr>expR_<wbr>sqr</a></li><li><a href="#measurable_expR_sqr">measurable_<wbr>expR_<wbr>sqr</a></li><li><a href="#integral_normal_expR_sqr">integral_<wbr>normal_<wbr>expR_<wbr>sqr</a></li><li><a href="#integrable_normal_expR_sqr">integrable_<wbr>normal_<wbr>expR_<wbr>sqr</a></li><li><a href="#integral_normal_expR_sqrB1">integral_<wbr>normal_<wbr>expR_<wbr>sqrB1</a></li><li class="toc-sec"><span>subgamma</span></li><li><a href="#ln_ge_half_sub_inv">ln_<wbr>ge_<wbr>half_<wbr>sub_<wbr>inv</a></li><li><a href="#ln_ge_sub_half_sqr">ln_<wbr>ge_<wbr>sub_<wbr>half_<wbr>sqr</a></li><li><a href="#ln_subgamma">ln_<wbr>subgamma</a></li><li class="toc-sec"><span>normal_sqr_mgf_le</span></li><li><a href="#integral_normal_expR_sqrB1_le">integral_<wbr>normal_<wbr>expR_<wbr>sqrB1_<wbr>le</a></li><li class="toc-sec"><span>centered_chi2</span></li><li><a href="#centered_chi2">centered_<wbr>chi2</a></li><li><a href="#measurable_centered_chi2">measurable_<wbr>centered_<wbr>chi2</a></li><li><a href="#integral_gauss_expR_centered_chi2">integral_<wbr>gauss_<wbr>expR_<wbr>centered_<wbr>chi2</a></li><li><a href="#integral_gauss_expR_centered_chi2_le">integral_<wbr>gauss_<wbr>expR_<wbr>centered_<wbr>chi2_<wbr>le</a></li><li><a href="#gauss_centered_chi2_upper_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>upper_<wbr>tail</a></li><li><a href="#centered_chi2N">centered_<wbr>chi2N</a></li><li><a href="#gauss_centered_chi2_lower_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>lower_<wbr>tail</a></li><li><a href="#gauss_centered_chi2_abs_tail">gauss_<wbr>centered_<wbr>chi2_<wbr>abs_<wbr>tail</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

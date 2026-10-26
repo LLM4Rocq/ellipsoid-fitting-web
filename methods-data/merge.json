@@ -1,0 +1,17 @@
+{
+  "pr": 14,
+  "merged": true,
+  "merged_at": "2026-10-02T14:35:23Z",
+  "merge_commit": "df283b7951db565183b8cf3f1bf96b382f6592f8",
+  "head": "7b0c5bb45f37563aa649ca67c7c60aac71c15fc4",
+  "remote_main": "df283b7951db565183b8cf3f1bf96b382f6592f8",
+  "frozen_branch": "00934b5c3e3a6bd307c830e6c86715ec0c1762fe",
+  "verified_at": "2026-10-02T14:45:27.351312+00:00",
+  "status": "USER_MERGE_VERIFIED",
+  "merged_tree_equals_checked_pr_head": true,
+  "verified_proof_hashes": 648,
+  "verified_frozen_hashes": 6,
+  "axiom_contract_unchanged": true,
+  "integration_worktree_preserved": true,
+  "protocol_acceptance_inferred_from_merge": false
+}

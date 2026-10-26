@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.fourier.inversion</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.partial_derivative.html">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod current" href="GaussianAnalysis.fourier.inversion.html" aria-current="page">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>cf_rV_density</span></li><li><a href="#cf_rV_kernel">cf_<wbr>rV_<wbr>kernel</a></li><li><a href="#cf_rV_kernel_le">cf_<wbr>rV_<wbr>kernel_<wbr>le</a></li><li><a href="#measurable_cf_rV_kernel">measurable_<wbr>cf_<wbr>rV_<wbr>kernel</a></li><li><a href="#integrable_cf_rV_norm">integrable_<wbr>cf_<wbr>rV_<wbr>norm</a></li><li><a href="#integrable_cf_rV_kernel">integrable_<wbr>cf_<wbr>rV_<wbr>kernel</a></li><li><a href="#cf_rV_density">cf_<wbr>rV_<wbr>density</a></li><li><a href="#cf_rV_density_le">cf_<wbr>rV_<wbr>density_<wbr>le</a></li><li class="is-local"><a href="#measurable_mxdot_self">measurable_<wbr>mxdot_<wbr>self</a></li><li class="is-local"><a href="#continuous_mxdotr">continuous_<wbr>mxdotr</a></li><li><a href="#continuous_cf_rV_density">continuous_<wbr>cf_<wbr>rV_<wbr>density</a></li><li><a href="#cf_rV_density_reg">cf_<wbr>rV_<wbr>density_<wbr>reg</a></li><li><a href="#cf_rV_density_reg0">cf_<wbr>rV_<wbr>density_<wbr>reg0</a></li><li><a href="#cvg_cf_rV_density_reg">cvg_<wbr>cf_<wbr>rV_<wbr>density_<wbr>reg</a></li><li class="is-local"><a href="#measurable_rV_subl">measurable_<wbr>rV_<wbr>subl</a></li><li class="is-local"><a href="#measurable_mxdot2">measurable_<wbr>mxdot2</a></li><li class="is-local"><a href="#reg_le">reg_<wbr>le</a></li><li class="is-local"><a href="#integrable_reg">integrable_<wbr>reg</a></li><li><a href="#cf_rV_density_regE">cf_<wbr>rV_<wbr>density_<wbr>regE</a></li><li><a href="#integral_cf_rV_kernel_gauss">integral_<wbr>cf_<wbr>rV_<wbr>kernel_<wbr>gauss</a></li><li><a href="#integral_cf_rV_density_gauss">integral_<wbr>cf_<wbr>rV_<wbr>density_<wbr>gauss</a></li><li><a href="#cf_rV_density_ge0">cf_<wbr>rV_<wbr>density_<wbr>ge0</a></li><li><a href="#measurable_cf_rV_density">measurable_<wbr>cf_<wbr>rV_<wbr>density</a></li><li><a href="#integral_cf_rV_density">integral_<wbr>cf_<wbr>rV_<wbr>density</a></li><li><a href="#cf_rV_inv_prob">cf_<wbr>rV_<wbr>inv_<wbr>prob</a></li><li class="toc-sec"><span>cf_rV_inv_prob</span></li><li><a href="#cf_rV_inv_prob0">cf_<wbr>rV_<wbr>inv_<wbr>prob0</a></li><li><a href="#cf_rV_inv_prob_ge0">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>ge0</a></li><li><a href="#cf_rV_inv_prob_sigma">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>sigma</a></li><li><a href="#cf_rV_inv_prob_setT">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>setT</a></li><li><a href="#instance-line-606">instance at line 606</a></li><li><a href="#instance-line-613">instance at line 613</a></li><li class="toc-sec"><span>add_gauss</span></li><li class="is-local"><a href="#measurable_mxdot_self-2">measurable_<wbr>mxdot_<wbr>self</a></li><li class="is-local"><a href="#measurable_rV_subl-2">measurable_<wbr>rV_<wbr>subl</a></li><li class="is-local"><a href="#msub2">msub2</a></li><li class="is-local"><a href="#pdf_le2">pdf_<wbr>le2</a></li><li><a href="#integral_add_gauss">integral_<wbr>add_<wbr>gauss</a></li><li><a href="#lipschitz_add_gauss">lipschitz_<wbr>add_<wbr>gauss</a></li><li class="toc-sec"><span>cf_rV_inversion</span></li><li class="is-local"><a href="#measurable_rV_subl-3">measurable_<wbr>rV_<wbr>subl</a></li><li><a href="#cf_rV_inv_prob_dominates">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>dominates</a></li><li class="is-local"><a href="#RN_density">RN_<wbr>density</a></li><li><a href="#ge0_integral_cf_rV_inv_prob">ge0_<wbr>integral_<wbr>cf_<wbr>rV_<wbr>inv_<wbr>prob</a></li><li><a href="#integral_gauss_pdf_inv_prob">integral_<wbr>gauss_<wbr>pdf_<wbr>inv_<wbr>prob</a></li><li class="is-local"><a href="#smooth_EFin">smooth_<wbr>EFin</a></li><li><a href="#cf_rV_inversion">cf_<wbr>rV_<wbr>inversion</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.fourier.html">fourier</a><span aria-hidden="true">/</span><span>inversion</span></div>
+<h1 class="page-title">The Fourier inversion theorem on row vectors</h1>
+<div class="page-meta"><code>GaussianAnalysis.fourier.inversion</code><span>library/fourier/inversion.v</span><span>1,050 lines</span><span>24 lemmas and theorems, 4 definitions</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>13</b> library modules and 35 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss.html">GaussianAnalysis.gaussian.gauss</a></li><li><a href="GaussianAnalysis.gaussian.gauss_ibp.html">GaussianAnalysis.gaussian.gauss_ibp</a></li><li><a href="GaussianAnalysis.gaussian.parameter_integral.html">GaussianAnalysis.gaussian.parameter_integral</a></li><li><a href="GaussianAnalysis.gaussian.lebesgue_rV.html">GaussianAnalysis.gaussian.lebesgue_rV</a></li><li><a href="GaussianAnalysis.matrix.euclidean.html">GaussianAnalysis.matrix.euclidean</a></li><li><a href="GaussianAnalysis.comparison.gauss_linear.html">GaussianAnalysis.comparison.gauss_linear</a></li><li><a href="GaussianAnalysis.comparison.gauss_smoothing.html">GaussianAnalysis.comparison.gauss_smoothing</a></li><li><a href="GaussianAnalysis.comparison.gauss_law.html">GaussianAnalysis.comparison.gauss_law</a></li><li><a href="GaussianAnalysis.probability.lindeberg.html">GaussianAnalysis.probability.lindeberg</a></li><li><a href="GaussianAnalysis.fourier.charfun.html">GaussianAnalysis.fourier.charfun</a></li><li><a href="GaussianAnalysis.fourier.esseen.html">GaussianAnalysis.fourier.esseen</a></li><li><a href="GaussianAnalysis.fourier.charfun_rV.html">GaussianAnalysis.fourier.charfun_rV</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.finite_group.fingroup, mathcomp.finite_group.perm, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.interval, mathcomp.algebra.archimedean, mathcomp.algebra.ring_tactic, mathcomp.algebra.field_tactic, mathcomp.algebra.arithmetic_tactic, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.classical.cardinality, mathcomp.reals.reals, mathcomp.analysis.ereal, mathcomp.algebra.interval_inference, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.sequences, mathcomp.analysis.derive, mathcomp.analysis.realfun, mathcomp.analysis.exp, mathcomp.analysis.numfun, mathcomp.analysis.measure_theory.measure, mathcomp.analysis.trigo, mathcomp.analysis.lebesgue_stieltjes_measure, mathcomp.analysis.lebesgue_measure, mathcomp.analysis.measurable_realfun, mathcomp.analysis.lebesgue_integral_theory.lebesgue_integral, mathcomp.analysis.charge, mathcomp.analysis.probability_theory.probability, mathcomp.analysis.probability_theory.normal_distribution</p></div></details></div>
+<section class="prose moddoc"><p>Let nu be a law on 'rV[R]_m whose characteristic function is integrable: \int |cf nu theta| dtheta &lt; +oo against <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m. Then nu has the density <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu with respect to <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m (<a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_rV_inversion</a>):</p>
+<pre class="display"><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w = (2 pi)^-m \int (cos &lt;theta, w&gt; <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_re" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_re">cf_rV_re</a> nu theta
+                        + sin &lt;theta, w&gt; <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_im" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_im">cf_rV_im</a> nu theta) dtheta.</pre>
+<p>This density is continuous (<a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a>), nonnegative (<a class="r k-thm" href="#cf_rV_density_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_ge0">cf_rV_density_ge0</a>), of integral one (<a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>), and bounded by (2 pi)^-m \int |cf nu| (<a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>).</p>
+<p>The proof uses no complex numbers and no Fourier transform of functions. For s &gt; 0 the regularized density, the same integral with the factor exp (- s^2 |theta|^2 / 2), is the density s^-m E[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> ((w - Y) / s)] of Y + s G, for Y of law nu and G of law gauss m independent (<a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_add_gauss" title="GaussianAnalysis.fourier.inversion.integral_add_gauss">integral_add_gauss</a>), and it is also the average of <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> over w + s G (<a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a>). It tends to <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> as s tends to 0 (<a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>), which gives the nonnegativity; the average gives the total mass. Hence Y + s G has the same law for Y of law nu and for Y of law <a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h, the probability with density <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu (<a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a>). For a Lipschitz test function with values in [0, 1], the expectation under either law is within |L| s (1 + m) / 2 of the expectation of the smoothed variable (<a class="r k-thm" href="#lipschitz_add_gauss" title="GaussianAnalysis.fourier.inversion.lipschitz_add_gauss">lipschitz_add_gauss</a>), and <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_law.html#measure_lipschitz_unique" title="GaussianAnalysis.comparison.gauss_law.measure_lipschitz_unique">measure_lipschitz_unique</a> concludes.</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_<wbr>rV_<wbr>kernel</a> nu w theta</code></td><td class="g-rhs">cos &lt;theta, w&gt; <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_re" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_re">cf_rV_re</a> nu theta + sin &lt;theta, w&gt; <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_im" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_im">cf_rV_im</a> nu theta</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_<wbr>rV_<wbr>density</a> nu w</code></td><td class="g-rhs">(2 pi)^-m \int <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> nu w theta dtheta</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_<wbr>rV_<wbr>density_<wbr>reg</a> nu s w</code></td><td class="g-rhs">the same, with the factor exp (- s^2 |theta|^2 / 2)</td></tr><tr><td class="g-lhs"><code><a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_<wbr>rV_<wbr>inv_<wbr>prob</a> h</code></td><td class="g-rhs">for h : \int |cf nu| &lt; +oo, the probability with density <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_<wbr>rV_<wbr>inversion</a></span></div></td><td>The Fourier inversion theorem on row vectors: if <code>\int |cf_rV nu theta| dtheta &lt; +oo</code> against <code><a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m</code>, then <code>nu X = \int_X cf_rV_density nu w dw</code> for every measurable <code>X</code>, with <code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w = (2 pi)^-m \int (cos &lt;theta, w&gt; cf_rV_re nu theta + sin &lt;theta, w&gt; cf_rV_im nu theta) dtheta</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_<wbr>rV_<wbr>density_<wbr>le</a></span><span><a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_<wbr>cf_<wbr>rV_<wbr>density</a></span><span><a class="r k-thm" href="#cf_rV_density_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_ge0">cf_<wbr>rV_<wbr>density_<wbr>ge0</a></span><span><a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_<wbr>cf_<wbr>rV_<wbr>density</a></span><span><a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_<wbr>rV_<wbr>inv_<wbr>prob</a></span></div></td><td>The density is bounded by <code>(2 pi)^-m \int |cf_rV nu|</code>, continuous, nonnegative and of integral one; <code><a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h</code> is the probability it defines.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_<wbr>rV_<wbr>density_<wbr>reg</a></span><span><a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_<wbr>rV_<wbr>density_<wbr>regE</a></span><span><a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_<wbr>cf_<wbr>rV_<wbr>density_<wbr>reg</a></span><span><a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_<wbr>cf_<wbr>rV_<wbr>density_<wbr>gauss</a></span><span><a class="r k-thm" href="#integral_cf_rV_kernel_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_kernel_gauss">integral_<wbr>cf_<wbr>rV_<wbr>kernel_<wbr>gauss</a></span></div></td><td>Gaussian regularization of the density: for <code>s &gt; 0</code>, <code>(2 pi)^-m \int exp (- s^2 |theta|^2 / 2) (...) dtheta</code> is the density <code>s^-m E[gauss_pdf ((w - Y) / s)]</code> of <code>Y + s G</code>, it is the average of <code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu</code> over <code>w + s G</code>, and it tends to <code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w</code> as <code>s -&gt; 0</code>.</td></tr><tr class="cont"><td><div class="names"><span><a class="r k-thm" href="#integral_add_gauss" title="GaussianAnalysis.fourier.inversion.integral_add_gauss">integral_<wbr>add_<wbr>gauss</a></span><span><a class="r k-thm" href="#lipschitz_add_gauss" title="GaussianAnalysis.fourier.inversion.lipschitz_add_gauss">lipschitz_<wbr>add_<wbr>gauss</a></span></div></td><td>For any law <code>mu</code> on <code>&#x27;rV[R]_m</code> and <code>G</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m</code>: <code>E[phi (Y + s G)] = s^-m \int phi w E[gauss_pdf ((w - Y) / s)] dw</code> for nonnegative measurable <code>phi</code>, and <code>|E[phi (Y + s G)] - E[phi Y]| &lt;= |L| s (1 + m) / 2</code> for <code>phi</code> with values in <code>[0, 1]</code> and Lipschitz with constant <code>L</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">30 exported, 13 local</span></h2>
+<div class="decl-toolbar"><label><input type="checkbox" id="show-local"> Show the 13 local declarations (<code>Let</code>, <code>Local</code>)</label><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-cf_rV_density-25"><span class="sec-kw">section</span><span class="sec-name">cf_rV_density</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variable</span> nu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span> <span class="sv" title="section variable R of section cf_rV_density">R</span>.</pre>
+<div class="decl k-def" id="cf_rV_kernel">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cf_rV_kernel">cf_rV_kernel</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L75" target="_blank" rel="noopener">source, line 75</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat}, probability &#x27;rV_m R -&gt; &#x27;rV_m -&gt; &#x27;rV_m -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cf_rV_kernel (w th : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>) : <span class="sv" title="section variable R of section cf_rV_density">R</span> :=
+  <span class="x" title="mathcomp.analysis.trigo.cos">cos</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">w</span>) * <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_re" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_re">cf_rV_re</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span> + <span class="x" title="mathcomp.analysis.trigo.sin">sin</span> (<a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">w</span>) * <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_im" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_im">cf_rV_im</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span>.</pre></div>
+<div class="decl-doc"><p>The integrand of the inversion formula at w: the real part of exp (- i &lt;theta, w&gt;) cf nu theta.</p></div>
+<details class="decl-used"><summary>Used by 12 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_kernel_le" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel_le">cf_rV_kernel_le</a>, <a class="r k-thm" href="#measurable_cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.measurable_cf_rV_kernel">measurable_cf_rV_kernel</a>, <a class="r k-thm" href="#integrable_cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.integrable_cf_rV_kernel">integrable_cf_rV_kernel</a>, <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a>, <a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a>, <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a>, <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-let" href="#reg_le" title="GaussianAnalysis.fourier.inversion.reg_le (section-local)">reg_le</a>, <a class="r k-let" href="#integrable_reg" title="GaussianAnalysis.fourier.inversion.integrable_reg (section-local)">integrable_reg</a>, <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_cf_rV_kernel_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_kernel_gauss">integral_cf_rV_kernel_gauss</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_kernel_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_kernel_le">cf_rV_kernel_le</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L79" target="_blank" rel="noopener">source, line 79</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} (nu : probability &#x27;rV_m R) (w th : &#x27;rV_m),
+`|<a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> nu w th| &lt;= <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th</pre></div>
+<div class="decl-doc"><p>It is bounded by |cf nu theta|.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_kernel_le w th : `|<a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span> <span class="bv">th</span>| &lt;= <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 7 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integrable_cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.integrable_cf_rV_kernel">integrable_cf_rV_kernel</a>, <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>, <a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a>, <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-let" href="#reg_le" title="GaussianAnalysis.fourier.inversion.reg_le (section-local)">reg_le</a>, <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_cf_rV_kernel">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_cf_rV_kernel">measurable_cf_rV_kernel</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L85" target="_blank" rel="noopener">source, line 85</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} (nu : probability &#x27;rV_m R) (w : &#x27;rV_m),
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_m] (<a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> nu w)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_cf_rV_kernel w :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>] (<a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 6 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integrable_cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.integrable_cf_rV_kernel">integrable_cf_rV_kernel</a>, <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>, <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-let" href="#integrable_reg" title="GaussianAnalysis.fourier.inversion.integrable_reg (section-local)">integrable_reg</a>, <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="note"><p>From here on, |cf nu| is integrable.</p></div>
+<pre class="code ctx"><span class="vk">Hypothesis</span> int_cf :
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span>)%:E &lt; +oo)%E.</pre>
+<div class="decl k-thm" id="integrable_cf_rV_norm">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_cf_rV_norm">integrable_cf_rV_norm</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L99" target="_blank" rel="noopener">source, line 99</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+(<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m).-integrable [set: &#x27;rV_m] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_cf_rV_norm :
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>).-integrable [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 6 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integrable_cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.integrable_cf_rV_kernel">integrable_cf_rV_kernel</a>, <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>, <a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a>, <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-let" href="#integrable_reg" title="GaussianAnalysis.fourier.inversion.integrable_reg (section-local)">integrable_reg</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integrable_cf_rV_kernel">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integrable_cf_rV_kernel">integrable_cf_rV_kernel</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L112" target="_blank" rel="noopener">source, line 112</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> w : &#x27;rV_m, (<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m).-integrable [set: &#x27;rV_m] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> nu w)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integrable_cf_rV_kernel w :
+  (<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>).-integrable [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>] (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>, <a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="cf_rV_density">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cf_rV_density">cf_rV_density</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L122" target="_blank" rel="noopener">source, line 122</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat}, probability &#x27;rV_m R -&gt; &#x27;rV_m -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cf_rV_density (w : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>) : <span class="sv" title="section variable R of section cf_rV_density">R</span> :=
+  (2 * <span class="x" title="mathcomp.analysis.trigo.pi">pi</span>) ^- <span class="sv" title="section variable m of section cf_rV_density">m</span> * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_th <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span> <span class="bv">th</span>.</pre></div>
+<div class="decl-doc"><p>The density given by the inversion formula.</p></div>
+<details class="decl-used"><summary>Used by 13 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>, <a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a>, <a class="r k-thm" href="#cf_rV_density_reg0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg0">cf_rV_density_reg0</a>, <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a>, <a class="r k-thm" href="#cf_rV_density_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_ge0">cf_rV_density_ge0</a>, <a class="r k-thm" href="#measurable_cf_rV_density" title="GaussianAnalysis.fourier.inversion.measurable_cf_rV_density">measurable_cf_rV_density</a>, <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a>, <a class="r k-let" href="#RN_density" title="GaussianAnalysis.fourier.inversion.RN_density (section-local)">RN_density</a>, <a class="r k-thm" href="#ge0_integral_cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.ge0_integral_cf_rV_inv_prob">ge0_integral_cf_rV_inv_prob</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a>, <a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_rV_inversion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_density_le">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_density_le">cf_rV_density_le</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L126" target="_blank" rel="noopener">source, line 126</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> w : &#x27;rV_m,
+`|<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w| &lt;= (2 * <span class="x" title="mathcomp.analysis.trigo.pi">pi</span>) ^- m * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th</pre></div>
+<div class="decl-doc"><p>The density is bounded by (2 pi)^-m \int |cf nu|.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The density is bounded by <code>(2 pi)^-m \int |cf_rV nu|</code>, continuous, nonnegative and of integral one; <code><a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h</code> is the probability it defines.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_density_le w :
+  `|<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="bv">w</span>| &lt;=
+  (2 * <span class="x" title="mathcomp.analysis.trigo.pi">pi</span>) ^- <span class="sv" title="section variable m of section cf_rV_density">m</span> * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_th <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="measurable_mxdot_self">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#measurable_mxdot_self">measurable_mxdot_self</a>
+<span class="tag local" title="Let: local to section cf_rV_density, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L145" target="_blank" rel="noopener">source, line 145</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> measurable_mxdot_self :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>] (<span class="kw">fun</span> x =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">x</span> <span class="bv">x</span>).</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-let" href="#integrable_reg" title="GaussianAnalysis.fourier.inversion.integrable_reg (section-local)">integrable_reg</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="continuous_mxdotr">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#continuous_mxdotr">continuous_mxdotr</a>
+<span class="tag local" title="Let: local to section cf_rV_density, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L152" target="_blank" rel="noopener">source, line 152</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> continuous_mxdotr (x : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>) :
+  <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="kw">fun</span> theta : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span> =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">x</span> <span class="bv">theta</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#continuous_cf_rV_density" title="GaussianAnalysis.fourier.inversion.continuous_cf_rV_density">continuous_cf_rV_density</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="continuous_cf_rV_density">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#continuous_cf_rV_density">continuous_cf_rV_density</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L162" target="_blank" rel="noopener">source, line 162</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt; <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu)</pre></div>
+<div class="decl-doc"><p>The density is continuous, by dominated convergence.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> continuous_cf_rV_density : <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#measurable_cf_rV_density" title="GaussianAnalysis.fourier.inversion.measurable_cf_rV_density">measurable_cf_rV_density</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="cf_rV_density_reg">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cf_rV_density_reg">cf_rV_density_reg</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L192" target="_blank" rel="noopener">source, line 192</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat}, probability &#x27;rV_m R -&gt; R -&gt; &#x27;rV_m -&gt; R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cf_rV_density_reg (s : <span class="sv" title="section variable R of section cf_rV_density">R</span>) (w : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>) : <span class="sv" title="section variable R of section cf_rV_density">R</span> :=
+  (2 * <span class="x" title="mathcomp.analysis.trigo.pi">pi</span>) ^- <span class="sv" title="section variable m of section cf_rV_density">m</span> * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_th
+    (<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">s</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">th</span> / 2) * <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span> <span class="bv">th</span>).</pre></div>
+<div class="decl-doc"><p>The regularized density: (2 pi)^-m times the integral of exp (- s^2 |theta|^2 / 2) times the kernel.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>Gaussian regularization of the density: for <code>s &gt; 0</code>, <code>(2 pi)^-m \int exp (- s^2 |theta|^2 / 2) (...) dtheta</code> is the density <code>s^-m E[gauss_pdf ((w - Y) / s)]</code> of <code>Y + s G</code>, it is the average of <code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu</code> over <code>w + s G</code>, and it tends to <code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w</code> as <code>s -&gt; 0</code>.</p>
+</div>
+<details class="decl-used"><summary>Used by 6 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_reg0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg0">cf_rV_density_reg0</a>, <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>, <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a>, <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_density_reg0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_density_reg0">cf_rV_density_reg0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L196" target="_blank" rel="noopener">source, line 196</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} (nu : probability &#x27;rV_m R) (w : &#x27;rV_m),
+<a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> nu 0 w = <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_density_reg0 w : <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> 0 <span class="bv">w</span> = <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="bv">w</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cvg_cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cvg_cf_rV_density_reg">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cvg_cf_rV_density_reg">cvg_cf_rV_density_reg</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L203" target="_blank" rel="noopener">source, line 203</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> [w : &#x27;rV_m], <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> nu s w @[s --&gt; 0] --&gt; <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w</pre></div>
+<div class="decl-doc"><p>The regularized density tends to the density as s tends to 0.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cvg_cf_rV_density_reg w :
+  <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> <span class="bv">s</span> <span class="bv">w</span> @[s --&gt; 0] --&gt; <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="bv">w</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_ge0">cf_rV_density_ge0</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="measurable_rV_subl">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#measurable_rV_subl">measurable_rV_subl</a>
+<span class="tag local" title="Let: local to section cf_rV_density, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L250" target="_blank" rel="noopener">source, line 250</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> measurable_rV_subl (w : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>] (<span class="kw">fun</span> y : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span> =&gt; <span class="bv">w</span> - <span class="bv">y</span>).</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="measurable_mxdot2">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#measurable_mxdot2">measurable_mxdot2</a>
+<span class="tag local" title="Let: local to section cf_rV_density, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L260" target="_blank" rel="noopener">source, line 260</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> measurable_mxdot2 d (T : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.Measurable.Exports.measurableType">measurableType</span> <span class="bv">d</span>) (f g : <span class="bv">T</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="bv">T</span>] <span class="bv">f</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="bv">T</span>] <span class="bv">g</span> -&gt;
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: <span class="bv">T</span>] (<span class="kw">fun</span> x =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> (<span class="bv">f</span> <span class="bv">x</span>) (<span class="bv">g</span> <span class="bv">x</span>)).</pre></div>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a>, <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="reg_le">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#reg_le">reg_le</a>
+<span class="tag local" title="Let: local to section cf_rV_density, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L270" target="_blank" rel="noopener">source, line 270</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> reg_le (s : <span class="sv" title="section variable R of section cf_rV_density">R</span>) w th :
+  `|<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">s</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">th</span> / 2) * <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span> <span class="bv">th</span>| &lt;=
+  <a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#integrable_reg" title="GaussianAnalysis.fourier.inversion.integrable_reg (section-local)">integrable_reg</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="integrable_reg">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#integrable_reg">integrable_reg</a>
+<span class="tag local" title="Let: local to section cf_rV_density, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L280" target="_blank" rel="noopener">source, line 280</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> integrable_reg (s : <span class="sv" title="section variable R of section cf_rV_density">R</span>) w : (<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>).-integrable [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>]
+  (<span class="x" title="mathcomp.reals.constructive_ereal.EFin">EFin</span> \o (<span class="kw">fun</span> th =&gt; <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">s</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">th</span> / 2) * <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span> <span class="bv">th</span>)).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_regE" title="GaussianAnalysis.fourier.inversion.cf_rV_density_regE">cf_rV_density_regE</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_density_regE">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_density_regE">cf_rV_density_regE</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L297" target="_blank" rel="noopener">source, line 297</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> [s : R] (w : &#x27;rV_m),
+0 &lt; s -&gt; <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> nu s w = s ^- m * \int[nu]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (s^-1 *: (w - y))</pre></div>
+<div class="decl-doc"><p>For s &gt; 0, the regularized density is the density of the law of Y + s G, for Y of law nu and G of law gauss m, independent: w |-&gt; s^-m E[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> ((w - Y) / s)].</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_density_regE (s : <span class="sv" title="section variable R of section cf_rV_density">R</span>) w : 0 &lt; <span class="bv">s</span> -&gt;
+  <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> <span class="bv">s</span> <span class="bv">w</span> = <span class="bv">s</span> ^- <span class="sv" title="section variable m of section cf_rV_density">m</span> * \int[<span class="sv" title="section variable nu of section cf_rV_density">nu</span>]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (<span class="bv">s</span>^-1 *: (<span class="bv">w</span> - <span class="bv">y</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 3 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_density_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_density_ge0">cf_rV_density_ge0</a>, <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_cf_rV_kernel_gauss">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_cf_rV_kernel_gauss">integral_cf_rV_kernel_gauss</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L370" target="_blank" rel="noopener">source, line 370</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} (nu : probability &#x27;rV_m R) (s : R)
+  (w : <span class="hb" title="printed as matrix_matrix__canonical__GRing_LSemiModule R 1 m">&#x27;rV[R]_m</span>) (th : &#x27;rV_m),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m]_g <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> nu (w + s *: g) th =
+<span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- s ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> th th / 2) * <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> nu w th</pre></div>
+<div class="decl-doc"><p>The Gaussian side: E[<a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> (w + s G) theta] for G of law gauss m is exp (- s^2 |theta|^2 / 2) <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> w theta.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_cf_rV_kernel_gauss (s : <span class="sv" title="section variable R of section cf_rV_density">R</span>) w th :
+  \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_g <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> (<span class="bv">w</span> + <span class="bv">s</span> *: <span class="bv">g</span>) <span class="bv">th</span> =
+  <span class="x" title="mathcomp.analysis.sequences.expR">expR</span> (- <span class="bv">s</span> ^+ 2 * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">th</span> <span class="bv">th</span> / 2) * <a class="r k-def" href="#cf_rV_kernel" title="GaussianAnalysis.fourier.inversion.cf_rV_kernel">cf_rV_kernel</a> <span class="bv">w</span> <span class="bv">th</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_cf_rV_density_gauss" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_cf_rV_density_gauss">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_cf_rV_density_gauss">integral_cf_rV_density_gauss</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L419" target="_blank" rel="noopener">source, line 419</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> (s : R) (w : <span class="hb" title="printed as matrix_matrix__canonical__GRing_LSemiModule R 1 m">&#x27;rV[R]_m</span>),
+\int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m]_g <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu (w + s *: g) = <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> nu s w</pre></div>
+<div class="decl-doc"><p>Convolution: the density at w + s G, averaged over G of law gauss m, is the regularized density at w.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_cf_rV_density_gauss (s : <span class="sv" title="section variable R of section cf_rV_density">R</span>) w :
+  \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_g <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> (<span class="bv">w</span> + <span class="bv">s</span> *: <span class="bv">g</span>) = <a class="r k-def" href="#cf_rV_density_reg" title="GaussianAnalysis.fourier.inversion.cf_rV_density_reg">cf_rV_density_reg</a> <span class="bv">s</span> <span class="bv">w</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_density_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_density_ge0">cf_rV_density_ge0</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L464" target="_blank" rel="noopener">source, line 464</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> w : &#x27;rV_m, 0 &lt;= <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w</pre></div>
+<div class="decl-doc"><p>The density is nonnegative, as a limit of the densities of Y + s G.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_density_ge0 w : 0 &lt;= <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="bv">w</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 4 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-thm" href="#cf_rV_inv_prob_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_ge0">cf_rV_inv_prob_ge0</a>, <a class="r k-thm" href="#cf_rV_inv_prob_sigma" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_sigma">cf_rV_inv_prob_sigma</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="measurable_cf_rV_density">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#measurable_cf_rV_density">measurable_cf_rV_density</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L476" target="_blank" rel="noopener">source, line 476</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_m] (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> measurable_cf_rV_density :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span>] <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a>.</pre></div></details>
+<details class="decl-used"><summary>Used by 6 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_cf_rV_density" title="GaussianAnalysis.fourier.inversion.integral_cf_rV_density">integral_cf_rV_density</a>, <a class="r k-thm" href="#cf_rV_inv_prob_sigma" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_sigma">cf_rV_inv_prob_sigma</a>, <a class="r k-thm" href="#cf_rV_inv_prob_dominates" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_dominates">cf_rV_inv_prob_dominates</a>, <a class="r k-let" href="#RN_density" title="GaussianAnalysis.fourier.inversion.RN_density (section-local)">RN_density</a>, <a class="r k-thm" href="#ge0_integral_cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.ge0_integral_cf_rV_inv_prob">ge0_integral_cf_rV_inv_prob</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_cf_rV_density">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_cf_rV_density">integral_cf_rV_density</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L481" target="_blank" rel="noopener">source, line 481</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_w (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w)%:E)%E = 1%E</pre></div>
+<div class="decl-doc"><p>The density has integral one.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_cf_rV_density :
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_w (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="bv">w</span>)%:E = 1)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_inv_prob_setT" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_setT">cf_rV_inv_prob_setT</a></li>
+</ul></details>
+</div>
+<div class="decl k-def" id="cf_rV_inv_prob">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#cf_rV_inv_prob">cf_rV_inv_prob</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L570" target="_blank" rel="noopener">source, line 570</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt; <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV_m -&gt; \bar R</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> cf_rV_inv_prob
+    (h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_density">nu</span> <span class="bv">th</span>)%:E &lt; +oo)%E) :
+    <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section cf_rV_density">R</span>]_<span class="sv" title="section variable m of section cf_rV_density">m</span> -&gt; \bar <span class="sv" title="section variable R of section cf_rV_density">R</span> :=
+  <span class="kw">fun</span> A =&gt; (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_density">m</span>]_(w <span class="kw">in</span> <span class="bv">A</span>) (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="bv">w</span>)%:E)%E.</pre></div>
+<div class="decl-doc"><p>The law with density <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> with respect to <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m; the proof h of the integrability of |cf nu| makes it a probability.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#cf_rV_density_le" title="GaussianAnalysis.fourier.inversion.cf_rV_density_le">cf_rV_density_le</a>.</p></div>
+<details class="decl-used"><summary>Used by 11 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_inv_prob0" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob0">cf_rV_inv_prob0</a>, <a class="r k-thm" href="#cf_rV_inv_prob_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_ge0">cf_rV_inv_prob_ge0</a>, <a class="r k-thm" href="#cf_rV_inv_prob_sigma" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_sigma">cf_rV_inv_prob_sigma</a>, <a class="r k-thm" href="#cf_rV_inv_prob_setT" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_setT">cf_rV_inv_prob_setT</a>, <a class="r k-inst" href="#instance-line-606" title="GaussianAnalysis.fourier.inversion: HB.instance at line 606">instance at line 606</a>, <a class="r k-inst" href="#instance-line-613" title="GaussianAnalysis.fourier.inversion: HB.instance at line 613">instance at line 613</a>, <a class="r k-thm" href="#cf_rV_inv_prob_dominates" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_dominates">cf_rV_inv_prob_dominates</a>, <a class="r k-let" href="#RN_density" title="GaussianAnalysis.fourier.inversion.RN_density (section-local)">RN_density</a>, <a class="r k-thm" href="#ge0_integral_cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.ge0_integral_cf_rV_inv_prob">ge0_integral_cf_rV_inv_prob</a>, <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a>, <a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_rV_inversion</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-cf_rV_inv_prob-413"><span class="sec-kw">section</span><span class="sec-name">cf_rV_inv_prob</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>} (nu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="bv">R</span>]_<span class="bv">m</span> <span class="bv">R</span>).
+<span class="vk">Variable</span> h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inv_prob">m</span>]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_inv_prob">nu</span> <span class="bv">th</span>)%:E &lt; +oo)%E.</pre>
+<div class="decl k-thm" id="cf_rV_inv_prob0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_inv_prob0">cf_rV_inv_prob0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L581" target="_blank" rel="noopener">source, line 581</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  (h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E),
+<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h <span class="x" title="mathcomp.classical.classical_sets.set0">set0</span> = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_inv_prob0 : <a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="sv" title="section variable h of section cf_rV_inv_prob">h</span> <span class="x" title="mathcomp.classical.classical_sets.set0">set0</span> = 0%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-606" title="GaussianAnalysis.fourier.inversion: HB.instance at line 606">instance at line 606</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_inv_prob_ge0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_inv_prob_ge0">cf_rV_inv_prob_ge0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L584" target="_blank" rel="noopener">source, line 584</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  (h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E) 
+  (A : set &#x27;rV_m),
+(0%R &lt;= <a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h A)%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_inv_prob_ge0 A : (0 &lt;= <a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="sv" title="section variable h of section cf_rV_inv_prob">h</span> <span class="bv">A</span>)%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-606" title="GaussianAnalysis.fourier.inversion: HB.instance at line 606">instance at line 606</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_inv_prob_sigma">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_inv_prob_sigma">cf_rV_inv_prob_sigma</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L589" target="_blank" rel="noopener">source, line 589</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  [h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E],
+<span class="x" title="mathcomp.analysis.measure_theory.measure_function.semi_sigma_additive">semi_sigma_additive</span> (<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_inv_prob_sigma : <span class="x" title="mathcomp.analysis.measure_theory.measure_function.semi_sigma_additive">semi_sigma_additive</span> (<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="sv" title="section variable h of section cf_rV_inv_prob">h</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-606" title="GaussianAnalysis.fourier.inversion: HB.instance at line 606">instance at line 606</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_inv_prob_setT">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_inv_prob_setT">cf_rV_inv_prob_setT</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L596" target="_blank" rel="noopener">source, line 596</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  (h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E),
+<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> h [set: &#x27;rV_m] = 1%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_inv_prob_setT : <a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="sv" title="section variable h of section cf_rV_inv_prob">h</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inv_prob">R</span>]_<span class="sv" title="section variable m of section cf_rV_inv_prob">m</span>] = 1%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-inst" href="#instance-line-613" title="GaussianAnalysis.fourier.inversion: HB.instance at line 613">instance at line 613</a></li>
+</ul></details>
+</div>
+</div>
+<div class="note"><p>HB declares canonical projections that the structures of the measure already provide; the warning says so. The setting lasts until the end of this file and is not exported.</p><pre class="code ctx">Set Warnings &quot;-redundant-canonical-projection&quot;.</pre></div>
+<div class="decl k-inst" id="instance-line-606">
+<div class="decl-head">
+<span class="decl-kind">instance</span>
+<a class="decl-name" href="#instance-line-606">instance at line 606</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L606" target="_blank" rel="noopener">source, line 606</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">HB.instance Definition</span> _ (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>)
+    (nu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="bv">R</span>]_<span class="bv">m</span> <span class="bv">R</span>)
+    (h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="bv">m</span>]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="bv">nu</span> <span class="bv">th</span>)%:E &lt; +oo)%E) :=
+  <span class="x" title="mathcomp.analysis.measure_theory.measure_function.isMeasure.Build">isMeasure.Build</span> _ _ _ (@<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="bv">R</span> <span class="bv">m</span> <span class="bv">nu</span> <span class="bv">h</span>)
+    (@<a class="r k-thm" href="#cf_rV_inv_prob0" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob0">cf_rV_inv_prob0</a> <span class="bv">R</span> <span class="bv">m</span> <span class="bv">nu</span> <span class="bv">h</span>) (@<a class="r k-thm" href="#cf_rV_inv_prob_ge0" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_ge0">cf_rV_inv_prob_ge0</a> <span class="bv">R</span> <span class="bv">m</span> <span class="bv">nu</span> <span class="bv">h</span>)
+    (@<a class="r k-thm" href="#cf_rV_inv_prob_sigma" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_sigma">cf_rV_inv_prob_sigma</a> <span class="bv">R</span> <span class="bv">m</span> <span class="bv">nu</span> <span class="bv">h</span>).</pre></div>
+</div>
+<div class="decl k-inst" id="instance-line-613">
+<div class="decl-head">
+<span class="decl-kind">instance</span>
+<a class="decl-name" href="#instance-line-613">instance at line 613</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L613" target="_blank" rel="noopener">source, line 613</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">HB.instance Definition</span> _ (R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>) (m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>)
+    (nu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="bv">R</span>]_<span class="bv">m</span> <span class="bv">R</span>)
+    (h : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="bv">m</span>]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="bv">nu</span> <span class="bv">th</span>)%:E &lt; +oo)%E) :=
+  <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Measure_isProbability.Build">Measure_isProbability.Build</span> _ _ _ (@<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="bv">R</span> <span class="bv">m</span> <span class="bv">nu</span> <span class="bv">h</span>)
+    (@<a class="r k-thm" href="#cf_rV_inv_prob_setT" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob_setT">cf_rV_inv_prob_setT</a> <span class="bv">R</span> <span class="bv">m</span> <span class="bv">nu</span> <span class="bv">h</span>).</pre></div>
+</div>
+<div class="sec"><div class="sec-head" id="section-add_gauss-438"><span class="sec-kw">section</span><span class="sec-name">add_gauss</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.</pre>
+<div class="decl k-let is-local" id="measurable_mxdot_self-2">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#measurable_mxdot_self-2">measurable_mxdot_self</a>
+<span class="tag local" title="Let: local to section add_gauss, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L623" target="_blank" rel="noopener">source, line 623</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> measurable_mxdot_self :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span>] (<span class="kw">fun</span> x =&gt; <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#mxdot" title="GaussianAnalysis.matrix.euclidean.mxdot">mxdot</a> <span class="bv">x</span> <span class="bv">x</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#lipschitz_add_gauss" title="GaussianAnalysis.fourier.inversion.lipschitz_add_gauss">lipschitz_add_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="measurable_rV_subl-2">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#measurable_rV_subl-2">measurable_rV_subl</a>
+<span class="tag local" title="Let: local to section add_gauss, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L630" target="_blank" rel="noopener">source, line 630</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> measurable_rV_subl (w : &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span>] (<span class="kw">fun</span> y : &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> =&gt; <span class="bv">w</span> - <span class="bv">y</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_add_gauss" title="GaussianAnalysis.fourier.inversion.integral_add_gauss">integral_add_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="msub2">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#msub2">msub2</a>
+<span class="tag local" title="Let: local to section add_gauss, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L640" target="_blank" rel="noopener">source, line 640</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> msub2 : <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> * &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span>]
+  (<span class="kw">fun</span> q : &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> * &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> =&gt; <span class="bv">q</span>.2 - <span class="bv">q</span>.1).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_add_gauss" title="GaussianAnalysis.fourier.inversion.integral_add_gauss">integral_add_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="pdf_le2">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#pdf_le2">pdf_le2</a>
+<span class="tag local" title="Let: local to section add_gauss, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L652" target="_blank" rel="noopener">source, line 652</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> pdf_le2 (x : &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span>) : `|<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> <span class="bv">x</span>| &lt;= <span class="x" title="mathcomp.algebra.numeric_hierarchy.numfield.Num.sqrt">Num.sqrt</span> (2 * <span class="x" title="mathcomp.analysis.trigo.pi">pi</span>) ^- <span class="sv" title="section variable m of section add_gauss">m</span>.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_add_gauss" title="GaussianAnalysis.fourier.inversion.integral_add_gauss">integral_add_gauss</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_add_gauss">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_add_gauss">integral_add_gauss</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L662" target="_blank" rel="noopener">source, line 662</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} (mu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV_m R) [phi : &#x27;rV_m -&gt; R] [s : R],
+0 &lt; s -&gt;
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_m] phi -&gt;
+(<span class="kw">forall</span> x : &#x27;rV_m, 0 &lt;= phi x) -&gt;
+(\int[mu]_y \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m]_g (phi (y + s *: g))%:E)%E =
+((s ^- m)%:E *
+ \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_w ((phi w)%:E * (\int[mu]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (s^-1 *: (w - y)))%:E))%E</pre></div>
+<div class="decl-doc"><p>For Y of law mu and G of law gauss m, independent, and s &gt; 0, the law of Y + s G has the density w |-&gt; s^-m E[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> ((w - Y) / s)].</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>For any law <code>mu</code> on <code>&#x27;rV[R]_m</code> and <code>G</code> of law <code><a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m</code>: <code>E[phi (Y + s G)] = s^-m \int phi w E[gauss_pdf ((w - Y) / s)] dw</code> for nonnegative measurable <code>phi</code>, and <code>|E[phi (Y + s G)] - E[phi Y]| &lt;= |L| s (1 + m) / 2</code> for <code>phi</code> with values in <code>[0, 1]</code> and Lipschitz with constant <code>L</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_add_gauss (mu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> <span class="sv" title="section variable R of section add_gauss">R</span>)
+    (phi : &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> -&gt; <span class="sv" title="section variable R of section add_gauss">R</span>) (s : <span class="sv" title="section variable R of section add_gauss">R</span>) :
+  0 &lt; <span class="bv">s</span> -&gt; <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span>] <span class="bv">phi</span> -&gt; (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">phi</span> <span class="bv">x</span>) -&gt;
+  (\int[<span class="bv">mu</span>]_y \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable m of section add_gauss">m</span>]_g (<span class="bv">phi</span> (<span class="bv">y</span> + <span class="bv">s</span> *: <span class="bv">g</span>))%:E =
+   (<span class="bv">s</span> ^- <span class="sv" title="section variable m of section add_gauss">m</span>)%:E * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section add_gauss">m</span>]_w
+     ((<span class="bv">phi</span> <span class="bv">w</span>)%:E * (\int[<span class="bv">mu</span>]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (<span class="bv">s</span>^-1 *: (<span class="bv">w</span> - <span class="bv">y</span>)))%:E))%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#smooth_EFin" title="GaussianAnalysis.fourier.inversion.smooth_EFin (section-local)">smooth_EFin</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="lipschitz_add_gauss">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#lipschitz_add_gauss">lipschitz_add_gauss</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L710" target="_blank" rel="noopener">source, line 710</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} (mu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV_m R) [phi : &#x27;rV_m -&gt; R] [L s : R],
+0 &lt; s -&gt;
+(<span class="kw">forall</span> x : &#x27;rV_m, 0 &lt;= phi x &lt;= 1) -&gt;
+(<span class="kw">forall</span> x y : &#x27;rV_m, `|phi x - phi y| &lt;= L * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (x - y)) -&gt;
+`|\int[mu]_y \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> m]_g phi (y + s *: g) - \int[mu]_y phi y| &lt;=
+`|L| * s * (1 + m%:R) / 2</pre></div>
+<div class="decl-doc"><p>For a law mu, s &gt; 0 and phi with values in [0, 1] and Lipschitz with constant L: |E[phi (Y + s G)] - E[phi Y]| &lt;= |L| s (1 + m) / 2.</p></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#integral_add_gauss" title="GaussianAnalysis.fourier.inversion.integral_add_gauss">integral_add_gauss</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> lipschitz_add_gauss (mu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> <span class="sv" title="section variable R of section add_gauss">R</span>)
+    (phi : &#x27;rV[<span class="sv" title="section variable R of section add_gauss">R</span>]_<span class="sv" title="section variable m of section add_gauss">m</span> -&gt; <span class="sv" title="section variable R of section add_gauss">R</span>) (L s : <span class="sv" title="section variable R of section add_gauss">R</span>) :
+  0 &lt; <span class="bv">s</span> -&gt; (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">phi</span> <span class="bv">x</span> &lt;= 1) -&gt;
+  (<span class="kw">forall</span> x y, `|<span class="bv">phi</span> <span class="bv">x</span> - <span class="bv">phi</span> <span class="bv">y</span>| &lt;= <span class="bv">L</span> * <a class="r k-def" href="GaussianAnalysis.matrix.euclidean.html#frobenius" title="GaussianAnalysis.matrix.euclidean.frobenius">frobenius</a> (<span class="bv">x</span> - <span class="bv">y</span>)) -&gt;
+  `|\int[<span class="bv">mu</span>]_y \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable m of section add_gauss">m</span>]_g <span class="bv">phi</span> (<span class="bv">y</span> + <span class="bv">s</span> *: <span class="bv">g</span>) - \int[<span class="bv">mu</span>]_y <span class="bv">phi</span> <span class="bv">y</span>| &lt;=
+  `|<span class="bv">L</span>| * <span class="bv">s</span> * (1 + <span class="sv" title="section variable m of section add_gauss">m</span>%:R) / 2.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_rV_inversion</a></li>
+</ul></details>
+</div>
+</div>
+<div class="sec"><div class="sec-head" id="section-cf_rV_inversion-621"><span class="sec-kw">section</span><span class="sec-name">cf_rV_inversion</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {m : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variable</span> nu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span> <span class="sv" title="section variable R of section cf_rV_inversion">R</span>.
+<span class="vk">Hypothesis</span> int_cf :
+  (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> <span class="sv" title="section variable nu of section cf_rV_inversion">nu</span> <span class="bv">th</span>)%:E &lt; +oo)%E.
+<span class="vk">Local Notation</span> P := (<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> <span class="sv" title="section variable int_cf of section cf_rV_inversion">int_cf</span>).</pre>
+<div class="decl k-let is-local" id="measurable_rV_subl-3">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#measurable_rV_subl-3">measurable_rV_subl</a>
+<span class="tag local" title="Let: local to section cf_rV_inversion, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L854" target="_blank" rel="noopener">source, line 854</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> measurable_rV_subl (w : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span>] (<span class="kw">fun</span> y : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span> =&gt; <span class="bv">w</span> - <span class="bv">y</span>).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_inv_prob_dominates">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#cf_rV_inv_prob_dominates">cf_rV_inv_prob_dominates</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L866" target="_blank" rel="noopener">source, line 866</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  (int_cf : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E),
+<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> int_cf `&lt;&lt; <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m</pre></div>
+<div class="decl-doc"><p>The law with density <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu is absolutely continuous with respect to <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m, and integrals against it carry the density.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> cf_rV_inv_prob_dominates : <span class="ln" title="Local Notation P := (cf_rV_inv_prob int_cf).">P</span> `&lt;&lt; <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-let" href="#RN_density" title="GaussianAnalysis.fourier.inversion.RN_density (section-local)">RN_density</a>, <a class="r k-thm" href="#ge0_integral_cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.ge0_integral_cf_rV_inv_prob">ge0_integral_cf_rV_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="RN_density">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#RN_density">RN_density</a>
+<span class="tag local" title="Let: local to section cf_rV_inversion, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L874" target="_blank" rel="noopener">source, line 874</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> RN_density : <span class="x" title="mathcomp.analysis.measure_theory.measure_negligible.ae_eq">ae_eq</span> (<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>) [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span>]
+  (<span class="x" title="mathcomp.analysis.charge.Radon_Nikodym_SigmaFinite.f">Radon_Nikodym_SigmaFinite.f</span> <span class="ln" title="Local Notation P := (cf_rV_inv_prob int_cf).">P</span> (<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>))
+  (<span class="kw">fun</span> w =&gt; (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="sv" title="section variable nu of section cf_rV_inversion">nu</span> <span class="bv">w</span>)%:E).</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#ge0_integral_cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.ge0_integral_cf_rV_inv_prob">ge0_integral_cf_rV_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="ge0_integral_cf_rV_inv_prob">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#ge0_integral_cf_rV_inv_prob">ge0_integral_cf_rV_inv_prob</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L887" target="_blank" rel="noopener">source, line 887</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  (int_cf : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E) 
+  [g : &#x27;rV_m -&gt; \bar R],
+<span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV_m] g -&gt;
+(<span class="kw">forall</span> x : &#x27;rV_m, (0%R &lt;= g x)%E) -&gt;
+(\int[<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> int_cf]_x g x)%E =
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_x (g x * (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu x)%:E))%E</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> ge0_integral_cf_rV_inv_prob (g : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span> -&gt; \bar <span class="sv" title="section variable R of section cf_rV_inversion">R</span>) :
+  <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span>] <span class="bv">g</span> -&gt; (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">g</span> <span class="bv">x</span>)%E -&gt;
+  (\int[<span class="ln" title="Local Notation P := (cf_rV_inv_prob int_cf).">P</span>]_x <span class="bv">g</span> <span class="bv">x</span> = \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>]_x (<span class="bv">g</span> <span class="bv">x</span> * (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="sv" title="section variable nu of section cf_rV_inversion">nu</span> <span class="bv">x</span>)%:E))%E.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#integral_gauss_pdf_inv_prob" title="GaussianAnalysis.fourier.inversion.integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="integral_gauss_pdf_inv_prob">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#integral_gauss_pdf_inv_prob">integral_gauss_pdf_inv_prob</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L904" target="_blank" rel="noopener">source, line 904</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R]
+  (int_cf : (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E) 
+  [s : R] (w : <span class="hb" title="printed as matrix_matrix__canonical__Algebra_BaseZmodule R 1 m">&#x27;rV[R]_m</span>),
+0 &lt; s -&gt;
+\int[<a class="r k-def" href="#cf_rV_inv_prob" title="GaussianAnalysis.fourier.inversion.cf_rV_inv_prob">cf_rV_inv_prob</a> int_cf]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (s^-1 *: (w - y)) =
+\int[nu]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (s^-1 *: (w - y))</pre></div>
+<div class="decl-doc"><p>The densities of Y + s G for Y of law nu and for Y of law P coincide.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> integral_gauss_pdf_inv_prob (s : <span class="sv" title="section variable R of section cf_rV_inversion">R</span>) w : 0 &lt; <span class="bv">s</span> -&gt;
+  \int[<span class="ln" title="Local Notation P := (cf_rV_inv_prob int_cf).">P</span>]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (<span class="bv">s</span>^-1 *: (<span class="bv">w</span> - <span class="bv">y</span>)) =
+  \int[<span class="sv" title="section variable nu of section cf_rV_inversion">nu</span>]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (<span class="bv">s</span>^-1 *: (<span class="bv">w</span> - <span class="bv">y</span>)).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_rV_inversion</a></li>
+</ul></details>
+</div>
+<div class="decl k-let is-local" id="smooth_EFin">
+<div class="decl-head">
+<span class="decl-kind">let</span>
+<a class="decl-name" href="#smooth_EFin">smooth_EFin</a>
+<span class="tag local" title="Let: local to section cf_rV_inversion, inlined when the section closes">section-local</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L953" target="_blank" rel="noopener">source, line 953</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="vk">Let</span> smooth_EFin (mu : <span class="x" title="mathcomp.analysis.measure_theory.probability_measure.Probability.Exports.probability">probability</span> &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span> <span class="sv" title="section variable R of section cf_rV_inversion">R</span>) (Phi : &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span> -&gt; <span class="sv" title="section variable R of section cf_rV_inversion">R</span>) (s : <span class="sv" title="section variable R of section cf_rV_inversion">R</span>) :
+  0 &lt; <span class="bv">s</span> -&gt; (<span class="kw">forall</span> x, 0 &lt;= <span class="bv">Phi</span> <span class="bv">x</span> &lt;= 1) -&gt; <span class="x" title="mathcomp.analysis.measure_theory.measurable_function.measurable_fun">measurable_fun</span> [set: &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span>] <span class="bv">Phi</span> -&gt;
+  (\int[<span class="bv">mu</span>]_y \int[<a class="r k-def" href="GaussianAnalysis.gaussian.gauss.html#gauss" title="GaussianAnalysis.gaussian.gauss.gauss">gauss</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>]_g <span class="bv">Phi</span> (<span class="bv">y</span> + <span class="bv">s</span> *: <span class="bv">g</span>))%:E =
+  ((<span class="bv">s</span> ^- <span class="sv" title="section variable m of section cf_rV_inversion">m</span>)%:E * \int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>]_w
+    ((<span class="bv">Phi</span> <span class="bv">w</span>)%:E * (\int[<span class="bv">mu</span>]_y <a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#gauss_pdf" title="GaussianAnalysis.gaussian.lebesgue_rV.gauss_pdf">gauss_pdf</a> (<span class="bv">s</span>^-1 *: (<span class="bv">w</span> - <span class="bv">y</span>)))%:E))%E.</pre></div>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#cf_rV_inversion" title="GaussianAnalysis.fourier.inversion.cf_rV_inversion">cf_rV_inversion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="cf_rV_inversion">
+<div class="decl-head">
+<span class="decl-kind">theorem</span>
+<a class="decl-name" href="#cf_rV_inversion">cf_rV_inversion</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/fourier/inversion.v#L998" target="_blank" rel="noopener">source, line 998</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {m : nat} [nu : probability &#x27;rV_m R],
+(\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_th (<a class="r k-def" href="GaussianAnalysis.fourier.charfun_rV.html#cf_rV_norm" title="GaussianAnalysis.fourier.charfun_rV.cf_rV_norm">cf_rV_norm</a> nu th)%:E &lt; +oo)%E -&gt;
+<span class="kw">forall</span> [X : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV_m],
+(<a class="r k-def" href="GaussianAnalysis.gaussian.measurable_matrix.html#measure_matrix_display" title="GaussianAnalysis.gaussian.measurable_matrix.measure_matrix_display">measure_matrix_display</a> default_measure_display).-<span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> X -&gt;
+nu X = (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m]_(w <span class="kw">in</span> X) (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w)%:E)%E</pre></div>
+<div class="decl-doc"><p>The inversion theorem: if |cf nu| is integrable with respect to Lebesgue measure, then nu has the density <a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu.</p></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>The Fourier inversion theorem on row vectors: if <code>\int |cf_rV nu theta| dtheta &lt; +oo</code> against <code><a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> m</code>, then <code>nu X = \int_X cf_rV_density nu w dw</code> for every measurable <code>X</code>, with <code><a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> nu w = (2 pi)^-m \int (cos &lt;theta, w&gt; cf_rV_re nu theta + sin &lt;theta, w&gt; cf_rV_im nu theta) dtheta</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Theorem</span> cf_rV_inversion (X : <span class="x" title="mathcomp.classical.classical_sets.set">set</span> &#x27;rV[<span class="sv" title="section variable R of section cf_rV_inversion">R</span>]_<span class="sv" title="section variable m of section cf_rV_inversion">m</span>) : <span class="x" title="mathcomp.analysis.measure_theory.measurable_structure.measurable">measurable</span> <span class="bv">X</span> -&gt;
+  <span class="sv" title="section variable nu of section cf_rV_inversion">nu</span> <span class="bv">X</span> = (\int[<a class="r k-def" href="GaussianAnalysis.gaussian.lebesgue_rV.html#lebesgue_rV" title="GaussianAnalysis.gaussian.lebesgue_rV.lebesgue_rV">lebesgue_rV</a> <span class="sv" title="section variable m of section cf_rV_inversion">m</span>]_(w <span class="kw">in</span> <span class="bv">X</span>) (<a class="r k-def" href="#cf_rV_density" title="GaussianAnalysis.fourier.inversion.cf_rV_density">cf_rV_density</a> <span class="sv" title="section variable nu of section cf_rV_inversion">nu</span> <span class="bv">w</span>)%:E)%E.</pre></div></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>cf_rV_density</span></li><li><a href="#cf_rV_kernel">cf_<wbr>rV_<wbr>kernel</a></li><li><a href="#cf_rV_kernel_le">cf_<wbr>rV_<wbr>kernel_<wbr>le</a></li><li><a href="#measurable_cf_rV_kernel">measurable_<wbr>cf_<wbr>rV_<wbr>kernel</a></li><li><a href="#integrable_cf_rV_norm">integrable_<wbr>cf_<wbr>rV_<wbr>norm</a></li><li><a href="#integrable_cf_rV_kernel">integrable_<wbr>cf_<wbr>rV_<wbr>kernel</a></li><li><a href="#cf_rV_density">cf_<wbr>rV_<wbr>density</a></li><li><a href="#cf_rV_density_le">cf_<wbr>rV_<wbr>density_<wbr>le</a></li><li class="is-local"><a href="#measurable_mxdot_self">measurable_<wbr>mxdot_<wbr>self</a></li><li class="is-local"><a href="#continuous_mxdotr">continuous_<wbr>mxdotr</a></li><li><a href="#continuous_cf_rV_density">continuous_<wbr>cf_<wbr>rV_<wbr>density</a></li><li><a href="#cf_rV_density_reg">cf_<wbr>rV_<wbr>density_<wbr>reg</a></li><li><a href="#cf_rV_density_reg0">cf_<wbr>rV_<wbr>density_<wbr>reg0</a></li><li><a href="#cvg_cf_rV_density_reg">cvg_<wbr>cf_<wbr>rV_<wbr>density_<wbr>reg</a></li><li class="is-local"><a href="#measurable_rV_subl">measurable_<wbr>rV_<wbr>subl</a></li><li class="is-local"><a href="#measurable_mxdot2">measurable_<wbr>mxdot2</a></li><li class="is-local"><a href="#reg_le">reg_<wbr>le</a></li><li class="is-local"><a href="#integrable_reg">integrable_<wbr>reg</a></li><li><a href="#cf_rV_density_regE">cf_<wbr>rV_<wbr>density_<wbr>regE</a></li><li><a href="#integral_cf_rV_kernel_gauss">integral_<wbr>cf_<wbr>rV_<wbr>kernel_<wbr>gauss</a></li><li><a href="#integral_cf_rV_density_gauss">integral_<wbr>cf_<wbr>rV_<wbr>density_<wbr>gauss</a></li><li><a href="#cf_rV_density_ge0">cf_<wbr>rV_<wbr>density_<wbr>ge0</a></li><li><a href="#measurable_cf_rV_density">measurable_<wbr>cf_<wbr>rV_<wbr>density</a></li><li><a href="#integral_cf_rV_density">integral_<wbr>cf_<wbr>rV_<wbr>density</a></li><li><a href="#cf_rV_inv_prob">cf_<wbr>rV_<wbr>inv_<wbr>prob</a></li><li class="toc-sec"><span>cf_rV_inv_prob</span></li><li><a href="#cf_rV_inv_prob0">cf_<wbr>rV_<wbr>inv_<wbr>prob0</a></li><li><a href="#cf_rV_inv_prob_ge0">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>ge0</a></li><li><a href="#cf_rV_inv_prob_sigma">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>sigma</a></li><li><a href="#cf_rV_inv_prob_setT">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>setT</a></li><li><a href="#instance-line-606">instance at line 606</a></li><li><a href="#instance-line-613">instance at line 613</a></li><li class="toc-sec"><span>add_gauss</span></li><li class="is-local"><a href="#measurable_mxdot_self-2">measurable_<wbr>mxdot_<wbr>self</a></li><li class="is-local"><a href="#measurable_rV_subl-2">measurable_<wbr>rV_<wbr>subl</a></li><li class="is-local"><a href="#msub2">msub2</a></li><li class="is-local"><a href="#pdf_le2">pdf_<wbr>le2</a></li><li><a href="#integral_add_gauss">integral_<wbr>add_<wbr>gauss</a></li><li><a href="#lipschitz_add_gauss">lipschitz_<wbr>add_<wbr>gauss</a></li><li class="toc-sec"><span>cf_rV_inversion</span></li><li class="is-local"><a href="#measurable_rV_subl-3">measurable_<wbr>rV_<wbr>subl</a></li><li><a href="#cf_rV_inv_prob_dominates">cf_<wbr>rV_<wbr>inv_<wbr>prob_<wbr>dominates</a></li><li class="is-local"><a href="#RN_density">RN_<wbr>density</a></li><li><a href="#ge0_integral_cf_rV_inv_prob">ge0_<wbr>integral_<wbr>cf_<wbr>rV_<wbr>inv_<wbr>prob</a></li><li><a href="#integral_gauss_pdf_inv_prob">integral_<wbr>gauss_<wbr>pdf_<wbr>inv_<wbr>prob</a></li><li class="is-local"><a href="#smooth_EFin">smooth_<wbr>EFin</a></li><li><a href="#cf_rV_inversion">cf_<wbr>rV_<wbr>inversion</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

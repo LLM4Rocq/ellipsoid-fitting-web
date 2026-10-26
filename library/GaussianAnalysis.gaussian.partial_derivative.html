@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GaussianAnalysis.gaussian.partial_derivative</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var r=document.documentElement,t=localStorage.getItem('libdoc-theme');if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+<button class="navtoggle" id="nav-toggle" aria-label="Show the library contents" aria-expanded="false" aria-controls="sidenav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+<a class="brand" href="index.html"><span class="brand-name">GaussianAnalysis</span><span class="brand-sub">Rocq library documentation</span></a>
+<div class="search" role="search">
+<input id="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search declarations, files, results and the glossary" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+<kbd>/</kbd>
+<div id="search-results" class="search-results" role="listbox" hidden></div>
+</div>
+<div class="toptools"><a href="results.html">Main results</a><a href="glossary.html">Glossary</a><button class="theme-btn" id="theme-toggle" type="button" aria-label="Change color theme">Theme</button></div>
+</header>
+<div class="shell">
+<nav class="sidenav" id="sidenav" aria-label="Library contents">
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="results.html">Main results</a>
+<a class="nav-link" href="glossary.html">Glossary</a>
+<a class="nav-link" href="declarations.html">All declarations</a>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianAnalysis</div>
+<details class="nav-dir" open><summary><a href="GaussianAnalysis.gaussian.html">gaussian</a><span class="nav-count">9</span></summary><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss.html">gauss</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_ibp.html">gauss_ibp</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_interpolation.html">gauss_interpolation</a><a class="nav-mod" href="GaussianAnalysis.gaussian.gauss_moments.html">gauss_moments</a><a class="nav-mod" href="GaussianAnalysis.gaussian.lebesgue_rV.html">lebesgue_rV</a><a class="nav-mod" href="GaussianAnalysis.gaussian.measurable_matrix.html">measurable_matrix</a><a class="nav-mod" href="GaussianAnalysis.gaussian.normal_integral.html">normal_integral</a><a class="nav-mod" href="GaussianAnalysis.gaussian.parameter_integral.html">parameter_integral</a><a class="nav-mod current" href="GaussianAnalysis.gaussian.partial_derivative.html" aria-current="page">partial_derivative</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.comparison.html">comparison</a><span class="nav-count">19</span></summary><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb.html">brascamp_lieb</a><a class="nav-mod" href="GaussianAnalysis.comparison.brascamp_lieb_lebesgue.html">brascamp_lieb_lebesgue</a><a class="nav-mod" href="GaussianAnalysis.comparison.cgmt.html">cgmt</a><a class="nav-mod" href="GaussianAnalysis.comparison.chi_square.html">chi_square</a><a class="nav-mod" href="GaussianAnalysis.comparison.cone_escape.html">cone_escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.escape.html">escape</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_concentration.html">gauss_concentration</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_law.html">gauss_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_linear.html">gauss_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_matrix_law.html">gauss_matrix_law</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_rotation.html">gauss_rotation</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_shift.html">gauss_shift</a><a class="nav-mod" href="GaussianAnalysis.comparison.gauss_smoothing.html">gauss_smoothing</a><a class="nav-mod" href="GaussianAnalysis.comparison.gordon.html">gordon</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_linear.html">normal_linear</a><a class="nav-mod" href="GaussianAnalysis.comparison.normal_mgf.html">normal_mgf</a><a class="nav-mod" href="GaussianAnalysis.comparison.ornstein_uhlenbeck.html">ornstein_uhlenbeck</a><a class="nav-mod" href="GaussianAnalysis.comparison.slepian.html">slepian</a><a class="nav-mod" href="GaussianAnalysis.comparison.sudakov.html">sudakov</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.matrix.html">matrix</a><span class="nav-count">17</span></summary><a class="nav-mod" href="GaussianAnalysis.matrix.condition_cone.html">condition_cone</a><a class="nav-mod" href="GaussianAnalysis.matrix.covering.html">covering</a><a class="nav-mod" href="GaussianAnalysis.matrix.effective_rank.html">effective_rank</a><a class="nav-mod" href="GaussianAnalysis.matrix.euclidean.html">euclidean</a><a class="nav-mod" href="GaussianAnalysis.matrix.lambda_max.html">lambda_max</a><a class="nav-mod" href="GaussianAnalysis.matrix.nets.html">nets</a><a class="nav-mod" href="GaussianAnalysis.matrix.nuclear.html">nuclear</a><a class="nav-mod" href="GaussianAnalysis.matrix.opnorm.html">opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_part.html">psd_part</a><a class="nav-mod" href="GaussianAnalysis.matrix.psd_splitting.html">psd_splitting</a><a class="nav-mod" href="GaussianAnalysis.matrix.random_opnorm.html">random_opnorm</a><a class="nav-mod" href="GaussianAnalysis.matrix.real_spectral.html">real_spectral</a><a class="nav-mod" href="GaussianAnalysis.matrix.spectral_gap.html">spectral_gap</a><a class="nav-mod" href="GaussianAnalysis.matrix.tensor_packing.html">tensor_packing</a><a class="nav-mod" href="GaussianAnalysis.matrix.trace_projection.html">trace_projection</a><a class="nav-mod" href="GaussianAnalysis.matrix.von_neumann.html">von_neumann</a><a class="nav-mod" href="GaussianAnalysis.matrix.whitening.html">whitening</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.probability.html">probability</a><span class="nav-count">24</span></summary><a class="nav-mod" href="GaussianAnalysis.probability.atoms.html">atoms</a><a class="nav-mod" href="GaussianAnalysis.probability.clip_profile.html">clip_profile</a><a class="nav-mod" href="GaussianAnalysis.probability.conditioning.html">conditioning</a><a class="nav-mod" href="GaussianAnalysis.probability.countable_mixture.html">countable_mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.density_law.html">density_law</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein.html">efron_stein</a><a class="nav-mod" href="GaussianAnalysis.probability.efron_stein_omission.html">efron_stein_omission</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_gap.html">finite_gap</a><a class="nav-mod" href="GaussianAnalysis.probability.finite_mean.html">finite_mean</a><a class="nav-mod" href="GaussianAnalysis.probability.hanson_wright.html">hanson_wright</a><a class="nav-mod" href="GaussianAnalysis.probability.lindeberg.html">lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.log_partition.html">log_partition</a><a class="nav-mod" href="GaussianAnalysis.probability.measurable_minimizer.html">measurable_minimizer</a><a class="nav-mod" href="GaussianAnalysis.probability.mixture.html">mixture</a><a class="nav-mod" href="GaussianAnalysis.probability.moments.html">moments</a><a class="nav-mod" href="GaussianAnalysis.probability.rademacher_lindeberg.html">rademacher_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.probability.semicircle_law.html">semicircle_law</a><a class="nav-mod" href="GaussianAnalysis.probability.small_ball_method.html">small_ball_method</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian.html">subgaussian</a><a class="nav-mod" href="GaussianAnalysis.probability.subgaussian_matrix.html">subgaussian_matrix</a><a class="nav-mod" href="GaussianAnalysis.probability.symmetrization.html">symmetrization</a><a class="nav-mod" href="GaussianAnalysis.probability.total_variation.html">total_variation</a><a class="nav-mod" href="GaussianAnalysis.probability.tuple_rows.html">tuple_rows</a><a class="nav-mod" href="GaussianAnalysis.probability.variational.html">variational</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.fourier.html">fourier</a><span class="nav-count">6</span></summary><a class="nav-mod" href="GaussianAnalysis.fourier.charfun.html">charfun</a><a class="nav-mod" href="GaussianAnalysis.fourier.charfun_rV.html">charfun_rV</a><a class="nav-mod" href="GaussianAnalysis.fourier.esseen.html">esseen</a><a class="nav-mod" href="GaussianAnalysis.fourier.gauss_factor.html">gauss_factor</a><a class="nav-mod" href="GaussianAnalysis.fourier.inversion.html">inversion</a><a class="nav-mod" href="GaussianAnalysis.fourier.small_ball.html">small_ball</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.convex.html">convex</a><span class="nav-count">12</span></summary><a class="nav-mod" href="GaussianAnalysis.convex.barrier_lindeberg.html">barrier_lindeberg</a><a class="nav-mod" href="GaussianAnalysis.convex.barrier_removal.html">barrier_removal</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_mixture.html">feature_mixture</a><a class="nav-mod" href="GaussianAnalysis.convex.feature_moments.html">feature_moments</a><a class="nav-mod" href="GaussianAnalysis.convex.gauss_feature.html">gauss_feature</a><a class="nav-mod" href="GaussianAnalysis.convex.least_squares.html">least_squares</a><a class="nav-mod" href="GaussianAnalysis.convex.logdet_barrier.html">logdet_barrier</a><a class="nav-mod" href="GaussianAnalysis.convex.ls_insertion.html">ls_insertion</a><a class="nav-mod" href="GaussianAnalysis.convex.minimizers.html">minimizers</a><a class="nav-mod" href="GaussianAnalysis.convex.moreau.html">moreau</a><a class="nav-mod" href="GaussianAnalysis.convex.ridge_comparison.html">ridge_comparison</a><a class="nav-mod" href="GaussianAnalysis.convex.self_concordant.html">self_concordant</a></details>
+<details class="nav-dir"><summary><a href="GaussianAnalysis.random_matrix.html">random_matrix</a><span class="nav-count">7</span></summary><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe.html">goe</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_edge.html">goe_edge</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_entries.html">goe_entries</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.goe_rotation.html">goe_rotation</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.matrix_series.html">matrix_series</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.restricted_isometry.html">restricted_isometry</a><a class="nav-mod" href="GaussianAnalysis.random_matrix.wigner.html">wigner</a></details>
+</div>
+<div class="nav-group"><div class="nav-label">GaussianApplications</div>
+<a class="nav-link" href="GaussianApplications.html">Overview of the applications</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeStatement.html">GoeEdgeStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.GoeEdgeTheorem.html">GoeEdgeTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesStatement.html">MatrixSeriesStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.MatrixSeriesTheorem.html">MatrixSeriesTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignDefinitions.html">PerceptronSignDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignStatement.html">PerceptronSignStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PerceptronSignTheorem.html">PerceptronSignTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingStatement.html">PsdSplittingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.PsdSplittingTheorem.html">PsdSplittingTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceDefinitions.html">SatVarianceDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceStatement.html">SatVarianceStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SatVarianceTheorem.html">SatVarianceTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapDefinitions.html">SKGapDefinitions</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapStatement.html">SKGapStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.SKGapTheorem.html">SKGapTheorem</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingStatement.html">TensorPackingStatement</a>
+<a class="nav-mod" style="padding-left:8px" href="GaussianApplications.TensorPackingTheorem.html">TensorPackingTheorem</a>
+<details class="nav-dir"><summary><span>Perceptron</span><span class="nav-count">1</span></summary><a class="nav-mod" href="GaussianApplications.Perceptron.Pressure.html">Pressure</a></details>
+<details class="nav-dir"><summary><span>RandomSAT</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.RandomSAT.Forcing.html">Forcing</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Model.html">Model</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Pivotal.html">Pivotal</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Replacement.html">Replacement</a><a class="nav-mod" href="GaussianApplications.RandomSAT.Variance.html">Variance</a></details>
+<details class="nav-dir"><summary><span>SKGap</span><span class="nav-count">5</span></summary><a class="nav-mod" href="GaussianApplications.SKGap.Disorder.html">Disorder</a><a class="nav-mod" href="GaussianApplications.SKGap.Ising.html">Ising</a><a class="nav-mod" href="GaussianApplications.SKGap.Poincare.html">Poincare</a><a class="nav-mod" href="GaussianApplications.SKGap.Spectral.html">Spectral</a><a class="nav-mod" href="GaussianApplications.SKGap.TwoSpin.html">TwoSpin</a></details>
+</div></nav>
+<main class="content" id="top"><aside class="release-history-banner" aria-label="Website navigation and documentation version" style="background:#edf2e8;color:#243d2e;border-left:3px solid #235c45;padding:16px 20px;margin:0 0 22px;font:14px/1.6 system-ui,sans-serif"><nav aria-label="Companion pages" style="display:flex;flex-wrap:wrap;gap:12px 22px;margin-bottom:10px"><a style="color:#235c45" href="../index.html">Home</a><a style="color:#235c45" href="../ellipsoid-fitting.html">The paper</a><a style="color:#235c45" href="index.html" aria-current="page">The library</a><a style="color:#235c45" href="../autoformalization-methods.html">Methods</a></nav><strong>Library reference · phase12 (9046883, 13 October 2026).</strong> Full signatures and declaration links for 94 library modules. The <a style="color:#235c45" href="../results.html#library">current library overview</a> covers the nine subject areas of the 128-module release and links to the later sources. The signatures below retain their recorded version.</aside><div class="content-inner">
+<details class="toc-inline"><summary>On this page</summary><nav aria-label="On this page"><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>partials</span></li><li><a href="#rV_prefix">rV_<wbr>prefix</a></li><li><a href="#rV_prefix0">rV_<wbr>prefix0</a></li><li><a href="#rV_prefixn">rV_<wbr>prefixn</a></li><li><a href="#rV_prefixS">rV_<wbr>prefixS</a></li><li><a href="#rV_prefix_norm">rV_<wbr>prefix_<wbr>norm</a></li><li><a href="#mean_value_coord">mean_<wbr>value_<wbr>coord</a></li><li><a href="#partials_expansion">partials_<wbr>expansion</a></li><li><a href="#partials_linear">partials_<wbr>linear</a></li><li><a href="#continuous_partials_linear">continuous_<wbr>partials_<wbr>linear</a></li><li><a href="#partials_diff_differentiable">partials_<wbr>diff_<wbr>differentiable</a></li><li><a href="#differentiable_partials">differentiable_<wbr>partials</a></li><li><a href="#diff_partials">diff_<wbr>partials</a></li></ul></nav></details>
+<div class="crumbs"><a href="index.html">GaussianAnalysis</a><span aria-hidden="true">/</span><a href="GaussianAnalysis.gaussian.html">gaussian</a><span aria-hidden="true">/</span><span>partial_derivative</span></div>
+<h1 class="page-title">Continuous partial derivatives</h1>
+<div class="page-meta"><code>GaussianAnalysis.gaussian.partial_derivative</code><span>library/gaussian/partial_derivative.v</span><span>173 lines</span><span>11 lemmas and theorems, 1 definition</span><a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v" target="_blank" rel="noopener">source</a></div>
+<div class="deps"><details><summary>Imports <b>2</b> library modules and 15 external</summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.measurable_matrix.html">GaussianAnalysis.gaussian.measurable_matrix</a></li><li><a href="GaussianAnalysis.gaussian.gauss_ibp.html">GaussianAnalysis.gaussian.gauss_ibp</a></li></ul><p class="ext">External: HB.structures, mathcomp.classical.all_ssreflect_compat, mathcomp.algebra.algebraic_hierarchy.ssralg, mathcomp.algebra.numeric_hierarchy.ssrnum, mathcomp.algebra.matrix, mathcomp.algebra.arithmetic_tactic, mathcomp.classical.boolp, mathcomp.classical.classical_sets, mathcomp.classical.functions, mathcomp.reals.reals, mathcomp.algebra.interval, mathcomp.analysis.topology_theory.topology, mathcomp.analysis.normedtype_theory.normedtype, mathcomp.analysis.landau, mathcomp.analysis.derive</p></div></details><details><summary>Imported by <b>6</b></summary><div class="dep-body"><ul><li><a href="GaussianAnalysis.gaussian.gauss_interpolation.html">GaussianAnalysis.gaussian.gauss_interpolation</a></li><li><a href="GaussianAnalysis.comparison.gauss_smoothing.html">GaussianAnalysis.comparison.gauss_smoothing</a></li><li><a href="GaussianAnalysis.comparison.gauss_concentration.html">GaussianAnalysis.comparison.gauss_concentration</a></li><li><a href="GaussianAnalysis.comparison.slepian.html">GaussianAnalysis.comparison.slepian</a></li><li><a href="GaussianAnalysis.comparison.gordon.html">GaussianAnalysis.comparison.gordon</a></li><li><a href="GaussianAnalysis.comparison.gauss_law.html">GaussianAnalysis.comparison.gauss_law</a></li></ul></div></details></div>
+<section class="prose moddoc"><p>A function F : 'rV[R]_n -&gt; R whose partial derivatives 'D_(delta_mx 0 j) F exist everywhere and are continuous is differentiable, and its differential is v |-&gt; \sum_j v 0 j * 'D_(delta_mx 0 j) F x (<a class="r k-thm" href="#differentiable_partials" title="GaussianAnalysis.gaussian.partial_derivative.differentiable_partials">differentiable_partials</a>, <a class="r k-thm" href="#diff_partials" title="GaussianAnalysis.gaussian.partial_derivative.diff_partials">diff_partials</a>). The proof writes the increment of F as a sum of increments along the coordinates and applies the mean value theorem to each (<a class="r k-thm" href="#mean_value_coord" title="GaussianAnalysis.gaussian.partial_derivative.mean_value_coord">mean_value_coord</a>, <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a>).</p>
+<div class="table-wrap"><table class="glossary"><tr><td class="g-lhs"><code><a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_<wbr>prefix</a> k h</code></td><td class="g-rhs">the row vector h with its coordinates of index k or more set to 0</td></tr></table></div></section>
+<h2 class="section-title" id="main-results">Main results</h2>
+<div class="table-wrap"><table class="tbl results"><thead><tr><th class="c-names">Results</th><th class="c-stmt">Statement</th></tr></thead><tbody><tr><td><div class="names"><span><a class="r k-thm" href="#differentiable_partials" title="GaussianAnalysis.gaussian.partial_derivative.differentiable_partials">differentiable_<wbr>partials</a></span><span><a class="r k-thm" href="#diff_partials" title="GaussianAnalysis.gaussian.partial_derivative.diff_partials">diff_<wbr>partials</a></span></div></td><td>A function on <code>&#x27;rV[R]_n</code> whose partial derivatives exist everywhere and are continuous is differentiable, with differential <code>v |-&gt; \sum_j v_j d_j F x</code>.</td></tr></tbody></table></div>
+<h2 class="section-title" id="declarations">Declarations<span class="count">12 exported</span></h2>
+<div class="decl-toolbar"><span class="legend"><span style="--sw:var(--k-thm)">lemma, theorem</span><span style="--sw:var(--k-def)">definition</span><span style="--sw:var(--k-inst)">instance</span><span style="--sw:var(--k-let)">local</span></span></div>
+<div class="sec"><div class="sec-head" id="section-partials-13"><span class="sec-kw">section</span><span class="sec-name">partials</span></div>
+<pre class="code ctx"><span class="vk">Context</span> {R : <span class="x" title="mathcomp.reals.reals.Real.Exports.realType">realType</span>} {n : <span class="x" title="Corelib.Init.Datatypes.nat">nat</span>}.
+<span class="vk">Variables</span> (F : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> -&gt; <span class="sv" title="section variable R of section partials">R</span>) (DF : &#x27;I_<span class="sv" title="section variable n of section partials">n</span> -&gt; &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> -&gt; <span class="sv" title="section variable R of section partials">R</span>).
+<span class="vk">Hypothesis</span> F_partial : <span class="kw">forall</span> j x, <span class="x" title="mathcomp.analysis.derive.is_derive">is_derive</span> <span class="bv">x</span> (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span>) <span class="sv" title="section variable F of section partials">F</span> (<span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> <span class="bv">x</span>).
+<span class="vk">Hypothesis</span> DF_cont : <span class="kw">forall</span> j, <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span>).</pre>
+<div class="decl k-def" id="rV_prefix">
+<div class="decl-head">
+<span class="decl-kind">definition</span>
+<a class="decl-name" href="#rV_prefix">rV_prefix</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L41" target="_blank" rel="noopener">source, line 41</a>
+</div>
+<div class="decl-sig"><span class="sig-label">Type</span><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat}, nat -&gt; &#x27;rV_n -&gt; &#x27;rV_n</pre></div>
+<div class="decl-sig"><span class="sig-label">Definition</span><pre class="code"><span class="vk">Definition</span> rV_prefix k (h : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> :=
+  \row_j (<span class="kw">if</span> (<span class="bv">j</span> &lt; <span class="bv">k</span>)%N <span class="kw">then</span> <span class="bv">h</span> 0 <span class="bv">j</span> <span class="kw">else</span> 0).</pre></div>
+<div class="decl-doc"><p>The first k coordinates of h, the others set to 0.</p></div>
+<details class="decl-used"><summary>Used by 5 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#rV_prefix0" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix0">rV_prefix0</a>, <a class="r k-thm" href="#rV_prefixn" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefixn">rV_prefixn</a>, <a class="r k-thm" href="#rV_prefixS" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefixS">rV_prefixS</a>, <a class="r k-thm" href="#rV_prefix_norm" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix_norm">rV_prefix_norm</a>, <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="rV_prefix0">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rV_prefix0">rV_prefix0</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L44" target="_blank" rel="noopener">source, line 44</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (h : &#x27;rV_n), <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> 0 h = 0</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rV_prefix0 h : <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> 0 <span class="bv">h</span> = 0.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="rV_prefixn">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rV_prefixn">rV_prefixn</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L47" target="_blank" rel="noopener">source, line 47</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (h : &#x27;rV_n), <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> n h = h</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rV_prefixn h : <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> <span class="sv" title="section variable n of section partials">n</span> <span class="bv">h</span> = <span class="bv">h</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="rV_prefixS">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rV_prefixS">rV_prefixS</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L50" target="_blank" rel="noopener">source, line 50</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (h : &#x27;rV_n) (k : &#x27;I_n),
+<a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> k.+1 h = h 0 k *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 k + <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> k h</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rV_prefixS h (k : &#x27;I_<span class="sv" title="section variable n of section partials">n</span>) :
+  <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> <span class="bv">k</span>.+1 <span class="bv">h</span> = <span class="bv">h</span> 0 <span class="bv">k</span> *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">k</span> + <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> <span class="bv">k</span> <span class="bv">h</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="rV_prefix_norm">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#rV_prefix_norm">rV_prefix_norm</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L58" target="_blank" rel="noopener">source, line 58</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [h : &#x27;rV_n] [k : &#x27;I_n] [c : R],
+`|c| &lt;= `|h 0 k| -&gt; `|c *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 k + <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> k h| &lt;= `|h|</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> rV_prefix_norm (h : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) (k : &#x27;I_<span class="sv" title="section variable n of section partials">n</span>) (c : <span class="sv" title="section variable R of section partials">R</span>) : `|<span class="bv">c</span>| &lt;= `|<span class="bv">h</span> 0 <span class="bv">k</span>| -&gt;
+  `|<span class="bv">c</span> *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">k</span> + <a class="r k-def" href="#rV_prefix" title="GaussianAnalysis.gaussian.partial_derivative.rV_prefix">rV_prefix</a> <span class="bv">k</span> <span class="bv">h</span>| &lt;= `|<span class="bv">h</span>|.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="mean_value_coord">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#mean_value_coord">mean_value_coord</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L71" target="_blank" rel="noopener">source, line 71</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [F : &#x27;rV_n -&gt; R] [DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality n">&#x27;I_n</span>)
+   (x : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 n">&#x27;rV[R]_n</span>),
+ is_derive x (<span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j) F (DF j x)) -&gt;
+<span class="kw">forall</span> (x : &#x27;rV_n) (j : &#x27;I_n) (t : R),
+<span class="kw">exists2</span> c : R,
+  `|c| &lt;= `|t| &amp; F (t *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j + x) - F x = t * DF j (c *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 j + x)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> mean_value_coord (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) (j : &#x27;I_<span class="sv" title="section variable n of section partials">n</span>) (t : <span class="sv" title="section variable R of section partials">R</span>) :
+  <span class="kw">exists2</span> c : <span class="sv" title="section variable R of section partials">R</span>, `|<span class="bv">c</span>| &lt;= `|<span class="bv">t</span>| &amp;
+    <span class="sv" title="section variable F of section partials">F</span> (<span class="bv">t</span> *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span> + <span class="bv">x</span>) - <span class="sv" title="section variable F of section partials">F</span> <span class="bv">x</span> = <span class="bv">t</span> * <span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> (<span class="bv">c</span> *: <span class="x" title="mathcomp.algebra.matrix.delta_mx">delta_mx</span> 0 <span class="bv">j</span> + <span class="bv">x</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_expansion" title="GaussianAnalysis.gaussian.partial_derivative.partials_expansion">partials_expansion</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="partials_expansion">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#partials_expansion">partials_expansion</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L99" target="_blank" rel="noopener">source, line 99</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [F : &#x27;rV_n -&gt; R] [DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality n">&#x27;I_n</span>)
+   (x : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 n">&#x27;rV[R]_n</span>),
+ is_derive x (delta_mx 0 j) F (DF j x)) -&gt;
+(<span class="kw">forall</span> j : &#x27;I_n, continuous (DF j)) -&gt;
+<span class="kw">forall</span> x : &#x27;rV_n,
+(<span class="kw">fun</span> h : &#x27;rV_n =&gt; F (h + x) - F x - \sum_(j &lt; n) h 0 j * DF j x) =o_
+(0 : &#x27;rV_n) <span class="x" title="Corelib.ssr.ssrfun.id">id</span></pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> partials_expansion (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) :
+  (<span class="kw">fun</span> h : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> =&gt; <span class="sv" title="section variable F of section partials">F</span> (<span class="bv">h</span> + <span class="bv">x</span>) - <span class="sv" title="section variable F of section partials">F</span> <span class="bv">x</span> - \sum_(j &lt; <span class="sv" title="section variable n of section partials">n</span>) <span class="bv">h</span> 0 <span class="bv">j</span> * <span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> <span class="bv">x</span>)
+    =o_ (0 : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) <span class="x" title="Corelib.ssr.ssrfun.id">id</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_diff_differentiable" title="GaussianAnalysis.gaussian.partial_derivative.partials_diff_differentiable">partials_diff_differentiable</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="partials_linear">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#partials_linear">partials_linear</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L135" target="_blank" rel="noopener">source, line 135</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} (DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R) (x : &#x27;rV_n),
+<span class="x" title="mathcomp.algebra.algebraic_hierarchy.rings_modules_and_algebras.GRing.LinearExports.linear">linear</span> (<span class="kw">fun</span> v : &#x27;rV_n =&gt; \sum_(j &lt; n) v 0 j * DF j x)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> partials_linear (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) :
+  <span class="x" title="mathcomp.algebra.algebraic_hierarchy.rings_modules_and_algebras.GRing.LinearExports.linear">linear</span> (<span class="kw">fun</span> v : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> =&gt; \sum_(j &lt; <span class="sv" title="section variable n of section partials">n</span>) <span class="bv">v</span> 0 <span class="bv">j</span> * <span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> <span class="bv">x</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_diff_differentiable" title="GaussianAnalysis.gaussian.partial_derivative.partials_diff_differentiable">partials_diff_differentiable</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="continuous_partials_linear">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#continuous_partials_linear">continuous_partials_linear</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L142" target="_blank" rel="noopener">source, line 142</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R] [x : &#x27;rV_n],
+<span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="kw">fun</span> v : &#x27;rV_n =&gt; \sum_(j &lt; n) v 0 j * DF j x)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> continuous_partials_linear (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) :
+  <span class="x" title="mathcomp.classical.filter.continuous">continuous</span> (<span class="kw">fun</span> v : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> =&gt; \sum_(j &lt; <span class="sv" title="section variable n of section partials">n</span>) <span class="bv">v</span> 0 <span class="bv">j</span> * <span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> <span class="bv">x</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#partials_diff_differentiable" title="GaussianAnalysis.gaussian.partial_derivative.partials_diff_differentiable">partials_diff_differentiable</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="partials_diff_differentiable">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#partials_diff_differentiable">partials_diff_differentiable</a>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L149" target="_blank" rel="noopener">source, line 149</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [F : &#x27;rV_n -&gt; R] [DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality n">&#x27;I_n</span>)
+   (x : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 n">&#x27;rV[R]_n</span>),
+ is_derive x (delta_mx 0 j) F (DF j x)) -&gt;
+(<span class="kw">forall</span> j : &#x27;I_n, continuous (DF j)) -&gt;
+<span class="kw">forall</span> x : &#x27;rV_n,
+<span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> F x /\ &#x27;d F x = (<span class="kw">fun</span> v : &#x27;rV_n =&gt; \sum_(j &lt; n) v 0 j * DF j x)</pre></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> partials_diff_differentiable (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) :
+  <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> <span class="sv" title="section variable F of section partials">F</span> <span class="bv">x</span> /\
+  &#x27;d <span class="sv" title="section variable F of section partials">F</span> <span class="bv">x</span> = (<span class="kw">fun</span> v : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> =&gt; \sum_(j &lt; <span class="sv" title="section variable n of section partials">n</span>) <span class="bv">v</span> 0 <span class="bv">j</span> * <span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> <span class="bv">x</span>) :&gt; (&#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> -&gt; <span class="sv" title="section variable R of section partials">R</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 2 declarations in 1 file</summary><ul>
+<li><span class="um">this file:</span> <a class="r k-thm" href="#differentiable_partials" title="GaussianAnalysis.gaussian.partial_derivative.differentiable_partials">differentiable_partials</a>, <a class="r k-thm" href="#diff_partials" title="GaussianAnalysis.gaussian.partial_derivative.diff_partials">diff_partials</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="differentiable_partials">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#differentiable_partials">differentiable_partials</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L166" target="_blank" rel="noopener">source, line 166</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [F : &#x27;rV_n -&gt; R] [DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality n">&#x27;I_n</span>)
+   (x : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 n">&#x27;rV[R]_n</span>),
+ is_derive x (delta_mx 0 j) F (DF j x)) -&gt;
+(<span class="kw">forall</span> j : &#x27;I_n, continuous (DF j)) -&gt; <span class="kw">forall</span> x : &#x27;rV_n, <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> F x</pre></div>
+<div class="decl-informal"><span class="lbl">Main result, as the README states it</span><p>A function on <code>&#x27;rV[R]_n</code> whose partial derivatives exist everywhere and are continuous is differentiable, with differential <code>v |-&gt; \sum_j v_j d_j F x</code>.</p>
+</div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> differentiable_partials (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) : <span class="x" title="mathcomp.analysis.derive.differentiable">differentiable</span> <span class="sv" title="section variable F of section partials">F</span> <span class="bv">x</span>.</pre></div></details>
+<details class="decl-used"><summary>Used by 10 declarations in 5 files</summary><ul>
+<li><span class="um">GaussianAnalysis.gaussian.gauss_interpolation:</span> <a class="r k-let" href="GaussianAnalysis.gaussian.gauss_interpolation.html#DF_diff" title="GaussianAnalysis.gaussian.gauss_interpolation.DF_diff (section-local)">DF_diff</a>, <a class="r k-let" href="GaussianAnalysis.gaussian.gauss_interpolation.html#F_diff" title="GaussianAnalysis.gaussian.gauss_interpolation.F_diff (section-local)">F_diff</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gauss_smoothing:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_smoothing.html#lipschitz_frobenius_grad" title="GaussianAnalysis.comparison.gauss_smoothing.lipschitz_frobenius_grad">lipschitz_frobenius_grad</a>, <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_smoothing.html#gauss_smooth_differentiable" title="GaussianAnalysis.comparison.gauss_smoothing.gauss_smooth_differentiable">gauss_smooth_differentiable</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gauss_concentration:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_concentration.html#herbst_Fdiff" title="GaussianAnalysis.comparison.gauss_concentration.herbst_Fdiff">herbst_Fdiff</a>, <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_concentration.html#gauss_concentration_smooth" title="GaussianAnalysis.comparison.gauss_concentration.gauss_concentration_smooth">gauss_concentration_smooth</a></li>
+<li><span class="um">GaussianAnalysis.comparison.slepian:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.slepian.html#lse_differentiable" title="GaussianAnalysis.comparison.slepian.lse_differentiable">lse_differentiable</a>, <a class="r k-thm" href="GaussianAnalysis.comparison.slepian.html#softmax_differentiable" title="GaussianAnalysis.comparison.slepian.softmax_differentiable">softmax_differentiable</a></li>
+<li><span class="um">GaussianAnalysis.comparison.gordon:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gordon.html#smm_D_differentiable" title="GaussianAnalysis.comparison.gordon.smm_D_differentiable">smm_D_differentiable</a>, <a class="r k-thm" href="GaussianAnalysis.comparison.gordon.html#smm_differentiable" title="GaussianAnalysis.comparison.gordon.smm_differentiable">smm_differentiable</a></li>
+</ul></details>
+</div>
+<div class="decl k-thm" id="diff_partials">
+<div class="decl-head">
+<span class="decl-kind">lemma</span>
+<a class="decl-name" href="#diff_partials">diff_partials</a>
+<span class="tag main">main result</span>
+<a class="decl-src" href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/blob/904688306c080bccbf2acc617c523a59cfc6899b/library/gaussian/partial_derivative.v#L169" target="_blank" rel="noopener">source, line 169</a>
+</div>
+<div class="decl-sig"><pre class="code"><span class="kw">forall</span> {R : realType} {n : nat} [F : &#x27;rV_n -&gt; R] [DF : &#x27;I_n -&gt; &#x27;rV_n -&gt; R],
+(<span class="kw">forall</span> (j : <span class="hb" title="printed as fintype_ordinal__canonical__eqtype_Equality n">&#x27;I_n</span>)
+   (x : <span class="hb" title="printed as matrix_matrix__canonical__normed_module_NormedModule R 1 n">&#x27;rV[R]_n</span>),
+ is_derive x (delta_mx 0 j) F (DF j x)) -&gt;
+(<span class="kw">forall</span> j : &#x27;I_n, continuous (DF j)) -&gt;
+<span class="kw">forall</span> x : &#x27;rV_n, &#x27;d F x = (<span class="kw">fun</span> v : &#x27;rV_n =&gt; \sum_(j &lt; n) v 0 j * DF j x)</pre></div>
+<div class="decl-informal short"><span class="lbl">Main result</span><p>Stated in the README together with <a class="r k-thm" href="#differentiable_partials" title="GaussianAnalysis.gaussian.partial_derivative.differentiable_partials">differentiable_partials</a>.</p></div>
+<details class="decl-more"><summary>Statement as written in the source</summary><div class="decl-sig"><pre class="code"><span class="vk">Lemma</span> diff_partials (x : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span>) :
+  &#x27;d <span class="sv" title="section variable F of section partials">F</span> <span class="bv">x</span> = (<span class="kw">fun</span> v : &#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> =&gt; \sum_(j &lt; <span class="sv" title="section variable n of section partials">n</span>) <span class="bv">v</span> 0 <span class="bv">j</span> * <span class="sv" title="section variable DF of section partials">DF</span> <span class="bv">j</span> <span class="bv">x</span>) :&gt; (&#x27;rV[<span class="sv" title="section variable R of section partials">R</span>]_<span class="sv" title="section variable n of section partials">n</span> -&gt; <span class="sv" title="section variable R of section partials">R</span>).</pre></div></details>
+<details class="decl-used"><summary>Used by 1 declaration in 1 file</summary><ul>
+<li><span class="um">GaussianAnalysis.comparison.gauss_smoothing:</span> <a class="r k-thm" href="GaussianAnalysis.comparison.gauss_smoothing.html#lipschitz_frobenius_grad" title="GaussianAnalysis.comparison.gauss_smoothing.lipschitz_frobenius_grad">lipschitz_frobenius_grad</a></li>
+</ul></details>
+</div>
+</div>
+<footer class="foot">Generated from commit <a href="https://github.com/LLM4Rocq/ellipsoid_fitting_rocq/tree/904688306c080bccbf2acc617c523a59cfc6899b" target="_blank" rel="noopener"><code>9046883</code></a> (tag phase12) of the ellipsoid fitting repository. Signatures are printed by Rocq 9.1.1; links in the source statements come from the compiled <code>.glob</code> files. The source links open the files on GitHub at this commit, in the now-public repository.</footer></div></main>
+<aside class="pagetoc" aria-label="On this page"><p class="toc-label">On this page</p><ul><li class="toc-h"><a href="#main-results">Main results</a></li><li class="toc-h"><a href="#declarations">Declarations</a></li><li class="toc-sec"><span>partials</span></li><li><a href="#rV_prefix">rV_<wbr>prefix</a></li><li><a href="#rV_prefix0">rV_<wbr>prefix0</a></li><li><a href="#rV_prefixn">rV_<wbr>prefixn</a></li><li><a href="#rV_prefixS">rV_<wbr>prefixS</a></li><li><a href="#rV_prefix_norm">rV_<wbr>prefix_<wbr>norm</a></li><li><a href="#mean_value_coord">mean_<wbr>value_<wbr>coord</a></li><li><a href="#partials_expansion">partials_<wbr>expansion</a></li><li><a href="#partials_linear">partials_<wbr>linear</a></li><li><a href="#continuous_partials_linear">continuous_<wbr>partials_<wbr>linear</a></li><li><a href="#partials_diff_differentiable">partials_<wbr>diff_<wbr>differentiable</a></li><li><a href="#differentiable_partials">differentiable_<wbr>partials</a></li><li><a href="#diff_partials">diff_<wbr>partials</a></li></ul></aside>
+</div>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
