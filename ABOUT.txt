@@ -1,10 +1,13 @@
 GaussianAnalysis and ellipsoid fitting: static website
 
-Open index.html and choose The paper or The library. These are separate
-pages: mathematical exposition and new results on one side, reusable
-library subject guides, search and full declarations on the other.
-The companion results.html describes the released mathematical sources of
-the Rocq repository https://github.com/LLM4Rocq/ellipsoid_fitting_rocq at
+Open index.html and choose The paper or The library. The paper opens the
+mathematical exposition and the new results. The library opens the
+current library overview, results.html#library: the nine subject areas
+and 128 modules of the release. A second link below it opens the dated
+declaration browser in library/, with search and full declarations.
+The overview is a section of results.html. That page describes the
+released mathematical sources of the Rocq repository
+https://github.com/LLM4Rocq/ellipsoid_fitting_rocq at
 305747af48d4f75e26378888a8111d591145fa52 (tag shifted), with documentation
 through 5893184eb385a81a61c68c3e0b10aabf684c61ce, 25 October 2026.
 
@@ -22,7 +25,12 @@ The methods report retains its dated measurements. Only the three
 explicitly selected methods-data records are included; private
 transcripts, excerpts and machine-specific receipts are excluded.
 
-No installation or server is required. The pages load no external fonts
-or scripts. External source links need internet.
-This copy was prepared on 25 October 2026 for publication as a separate
-repository served by GitHub Pages. It has not been deployed.
+A local copy needs no installation or server. The pages load no external
+fonts or scripts. External source links need internet.
+
+Since 26 October 2026, GitHub Pages has served the site at
+https://llm4rocq.github.io/ellipsoid-fitting-web/ from the main branch of
+the repository https://github.com/LLM4Rocq/ellipsoid-fitting-web.
+
+The whole site (the code of its pages, their text and the PDFs) is under
+the MIT license in LICENSE.
